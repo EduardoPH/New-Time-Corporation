@@ -2,6 +2,8 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Home from "./components/menu/index";
 
+
+
 export default function Routes(){
     return(
         <BrowserRouter>
