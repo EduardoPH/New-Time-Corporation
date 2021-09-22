@@ -31,23 +31,20 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        .b{
-            flex-grow: 1;
+
+        .box-direita{
             display: flex;
             flex-direction: column;
+
+            justify-content: center;
             align-items: center;
-        }
-        .box-apoio{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            width: 60em;
+            align-self: center;
+
+            width: 83em;
             height: 34.2em;
             
+            margin-left: 3em;
             margin-right: 3em;
-
-            align-self: center;
             
             background-color: rgba(255,255,255,0.7);
             
@@ -55,15 +52,53 @@ const Container = styled.div`
 
             font-family: 'Roboto';
             
+            .input-frase{
+                    width: 54em;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1em; 
+
+                        input{
+                        
+                            width: 54em; 
+                            height: 4em;
+
+                            outline: none;
+                            
+                            border-radius: 1em;
+                        };
+                        button{
+                            width: 10em;
+                            border-radius: 10px;
+                            background-color: green;
+                            color: white;
+                            border: solid 0px;
+                            cursor:pointer;
+                            &:hover{
+                                transition: 5ms;
+                                opacity:0.5;
+                                background-color: white;
+                                color: green;
+                                border: solid 3px;
+                                border-color: green;
+                            }
+                        }
+
+                        
+                    }
+        }
+        .box-apoio{
+
+            height: 23em;
+            overflow-y: scroll;
+
             .lista-frase{
 
-                width: 53em;
-                height: 23em;
-
                 background-color: white;
-                
-                border-radius: 2em;
-                padding: 2em;
+                border-radius: 1em;
+                padding: 1.5em;
+                margin-bottom: 1em;
+                margin-right: 1em;
 
                 .item{
                     
