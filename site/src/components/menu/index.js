@@ -6,7 +6,7 @@ export default function Menu(){
             <div className="logo">
                 <img src="/assets/images/menu/Logo-ntc.svg" alt="logo"/>
             </div>
-            <Link style={{textDecorationline: 'underline'}}>
+            <Link >
                 <div className="item-menu">
                     Home
                     <img src="/assets/images/menu/Home Office.svg" alt="Home-svg"/>

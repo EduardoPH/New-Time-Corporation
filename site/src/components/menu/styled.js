@@ -15,8 +15,6 @@ const Container= sytled.div`
 
     padding: 0em 3em 0em 1em; 
 
-    background-color: purple;
-
     .logo img{
 
         height: 4em;
