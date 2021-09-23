@@ -6,7 +6,7 @@ const Container = styled.div`
     flex-direction: column;
     background:url(${'/assets/images/administrador/bg-adm.png'});
     background-size: cover;
-    height: 100vh;
+    height: 200vh;
     
     .Top-Adm{
         
@@ -26,41 +26,83 @@ const Container = styled.div`
         margin-bottom: 1em;
         padding: 7px;
     }
-    .validar-apoio{
+    .boxs{
 
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        height: 100%;
 
         .box-direita{
-            display: flex;
-            flex-direction: column;
-
-            justify-content: center;
+            display: flex; 
+            flex-direction: column; 
             align-items: center;
-            align-self: center;
+            height: 100%;
+            width: 100%;
+        };
+        
+        
+        .lista-apoio{
+            
+            width: 86%;
+            height: 23em;
+            
+            overflow-y: scroll;
 
-            width: 83em;
-            height: 34.2em;
-            
-            margin-left: 3em;
-            margin-right: 3em;
-            
-            background-color: rgba(255,255,255,0.7);
-            
-            border-radius: 1em;
+            .item-frase{
 
-            font-family: 'Roboto';
-            
-            .input-frase{
-                    width: 54em;
+                display: flex;
+
+                background-color: white;
+                border-radius: 1em;
+                padding: 1.5em;
+                margin-bottom: 1em;
+                margin-right: 1em;
+
+                p1{
+                    width: 86%;
+
+                }
+
+                .btm-acao{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 10em;
+                    align-items: center;
+
+                    .alterar{
+                        background-color: blue; 
+                        color: white; 
+                        border:none; 
+                        border-radius: 1em; 
+                        height: 2em;
+                        cursor: pointer;
+                        &:hover{opacity:0.3;}
+                    }
+                    .excluir{
+                        background-color: red; 
+                        color: white; 
+                        border:none; 
+                        border-radius: 1em; 
+                        height: 2em;
+                        cursor: pointer;
+                        &:hover{opacity:0.3;}
+                    }
+
+                }
+
+                
+            }
+        }
+        .input-frase{
+                    width: 86%;
                     display: flex;
                     justify-content: space-between;
                     margin-top: 1em; 
 
                         input{
                         
-                            width: 54em; 
+                            width: 86%;
                             height: 4em;
 
                             outline: none;
@@ -86,61 +128,35 @@ const Container = styled.div`
 
                         
                     }
-        }
-        .box-apoio{
-
-            height: 23em;
-            overflow-y: scroll;
-
-            .lista-frase{
-
-                background-color: white;
-                border-radius: 1em;
-                padding: 1.5em;
-                margin-bottom: 1em;
-                margin-right: 1em;
-
-                .item{
-                    
-                    display: flex;
-                    
-                    p1{
-                        width: 39em;
-                    }
-
-                    .btm-acao{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-evenly;
-                        width: 10em;
-                        align-items: center;
-
-                        .alterar{
-                            background-color: blue; 
-                            color: white; 
-                            border:none; 
-                            border-radius: 1em; 
-                            height: 2em;
-                            cursor: pointer;
-                            &:hover{opacity:0.3;}
-                        }
-                        .excluir{
-                            background-color: red; 
-                            color: white; 
-                            border:none; 
-                            border-radius: 1em; 
-                            height: 2em;
-                            cursor: pointer;
-                            &:hover{opacity:0.3;}
-                        }
-
-                    }
-
-                }
-            }
-        }
+    }
+    .pesquisar-usuarias{
+        height: 100vh;
     }
 `
+const BoxStyled = styled.div`
 
+            display: flex;
+            flex-direction: column;
 
-export {Container}
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+
+            width: 93%;
+            height: 34.2em;
+            
+            margin-left: 3em;
+            margin-right: 3em;
+            margin-top: 1em;
+            
+            background-color: rgba(255,255,255,0.7);
+            
+            border-radius: 1em;
+
+            font-family: 'Roboto';
+            
+            
+        
+`
+
+export {Container , BoxStyled}
