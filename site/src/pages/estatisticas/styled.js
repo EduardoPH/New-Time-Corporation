@@ -4,18 +4,6 @@ const  Containers = styled.div `
 
 
 
-body {
-    margin: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-
-
-
-
-.dados{
     display:flex;
     flex-direction: column;
 
@@ -23,8 +11,18 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     width: auto;
-}
 
+
+
+
+    .dados{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 81%;
+    }
+
+    
 
 .titulo{
     display:flex;

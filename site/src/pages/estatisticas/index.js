@@ -1,8 +1,10 @@
 import Containers from './styled.js';
+import Menu from '../../components/menu'
 
 export default function Estatisticas (){
     return(
         <Containers>
+            <Menu/>
             <div class="dados">
             <div class="titulo"> Estatísticas </div>
             <div class="caixa">
@@ -17,7 +19,7 @@ export default function Estatisticas (){
                 <div class="setDireita"><img src="/assets/images/estatisticas/setDireita.svg" alt=""/></div>
             </div>
 
-            <div class="caixa">
+           {/*  <div class="caixa">
                 <div class="centro">
                     <div class="subT">Cidades com maior número de denúncias</div>
                     <div class="tabLad">
@@ -35,7 +37,7 @@ export default function Estatisticas (){
                         <div class="dados"></div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             </div>
 
 
