@@ -14,6 +14,7 @@ const MenuLateralStyled= styled.div`
 
     background-color: white;
     position: sticky;
+    top: 11em;
 
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;

@@ -38,99 +38,118 @@ const Container = styled.div`
             align-items: center;
             height: 100%;
             width: 100%;
+            
         };
-        
-        
-        .lista-apoio{
-            
-            width: 86%;
-            height: 23em;
-            
-            overflow-y: scroll;
-
-            .item-frase{
-
-                display: flex;
-
-                background-color: white;
-                border-radius: 1em;
-                padding: 1.5em;
-                margin-bottom: 1em;
-                margin-right: 1em;
-
-                p1{
-                    width: 86%;
-
-                }
-
-                .btm-acao{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    width: 10em;
-                    align-items: center;
-
-                    .alterar{
-                        background-color: blue; 
-                        color: white; 
-                        border:none; 
-                        border-radius: 1em; 
-                        height: 2em;
-                        cursor: pointer;
-                        &:hover{opacity:0.3;}
-                    }
-                    .excluir{
-                        background-color: red; 
-                        color: white; 
-                        border:none; 
-                        border-radius: 1em; 
-                        height: 2em;
-                        cursor: pointer;
-                        &:hover{opacity:0.3;}
-                    }
-
-                }
-
+        .box-apoio{
+            .lista-apoio{
                 
-            }
-        }
-        .input-frase{
-                    width: 86%;
+                width: 86%;
+                height: 23em;
+                
+                overflow-y: scroll;
+
+                .item-frase{
+
                     display: flex;
-                    justify-content: space-between;
-                    margin-top: 1em; 
 
-                        input{
-                        
-                            width: 86%;
-                            height: 4em;
+                    background-color: white;
+                    border-radius: 1em;
+                    padding: 1.5em;
+                    margin-bottom: 1em;
+                    margin-right: 1em;
 
-                            outline: none;
-                            
-                            border-radius: 1em;
-                        };
-                        button{
-                            width: 10em;
-                            border-radius: 10px;
-                            background-color: green;
-                            color: white;
-                            border: solid 0px;
-                            cursor:pointer;
-                            &:hover{
-                                transition: 5ms;
-                                opacity:0.5;
-                                background-color: white;
-                                color: green;
-                                border: solid 3px;
-                                border-color: green;
-                            }
+                    p1{
+                        width: 86%;
+
+                    }
+
+                    .btm-acao{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        width: 10em;
+                        align-items: center;
+
+                        .alterar{
+                            background-color: blue; 
+                            color: white; 
+                            border:none; 
+                            border-radius: 1em; 
+                            height: 2em;
+                            cursor: pointer;
+                            &:hover{opacity:0.3;}
+                        }
+                        .excluir{
+                            background-color: red; 
+                            color: white; 
+                            border:none; 
+                            border-radius: 1em; 
+                            height: 2em;
+                            cursor: pointer;
+                            &:hover{opacity:0.3;}
                         }
 
-                        
                     }
-    }
-    .pesquisar-usuarias{
-        height: 100vh;
+
+                    
+                }
+            }
+            .input-frase{
+                        width: 86%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 1em; 
+
+                            input{
+                            
+                                width: 86%;
+                                height: 4em;
+
+                                outline: none;
+                                
+                                border-radius: 1em;
+                            };
+                            button{
+                                width: 10em;
+                                border-radius: 10px;
+                                background-color: green;
+                                color: white;
+                                border: solid 0px;
+                                cursor:pointer;
+                                &:hover{
+                                    transition: 5ms;
+                                    opacity:0.5;
+                                    background-color: white;
+                                    color: green;
+                                    border: solid 3px;
+                                    border-color: green;
+                                }
+                            }
+
+                            
+                        }
+        };
+        .box-usuarias{
+            input{
+                width: 86%;
+                height: 3em;
+            }
+            .tabela-usuaria{
+                width: 86%;
+                height: 23em;
+                thead{
+                    background-color: blue; 
+                    border-collapse: none;
+                    color: white;
+                    
+                }
+                tbody{
+                    height:5em;
+                    overflow-y:scroll ;
+                }
+            }
+        }
+        
     }
 `
 const BoxStyled = styled.div`
