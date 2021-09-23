@@ -20,6 +20,9 @@ body {
     flex-direction: column;
 
     background:url(${'/assets/images/estatisticas/fundo.svg'});
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: auto;
 }
 
 
@@ -37,6 +40,7 @@ body {
     flex-direction: row;
     align-self:center;
     background-color: #7F00BF;
+    opacity: 1;
     width: 16em;
     height:auto;
     border-radius: 1em;

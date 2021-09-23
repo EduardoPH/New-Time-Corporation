@@ -21,7 +21,7 @@ export default function Estatisticas (){
                 <div class="centro">
                     <div class="subT">Cidades com maior número de denúncias</div>
                     <div class="tabLad">
-                        <div class="porcentagem"><img src="/assets/images/estatisticas/porcentagem 2.svg"/></div>
+                        <div class="porcentagem"><img src="/assets/images/estatisticas/porcentagem 2.svg"  alt=""/></div>
                         <div class="dados"></div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function Estatisticas (){
                 <div class="centro">
                     <div class="subT">Porcentagem de denúncias mensais no site</div>
                     <div class="tabLad">
-                        <div class="porcentagem"><img src="/assets/images/estatisticas/porcentagem 2.svg"/></div>
+                        <div class="porcentagem"><img src="/assets/images/estatisticas/porcentagem 2.svg"  alt=""/></div>
                         <div class="dados"></div>
                     </div>
                 </div>
