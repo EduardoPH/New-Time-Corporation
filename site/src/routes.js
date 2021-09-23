@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Home from "./components/menu/index";
+import Home from "./pages/home";
 import Estatisticas from './pages/estatisticas';
 import Administrador from './pages/Administrador';
 import DenunciasRecents from './pages/Denuncias-recentes'
