@@ -1,6 +1,6 @@
 import { Container } from "./styled";
 import Menu from '../../components/menu'
-import Mensagem from '../../components/details-mensagem'
+import Mensagem from '../../components/recents-mensagem'
 
 export default function Details() {
     return(

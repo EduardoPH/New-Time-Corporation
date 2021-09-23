@@ -1,21 +1,20 @@
 import {Conteiners} from "./styled"
-
+import Menu from "../../components/menu"
 
 export default function Home() {
     return(
         <Conteiners> 
 
-            {/* <div className="menu"> </div> */}
+            <Menu/>
           <div className="box"> 
-            <div className="box-sub1"> 
-                <h1> Denuncie </h1>
-            </div>
+                <div className="box-sub1"> 
+                    <h1> Denuncie!</h1>
+                </div>
 
-            <div className="box-sub2"> 
-                <img src=""> </img>
-            </div>
-            
-            </div>
+                <div className="box-sub2"> 
+                    <img src="/assets/images/home/woman.svg"/>
+                </div>       
+         </div>
             
             
            <div className="rodape"> 
@@ -30,19 +29,19 @@ export default function Home() {
                     <h2> Recomendacoes </h2>
                     
                     <div className="lady"> 
-                        <img src="/assets/image/home/khalo.svg" alt="" > </img>
+                        <img src="/assets/image/khalo.svg" alt="" />
                         <div className="titulo"> Lady Driver </div>
                         <div className="descricao">Um app que possibilita viagens pagas com motoristas mulhers. </div>
                     </div>  
 
                     <div className="women">
-                        <img src="/assets/image/home/khalo.svg" alt=""> </img>
+                        <img src="/assets/image/home/khalo.svg" alt=""/>
                         <div className="titulo"> Lady Driver </div>
                         <div className="descricao"> O site traz varios blogs escritos por mulheres para mulheres. </div> 
                     </div>
 
                     <div className="kahlo"> 
-                        <img src="/assets/image/home/khalo.svg" alt=""> </img>
+                        <img src="/assets/image/home/khalo.svg" alt=""/> 
                         <div className="titulo"> Lady Driver </div>
                         <div className="descricao">  blog foi criado para expandir “a palavra” feminista a mais mulheres. </div>
                     </div>

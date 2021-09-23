@@ -38,6 +38,7 @@ const Container = styled.div`
 
     .rc-mensagem {
         padding-left: 3em;
+        font-size: 2em;
     }
     .ver-mais {
         cursor: pointer;
