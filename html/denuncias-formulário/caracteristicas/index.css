@@ -1,0 +1,48 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    background-image: url("../../../site/public/assets/images/estatisticas/fundo.svg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    color: white;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 3.5em;
+}
+
+.menu-lateral{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: row;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+}
+
+.informacoes{
+    color: #F503A1;
+}
+
+button{
+    background-color: #F503A1;
+    border: none;
+    padding: 1.2em;
+    
+}
