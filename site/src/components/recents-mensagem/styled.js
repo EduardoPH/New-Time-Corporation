@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+width: 41em;
     .rc-user {
         display: flex;
         flex-direction: row ;
@@ -13,46 +14,45 @@ const Container = styled.div`
         margin-left: 0.8em;
     }
 
-    
         padding: 3em;
 
-
-    .rc-setinha img {
-        display: flex;
-        margin-top: -0.5em;
-        margin-left: 1.5em;
+    .rc-box {
+        position: relative;
+        margin-left: 2em;
+        margin-bottom: 5em;
     }
 
-    .rc-caixa {
-        background-color: white;
-        height: 5em;
-        min-height: 5em;
-        width: 24em;
-        display: flex;
-        flex-direction: column;
-        margin-top: -2.8em;
-        margin-left: 2.5em;
-        border-radius: 14px;
-        padding:0.5em 1em 0.5em 1em;
+    .rc-box img {
+        position: absolute;
+    }
+
+    .rc-box label {
+        position: absolute;
+        font-size: 1.3em;
+        top: 2em;
+        left: 2em;
     }
 
     .rc-mensagem {
-        padding-left: 3em;
-        font-size: 2em;
+        display: flex;
+        flex-direction: row;
+        padding-left: 1em;
+        font-size: 1.5em;
+        
     }
+
     .ver-mais {
+        position: absolute;
         cursor: pointer;
         text-align: end;
+        margin-top: 6em;
+        margin-left: 87%;
     }
 
     .ver-mais :hover{
         text-decoration: underline;
     }
 
-    .Mensagem-caixa {
-        width: 100%;
-        height: 200%;
-    }
 `
 
 export {Container}

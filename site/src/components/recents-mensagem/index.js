@@ -7,12 +7,10 @@ export default function Mensagem() {
                 <img className="rc-img-user" src="/assets/images/denuncias-recents/Perfil.png"alt=""/>
                 <div className="rc-name-user"> User14143 </div>
             </div>
-            <div className="rc-mensagem"> 
-                <span className="rc-setinha"> <img src="/assets/images/denuncias-recents/Setinha.png" alt=""/> </span>
-                <div className="rc-caixa">
-                    <div className="Mensagem-caixa"> opaaa </div>
-                    <div className="ver-mais"> Ver Mais.. </div>
-                </div>
+            <div class="rc-box">
+                <img id="image" src="/assets/images/denuncias-recents/base.svg" alt=""/>
+                <label className="rc-mensagem">Opaa</label>
+                <div className="ver-mais">  Ver mais... </div>
             </div>
         </Container>
     )

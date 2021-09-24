@@ -10,15 +10,19 @@ const Container = styled.div`
     .dt-conteudo {
         display: flex;
         flex-direction: row;
-        display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 93%;
         height: 90%;
         background: rgba(127, 0, 191, 0.63);
         backdrop-filter: blur(7px);
         border-radius: 20px;
         padding: 3em;
+        align-items: center;
+    }
+
+    .container-conteudo {
+        width: 100%;
     }
 
     .dt-titulo {
@@ -50,9 +54,7 @@ const Container = styled.div`
         font-size: 24px;
         line-height: 27px;
         text-align: center;
-
         color: #530096;
-
     }
 
     .dt-pt1 {
@@ -68,7 +70,7 @@ const Container = styled.div`
 
     .rc-caixa {
         background-color: white;
-        height: 100%;
+        height: 48vh;
         min-height: 90%;
         width: 90%;
         display: flex;
