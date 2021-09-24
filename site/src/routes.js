@@ -6,6 +6,7 @@ import Administrador from './pages/Administrador';
 import DenunciasRecents from './pages/Denuncias-recentes'
 import DenunciaDetalhada from './pages/denuncia-detalhe'
 import Login from './pages/login'
+import PerfilUsuaria from './pages/perfil-usuaria'
 
 
 export default function Routes(){
@@ -18,7 +19,7 @@ export default function Routes(){
                 <Route path="/denuncia-recents"  component={DenunciasRecents} />
                 <Route path="/denuncia-details" component={DenunciaDetalhada}/>
                 <Route path="/login" component={Login}/>
-
+                <Route path="/perfil" component={PerfilUsuaria}/>
             </Switch>
         </BrowserRouter>
 
