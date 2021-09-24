@@ -16,7 +16,67 @@ export default function Home() {
                 </div>       
          </div>
             
+
+        <div className="box2"> 
+            <div className="caixa2">
+                <div className="box2-sub1"> 
+                <h1> Apoio </h1>
+                </div>
+
+                <div className="box2-sub2"> 
+                    <img src="/assets/images/home/apoio.svg"  alt="" />
+                </div>
+           </div>
+        
+           <div className="descri-2"> 
+            <p> Nos preocupamos com todas as mulheres, por isso trouxemos uma coletânea 
+                de frases e apoio psicológico.</p>
+           </div>
+        </div>
+
+        <div className="box3"> 
+            <div className="caixa3">
+                <div className="box3-sub1"> 
+                  <h1> Estastística </h1>
+                </div>
+
+                <div className="box3-sub2"> 
+                    <img src="/assets/images/home/estatistica.svg"  alt="" />
+                </div>
+           </div>
+        
+           <div className="descri-3"> 
+            <p> Com nossos dados é possível montarmos estatíticas para que assim facilite o 
+                levantamento de dados </p>
+           </div>
+        </div>
+
+        <div className="box4"> 
+            <div className="caixa4">
+                <div className="box4-sub1"> 
+                <h1> Sistema de Denuncias </h1>
+                </div>
+
+                <div className="box4-sub2"> 
+                    <img src="/assets/images/home/sistema.svg"  alt="" />
+                </div>
+           </div>
+        
+           <div className="descri-4"> 
+            <p> Trazemos um sistema de denúncias para as mulhers que sofreram qualquer forma de assédio </p>
+           </div>
+        </div>
             
+
+
+
+
+
+
+
+
+
+
            <div className="rodape"> 
               <div className="contato">
                     <h2> contato </h2>
