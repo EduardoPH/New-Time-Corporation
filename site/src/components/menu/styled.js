@@ -35,7 +35,6 @@ const Container= sytled.div`
         
         img{margin-left: 10px;}
         
-        
     }
 `
 export {Container}

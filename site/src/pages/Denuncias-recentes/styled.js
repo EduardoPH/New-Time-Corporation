@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    background:url(${'/assets/images/denuncias-recents/BACKGROUND.svg'});
+    background:url(${'/assets/images/denuncias-recentes/BACKGROUND.svg'});
     background-size: cover;
     height: 100vh;
 
@@ -16,6 +16,7 @@ const Container = styled.div`
         background: rgba(127, 0, 191, 0.63);
         backdrop-filter: blur(7px);
         border-radius: 20px;
+        padding: 2em;
     }   
 
     .rc-titulo {

@@ -11,7 +11,7 @@ export default function Estatisticas (){
             <Menu/>
             <div class="dados">
             <div class="titulo"> Estatísticas </div>
-            <Carousel  >
+            <Carousel autoPlay infiniteLoop >
                 <div class="caixa">
                     <div class="centro">
                         <div class="subT">Porcentagem de denúncias mensais no site</div>
