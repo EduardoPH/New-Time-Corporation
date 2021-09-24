@@ -1,16 +1,18 @@
 import { Container } from "./styled";
 
 export default function Mensagem() {
+
     return(
         <Container>
-            <div className="rc-user"> 
-                <img className="rc-img-user" src="/assets/images/denuncias-recents/Perfil.png"alt=""/>
-                <div className="rc-name-user"> User14143 </div>
+            <div className="pt1-msg">
+                <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/> 
             </div>
-            <div class="rc-box">
-                <img id="image" src="/assets/images/denuncias-recents/base.svg" alt=""/>
-                <label className="rc-mensagem">Opaa</label>
-                <div className="ver-mais">  Ver mais... </div>
+            <div className="pt2-msg">
+                <div className="name-user"> user27562</div>
+                <div className="ct-msg"> 
+                    <img className="setinha" src="/assets/images/denuncias-recentes/Setinha.png" alt=""/>
+                    <div className="caixa-msg"> <div className="mensagem" > declaração da testemunha ou da parte sobre deione com seus interesses e que figura no processo como prova testemunhal  declaração da testemunha ou da parte sobre determinado fato, do qual tem conhecimento ou que se relacione com seus interesses e que figura no processo como prova testemunhal </div> </div>
+                </div>
             </div>
         </Container>
     )
