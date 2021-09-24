@@ -5,6 +5,7 @@ import Estatisticas from './pages/estatisticas';
 import Administrador from './pages/Administrador';
 import DenunciasRecents from './pages/Denuncias-recentes'
 import DenunciaDetalhada from './pages/denuncia-detalhe'
+import Login from './pages/login'
 
 
 export default function Routes(){
@@ -16,6 +17,8 @@ export default function Routes(){
                 <Route path="/administrador"  component={Administrador} />
                 <Route path="/denuncia-recents"  component={DenunciasRecents} />
                 <Route path="/denuncia-details" component={DenunciaDetalhada}/>
+                <Route path="/login" component={Login}/>
+
             </Switch>
         </BrowserRouter>
 
