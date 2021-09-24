@@ -8,33 +8,35 @@ const  Containers = styled.div `
     flex-direction: column;
 
     background:url(${'/assets/images/estatisticas/fundo.svg'});
-    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
-    width: auto;
+    width: 100%;
 
 
 
 
-    .dados{
+     .dados{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 81%;
+        height: 91%;
+        align-self: center;
+        width: 87%;
     }
+    
 
 
     .caix{
         display:flex;
     }
 
-    
 
 .titulo{
     display:flex;
     align-self: center;
     color: white;
-    font: 700 .8em Roboto;
+    font: 700 4em Roboto;
 }
 
 
@@ -45,31 +47,10 @@ const  Containers = styled.div `
     align-self:center;
     background-color: #7F00BF;
     opacity: 1;
-    width: 16em;
-    height:auto;
+    height: 33em;
     border-radius: 1em;
+    
 }
-
-
-
-.setEsquerda img{
-    cursor:pointer;
-    width: .7em;
-    margin-top: 3.6em;
-}
-
-
-
-.setDireita{
-}
-
-.setDireita img{
-    cursor:pointer;
-    width: .7em;
-    margin-top: 3.6em;
-    align-self:right;
-}
-
 
 
 
@@ -77,8 +58,7 @@ const  Containers = styled.div `
 .centro{
     display:flex;
     flex-direction: column;
-    width: 9em;
-    height:6em;
+    height: 100%;
     margin-left:1em;
     margin-top: 2em;
 }
@@ -86,36 +66,15 @@ const  Containers = styled.div `
 
 
 .subT{
-    font: 700 .4em Roboto;
+    font-weight: 700;
+    font-family: 'Roboto';
     background-color: #E78CFE;
     color: white;
-    padding: .7em .7em;
-    border-radius:1em;
-    width:  13em;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 1.5em;
 }
-
-
-
-.tabLad{
-    display:flex;
-    flex-direction: row;
-}
-
-
-
-.porcentagem img{
-    width: 4em;
-    height: auto;
-}
-
-
-
-
-
-
-.dados{
-    font: 100 4em Roboto;
-}
+ 
 
 `
 

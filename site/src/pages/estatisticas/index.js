@@ -1,49 +1,8 @@
 import Containers from './styled.js';
 import Menu from '../../components/menu'
-
-
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Carousel = require('react-responsive-carousel').Carousel;
-
-var DemoCarousel = React.createClass({
-    render() {
-        return (
-            <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
-                <div>
-                    <img src="assets/1.jpeg" />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Legend 3</p>
-                </div>
-                <div>
-                    <img src="assets/4.jpeg" />
-                    <p className="legend">Legend 4</p>
-                </div>
-                <div>
-                    <img src="assets/5.jpeg" />
-                    <p className="legend">Legend 5</p>
-                </div>
-                <div>
-                    <img src="assets/6.jpeg" />
-                    <p className="legend">Legend 6</p>
-                </div>
-            </Carousel>
-        );
-    }
-});
-ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
-
-
-
-
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 export default function Estatisticas (){
@@ -52,42 +11,37 @@ export default function Estatisticas (){
             <Menu/>
             <div class="dados">
             <div class="titulo"> Estatísticas </div>
-            <div class="caix">
-              <div class="setEsquerda"><img src="/assets/images/estatisticas/setEsquerda.svg" alt=""/></div>
-              <div class="caixa">
-                <div class="centro">
-                    <div class="subT">Bairros com maior número de denúncias</div>
-                    <div class="tabLad">
-                        <div class="porcentagem"><img src="/assets/images/estatisticas/porcentagem 2.svg" alt=""/></div>
-                        <div class="dados"></div>
+            <Carousel  >
+                <div class="caixa">
+                    <div class="centro">
+                        <div class="subT">Porcentagem de denúncias mensais no site</div>
+                        <div class="porc-img">
+                            <img src="/assets/images/estatisticas/porcentagem 2.svg" alt=""/>
+                        </div>
                     </div>
-                </div>
-              </div>
-                <div class="setDireita"><img src="/assets/images/estatisticas/setDireita.svg" alt=""/></div>
-            </div>
-
-           {/*  <div class="caixa">
-                <div class="centro">
-                    <div class="subT">Cidades com maior número de denúncias</div>
-                    <div class="tabLad">
-                        <div class="porcentagem"><img src="/assets/images/estatisticas/porcentagem 2.svg"  alt=""/></div>
-                        <div class="dados"></div>
+                    <img src="/assets/images/estatisticas/image 15.svg" styled={{ width: '43em'}} alt=""/>
+                </div> 
+                <div class="caixa">
+                    <div class="centro">
+                        <div class="subT">Porcentagem de denúncias mensais no site</div>
+                        <div class="porc-img">
+                            <img src="/assets/images/estatisticas/porcentagem 2.svg" alt=""/>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="caixa">
-                <div class="centro">
-                    <div class="subT">Porcentagem de denúncias mensais no site</div>
-                    <div class="tabLad">
-                        <div class="porcentagem"><img src="/assets/images/estatisticas/porcentagem 2.svg"  alt=""/></div>
-                        <div class="dados"></div>
+                    <img src="/assets/images/estatisticas/image 15.svg" styled={{ width: '43em'}} alt=""/>
+                </div> 
+                <div class="caixa">
+                    <div class="centro">
+                        <div class="subT">Porcentagem de denúncias mensais no site</div>
+                        <div class="porc-img">
+                            <img src="/assets/images/estatisticas/porcentagem 2.svg" alt=""/>
+                        </div>
                     </div>
-                </div>
-            </div> */}
+                    <img src="/assets/images/estatisticas/image 15.svg" styled={{ width: '43em'}} alt=""/>
+                </div> 
+                
+             </Carousel>
             </div>
-
-
         </Containers>
 
     )
