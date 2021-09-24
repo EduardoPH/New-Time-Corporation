@@ -2,15 +2,15 @@ import Containers from './styled.js';
 import Menu from '../../components/menu'
 
 
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from 'react-responsive-carousel';
 
-class DemoCarousel extends Component {
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Carousel = require('react-responsive-carousel').Carousel;
+
+var DemoCarousel = React.createClass({
     render() {
         return (
-            <Carousel>
+            <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
                 <div>
                     <img src="assets/1.jpeg" />
                     <p className="legend">Legend 1</p>
@@ -23,13 +23,23 @@ class DemoCarousel extends Component {
                     <img src="assets/3.jpeg" />
                     <p className="legend">Legend 3</p>
                 </div>
+                <div>
+                    <img src="assets/4.jpeg" />
+                    <p className="legend">Legend 4</p>
+                </div>
+                <div>
+                    <img src="assets/5.jpeg" />
+                    <p className="legend">Legend 5</p>
+                </div>
+                <div>
+                    <img src="assets/6.jpeg" />
+                    <p className="legend">Legend 6</p>
+                </div>
             </Carousel>
         );
     }
-};
-
+});
 ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
-
 
 
 
