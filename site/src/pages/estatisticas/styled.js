@@ -19,7 +19,13 @@ const  Containers = styled.div `
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         height: 81%;
+    }
+
+
+    .caix{
+        display:flex;
     }
 
     
@@ -28,7 +34,7 @@ const  Containers = styled.div `
     display:flex;
     align-self: center;
     color: white;
-    font: 700 1em Roboto;
+    font: 700 .8em Roboto;
 }
 
 
@@ -55,7 +61,6 @@ const  Containers = styled.div `
 
 
 .setDireita{
-    margin-left:4.8em;
 }
 
 .setDireita img{
