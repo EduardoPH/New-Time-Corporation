@@ -1,58 +1,53 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-width: 41em;
-    .rc-user {
-        display: flex;
-        flex-direction: row ;
-        align-items: top;
+    display:flex;
+    flex-direction: row;
+
+    .pt2-msg{
+
     }
 
-    .rc-name-user {
-        font-size: 2em;
-        color: white;
-        margin-left: 0.8em;
-    }
-
-        padding: 3em;
-
-    .rc-box {
-        position: relative;
-        margin-left: 2em;
-        margin-bottom: 5em;
-    }
-
-    .rc-box img {
-        position: absolute;
-    }
-
-    .rc-box label {
-        position: absolute;
+    .name-user {
         font-size: 1.3em;
-        top: 2em;
-        left: 2em;
+        color: white;
     }
 
-    .rc-mensagem {
+    .ct-msg {
         display: flex;
         flex-direction: row;
-        padding-left: 1em;
-        font-size: 1.5em;
-        
+        align-items: flex-start;
+
+        margin: 2em 0em 2em 1em;
     }
 
-    .ver-mais {
-        position: absolute;
-        cursor: pointer;
-        text-align: end;
-        margin-top: 6em;
-        margin-left: 87%;
+    .caixa-msg {
+        margin-top: 1em;
+        width: 100;
+        height: 100;
+        background-color: white;
+        border-radius: 8px;
+        padding: 1em;
+        max-width: 30em;
+        max-height: 7em;
+        overflow-y: scroll;
+    
     }
 
-    .ver-mais :hover{
-        text-decoration: underline;
+    .mensagem {
+        display: flex;
+        flex-wrap: wrap;
     }
 
+    .ct-msg img {
+        overflow: hidden;
+        width: 40px;
+        margin-right: -1.9em;
+        margin-top: 0.6em ;
+    }
+
+    
+   
 `
 
 export {Container}
