@@ -1,11 +1,14 @@
 import {Conteiners} from "./styled"
 import Menu from "../../components/menu"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 export default function Home() {
     return(
         <Conteiners> 
 
             <Menu/>
+            <Carousel autoPlay  infiniteLoop  >
           <div className="box"> 
                 <div className="box-sub1"> 
                     <h1> Denuncie!</h1>
@@ -28,12 +31,13 @@ export default function Home() {
                 </div>
            </div>
         
+
            <div className="descri-2"> 
             <p> Nos preocupamos com todas as mulheres, por isso trouxemos uma coletânea 
                 de frases e apoio psicológico.</p>
            </div>
         </div>
-
+  
         <div className="box3"> 
             <div className="caixa3">
                 <div className="box3-sub1"> 
@@ -41,7 +45,7 @@ export default function Home() {
                 </div>
 
                 <div className="box3-sub2"> 
-                    <img src="/assets/images/home/estatistica.svg"  alt="" />
+                    <img src="/assets/images/home/estatistica.svg"  alt=""/>
                 </div>
            </div>
         
@@ -58,7 +62,7 @@ export default function Home() {
                 </div>
 
                 <div className="box4-sub2"> 
-                    <img src="/assets/images/home/sistema.svg"  alt="" />
+                    <img src="/assets/images/home/sistema.svg"  alt=""/>
                 </div>
            </div>
         
@@ -66,16 +70,8 @@ export default function Home() {
             <p> Trazemos um sistema de denúncias para as mulhers que sofreram qualquer forma de assédio </p>
            </div>
         </div>
-            
 
-
-
-
-
-
-
-
-
+        </Carousel>
 
            <div className="rodape"> 
               <div className="contato">

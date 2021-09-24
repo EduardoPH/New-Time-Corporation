@@ -19,19 +19,26 @@ height: 100vh;
     
 }
 
+.box-sub1 h1{
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
 .box-sub1{
-    margin-right: -8em;
+    margin-right: 1em;
     font-size: 33px;
 
 }
 
 .box-sub2 img{
-    width: 42em;
-    height: 26em;
+    width: 30em;
+    height: 4em;
 
     min-height: 84vh;
 
 }
+
 
 .endereco{
 
@@ -44,6 +51,7 @@ height: 100vh;
 
     justify-content: center;
     align-items: center;
+    margin-top: 10em;
     
 }
 
@@ -51,6 +59,15 @@ height: 100vh;
     width: 38em;
     height: 22em;
 }
+
+
+.box2-sub1 h1{
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+  
+}
+
 
 .descri-2{
     display: flex;
@@ -62,6 +79,7 @@ height: 100vh;
 .descri-2 p{
     width: 30.5em;
     text-align: center;
+    color: white;
 }
 
 
@@ -71,11 +89,18 @@ height: 100vh;
 
     justify-content: center;
     align-items: center;
+    margin-top: 7em;
 }
 
 .box3-sub2 img{
-    width: 44em;
+    width: 37em;
     height: 30em;
+}
+
+.box3-sub1{
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .descri-3{
@@ -88,27 +113,24 @@ height: 100vh;
 .descri-3 p{
     width: 29.5em;
     text-align: center;
-}
-
-
-.box4{
-    background: url(${'/assets/images/home/fundo.svg'});
-background-size: cover;
-
-
+    color: white;
 }
 
 .caixa4{
     display: flex;
     flex-direction: row;
+
     height: 60vh;
     justify-content: center;
+
+    margin-top: 4em;
     align-items: center;
 }
 
 .box4-sub2 img{
-    width: 33em;
+    width: 37em;
     height: 19em;
+
 }
 
 .descri-4{
@@ -123,19 +145,14 @@ background-size: cover;
 .descri-4 p{
     width: 30.5em;
     text-align: center;
+    color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.box4-sub1{
+ color: white;
+ font-size: 1.2em;
+    font-weight: bold;
+}
 
 
 .rodape{
@@ -164,6 +181,7 @@ background-size: cover;
 .recomendacoes h2{
     font-family: roboto;
     color: white;
+   
 }
 
 .kahlo{
@@ -213,12 +231,21 @@ background-size: cover;
     font-size: 1.5em;
 }
 
+.descri-2 p{
+    font-family: roboto;
+    font-size: 1.5em;
+}
+.descri-3 {
+    font-family: roboto;
+    font-size: 1.5em;
+}
 
-
-
-
-
-
+.descri-4{
+    font-family: roboto;
+    font-size: 1.5em;
+    margin-top: -1em;
+}
+  
 
 `
 export {Conteiners }
