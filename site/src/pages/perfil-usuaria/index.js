@@ -10,7 +10,7 @@ export default function PerfilUsuaria(){
                 <div className="box">
                     <div className="cabecalho">
                         <div className="infos-usuarias">
-                            <img src="/assets/images/denuncias-recents/Perfil.png" alt=""/>
+                            <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/>
                             <p1>Usuária 5456486</p1>
                         </div>
                         <h2>Denúncias</h2>
@@ -18,24 +18,28 @@ export default function PerfilUsuaria(){
                     </div>
                     <div className="parte-final-box">
                         <div className="informas">
-                        <p1>Email:</p1>
-                        <input type="text"/>
-                        <p1>Telefone:</p1>
-                        <input type="text"/>
-                        <button>Alterar suas Informações </button>
-                    </div>
+                            <p1>Email :</p1>
+                            <input type="text" disabled value="teste@gamil"/>
+                            <p1>Telefone :</p1>
+                            <input type="text" disabled value="teste@gamil"/>
+                            <p1>CPF :</p1>
+                            <input typpe="text"disabled value="teste@gamil"/>
+                            <button>Alterar suas Informações </button>
+                         </div>
                         <div className="denunciasCadastradas">
                         <div className="item-denun">
                             <div className="lado-esquerdo">
-                                <p1>HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</p1>
+                                
+                                    <p1>HHiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidddddddddd</p1>
+                               
                                 <div className="btms">
-                                    <button className=""></button>
-                                    <button className=""></button>
+                                    <button className="alterar">Alterar</button>
+                                    <button className="excluir">excluir</button>
                                 </div>
                             </div>
                             <div className="lado-direito">
                                 <p1>45/465/654</p1>
-                                <p1> Ver mais...</p1>
+                                <p2> Ver mais...</p2>
                             </div>
                         </div>
                     </div>
