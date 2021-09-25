@@ -8,7 +8,7 @@ export default function Home() {
         <Conteiners> 
 
             <Menu/>
-            <Carousel autoPlay  infiniteLoop  >
+            <Carousel  autoPlay  infiniteLoop  >
           <div className="box"> 
                 <div className="box-sub1"> 
                     <h1> Denuncie!</h1>

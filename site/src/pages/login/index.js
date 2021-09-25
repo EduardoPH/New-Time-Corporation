@@ -27,7 +27,7 @@ export default function Login(){
                     </div>
                     <div className="casoJa">
                         <div className="np">Não Possui uma conta?</div>
-                        <div className="botC">Cadastre-se</div>
+                        <div className="botC"><button>Cadastre-se</button></div>
                     </div>
                 </div>
             </div>
