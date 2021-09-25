@@ -29,22 +29,24 @@ width: 100%;
 
 
 .imgPC img{
-    height: 30em;
     width: 41em;
+    height: 26em;
 }
 
 
 
 .Tit{
-    font: 700 2em Roboto;
+    font: 700 2.4em Roboto;
+    margin-left: 4em;
 }
 
 
 .direita{
     display:flex;
     flex-direction: column;
-    margin-top:2em;
-    margin-left:5em;
+
+    margin-top: 2em;
+    margin-left: 7em;
 }
 
 
@@ -52,10 +54,9 @@ width: 100%;
 .login{
     background-color: #E5B3FE;
     border-radius: 20px;
-    width:30em;
+    width:26em;
     height: 21em;
  
-
 
 }
 
@@ -66,7 +67,7 @@ width: 100%;
     display:flex;
     font: 700 2em Roboto;
     color:#7F00BF;
-    margin-left: 6em;
+    margin-left: 5.2em;
     margin-top: 1em;
 }
 
@@ -76,7 +77,7 @@ width: 100%;
     display:flex;
     align-self: center;
 flex-direction: column;
-margin-left: 4em;
+margin-left: 2.5em;
 }
 
 
@@ -87,6 +88,7 @@ input{
     height: 4em; 
     border: black;
     margin-top: 1em;
+    cursor:auto;
 
 }
 
@@ -102,13 +104,20 @@ flex-direction: row;
 .bot1{
     font: 700 4em Roboto;
     margin-top: .1em;
-    margin-left: 1.7em
+    margin-left: 1.3em;
 }
 
 
 .bot1 button{
     background-color: #E5B3FE;
     border: black;
+    cursor:pointer;
+    
+}
+
+.bot2 button:hover{
+    background-color:rgba(255, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 
@@ -127,6 +136,7 @@ flex-direction: row;
     border: black;
     width: 11em;
     height: 3em;
+    cursor:pointer;
 }
 
 
@@ -146,7 +156,7 @@ flex-direction: row;
 .np{
     font: 700 2em Roboto;
     color:#7F00BF;
-    margin-left: 2em;
+    margin-left: 1.3em;
     margin-top: .6em;
 }
 
@@ -154,7 +164,7 @@ flex-direction: row;
 
 .botC{
     font: 700 4em Roboto;
-    margin-left: 1em;
+    margin-left: 0.6em;
     
 }
 
@@ -167,7 +177,16 @@ flex-direction: row;
     height: 3.5em;
     border-radius: 10px;
     border: black;
+    cursor:pointer;
 }
+
+
+
+.botC button:hover{
+    background-color:rgba(255, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
 `
 
 
