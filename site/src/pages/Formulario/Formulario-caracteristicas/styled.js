@@ -16,7 +16,7 @@ const  Containerformulario = styled.div `
         flex-direction: column;
         margin-top: 1.5em;
         padding: 2em;
-        width: 65%;
+        width: 90%;
     }
     
     .menu-lateral {

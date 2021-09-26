@@ -8,6 +8,10 @@ import DenunciaDetalhada from './pages/denuncia-detalhe'
 import Login from './pages/login'
 import PerfilUsuaria from './pages/perfil-usuaria'
 import Apoio from './pages/Apoio';
+import caracteristicas from './pages/Formulario/Formulario-caracteristicas';
+import depoimento from './pages/Formulario/Formulario-depoimento';
+import Local from './pages/Formulario/Formulario-local';
+import vestimentas from './pages/Formulario/Formulario-vestimentas';
 
 
 export default function Routes(){
@@ -22,6 +26,10 @@ export default function Routes(){
                 <Route path="/login" component={Login}/>
                 <Route path="/perfil" component={PerfilUsuaria}/>
                 <Route path="/apoio" component={Apoio}/>
+                <Route path="/formulario" component={caracteristicas}/>
+                <Route path="/formulario2" component={depoimento}/>
+                <Route path="/formulario3" component={Local}/>
+                <Route path="/formulario4" component={vestimentas}/>
             </Switch>
         </BrowserRouter>
 

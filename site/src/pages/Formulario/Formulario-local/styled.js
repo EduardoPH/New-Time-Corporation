@@ -23,8 +23,7 @@ font-family: arial;
     padding: 2em;
     background-color: rgb(255, 255, 255, 40%);
     border-radius: 1.5em;
-    width: 65%;
-    heigth: 50%;
+    width: 90%;
     align-self:center;
     margin-top: 2em;
 }
@@ -46,7 +45,7 @@ font-family: arial;
 }
 
 .conteudo-right {
-    width: 65%;
+    width: 57%;
     padding-right: 2em;
 }
 
@@ -80,6 +79,6 @@ input {
     height: auto;
     margin-top: 1em;
 }
-}
+
 `
 export default Containerformulario;
