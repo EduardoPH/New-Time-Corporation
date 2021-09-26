@@ -3,7 +3,7 @@ import Menu from '../../components/menu'
 
 
 
-export default function Login(){
+export default function Cadastro (){
     return(
 
         <Container>
