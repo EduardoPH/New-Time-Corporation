@@ -116,6 +116,10 @@ flex-direction: row;
     
 }
 
+.bot1 button:hover{
+    text-decoration: underline;
+}
+
 .bot2 button:hover{
     background-color:rgba(255, 0, 0, 0.2);
     transition: 0.3s;
