@@ -10,7 +10,7 @@ ds_telefone varchar(255)
 
 create table infoC_ntc_administrador(
 id_administrador int primary Key auto_increment,
-nm_administrador varchar(255),
+nm_administrador varchar(255),]
 ds_senha varchar(255)
 );
 

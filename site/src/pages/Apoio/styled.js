@@ -8,14 +8,13 @@ const  ContainerApoio = styled.div `
     background-size: cover;
     height: 100vh;
     width: 100%;
-    
-    justify-content: space-between;
 
     .titulo {
         display:flex;
         align-self: center;
         color: white;
-        font: 700 2em Roboto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2em;
     }
 
     .caixa {
@@ -24,10 +23,12 @@ const  ContainerApoio = styled.div `
         align-self:center;
         background-color: rgba(85, 26, 132, 0.4);
         opacity: 1;
-        height: 40em;
+        align-self: center;
         border-radius: 1em;
         align-items: center;
         justify-content: center;
+        height: 33em;
+         margin-top: 1em;
     }
 
     .frases {
@@ -35,12 +36,13 @@ const  ContainerApoio = styled.div `
         font-size: 2em;
         color: white;    
         width: 25em;
+        font-family: 'Roboto';
     }
 
     .carrousel1 {
         align-self: center;
         width: 89%;
-        heigth: 10em;
+        height: 100%;
     }
 `
 
