@@ -6,19 +6,19 @@ export default function Menu(){
             <div className="logo">
                 <img src="/assets/images/menu/Logo-ntc.svg" alt="logo"/>
             </div>
-            <Link >
+            <Link to="/">
                 <div className="item-menu">
                     Home
                     <img src="/assets/images/menu/Home Office.svg" alt="Home-svg"/>
                 </div>
             </Link>
-            <Link>     
+            <Link to="/denuncia-recents">     
                 <div className="item-menu">
                     Denúncias
                     <img src="/assets/images/menu/System Report.svg" alt="denuncia-svg"/>
                 </div>
             </Link>
-            <Link>
+            <Link to="/estatisticas">
                 <div className="item-menu">
                     Estatísticas
                     <img src="/assets/images/menu/Web Analytics.svg" alt="estati-svg"/>
