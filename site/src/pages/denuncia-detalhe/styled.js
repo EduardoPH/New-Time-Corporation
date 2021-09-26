@@ -5,6 +5,7 @@ const Container = styled.div`
     flex-direction: column;
     background:url(${'/assets/images/denuncias-recentes/BACKGROUND.svg'});
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
 
     .titulo {
@@ -15,24 +16,97 @@ const Container = styled.div`
     }
 
     .dt-conteudo {
-        display: block;
+        display: flex;
+        flex-direction: row;
         margin-left: auto;
         margin-right: auto;
+        justify-content: space-between;
         width: 85%;
-        height: 73%;
+        height: 60vh;
         background: rgba(127, 0, 191, 0.63);
         backdrop-filter: blur(7px);
         border-radius: 20px;
         padding: 2em;
+        align-items: center;
+    }
+
+    .pt2-body {
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        justify-content: center;
     }
 `
 
 const Pag = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    .pt1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pack-user {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .user-name {
+        color: white;
+        font-size: 1.8em;
+        margin-left: 0.5em;
+    }
+
+    .cx-mensagem {
+        width: 87%;
+        height: 100%;
+        padding: 1em;
+        background-color: white;
+        margin: 1.2% 0% 0% 1.5%;
+        border-radius: 8px;
+
     
+    }
+
+    .msg-denuncia {
+        padding-left: 1em;
+        font-size: 1.4em;
+    }
+
+    .pt2 {
+        margin-left: 4em;
+    }
+
+    .box-msg {
+        display: flex;
+        flex-direction: row;
+        height: 40vh;
+    }
+
+    .box-msg img {
+        position: absolute;
+    }
+
+    .btn-voltar button {
+        width: 160px;
+        height: 48px;
+        left: 3;
+        top: 1;
+
+        border: solid 0px;
+
+        background: #FFFFFF;
+        border-radius: 29px;
+    }
 `
 
 const Caracteristicas = styled.div`
-
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
 `
 
 export {Container, Caracteristicas, Pag}
