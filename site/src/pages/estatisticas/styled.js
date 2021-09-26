@@ -10,7 +10,7 @@ const  Containers = styled.div `
     background:url(${'/assets/images/estatisticas/fundo.svg'});
     background-size: cover;
     width: 100%;
-    height: 48.1vw;
+    height: 100vh;
 
     .carousel .thumbs-wrapper {
         margin: 0px;

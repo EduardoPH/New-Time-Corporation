@@ -16,16 +16,18 @@ const  Containerformulario = styled.div `
         flex-direction: column;
         margin-top: 1.5em;
         padding: 2em;
-        width: 60%;
+        width: 65%;
     }
     
     .menu-lateral {
+        padding: 1em 0em;
         display: flex;
         background-color: white;
-        font-size: 1.5em;
+        font-size: 1.0em;
         border-radius: 0.3em;
         flex-direction: column;
         align-self: center;
+        font-family: arial;
     }
 
     .textos-lateral {
@@ -38,6 +40,7 @@ const  Containerformulario = styled.div `
         justify-content: center;
         font-size: 3.5em;
         color: white;
+        font-family: arial;
     }
 
     .conteudo {
@@ -48,43 +51,44 @@ const  Containerformulario = styled.div `
     .imputs {
         display: flex;
         flex-direction: column;
+        font-family: arial;
     }
 
     .titulo-box, .input {
-        font-size: 1.8em;
+        font-size: 1.5em;
+        font-family: arial;
     }
 
     .form-2 {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     textarea {
         width: 50em;
-        height: 15em; 
+        height: 12em; 
         border-radius: 0.6em;
         border: none;
         resize: none;
+        
     }
 
     button {
-        padding: 0.5em 1em;
+        padding: 0.4em 0.5em;
         border: none;
         border-radius: 2em;
-        font-size: 2em;
+        font-size: 1.5em;
         background-color: #FC02A0;
         color: white;
-    }
-
-    .form-2 {
-        display: flex;
-        justify-content: space-between;
+   
     }
 
     .informacoes {
         font-size: 1.8em;
-        margin: 1em 0em;
+        margin: 0.4em 0em;
         color: #FC02A0;
+        font-family: arial;
     }
 `
 export default Containerformulario;

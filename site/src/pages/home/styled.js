@@ -8,7 +8,7 @@ flex-direction: column;
 
 background: url(${'/assets/images/home/fundo.svg'});
 background-size: cover;
-    height: 100vh;
+height: 100vh;
 
 .box{
     display: flex;
@@ -21,8 +21,10 @@ background-size: cover;
 
 .box-sub1 h1{
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 400;
 }
 
 .box-sub1{
@@ -171,7 +173,6 @@ background-size: cover;
     display: flex;
     flex-direction: column;
 
-    height: 20em;
     margin-left: 5em;
     text-align: center; 
     

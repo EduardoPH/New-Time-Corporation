@@ -12,7 +12,7 @@ export default function Menu(){
                     <img src="/assets/images/menu/Home Office.svg" alt="Home-svg"/>
                 </div>
             </Link>
-            <Link to="/denuncia-recents">     
+            <Link to="/denuncia-recentes">     
                 <div className="item-menu">
                     Denúncias
                     <img src="/assets/images/menu/System Report.svg" alt="denuncia-svg"/>
@@ -24,13 +24,13 @@ export default function Menu(){
                     <img src="/assets/images/menu/Web Analytics.svg" alt="estati-svg"/>
                 </div>
             </Link>
-            <Link>
+            <Link to ="/apoio">
                 <div className="item-menu">
                     Apoio
                     <img src="/assets/images/menu/AIDS Ribbon.svg" alt="apoio-svg"/>
                 </div>
             </Link>
-            <Link>
+            <Link to="/login">
                 <div className="item-menu">
                     Login
                     <img src="/assets/images/menu/login.svg" alt="login-svg"/>
