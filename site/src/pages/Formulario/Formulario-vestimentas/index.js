@@ -2,7 +2,7 @@ import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import React from "react";
 
-export default function caracteristicas (){
+export default function vestimentas (){
     return(
         <Containerformulario>
             <Menu/>
@@ -18,19 +18,19 @@ export default function caracteristicas (){
 
                         
                             <div class="box">
-                                <div class="titulo-box">Tom de pele</div>
+                                <div class="titulo-box">Parte de cima</div>
                                 <div class="imputs">
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Negra </label>
+                                        <label for=""> Moletom </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Branca </label>
+                                        <label for=""> Camisa </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Parda </label>
+                                        <label for=""> Regata </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
@@ -44,19 +44,19 @@ export default function caracteristicas (){
                             </div>
 
                             <div class="box">
-                                <div class="titulo-box">Cabelo</div>
+                                <div class="titulo-box">Parte de baixo</div>
                                 <div class="imputs">
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Liso </label>
+                                        <label for=""> Jeans </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Cacheado </label>
+                                        <label for=""> Moletom </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Crespo </label>
+                                        <label for=""> Bermuda </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
@@ -70,19 +70,19 @@ export default function caracteristicas (){
                             </div>
 
                             <div class="box">
-                                <div class="titulo-box">Cor do cabelo</div>
+                                <div class="titulo-box">Calçado</div>
                                 <div class="imputs">
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Preto </label>
+                                        <label for=""> Tênis </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Loiro </label>
+                                        <label for=""> Chinelo </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
-                                        <label for=""> Ruivo </label>
+                                        <label for=""> Descalço </label>
                                     </div>
                                     <div class="input">
                                         <input type="radio" name="" value=""/>
