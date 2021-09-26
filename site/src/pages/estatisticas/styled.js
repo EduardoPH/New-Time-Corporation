@@ -9,20 +9,47 @@ const  Containers = styled.div `
 
     background:url(${'/assets/images/estatisticas/fundo.svg'});
     background-size: cover;
-    height: 100vh;
     width: 100%;
+    height: 48.1vw;
+
+    .carousel .thumbs-wrapper {
+        margin: 0px;
+        overflow:hidden;
+    }
 
 
 
+    .carousel .slide {
+    min-width: 80%;
+    }
+
+
+
+    .carousel .slider-wrapper.axis-horizontal .slider .slide {
+    flex-direction: column;
+    flex-flow: column;
+    width: 30em;
+    }
+
+    .bGuXcd .carousel .slider {
+   width: 85em;
+    margin-left: 4em;
+    }
+
+    .carousel .slider{
+        width: 70%;
+        margin-left: 42em;
+    }
 
      .dados{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 91%;
+        height: 77%;
         align-self: center;
-        width: 87%;
+        width: 100%;
+        margin-top:3em;
     }
     
 
@@ -36,10 +63,8 @@ const  Containers = styled.div `
     display:flex;
     align-self: center;
     color: white;
-    font: 700 4em Roboto;
+    font: 700 3em Arial;
 }
-
-
 
 .caixa{
     display:flex;
@@ -47,9 +72,39 @@ const  Containers = styled.div `
     align-self:center;
     background-color: #7F00BF;
     opacity: 1;
-    height: 33em;
+    height: 30em;
     border-radius: 1em;
-    
+    width: 51em;
+    margin-right:3em;
+    margin-left: -24em;
+}
+
+.caixa2{
+    display:flex;
+    flex-direction: row;
+    align-self:center;
+    background-color: #7F00BF;
+    opacity: 1;
+    height: 30em;
+    border-radius: 1em;
+    width: 51em;
+    margin-right: 3em;
+    margin-left: -12em;
+
+}
+
+
+
+.caixa3{
+    display:flex;
+    flex-direction: row;
+    align-self:center;
+    background-color: #7F00BF;
+    opacity: 1;
+    height: 30em;
+    border-radius: 1em;
+    width: 51em;
+    margin-right: 5em;
 }
 
 
@@ -65,6 +120,7 @@ const  Containers = styled.div `
 
 
 
+
 .subT{
     font-weight: 700;
     font-family: 'Roboto';
@@ -73,6 +129,14 @@ const  Containers = styled.div `
     border-radius: 10px;
     padding: 1em;
     font-size: 1.5em;
+    width: 14em;
+    margin-right: 1em;
+}
+
+
+.porc-img img{
+    width: 20em;
+    height: 18em;
 }
  
 

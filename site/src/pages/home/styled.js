@@ -8,7 +8,7 @@ flex-direction: column;
 
 background: url(${'/assets/images/home/fundo.svg'});
 background-size: cover;
-height: 100vh;
+    height: 100vh;
 
 .box{
     display: flex;
@@ -35,7 +35,7 @@ height: 100vh;
     width: 30em;
     height: 4em;
 
-    min-height: 84vh;
+    min-height: 77vh;
 
 }
 
@@ -46,18 +46,19 @@ height: 100vh;
 }
 
 .caixa2{
+    margin-top: 2em;
     display: flex;
     flex-direction: row;
 
     justify-content: center;
     align-items: center;
-    margin-top: 10em;
+ 
     
 }
 
 .box2-sub2 img{
-    width: 38em;
-    height: 22em;
+    width: 36em;
+    height: 20em;
 }
 
 
@@ -83,18 +84,18 @@ height: 100vh;
 }
 
 
-.caixa3 {
+ .caixa3 {
     display: flex;
     flex-direction: row;
 
     justify-content: center;
     align-items: center;
-    margin-top: 7em;
+   
 }
 
 .box3-sub2 img{
-    width: 37em;
-    height: 30em;
+    width: 31em;
+    height: 24em;
 }
 
 .box3-sub1{
@@ -111,19 +112,16 @@ height: 100vh;
 }
 
 .descri-3 p{
-    width: 29.5em;
+    width: 58%;
     text-align: center;
     color: white;
-}
-
+} 
 .caixa4{
     display: flex;
     flex-direction: row;
 
     height: 60vh;
     justify-content: center;
-
-    margin-top: 4em;
     align-items: center;
 }
 
@@ -151,8 +149,8 @@ height: 100vh;
 .box4-sub1{
  color: white;
  font-size: 1.2em;
-    font-weight: bold;
-}
+ font-weight: bold;
+} 
 
 
 .rodape{
@@ -179,7 +177,7 @@ height: 100vh;
     
 }
 .recomendacoes h2{
-    font-family: roboto;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
    
 }
@@ -218,7 +216,7 @@ height: 100vh;
     padding-top: 2em;
     padding-left: 2em;
 
-    font-family: roboto;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
     color: white;
 }
@@ -226,22 +224,22 @@ height: 100vh;
 .titulo{
    
     color: white;
-    font: 900 .3em Roboto;
+    font: 900 .3em Arial, Helvetica, sans-serif;
 
     font-size: 1.5em;
 }
 
 .descri-2 p{
-    font-family: roboto;
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 1.5em;
 }
 .descri-3 {
-    font-family: roboto;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
 }
 
 .descri-4{
-    font-family: roboto;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     margin-top: -1em;
 }

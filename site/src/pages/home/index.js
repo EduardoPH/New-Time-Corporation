@@ -8,7 +8,9 @@ export default function Home() {
         <Conteiners> 
 
             <Menu/>
+
             <Carousel  autoPlay  infiniteLoop  >
+
           <div className="box"> 
                 <div className="box-sub1"> 
                     <h1> Denuncie!</h1>
@@ -17,7 +19,7 @@ export default function Home() {
                 <div className="box-sub2"> 
                     <img src="/assets/images/home/woman.svg"  alt="" />
                 </div>       
-         </div>
+           </div>
             
 
         <div className="box2"> 
@@ -38,7 +40,7 @@ export default function Home() {
            </div>
         </div>
   
-        <div className="box3"> 
+          <div className="box3"> 
             <div className="caixa3">
                 <div className="box3-sub1"> 
                   <h1> Estastística </h1>
@@ -53,9 +55,9 @@ export default function Home() {
             <p> Com nossos dados é possível montarmos estatíticas para que assim facilite o 
                 levantamento de dados </p>
            </div>
-        </div>
+        </div>  
 
-        <div className="box4"> 
+         <div className="box4"> 
             <div className="caixa4">
                 <div className="box4-sub1"> 
                 <h1> Sistema de Denuncias </h1>
@@ -67,9 +69,9 @@ export default function Home() {
            </div>
         
            <div className="descri-4"> 
-            <p> Trazemos um sistema de denúncias para as mulhers que sofreram qualquer forma de assédio </p>
+              <p> Trazemos um sistema de denúncias para as mulhers que sofreram qualquer forma de assédio </p>
            </div>
-        </div>
+        </div>   
 
         </Carousel>
 

@@ -89,6 +89,7 @@ input{
     border: black;
     margin-top: 1em;
     cursor:auto;
+    outline: none;
 
 }
 
@@ -113,6 +114,10 @@ input{
     border: black;
     cursor:pointer;
     
+}
+
+.bot1 button:hover{
+    text-decoration: underline;
 }
 
 .bot2 button:hover{
