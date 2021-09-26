@@ -96,7 +96,7 @@ input{
 
 .lado{
     display:flex;
-flex-direction: row;
+    flex-direction: row;
 }
 
 

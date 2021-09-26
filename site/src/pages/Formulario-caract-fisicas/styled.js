@@ -8,37 +8,83 @@ const  Containerformulario = styled.div `
     height: 100vh;
     width: 100%;
 
-    .menu-lateral{
+    .pag {
+        display: flex;
+        align-self: center;
+        background-color: rgb(255, 255, 255, 40%);
+        border-radius: 1.2em;
+        flex-direction: column;
+        margin-top: 1.5em;
+        padding: 2em;
+        width: 60%;
+    }
+    
+    .menu-lateral {
+        display: flex;
         background-color: white;
-        width: 10em;
-        height: 10em;
         font-size: 1.5em;
         border-radius: 0.3em;
+        flex-direction: column;
+        align-self: center;
     }
 
-    .titulo{
+    .textos-lateral {
+        padding: 0.2em 0.3em;
+        font-size: 1.4em;
+    }
+
+    .titulo {
         display: flex;
         justify-content: center;
         font-size: 3.5em;
         color: white;
     }
 
-    .conteudo{
+    .conteudo {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .formulario{
-        display: flex;
-    }
-
-    .imputs{
+    .imputs {
         display: flex;
         flex-direction: column;
     }
 
-    .box{
-        padding: 0em 3em;
+    .titulo-box, .input {
+        font-size: 1.8em;
+    }
+
+    .form-2 {
+        display: flex;
+        align-items: center;
+    }
+
+    textarea {
+        width: 50em;
+        height: 15em; 
+        border-radius: 0.6em;
+        border: none;
+        resize: none;
+    }
+
+    button {
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 2em;
+        font-size: 2em;
+        background-color: #FC02A0;
+        color: white;
+    }
+
+    .form-2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .informacoes {
+        font-size: 1.8em;
+        margin: 1em 0em;
+        color: #FC02A0;
     }
 `
 export default Containerformulario;
