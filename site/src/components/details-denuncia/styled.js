@@ -6,20 +6,32 @@ const Container = styled.div`
     width: 100;
     padding: 1em;
     border-radius: 7px;
-    position: fixed;
+    position: absolute;
+    top: 40%;
 
     .mensagem {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        font-size: 1.6em;
+        font-size: 1.2em;
+        text-align: start;
     }
     
     .mensagem img {
         width: auto;
         
     }
+    
+    .mensagem span {
+        text-align: start;
+    }
 `
 
-export {Container}
+const BoxCaracter = styled.div`
+    .box-caracter {
+        background-color: #C4C4C4;
+        
+    }
+`
+
+export {Container, BoxCaracter}
