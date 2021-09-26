@@ -36,8 +36,8 @@ width: 100%;
 
 
 .Tit{
-    font: 700 2.4em Roboto;
-    margin-left: 4em;
+    font: 700 2.4em Arial;
+    margin-left: 3em;
 }
 
 
@@ -98,29 +98,30 @@ input{
 .lado{
     display:flex;
     flex-direction: row;
+    margin-left: 4em;
 }
 
 
 
-.bot1{
+.bot2{
     font: 700 4em Roboto;
     margin-top: .1em;
-    margin-left: 1.3em;
+    margin-left: .3em;
 }
 
 
-.bot1 button{
+.bot2 button{
     background-color: #E5B3FE;
     border: black;
     cursor:pointer;
     
 }
 
-.bot1 button:hover{
+.bot2 button:hover{
     text-decoration: underline;
 }
 
-.bot2 button:hover{
+.bot1 button:hover{
     background-color:rgba(255, 0, 0, 0.2);
     transition: 0.3s;
 }
@@ -128,13 +129,13 @@ input{
 
 
 
-.bot2 {
+.bot1 {
     font: 700 4em Roboto;
     
 }
 
 
-.bot2 button{
+.bot1 button{
     background-color:#B133FF;
     color:white;
     border-radius: 10px;
