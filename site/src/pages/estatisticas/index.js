@@ -3,45 +3,51 @@ import Menu from '../../components/menu'
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {BarChart, Graf2,  Graf3 } from './grafico.js';
+
+
 
 
 export default function Estatisticas (){
+
+ 
+
     return(
         <Containers>
             <Menu/>
-            <div class="dados">
             <div class="titulo"> Estatísticas </div>
-            <Carousel autoPlay infiniteLoop >
+            <Carousel >
                 <div class="caixa">
                     <div class="centro">
-                        <div class="subT">Porcentagem de denúncias mensais no site</div>
+                        <div class="subT">Bairros com maiores números de denúncias </div>
                         <div class="porc-img">
                             <img src="/assets/images/estatisticas/porcentagem 2.svg" alt=""/>
                         </div>
                     </div>
-                    <img src="/assets/images/estatisticas/image 15.svg" styled={{ width: '43em'}} alt=""/>
+                    <BarChart/>
+                    
                 </div> 
-                <div class="caixa">
+                <div class="caixa2">
                     <div class="centro">
-                        <div class="subT">Porcentagem de denúncias mensais no site</div>
+                        <div class="subT">Cidades com maiores números de denúncias </div>
                         <div class="porc-img">
                             <img src="/assets/images/estatisticas/porcentagem 2.svg" alt=""/>
                         </div>
                     </div>
-                    <img src="/assets/images/estatisticas/image 15.svg" styled={{ width: '43em'}} alt=""/>
+                    <Graf2/>
                 </div> 
-                <div class="caixa">
+
+                <div class="caixa3">
                     <div class="centro">
                         <div class="subT">Porcentagem de denúncias mensais no site</div>
                         <div class="porc-img">
                             <img src="/assets/images/estatisticas/porcentagem 2.svg" alt=""/>
                         </div>
                     </div>
-                    <img src="/assets/images/estatisticas/image 15.svg" styled={{ width: '43em'}} alt=""/>
+                    < Graf3/>
                 </div> 
                 
              </Carousel>
-            </div>
         </Containers>
 
     )

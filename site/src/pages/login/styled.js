@@ -89,6 +89,7 @@ input{
     border: black;
     margin-top: 1em;
     cursor:auto;
+    outline: none;
 
 }
 
