@@ -4,7 +4,6 @@ import {BoxDetails} from '../../components/details-denuncia'
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import App from '../../components/map/MyLocation';
 function Pag1(){
     return(
         <Pag>
@@ -70,4 +69,5 @@ function Pag3Map() {
     )
 }
 
+console.log(Pag3Map)
 export {Pag1, Pag2}

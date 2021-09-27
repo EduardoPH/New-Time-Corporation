@@ -14,6 +14,7 @@ const API_KEY = "AIzaSyBmWg6SrxvblQHjMwlinmCLc9RU3bIu3-A"
 
 const RespMap = withScriptjs(withGoogleMap(Map))
 
+console.log(API_KEY, RespMap)
 export default function App() {
     return(
         <div style={{width: '100vw', height: '100vh'}}>
