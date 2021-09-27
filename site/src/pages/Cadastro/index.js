@@ -10,7 +10,7 @@ export default function Cadastro (){
             <Menu/>
             <div class="conteudo">
                 <div class="left-conteudo">
-                    <img src="../assets/images/cadastro/img-cadastro.svg" alt=""/>
+                    <div class="imagem"><img src="../assets/images/cadastro/img-cadastro.svg" alt=""/></div>
                     <div class="titulo">No Cadastro:</div>
                     <div class="texto-1">Mantemos seus dados totalmente seguros </div>
                     <div class="texto-2">Geramos um indetidade anônima  para você</div>
