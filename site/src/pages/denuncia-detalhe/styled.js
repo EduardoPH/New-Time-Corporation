@@ -30,7 +30,6 @@ const Container = styled.div`
         border-radius: 20px;
         padding: 2em;
         align-items: center;
-        overflow-y: scroll;
     }
 
     .pt2-body {

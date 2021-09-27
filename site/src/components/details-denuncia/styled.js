@@ -6,7 +6,7 @@ const Container = styled.div`
     width: 100;
     padding: 1em;
     border-radius: 7px;
-    position: absolute;
+    position: sticky;
     top: 40%;
 
     .mensagem {
