@@ -6,7 +6,7 @@ import {MenuLeft} from '../../components/details-denuncia'
 export default function Pag(){
     return(
         <Container>
-            <Menu/>
+            <Menu  className="menu"/>
             <div className="dt-base">
                 <div className="titulo"> Denúncia </div>
                 <div className="dt-conteudo"> 

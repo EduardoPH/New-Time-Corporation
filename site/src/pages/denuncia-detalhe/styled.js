@@ -7,7 +7,7 @@ const Container = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    justify-content: center;
+    top: 0px;
 
     .titulo {
         text-align: center;
@@ -15,6 +15,7 @@ const Container = styled.div`
         font-size: 3em;
         color: #FFF
     }
+
 
     .dt-conteudo {
         display: flex;
