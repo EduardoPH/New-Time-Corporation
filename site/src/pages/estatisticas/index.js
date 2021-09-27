@@ -49,6 +49,5 @@ export default function Estatisticas (){
                 
              </Carousel>
         </Containers>
-
     )
 }

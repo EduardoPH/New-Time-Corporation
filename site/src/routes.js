@@ -13,6 +13,9 @@ import depoimento from './pages/Formulario/Formulario-depoimento';
 import Local from './pages/Formulario/Formulario-local';
 import vestimentas from './pages/Formulario/Formulario-vestimentas';
 import Cadastro from './pages/Cadastro';
+import MyLocation from './components/map/MyLocation'
+import Maps from './components/map/map.js'
+
 
 
 export default function Routes(){
@@ -32,6 +35,8 @@ export default function Routes(){
                 <Route path="/formulario3" component={Local}/>
                 <Route path="/formulario4" component={vestimentas}/>
                 <Route path="/cadastro" component={Cadastro}/>
+                <Route path="/map" component={MyLocation}/>
+                <Route path="/map-render" component={Maps}/>
             </Switch>
         </BrowserRouter>
 

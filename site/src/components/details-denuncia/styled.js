@@ -28,9 +28,23 @@ const Container = styled.div`
 `
 
 const BoxCaracter = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(196, 196, 196, 0.54);;
+    padding: 1em;
+    border-radius: 15px ;
+
     .box-caracter {
-        background-color: #C4C4C4;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box-caracter-image img {
+        width: 110px;
+        height: 100px;
     }
 `
 

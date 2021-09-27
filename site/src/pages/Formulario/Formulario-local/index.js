@@ -20,7 +20,7 @@ export default function Local (){
                     <div class="conteudo-right">
                         <div class="titulo-local">Área Localizada</div>
                         <input type="text" placeholder="Buscar localização"></input>
-                        <div class="mapa"><img src="/assets/images/formulario/Mapa.svg"/></div>
+                        <div class="mapa"><img src="/assets/images/formulario/Mapa.svg" alt=""/></div>
                     </div>
                 </div>
 

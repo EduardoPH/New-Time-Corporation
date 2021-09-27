@@ -14,8 +14,7 @@ function MenuLeft() {
 function BoxDetails() {
     return(
         <BoxCaracter> 
-            <div className="name-caracter"> </div>
-                    <div className="box-caracter-image"> 
+                <div className="box-caracter-image"> 
                     <img src="/assets/images/denuncia-detalhe/chinelo.svg" alt=""/>
                 <div className="desc-caracter"> Chinelo </div>
             </div>

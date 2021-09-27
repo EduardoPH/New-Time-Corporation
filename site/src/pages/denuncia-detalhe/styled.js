@@ -7,10 +7,11 @@ const Container = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    justify-content: center;
 
     .titulo {
         text-align: center;
-        margin: 1.5em;
+        margin: 0.8em;
         font-size: 3em;
         color: #FFF
     }
@@ -28,11 +29,14 @@ const Container = styled.div`
         border-radius: 20px;
         padding: 2em;
         align-items: center;
+        overflow-y: scroll;
     }
 
     .pt2-body {
         display: flex;
         flex-direction: column;
+        height: auto;
+        padding-top: 20em;
         width: 93%;
         justify-content: center;
     }
@@ -99,14 +103,59 @@ const Pag = styled.div`
 
         background: #FFFFFF;
         border-radius: 29px;
+        color: #530096;
     }
+
 `
 
 const Caracteristicas = styled.div`
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
+
+        .container-caracter {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3em;
+            width: 83%;
+            height: 12.6em;
+            padding: 1.5em;
+            border-radius: 7px;
+
+            background-color: white;
+        }
+
+        .box-detalhes {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .titulo-caracter {
+            padding-top: 1.2em;
+            font-size: 2.7em;
+            color: #FFFFFF
+        }
+
+        .title-details-caracters {
+            font-size: 2em;
+        }
+
+        .box-carac {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box-detalhe {
+            text-align: start;
+        }
+
+        
 `
 
-export {Container, Caracteristicas, Pag}
+const Map = styled.div`
+    
+`
+
+export {Container, Caracteristicas, Pag, Map}
