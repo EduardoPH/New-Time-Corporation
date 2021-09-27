@@ -23,20 +23,20 @@ export default function Routes(){
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact={true} component={Home} />
-                <Route path="/estatisticas" exact={true} component={Estatisticas} />
-                <Route path="/administrador" exact={true} component={Administrador} />
-                <Route path="/denuncia-recentes" exact={true} component={DenunciasRecents} />
-                <Route path="/denuncia-details" exact={true} component={DenunciaDetalhada}/>
-                <Route path="/login" exact={true} component={Login}/>
-                <Route path="/perfil"exact={true} component={PerfilUsuaria}/>
-                <Route path="/apoio" exact={true} component={Apoio}/>
-                <Route path="/formulario" exact={true} component={caracteristicas}/>
-                <Route path="/formulario2" exact={true} component={depoimento}/>
-                <Route path="/formulario3" exact={true} component={Local}/>
-                <Route path="/formulario4" exact={true} component={vestimentas}/>
-                <Route path="/cadastro" exact={true} component={Cadastro}/>
-                <Route path="/map" exact={true} component={MyLocation}/>
-                <Route path="/map-render" exact={true} component={Maps}/>
+                <Route path="/estatisticas"  component={Estatisticas} />
+                <Route path="/administrador"  component={Administrador} />
+                <Route path="/denuncia-recentes"  component={DenunciasRecents} />
+                <Route path="/denuncia-details" component={DenunciaDetalhada}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/perfil" component={PerfilUsuaria}/>
+                <Route path="/apoio" component={Apoio}/>
+                <Route path="/formulario" component={caracteristicas}/>
+                <Route path="/formulario2" component={depoimento}/>
+                <Route path="/formulario3" component={Local}/>
+                <Route path="/formulario4" component={vestimentas}/>
+                <Route path="/cadastro" component={Cadastro}/>
+                <Route path="/map" component={MyLocation}/>
+                <Route path="/map-render" component={Maps}/>
             </Switch>
         </BrowserRouter>
 
