@@ -13,7 +13,8 @@ import depoimento from './pages/Formulario/Formulario-depoimento';
 import Local from './pages/Formulario/Formulario-local';
 import vestimentas from './pages/Formulario/Formulario-vestimentas';
 import Cadastro from './pages/Cadastro';
-import MyLocation from './components/map/MyLocation'
+import MyLocation from './components/map/MyLocation';
+import TelaRoteamento from './pages/telaRoteamento';
 import Maps from './components/map/map.js'
 
 
@@ -22,7 +23,8 @@ export default function Routes(){
     return(
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact={true} component={Home} />
+                <Route path="/" exact={true} component={TelaRoteamento}/>
+                <Route path="/home"  component={Home} />
                 <Route path="/estatisticas"  component={Estatisticas} />
                 <Route path="/administrador"  component={Administrador} />
                 <Route path="/denuncia-recentes"  component={DenunciasRecents} />
