@@ -22,8 +22,8 @@ export default function Login(){
                             <input type = "text" placeholder="Digite sua Senha..."/>
                         </div>
                         <div className="lado">
-                            <div className="bot1"><button>Entrar</button></div>
                             <div className="bot2"><button>Esqueci minha senha</button></div>
+                            <div className="bot1"><button>Entrar</button></div>
                         </div>
                     </div>
                     <div className="casoJa">

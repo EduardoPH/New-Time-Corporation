@@ -32,7 +32,6 @@ width: 100%;
     height: 28em;
     align-items: center;
     justify-content: space-around;
-    margin-top: 1em;
 }
 
 .centro{

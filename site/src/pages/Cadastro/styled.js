@@ -21,7 +21,7 @@ display:flex;
     .titulo {
         display: flex;
         justify-content: center;
-        font-size: 3em;
+        font-size: 2em;
         margin-bottom: 0.7em;
     }
  
@@ -43,7 +43,6 @@ display:flex;
         align-self: center;
         background-color: rgba(229, 179, 254, 0.8);
         border-radius: 1em;
-        margin-top: 2.5em;
     }
  
     input {
@@ -68,8 +67,9 @@ display:flex;
         margin-left: 2.5em;
         margin-bottom: 1em;
         text-decoration: underline;
-        text-size: 3em;
+        font-size: 1em;
         color: #3B3B3B;
+        cursor:pointer;
     }
  
     button {
@@ -80,6 +80,10 @@ display:flex;
         border-radius: 10px;
         border: black;
         cursor:pointer;
+        &:hover {
+            background-color:rgba(255, 0, 0, 0.2);
+            transition: 0.3s;
+        }
     }
  
     .botao {

@@ -109,9 +109,12 @@ const Container = styled.div`
                                 height: 4em;
 
                                 outline: none;
-                                
+                                cursor:auto;
+
                                 border-radius: 1em;
                                 margin-bottom: 1em;
+
+                               
                             };
                             button{
                                 width: 10em;
@@ -139,6 +142,7 @@ const Container = styled.div`
                 width: 86%;
                 height: 3em;
                 outline:none;
+                cursor:auto;
             }
             .tabela-usuaria{
             margin-top:1em;
@@ -336,6 +340,7 @@ const Container = styled.div`
                     color: black;
                     font-family: 'Roboto';
                     font-size: 1em;
+                    cursor:auto;
                 }
                 button{
                     color: white;

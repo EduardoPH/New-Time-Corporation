@@ -23,7 +23,7 @@ width: 100%;
     align-self:center;
     background-color: rgba(85, 26, 132, 0.4);
     opacity: 1;
-    height: 30em;
+    height: 27em;
     border-radius: 1em;
     align-items: center;
     justify-content: center;

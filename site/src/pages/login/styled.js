@@ -52,6 +52,9 @@ width: 100%;
 
 
 .login{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #E5B3FE;
     border-radius: 20px;
     width:26em;
@@ -67,7 +70,7 @@ width: 100%;
     display:flex;
     font: 700 2em Roboto;
     color:#7F00BF;
-    margin-left: 5.2em;
+    align-items: center;
     margin-top: 1em;
 }
 
@@ -77,7 +80,6 @@ width: 100%;
     display:flex;
     align-self: center;
 flex-direction: column;
-margin-left: 2.5em;
 }
 
 
@@ -98,7 +100,9 @@ input{
 .lado{
     display:flex;
     flex-direction: row;
-    margin-left: 4em;
+    align-items: flex-end;
+    width: 80%;
+    justify-content: space-between;
 }
 
 
