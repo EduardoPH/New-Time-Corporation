@@ -21,7 +21,7 @@ width: 100%;
     align-self: center;
     width:82%;
     background-color: #7F00BF;
-    height: 34em;
+    height: 30em;
     border-radius: 1em;
 }
 
@@ -29,7 +29,7 @@ width: 100%;
     display:flex;
     flex-direction: row;
     align-self:center;
-    height: 34em;
+    height: 28em;
     align-items: center;
     justify-content: space-around;
 }
