@@ -44,7 +44,6 @@ display:flex;
         background-color: rgba(229, 179, 254, 0.8);
         border-radius: 1em;
         margin-top: 2.5em;
-        height: 50;
     }
  
     input {
