@@ -32,8 +32,18 @@ const BarChart = () =>{
 
                 width={400}
                 height={650}
-                options={{ maintainAspectRatio: false,
-                           legend:{labels:{fontSize: 25, fontColor: '#FFFFF'} } }}
+                options={{ 
+                    maintainAspectRatio: false,
+                                   
+                    legend:{labels:{fontSize: 25, fontColor: '#FFFFF'}}, 
+
+                    scales: {
+                        y:{ticks: {color:'white'},  grid:{color: '#FFB6C1'}},
+                        x:{ticks: {color:'white',  font:{size: 13} }, grid:{none: 'none'}},
+                        
+                    }
+                    
+                }}
              />
 
         </div>
@@ -71,10 +81,18 @@ const BarChart = () =>{
 
                     width={400}
                     height={650}
-                    options={{ maintainAspectRatio: false,
-                            labels:{fontSize: 25, fontColor: '#FFFFF'} } }
-                       
-                       />
+                    options={{ 
+                        maintainAspectRatio: false,
+                                       
+                        legend:{labels:{fontSize: 25, fontColor: '#FFFFF'}}, 
+    
+                        scales: {
+                            y:{ticks: {color:'white'},  grid:{color: '#FFB6C1'}},
+                            x:{ticks: {color:'white',  font:{size: 13} }, grid:{none: 'none'}},
+                            
+                        }
+                        
+                    }}/>
           </div>
       )
   }
@@ -112,10 +130,18 @@ const BarChart = () =>{
 
             width={400}
             height={650}
-            options={{ maintainAspectRatio: false,
-                    legend:{labels:{fontSize: 25, fontColor: '#FFFFF'} } }}
+            options={{ 
+                maintainAspectRatio: false,
+                               
+                legend:{labels:{fontSize: 25, fontColor: '#FFFFF'}}, 
+
+                scales: {
+                    y:{ticks: {color:'white'},  grid:{color: '#FFB6C1'}},
+                    x:{ticks: {color:'white',  font:{size: 13} }, grid:{none: 'none'}},
                     
-                    />
+                }
+                
+            }}/>
           </div>
       )
   }
