@@ -7,6 +7,10 @@ height: 100vh;
 justify-content: space-around;
 align-items:center;
 
+Link{
+    cursor: pointer;
+}
+
 `
 
 export default Container

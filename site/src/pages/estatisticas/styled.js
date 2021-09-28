@@ -1,125 +1,46 @@
 import styled from 'styled-components';
 
 const  Containers = styled.div `
+display:flex;
+flex-direction: column;
 
+background:url(${'../assets/images/estatisticas/fundo.svg'});
+background-size: cover;
+height: 100vh;
+width: 100%;
 
-
-    display:flex;
-    flex-direction: column;
-
-    background:url(${'/assets/images/estatisticas/fundo.svg'});
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-
-    .carousel .thumbs-wrapper {
-        margin: 0px;
-        overflow:hidden;
-    }
-
-
-
-    .carousel .slide {
-    min-width: 80%;
-    }
-
-
-
-    .carousel .slider-wrapper.axis-horizontal .slider .slide {
-    flex-direction: column;
-    flex-flow: column;
-    width: 30em;
-    }
-
-    .bGuXcd .carousel .slider {
-   width: 85em;
-    margin-left: 4em;
-    }
-
-    .carousel .slider{
-        width: 70%;
-        margin-left: 42em;
-    }
-
-     .dados{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 77%;
-        align-self: center;
-        width: 100%;
-        margin-top:3em;
-    }
-    
-
-
-    .caix{
-        display:flex;
-    }
-
-
-.titulo{
+.titulo {
     display:flex;
     align-self: center;
     color: white;
-    font: 700 3em Arial;
+    font: 700 2em arial;
+    margin: 0.9em 0em;
 }
 
-.caixa{
+.carrousel1 {
+    align-self: center;
+    width:82%;
+    background-color: #7F00BF;
+    height: 30em;
+    border-radius: 1em;
+}
+
+.caixa {
     display:flex;
     flex-direction: row;
     align-self:center;
-    background-color: #7F00BF;
-    opacity: 1;
-    height: 30em;
-    border-radius: 1em;
-    width: 51em;
-    margin-right:3em;
-    margin-left: -24em;
+    height: 28em;
+    align-items: center;
+    justify-content: space-around;
 }
-
-.caixa2{
-    display:flex;
-    flex-direction: row;
-    align-self:center;
-    background-color: #7F00BF;
-    opacity: 1;
-    height: 30em;
-    border-radius: 1em;
-    width: 51em;
-    margin-right: 3em;
-    margin-left: -12em;
-
-}
-
-
-
-.caixa3{
-    display:flex;
-    flex-direction: row;
-    align-self:center;
-    background-color: #7F00BF;
-    opacity: 1;
-    height: 30em;
-    border-radius: 1em;
-    width: 51em;
-    margin-right: 5em;
-}
-
-
-
 
 .centro{
     display:flex;
     flex-direction: column;
-    height: 100%;
-    margin-left:1em;
-    margin-top: 2em;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
 }
-
-
-
 
 .subT{
     font-weight: 700;
@@ -129,16 +50,20 @@ const  Containers = styled.div `
     border-radius: 10px;
     padding: 1em;
     font-size: 1.5em;
-    width: 14em;
-    margin-right: 1em;
+    width: 15em;
 }
-
 
 .porc-img img{
-    width: 20em;
-    height: 18em;
+    width: 100%;
 }
- 
+
+.grafico{
+    height: 100%;
+    width: 40%;
+    align-self: center;
+    display: flex;
+}
+
 
 `
 

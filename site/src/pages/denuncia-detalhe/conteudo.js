@@ -13,9 +13,6 @@ function Pag1(){
                     <div className="user-name"> User 275625</div>
                 </div>
 
-                <div className="btn-voltar"> 
-                    <button> Voltar </button>
-                </div>
             </div>
 
             <div className="pt2"> 

@@ -101,14 +101,13 @@
                     background: rgba(1, 11, 225, 0.62);
                     border-radius: 16px;
                     padding: 1em;
-                    border: solid 0px;
+                    border: solid 2px;
                     cursor: pointer;
                     outline: none;
                     &:hover{
                         color: rgba(1, 11, 225, 0.62); 
                         background: white;
                         transition: 0.5s;
-                        border: solid 4px;
                         border-color:rgba(1, 11, 225, 0.62);
                         
                     }
@@ -178,13 +177,12 @@
                                 font-size: 1em;
                                 padding: 0.5em 1em;
                                 color: #FFFFFF;
-                                border: solid 0px;
+                                border: solid 1px;
                                 cursor: pointer;
 
                                 &:hover{
                                     background: white;
                                     color: #111AE3;
-                                    border: solid 1px;
                                     border-color: #111AE3;
                                     transition: 0.3s;
                                 }
@@ -197,13 +195,12 @@
                                 font-size: 1em;
                                 padding: 0.5em 1em;
                                 color: #FFFFFF;
-                                border: solid 0px;
+                                border: solid 1px;
                                 cursor: pointer;
 
                                 &:hover{
                                     background: white;
                                     color: #FF0000;
-                                    border: solid 1px;
                                     border-color: #FF0000;
                                     transition: 0.3s;
                                 }
