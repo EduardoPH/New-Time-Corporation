@@ -2,7 +2,7 @@ import Menu from '../../components/menu/index';
 import { Container, BoxStyled, MenuLateralStyled } from './styled';
 import { useState } from 'react';
 export default function Administrador(){
-    const[ vDenuncia, setVDenuncia ] = useState(false);
+    const[ vDenuncia, setVDenuncia ] = useState(true);
     const[ apoio, setApoio ] = useState(false);
     const[ cargos, setCargos ] = useState(false);
     const[ usuarias, setUsuarias ] = useState(false);

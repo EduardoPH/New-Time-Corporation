@@ -32,6 +32,7 @@ width: 100%;
     height: 28em;
     align-items: center;
     justify-content: space-around;
+    margin-top: 1em;
 }
 
 .centro{
@@ -43,9 +44,9 @@ width: 100%;
 }
 
 .subT{
-    font-weight: 700;
-    font-family: 'Roboto';
-    background-color: #E78CFE;
+    font-weight: bolder;
+    font-family: arial;
+    background-color: #ff00e6;
     color: white;
     border-radius: 10px;
     padding: 1em;

@@ -10,6 +10,7 @@ const BarChart = () =>{
                     labels: ["Sé (São Paulo)", "Barra Funda (São Paulo)", "Cidade de Deus (Rio de Janeiro)", "Campo Grande (Rio de Janeiro)", "Sítio Cercado (Curitiba)"],
                     datasets: [
                         {
+                            label: "",
                             data: [77,70,86,64,56],
                             backgroundColor:[
                                 '#A3E5F6',
@@ -59,6 +60,7 @@ const BarChart = () =>{
                        labels: ["Salvador", "Rio de Janeiro", "Curitiba", "São Paulo", "Porto Alegre"],
                         datasets: [
                             {
+                                label: "",
                                 data: [71,89,96,83,67],
                                 backgroundColor:[
                                     '#A3E5F6',
@@ -108,6 +110,7 @@ const BarChart = () =>{
                 labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set"],
                 datasets: [
                     {
+                        label: "",
                         data: [23,36,48,28,33,43,62,69,73],
                         backgroundColor:[
                             '#A3E5F6',
