@@ -1,6 +1,6 @@
 import Containers from './styled.js';
 import Menu from '../../components/menu'
-import React, { useState } from "react";
+
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {BarChart, Graf2,  Graf3 } from './grafico.js';
