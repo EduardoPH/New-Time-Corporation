@@ -18,6 +18,8 @@ width: 100%;
     display:flex;
     flex-direction: row;
     color: white;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 
