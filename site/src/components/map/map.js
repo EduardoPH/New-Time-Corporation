@@ -1,7 +1,10 @@
 import React from "react"
 import {GoogleMap, useLoadScript, Marker, InfoWindow} from '@react-google-maps/api'
 //import {format, formatRelative} from 'date-fns'
-import {MapStyle} from "./mapStyle"
+import {MapStyle, ExtraStyles} from "./mapStyle"
+import usePlacesAutoComplete, {} from 'use-places-autocomplete'
+import {Combobox, ComboboxInput, ComboboxPopover,  ComboboxOption} from "@reach/combobox"  
+import "@reach/combobox/styles.css"
 
 
 const libraries = ["places"]
@@ -60,6 +63,9 @@ export default function Map() {
       NTC{" "}
       <span> Logo </span>   
     </h1>
+
+      <BarraPesquisa/> 
+
       <GoogleMap 
         mapContainerStyle={mapContainerStyle} 
         zoom={13} 
@@ -84,7 +90,7 @@ export default function Map() {
             }}>
               <div> 
                 <h2> Janelinha </h2>
-                <p> Date </p>
+                <div>  "Conteudo da janela"</div>
               </div>
             </InfoWindow>) : null}
       </GoogleMap>
@@ -92,4 +98,37 @@ export default function Map() {
   )
 }
 
+
+function  BarraPesquisa() {
+  const {ready, value, suggestions: {status, data}, setValue} = usePlacesAutoComplete({
+    requestOptions: {
+      location: {lat: () => position.lat, lng: () => position.lng },
+      radius: 200 * 1000,
+    }
+  })
+
+
+  return (
+    <ExtraStyles>
+      <div className="pesquisa"> 
+      <Combobox onSelect={(endereço) => {console.log(endereço)}}> 
+        <ComboboxInput value={value} onChange={(e) => {
+          setValue(e.target.value)
+        }}
+          disabled={!ready}
+        placeholder="Digite seu endereço"
+        />
+
+        <ComboboxPopover>
+          {status === "OK" && 
+            data.map(({ id, description}) => (
+              <ComboboxOption  key={id} value={description}/>
+            ))
+          }
+        </ComboboxPopover>
+      </Combobox>
+      </div>
+    </ExtraStyles>
+  )
+}
 

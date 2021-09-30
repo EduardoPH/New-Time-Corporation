@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 const MapStyle = [
     {
         "featureType": "all",
@@ -337,4 +339,22 @@ const MapStyle = [
     }
 ]
 
-export {MapStyle}
+const ExtraStyles = styled.div`
+    .pesquisa {
+        position: absolute;
+        top: 1em;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .pesquisa input {
+        display: flex;
+        padding: 0.5rem;
+        font-size: 1em;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+`
+
+export {MapStyle, ExtraStyles}
