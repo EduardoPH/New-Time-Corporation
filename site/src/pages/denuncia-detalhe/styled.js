@@ -36,9 +36,29 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         height: auto;
-        padding-top: 20em;
         width: 93%;
-        justify-content: center;
+        overflow-y: scroll;
+        max-height: 90%;
+        margin-left: -1em;
+    }
+
+    .btn-voltar button {
+        width: 160px;
+        height: 48px;
+        left: 3;
+        top: 1;
+
+        border: solid 0px;
+
+        background: #FFFFFF;
+        border-radius: 29px;
+        color: #530096;
+    }
+
+    .pt-menuLeft {
+        display: flex;
+        flex-direction: column;
+        height: 30%;
     }
 `
 
@@ -64,11 +84,12 @@ const Pag = styled.div`
     }
 
     .cx-mensagem {
+
         width: 87%;
         height: 100%;
         padding: 1em;
         background-color: white;
-        margin: 1.2% 0% 0% 1.5%;
+        margin: 1.2% 0% 0% -7.4%;
         border-radius: 8px;
 
     
@@ -90,20 +111,9 @@ const Pag = styled.div`
     }
 
     .box-msg img {
-        position: absolute;
-    }
-
-    .btn-voltar button {
-        width: 160px;
-        height: 48px;
-        left: 3;
-        top: 1;
-
-        border: solid 0px;
-
-        background: #FFFFFF;
-        border-radius: 29px;
-        color: #530096;
+        height: 42px;
+        width: 13%;
+        top: 1em;
     }
 
 `
@@ -155,7 +165,15 @@ const Caracteristicas = styled.div`
 `
 
 const Map = styled.div`
-    
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    max-height: 50%;
+
+    .map {
+        margin-left: auto;
+    margin-right: auto;
+    }
 `
 
 export {Container, Caracteristicas, Pag, Map}

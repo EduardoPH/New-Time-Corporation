@@ -4,6 +4,7 @@ import {BoxDetails} from '../../components/details-denuncia'
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+
 function Pag1(){
     return(
         <Pag>
@@ -58,13 +59,13 @@ function Pag2(){
     )
 }
 
-function Pag3Map() {
+function Pag3() {
     return(
         <Map> 
-            
+            <div className="tiitle"> Área Localizada </div>
         </Map>
     )
 }
 
-console.log(Pag3Map)
-export {Pag1, Pag2}
+
+export {Pag1, Pag2, Pag3}

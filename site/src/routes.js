@@ -15,7 +15,7 @@ import vestimentas from './pages/Formulario/Formulario-vestimentas';
 import Cadastro from './pages/Cadastro';
 import MyLocation from './components/map/MyLocation';
 import TelaRoteamento from './pages/telaRoteamento';
-import Maps from './components/map/map.js'
+import {MyMapComponent} from './components/map/map.js'
 
 
 
@@ -38,7 +38,7 @@ export default function Routes(){
                 <Route path="/formulario4" component={vestimentas}/>
                 <Route path="/cadastro" component={Cadastro}/>
                 <Route path="/map" component={MyLocation}/>
-                <Route path="/map-render" component={Maps}/>
+                <Route path="/map-render" component={MyMapComponent}/>
             </Switch>
         </BrowserRouter>
 
