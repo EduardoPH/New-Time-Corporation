@@ -17,7 +17,7 @@ flex-direction: row;
     
 }
 
-.box2-sub2 img{
+/* .box2-sub2 img{
     width: 36em;
     height: 20em;
 }
@@ -28,9 +28,9 @@ flex-direction: row;
     font-size: 3em;
     font-weight: bold;
   
-}
+} */
 
-
+/* 
 .descri-2{
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@ flex-direction: row;
     width: 30.5em;
     text-align: center;
     color: white;
-}
+} */
 `
 
 

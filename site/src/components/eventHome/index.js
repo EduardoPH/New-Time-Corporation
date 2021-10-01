@@ -1,5 +1,5 @@
-import { Conteiners } from "../styled";
-import Home from '../home';
+import { Conteiners } from "./styled";
+import HomeCase from '../HomeCase';
 
 import { useState } from "react";
 
@@ -9,7 +9,9 @@ export default function HomeC() {
     const [eventos, setEventos] = useState([]);
 
 
-    function SobreSite (){
+    function SobreSite(){
+
+         
 
         const apiResponse = [
             {
@@ -26,14 +28,14 @@ export default function HomeC() {
     }
 
 
-
-
-
     return(
         <Conteiners>
            <div className="caixa-box">
                {eventos.map(item => 
-                  <Home  titulo={item.titulo} descricao={item.descricao} imagem={item.imagem} />
+                  <HomeCase titulo={item.titulo}
+                  
+                  descricao={item.descricao}
+                    imagem={item.imagem} />
                 )}
            </div>
 

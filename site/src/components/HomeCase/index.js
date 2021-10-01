@@ -2,7 +2,9 @@ import {Conteiners} from "./styled"
 
 
 
-export default function HomeC (props) {
+export default function HomeC(props) {
+
+    
     return (
     <Conteiners>
                 <div className="box2-sub1"> 
@@ -21,9 +23,7 @@ export default function HomeC (props) {
 
 
 
-
-
-           <div className="box2-sub1"> 
+          {/*  <div className="box2-sub1"> 
                 {props.titulo}
                 </div>
 
@@ -53,7 +53,7 @@ export default function HomeC (props) {
 
            <div className="descri-2"> 
             {props.descricao}
-           </div>
+           </div> */}
     </Conteiners>
     )
 }
