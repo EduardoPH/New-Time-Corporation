@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 import {MapStyle} from './mapStyle.js'
 import Geocode from "react-geocode";
 
@@ -44,9 +44,8 @@ export class  Mapa extends Component{
         <input onChange={(e) => this.setState({...this.state, end: e.target.value} )} />
         <button onClick={() => this.loc(this.state.end)}> Localização </button> 
         <div id="lat"> {this.state.lat} </div>
-        <div id="lng"> {this.state.lng} </div>
-
-        <Marker position={{lat: this.state.lat, lng: this.state.lng}}/> 
+        <div id="lng"> {this.state.lng} </div> 
+        
         <Map 
           google={this.props.google}
           zoom={20}

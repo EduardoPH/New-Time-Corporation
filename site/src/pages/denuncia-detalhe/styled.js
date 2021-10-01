@@ -166,13 +166,11 @@ const Caracteristicas = styled.div`
 
 const Map = styled.div`
     display: flex;
-    width: 100%;
-    flex-direction: column;
-    max-height: 50%;
+    width: 10vw;
+    justify-content: center;
 
     .mapa {
-        margin-left: auto;
-    margin-right: auto;
+        width: 10vw;
     }
 `
 
