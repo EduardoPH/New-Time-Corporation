@@ -22,7 +22,7 @@ export default function Home() {
                 </div>       
            </div>
             
-            <Home/>
+            <HomeC/>
             
 
        {/*   <div className="box2"> 
