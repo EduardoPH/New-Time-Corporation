@@ -170,7 +170,7 @@ const Map = styled.div`
     flex-direction: column;
     max-height: 50%;
 
-    .map {
+    .mapa {
         margin-left: auto;
     margin-right: auto;
     }

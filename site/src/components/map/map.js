@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import React, { Component } from 'react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import {MapStyle} from './mapStyle.js'
 import Geocode from "react-geocode";
 
@@ -35,6 +35,7 @@ export class  Mapa extends Component{
       }
     );
   }
+  
 
   render(){
 
@@ -44,11 +45,14 @@ export class  Mapa extends Component{
         <button onClick={() => this.loc(this.state.end)}> Localização </button> 
         <div id="lat"> {this.state.lat} </div>
         <div id="lng"> {this.state.lng} </div>
+
+        <Marker position={{lat: this.state.lat, lng: this.state.lng}}/> 
         <Map 
           google={this.props.google}
-          zoom={17}
+          zoom={20}
           center={{lat: this.state.lat, lng: this.state.lng}}
           styles={MapStyle}
+          disableDefaultUI={true}
         />
       </div>
     )
