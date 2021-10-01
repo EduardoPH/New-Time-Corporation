@@ -2,6 +2,7 @@ import {Conteiners} from "./styled"
 import Menu from "../../components/menu"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import HomeC from "../../components/home";
 
 export default function Home() {
     return(
@@ -21,8 +22,10 @@ export default function Home() {
                 </div>       
            </div>
             
+            <Home/>
+            
 
-        <div className="box2"> 
+       {/*   <div className="box2"> 
             <div className="caixa2">
                 <div className="box2-sub1"> 
                 <h1> Apoio </h1>
@@ -71,7 +74,7 @@ export default function Home() {
            <div className="descri-4"> 
               <p> Trazemos um sistema de denúncias para as mulhers que sofreram qualquer forma de assédio </p>
            </div>
-        </div>   
+        </div>    */}
 
         </Carousel>
 
