@@ -2,8 +2,8 @@ import React from "react"
 import {GoogleMap, useLoadScript, Marker, InfoWindow} from '@react-google-maps/api'
 //import {format, formatRelative} from 'date-fns'
 import {MapStyle, ExtraStyles} from "./mapStyle"
-import usePlacesAutoComplete, {} from 'use-places-autocomplete'
-import {Combobox, ComboboxInput, ComboboxPopover,  ComboboxOption} from "@reach/combobox"  
+import usePlacesAutocomplete, {getGeocode, getLatLng} from 'use-places-autocomplete'
+import {Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption} from "@reach/combobox"  
 import "@reach/combobox/styles.css"
 
 
@@ -40,7 +40,7 @@ export default function Map() {
       {
         lat: e.latLng.lat(),
         lng: e.latLng.lng(),
-        time: new Date(),
+        time: new Date()
       },
     ]);
   }, []);
@@ -64,7 +64,7 @@ export default function Map() {
       <span> Logo </span>   
     </h1>
 
-      <BarraPesquisa/> 
+      <Search/> 
 
       <GoogleMap 
         mapContainerStyle={mapContainerStyle} 
@@ -85,6 +85,10 @@ export default function Map() {
               }}
             />)}
 
+            <Marker
+              position={{lat: position.lat, lng: position.lng}}
+            />
+
             {select ? (<InfoWindow position={{lat: select.lat, lng: select.lng }} onCloseClick={() => {
               setSelect(null)
             }}>
@@ -99,36 +103,57 @@ export default function Map() {
 }
 
 
-function  BarraPesquisa() {
-  const {ready, value, suggestions: {status, data}, setValue} = usePlacesAutoComplete({
-    requestOptions: {
-      location: {lat: () => position.lat, lng: () => position.lng },
-      radius: 200 * 1000,
-    }
-  })
+ function Search() {
+  const {
+    ready,
+    value,
+    suggestions: { status, data },
+    setValue
+  } = usePlacesAutocomplete();
 
+  const handleInput = (e)=> {
+    setValue(e.target.value);
+  };
+
+  const handleSelect = (val)=> {
+    setValue(val, false);
+  };
+
+  const renderSuggestions = () => {
+    const suggestions = data.map(({ place_id, description }) => (
+      <ComboboxOption key={place_id} value={description} />
+    ));
+
+    return (
+      <>
+        {suggestions}
+        <li className="logo">
+          <img
+            src="https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png"
+            alt="Powered by Google"
+          />
+        </li>
+      </>
+    );
+  };
 
   return (
-    <ExtraStyles>
-      <div className="pesquisa"> 
-      <Combobox onSelect={(endereço) => {console.log(endereço)}}> 
-        <ComboboxInput value={value} onChange={(e) => {
-          setValue(e.target.value)
-        }}
+    <div className="App">
+      <h1 className="title">USE-PLACES-AUTOCOMPLETE</h1>
+      <p className="subtitle">
+        React hook for Google Maps Places Autocomplete.
+      </p>
+      <Combobox onSelect={handleSelect} aria-labelledby="demo">
+        <ComboboxInput
+          style={{ width: 300, maxWidth: "90%" }}
+          value={value}
+          onChange={handleInput}
           disabled={!ready}
-        placeholder="Digite seu endereço"
         />
-
         <ComboboxPopover>
-          {status === "OK" && 
-            data.map(({ id, description}) => (
-              <ComboboxOption  key={id} value={description}/>
-            ))
-          }
+          <ComboboxList>{status === "OK" && renderSuggestions()}</ComboboxList>
         </ComboboxPopover>
       </Combobox>
-      </div>
-    </ExtraStyles>
-  )
+    </div>
+  );
 }
-
