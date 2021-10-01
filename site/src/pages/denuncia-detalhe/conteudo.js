@@ -3,6 +3,7 @@ import {BoxDetails} from '../../components/details-denuncia'
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import MapaFull from "../../components/map/map";
 
 
 function Pag1(){
@@ -62,7 +63,7 @@ function Pag2(){
 function Pag3() {
     return(
         <Map> 
-            <div className="tiitle"> Área Localizada </div>
+            <MapaFull/>
         </Map>
     )
 }
