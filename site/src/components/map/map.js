@@ -1,7 +1,10 @@
 import React from "react"
 import {GoogleMap, useLoadScript, Marker, InfoWindow} from '@react-google-maps/api'
 //import {format, formatRelative} from 'date-fns'
-import {MapStyle} from "./mapStyle"
+import {MapStyle, ExtraStyles} from "./mapStyle"
+import usePlacesAutocomplete, {getGeocode, getLatLng} from 'use-places-autocomplete'
+import {Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption} from "@reach/combobox"  
+import "@reach/combobox/styles.css"
 
 
 const libraries = ["places"]
@@ -37,7 +40,7 @@ export default function Map() {
       {
         lat: e.latLng.lat(),
         lng: e.latLng.lng(),
-        time: new Date(),
+        time: new Date()
       },
     ]);
   }, []);
@@ -60,6 +63,9 @@ export default function Map() {
       NTC{" "}
       <span> Logo </span>   
     </h1>
+
+      <Search/> 
+
       <GoogleMap 
         mapContainerStyle={mapContainerStyle} 
         zoom={13} 
@@ -79,12 +85,16 @@ export default function Map() {
               }}
             />)}
 
+            <Marker
+              position={{lat: position.lat, lng: position.lng}}
+            />
+
             {select ? (<InfoWindow position={{lat: select.lat, lng: select.lng }} onCloseClick={() => {
               setSelect(null)
             }}>
               <div> 
                 <h2> Janelinha </h2>
-                <p> Date </p>
+                <div>  "Conteudo da janela"</div>
               </div>
             </InfoWindow>) : null}
       </GoogleMap>
@@ -93,3 +103,57 @@ export default function Map() {
 }
 
 
+ function Search() {
+  const {
+    ready,
+    value,
+    suggestions: { status, data },
+    setValue
+  } = usePlacesAutocomplete();
+
+  const handleInput = (e)=> {
+    setValue(e.target.value);
+  };
+
+  const handleSelect = (val)=> {
+    setValue(val, false);
+  };
+
+  const renderSuggestions = () => {
+    const suggestions = data.map(({ place_id, description }) => (
+      <ComboboxOption key={place_id} value={description} />
+    ));
+
+    return (
+      <>
+        {suggestions}
+        <li className="logo">
+          <img
+            src="https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png"
+            alt="Powered by Google"
+          />
+        </li>
+      </>
+    );
+  };
+
+  return (
+    <div className="App">
+      <h1 className="title">USE-PLACES-AUTOCOMPLETE</h1>
+      <p className="subtitle">
+        React hook for Google Maps Places Autocomplete.
+      </p>
+      <Combobox onSelect={handleSelect} aria-labelledby="demo">
+        <ComboboxInput
+          style={{ width: 300, maxWidth: "90%" }}
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+        />
+        <ComboboxPopover>
+          <ComboboxList>{status === "OK" && renderSuggestions()}</ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  );
+}
