@@ -7,8 +7,14 @@ function MenuLeft() {
         <img src="/assets/images/denuncia-detalhe/arrow-black.svg" alt="" />
         Mensagens
       </div>
-      <div className="mensagem"> Características </div>
-      <div className="mensagem"> Local </div>
+      <div className="mensagem">
+        <img src="/assets/images/denuncia-detalhe/arrow-black.svg" alt="" />
+        Características
+      </div>
+      <div className="mensagem">
+        <img src="/assets/images/denuncia-detalhe/arrow-black.svg" alt="" />
+        Local
+      </div>
     </Container>
   );
 }
@@ -23,3 +29,5 @@ function BoxDetails() {
     </BoxCaracter>
   );
 }
+
+export { BoxDetails, MenuLeft };

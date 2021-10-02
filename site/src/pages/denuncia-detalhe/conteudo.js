@@ -1,5 +1,5 @@
 import { Pag, Caracteristicas, Map } from "./styled";
-import { BoxDetails } from "../../components/details-denuncia";
+import {BoxDetails} from "../../components/details-denuncia";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
