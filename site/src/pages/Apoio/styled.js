@@ -8,13 +8,14 @@ const  ContainerApoio = styled.div `
     background-size: cover;
     height: 100vh;
     width: 100%;
+    
 
     .titulo {
         display:flex;
         align-self: center;
         color: white;
-        font: 700 2em arial;
-        margin: 0.9em 0em;
+        font: 700 2.5em arial;
+        margin-bottom: 0.9em;
     }
 
     .caixa {
@@ -31,7 +32,7 @@ const  ContainerApoio = styled.div `
 
     .frases {
         display:flex;
-        font: 2em arial;
+        font: 1.8em arial;
         color: white;    
         width: 25em;
         padding: 8% 0%;
@@ -39,11 +40,19 @@ const  ContainerApoio = styled.div `
 
     .carrousel1 {
         align-self: center;
-        width: 89%;
+        width: 75%;
     }
 
     .carousel .thumbs-wrapper {
         overflow: visible;
+    }
+
+    .oi {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
     }
 `
 
