@@ -1,6 +1,7 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import React from "react";
+import  Mapa  from '../../../components/map/map';
 
 export default function Local (){
     return(
@@ -19,8 +20,7 @@ export default function Local (){
                     </div>
                     <div class="conteudo-right">
                         <div class="titulo-local">Área Localizada</div>
-                        <input type="text" placeholder="Buscar localização"></input>
-                        <div class="mapa"><img src="/assets/images/formulario/Mapa.svg" alt=""/></div>
+                        <div class="mapa"><Mapa /></div>
                     </div>
                 </div>
 

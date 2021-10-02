@@ -338,6 +338,10 @@ const MapStyle = [
         ]
     }
 ]
+const containerStyle={
+    position: 'fixed',
+    width: '66%',
+    height:'50%'
+}
 
-
-export {MapStyle}
+export {MapStyle, containerStyle}
