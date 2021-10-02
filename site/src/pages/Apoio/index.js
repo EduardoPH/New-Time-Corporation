@@ -1,11 +1,40 @@
 import ContainerApoio from './styled.js';
 import Menu from '../../components/menu'
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Caixa from '../../components/commum/item-carrossel'
 
 
 export default function Apoio (){
+
+    const [eventos, setEventos] = useState([]);
+
+
+    function SobreSite(){
+    
+
+        const apiResponse = [
+            {
+             frase: "Lute. Acredite. Conquiste. Perca. Deseje. Espere. Alcance. Invada. Caia. Seja tudo o quiser ser, mas acima de tudo, seja você sempre." 
+            },
+
+            {
+               frase: "A coragem não é ausência do medo; é a persistência apesar do medo." 
+            },
+            {
+                frase: "Creia em si, mas não duvide sempre dos outros." 
+            }
+        ]
+        setEventos(apiResponse)
+    }
+ 
+    useEffect(
+        () => {SobreSite() }, [] 
+    )
+
+
+
     return(
         <ContainerApoio>
             <Menu/>
@@ -14,21 +43,7 @@ export default function Apoio (){
             
             <div class="carrousel1">
                 <Carousel autoPlay infiniteLoop>
-                    <div class="caixa">
-                        <div class="frases"> Você teve a coragem de fazer uma denúncia, encontrou forças para se posicionar contra esse ato desumano e poderá recuperar sua tranquilidade. </div>
-                    </div>
-                    <div class="caixa">
-                        <div class="frases"> Olha quanta coisa você superou. Repara o caminho que percorreu. Tantos obstáculos transpassados. Tanto aprendizado. Por meio de seus esforços você tem crescido e evoluído. Há tanto ainda para ser vivido. Tem tanta coisa boa te esperando lá na frente. </div>
-                    </div>
-                    <div class="caixa">
-                        <div class="frases"> Não deixe que as pessoas te façam desistir daquilo que você mais quer na vida. Acredite. Lute. Conquiste. E acima de tudo, seja feliz </div>
-                    </div>
-                    <div class="caixa">
-                        <div class="frases"> Está tudo bem não se sentir forte o tempo todo, você não precisa se culpar por isso. Está tudo bem não estar sorrindo o tempo todo. Precisamos dos momentos “só nossos” para refletirmos sobre tudo o que vivemos. Afinal, tudo é uma questão de aprendizado e evolução interior. </div>
-                    </div>
-                    <div class="caixa">
-                        <div class="frases"> Você é mais forte do que imagina, mais bonita do que enxerga mais capaz do que dizem. Você é maravilhosa. </div>
-                    </div>
+                    {eventos.map(i => <Caixa frase = {i.frase} cgrafico = {false}/>)}
                 </Carousel>
                 </div>
             </div>
