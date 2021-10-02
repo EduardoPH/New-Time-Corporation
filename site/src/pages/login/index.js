@@ -22,11 +22,11 @@ export default function Login(){
                             <input type = "text" placeholder="Digite sua Senha..."/>
                         </div>
                         <div className="lado">
-                            <div className="bot2"><button>Esqueci minha senha</button></div>
+                            <div className="bot2">Esqueci minha senha</div>
                             <div className="bot1"><button>Entrar</button></div>
                         </div>
                     </div>
-                    <div className="casoJa">
+                    <div className="nao-possui">
                         <div className="np">Não Possui uma conta?</div>
                         <Link to = "/cadastro"><div className="botC"><button>Cadastre-se</button></div></Link>
                     </div>

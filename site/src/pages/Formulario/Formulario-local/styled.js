@@ -24,8 +24,14 @@ font-family: arial;
     background-color: rgb(255, 255, 255, 40%);
     border-radius: 1.5em;
     width: 90%;
+    height: 74%;
     align-self:center;
     margin-top: 2em;
+}
+.conteudo-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .menu-lateral {
@@ -45,11 +51,11 @@ font-family: arial;
 }
 
 .conteudo-right {
-    width: 57%;
-    padding-right: 2em;
+    width: 78%;
 }
 
-button {
+.botao{
+    button {
     padding: 0.5em 1em;
     border: none;
     border-radius: 2em;
@@ -57,6 +63,7 @@ button {
     background-color: #FC02A0;
     color: white;
     margin-top: 3em;
+    }
 }
 
 .titulo-local {

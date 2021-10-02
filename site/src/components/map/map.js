@@ -1,6 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
-import {MapStyle} from './mapStyle.js'
+import {MapStyle, containerStyle} from './mapStyle.js'
 import Geocode from "react-geocode";
 
 
@@ -13,10 +13,7 @@ Geocode.setApiKey("AIzaSyBmWg6SrxvblQHjMwlinmCLc9RU3bIu3-A")
 
 export class  Mapa extends Component{
 
-  // this.setState((state) => {
-  //   // Importante: use `state` em vez de `this.state` quando estiver atualizando.
-  //   return {count: state.count + 1}
-  // });
+  
 
   constructor(){
     super();
@@ -35,20 +32,24 @@ export class  Mapa extends Component{
       }
     );
   }
+  
 
   render(){
 
     return(
       <div>
-        <input onChange={(e) => this.setState({...this.state, end: e.target.value} )} />
-        <button onClick={() => this.loc(this.state.end)}> Localização </button> 
-        <div id="lat"> {this.state.lat} </div>
-        <div id="lng"> {this.state.lng} </div>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
+          <input style={{padding: '5px', outline: 'none', marginBottom: '10px'}} onChange={(e) => this.setState({...this.state, end: e.target.value} )} placeholder="digite o endereço..."/>
+          <button style={{backgroundColor: 'white', outline: 'none',cursor: 'pointer', borderRadius: '30px',border:'0px', marginTop: '1em', marginBottom: '10px'}} onClick={() => this.loc(this.state.end)}> Localização </button> 
+        </div>
+        
         <Map 
           google={this.props.google}
-          zoom={17}
+          zoom={16}
           center={{lat: this.state.lat, lng: this.state.lng}}
           styles={MapStyle}
+          disableDefaultUI={true}
+          containerStyle = {containerStyle}
         />
       </div>
     )

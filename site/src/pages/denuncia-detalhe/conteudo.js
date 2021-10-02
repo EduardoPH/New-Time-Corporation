@@ -63,7 +63,7 @@ function Pag2(){
 function Pag3() {
     return(
         <Map> 
-            <MapaFull/>
+            <MapaFull className="mapa"/>
         </Map>
     )
 }
