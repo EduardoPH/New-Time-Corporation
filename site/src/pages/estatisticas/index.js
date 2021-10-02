@@ -1,5 +1,5 @@
 import Containers from './styled.js';
-import Menu from '../../components/menu'
+import Menu from '../../components/menu';
 import { useState, useEffect } from 'react';
 
 import { Carousel } from "react-responsive-carousel";
