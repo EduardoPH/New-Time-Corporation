@@ -165,12 +165,8 @@ const Caracteristicas = styled.div`
 `
 
 const Map = styled.div`
-    display: flex;
-    width: 10vw;
-    justify-content: center;
-
-    .mapa {
-        width: 10vw;
+    input {
+        display: none;
     }
 `
 

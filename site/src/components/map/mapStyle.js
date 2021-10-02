@@ -51,6 +51,7 @@ const MapStyle = [
         ]
     },
     {
+        
         "featureType": "landscape",
         "elementType": "all",
         "stylers": [
