@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const Container = styled.div `
-display:flex;
+    display:flex;
     flex-direction: column;
  
     background:url(${'../assets/images/estatisticas/fundo.svg'});
