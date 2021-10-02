@@ -10,149 +10,7 @@ background: url(${'/assets/images/home/fundo.svg'});
 background-size: cover;
 height: 100vh;
 
-.box{
-    display: flex;
-    flex-direction: row;
 
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.box-sub1 h1{
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    font-family: 'Russo One', sans-serif;
-    font-weight: 400;
-}
-
-.box-sub1{
-    margin-right: 1em;
-    font-size: 33px;
-
-}
-
-.box-sub2 img{
-    width: 30em;
-    height: 4em;
-
-    min-height: 77vh;
-
-}
-
-
-.endereco{
-
-    width: 20.5em;
-}
-
-.caixa2{
-    margin-top: 2em;
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-    align-items: center;
- 
-    
-}
-
-.box2-sub2 img{
-    width: 36em;
-    height: 20em;
-}
-
-
-.box2-sub1 h1{
-    color: white;
-    font-size: 3em;
-    font-weight: bold;
-  
-}
-
-
-.descri-2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.descri-2 p{
-    width: 30.5em;
-    text-align: center;
-    color: white;
-}
-
-
- .caixa3 {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-    align-items: center;
-   
-}
-
-.box3-sub2 img{
-    width: 31em;
-    height: 24em;
-}
-
-.box3-sub1{
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.descri-3{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.descri-3 p{
-    width: 58%;
-    text-align: center;
-    color: white;
-} 
-.caixa4{
-    display: flex;
-    flex-direction: row;
-
-    height: 60vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.box4-sub2 img{
-    width: 37em;
-    height: 19em;
-
-}
-
-.descri-4{
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-}
-
-.descri-4 p{
-    width: 30.5em;
-    text-align: center;
-    color: white;
-}
-
-.box4-sub1{
- color: white;
- font-size: 1.2em;
- font-weight: bold;
-} 
 
 
 .rodape{
@@ -161,6 +19,13 @@ height: 100vh;
 
     justify-content: space-around;
     background-color: #3A3A3A;
+}
+
+.recomen {
+    .titulo{  color:white;
+       font-family: Roboto;
+    } 
+   
 }
 
 .descricao{
@@ -222,13 +87,6 @@ height: 100vh;
     color: white;
 }
 
-.titulo{
-   
-    color: white;
-    font: 900 .3em Arial, Helvetica, sans-serif;
-
-    font-size: 1.5em;
-}
 
 .descri-2 p{
     font-family:Arial, Helvetica, sans-serif;

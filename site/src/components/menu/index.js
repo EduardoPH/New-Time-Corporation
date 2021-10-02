@@ -3,9 +3,10 @@ import { Container } from "./styled";
 export default function Menu(){
     return(
         <Container>
-            <div className="logo" style={{textDecoration: "none"}}>
+             <div className="logo" style={{textDecoration: "none"}}>
                 <img src="/assets/images/menu/Logo-ntc.svg" alt="logo"/>
             </div>
+            <button className="butao">  DENUNCIAR! </button>
             <Link to="/" style={{textDecoration: "none"}}>
                 <div className="item-menu">
                     Home

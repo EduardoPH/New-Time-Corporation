@@ -36,5 +36,20 @@ const Container= sytled.div`
         img{margin-left: 10px;}
         
     }
+
+    button{
+        background-color: red;
+        color:white;
+
+        border: solid 1px;
+        border-color: red;
+        border-radius: 7px;
+        padding: 0.5em 2em ;
+        
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Roboto';
+        &:hover{background-color:purple; ; transition: 0.3s}
+    }
 `
 export {Container}

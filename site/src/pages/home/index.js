@@ -2,81 +2,56 @@ import {Conteiners} from "./styled"
 import Menu from "../../components/menu"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import HomeC from "../../components/home";
-
+import Item from "../../components/commum/home";
+import { useState, useEffect } from "react";
 export default function Home() {
+    const [eventos, setEventos] = useState([]);
+
+
+    function SobreSite(){
+    
+
+        const apiResponse = [
+            {
+             titulo: "Denuncie!" , legenda:"" ,  imagem:"../../../assets/images/home/woman.svg" 
+            },
+
+            {
+                titulo: "Apoio" , legenda:"Nos preocupamos com todas as mulheres, por isso trouxemos uma coletânea de frases e apoio psicológico." ,  imagem:"../../../assets/images/home/apoio.svg" 
+            },
+            {
+                titulo: "Estatísticas" , legenda:"Com nossos dados é possível montarmos estatíticas para que assim facilite o levantamento de dados." ,  imagem:"../assets/images/home/estatistica.svg" 
+            },
+            {
+                titulo: "Sistema de Denúncias" , legenda:"Trazemos um sistema de denúncias para as mulhers que sofreram qualquer forma de assédio." ,  imagem:"../assets/images/home/sistema.svg" 
+            },
+            
+        ]
+        setEventos(apiResponse)
+    }
+ 
+    useEffect(
+        () => {SobreSite() }, [] 
+    )
+ 
+
     return(
         <Conteiners> 
 
             <Menu/>
 
-            <Carousel  autoPlay  infiniteLoop  >
+              
+             <Carousel> 
+             {eventos.map(
+                 i=> <Item titulo ={i.titulo } imagem={i.imagem} legenda={i.legenda}/> 
+             )}
+           </Carousel>
 
-          <div className="box"> 
-                <div className="box-sub1"> 
-                    <h1> Denuncie!</h1>
-                </div>
 
-                <div className="box-sub2"> 
-                    <img src="/assets/images/home/woman.svg"  alt="" />
-                </div>       
-           </div>
-            
-            <HomeC/>
-            
+           
+           
 
-       {/*   <div className="box2"> 
-            <div className="caixa2">
-                <div className="box2-sub1"> 
-                <h1> Apoio </h1>
-                </div>
 
-                <div className="box2-sub2"> 
-                    <img src="/assets/images/home/apoio.svg"  alt="" />
-                </div>
-           </div>
-        
-
-           <div className="descri-2"> 
-            <p> Nos preocupamos com todas as mulheres, por isso trouxemos uma coletânea 
-                de frases e apoio psicológico.</p>
-           </div>
-        </div>
-  
-          <div className="box3"> 
-            <div className="caixa3">
-                <div className="box3-sub1"> 
-                  <h1> Estastística </h1>
-                </div>
-
-                <div className="box3-sub2"> 
-                    <img src="/assets/images/home/estatistica.svg"  alt=""/>
-                </div>
-           </div>
-        
-           <div className="descri-3"> 
-            <p> Com nossos dados é possível montarmos estatíticas para que assim facilite o 
-                levantamento de dados </p>
-           </div>
-        </div>  
-
-         <div className="box4"> 
-            <div className="caixa4">
-                <div className="box4-sub1"> 
-                <h1> Sistema de Denuncias </h1>
-                </div>
-
-                <div className="box4-sub2"> 
-                    <img src="/assets/images/home/sistema.svg"  alt=""/>
-                </div>
-           </div>
-        
-           <div className="descri-4"> 
-              <p> Trazemos um sistema de denúncias para as mulhers que sofreram qualquer forma de assédio </p>
-           </div>
-        </div>    */}
-
-        </Carousel>
 
            <div className="rodape"> 
               <div className="contato">
