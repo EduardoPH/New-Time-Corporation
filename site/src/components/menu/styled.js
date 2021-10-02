@@ -1,6 +1,6 @@
-import sytled from 'styled-components';
+import sytled from "styled-components";
 
-const Container= sytled.div`
+const Container = sytled.div`
     
     text-decoration-line: underline;
 
@@ -51,5 +51,5 @@ const Container= sytled.div`
         font-family: 'Roboto';
         &:hover{background-color:purple; ; transition: 0.3s}
     }
-`
-export {Container}
+`;
+export { Container };

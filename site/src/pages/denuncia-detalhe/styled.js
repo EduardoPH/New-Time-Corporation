@@ -65,6 +65,7 @@ const Container = styled.div`
 const Pag = styled.div`
     display: flex;
     flex-direction: column;
+    display: none;
 
     .pt1 {
         display: flex;
@@ -91,8 +92,6 @@ const Pag = styled.div`
         background-color: white;
         margin: 1.2% 0% 0% -7.4%;
         border-radius: 8px;
-
-    
     }
 
     .msg-denuncia {
@@ -122,6 +121,7 @@ const Caracteristicas = styled.div`
         display: flex;
         flex-direction: column;
         text-align: center;
+        display: none;
 
         .container-caracter {
             margin-left: auto;
@@ -165,8 +165,17 @@ const Caracteristicas = styled.div`
 `
 
 const Map = styled.div`
-    input {
+    /* input , button {
         display: none;
+    } */
+    
+
+    .box-map {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 17em;
     }
 `
 

@@ -1,22 +1,22 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const  Containerformulario = styled.div`
-display:flex;
-flex-direction: column;
-background:url(${'/assets/images/estatisticas/fundo.svg'});
-background-size: cover;
-height: 100vh;
-width: 100%;
-font-family: arial;
+const Containerformulario = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: url(${"/assets/images/estatisticas/fundo.svg"});
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  font-family: arial;
 
-.titulo {
+  .titulo {
     display: flex;
     justify-content: center;
     color: white;
     font-size: 3em;
-}
+  }
 
-.conteudo {
+  .conteudo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -25,67 +25,66 @@ font-family: arial;
     border-radius: 1.5em;
     width: 90%;
     height: 74%;
-    align-self:center;
+    align-self: center;
     margin-top: 2em;
-}
-.conteudo-left{
+  }
+  .conteudo-left {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
+  }
 
-.menu-lateral {
+  .menu-lateral {
     padding: 1em 0em;
     display: flex;
     background-color: white;
-    font-size: 1.0em;
+    font-size: 1em;
     border-radius: 0.3em;
     flex-direction: column;
     align-self: center;
     font-family: arial;
-}
+  }
 
-.textos-lateral {
+  .textos-lateral {
     padding: 0.2em 0.3em;
     font-size: 1.4em;
-}
+  }
 
-.conteudo-right {
+  .conteudo-right {
     width: 78%;
-}
+  }
 
-.botao{
+  .botao {
     button {
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 2em;
-    font-size: 2em;
-    background-color: #FC02A0;
-    color: white;
-    margin-top: 3em;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 2em;
+      font-size: 2em;
+      background-color: #fc02a0;
+      color: white;
+      margin-top: 3em;
     }
-}
+  }
 
-.titulo-local {
+  .titulo-local {
     color: white;
     font-size: 2.5em;
     display: flex;
     justify-content: center;
-}
+  }
 
-input {
+  input {
     border-radius: 2em;
     border: none;
     width: 100%;
     height: 4em;
     margin-top: 1em;
-}
+  }
 
-.mapa img {
+  .mapa img {
     width: 100%;
     height: auto;
     margin-top: 1em;
-}
-
-`
+  }
+`;
 export default Containerformulario;

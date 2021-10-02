@@ -1,108 +1,97 @@
-import styled from "styled-components"
-
-
+import styled from "styled-components";
 
 const Conteiners = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-background: url(${'/assets/images/home/fundo.svg'});
-background-size: cover;
-height: 100vh;
+  background: url(${"/assets/images/home/fundo.svg"});
+  background-size: cover;
+  height: 100vh;
 
-
-
-
-.rodape{
+  .rodape {
     display: flex;
     flex-direction: row;
 
     justify-content: space-around;
-    background-color: #3A3A3A;
-}
+    background-color: #3a3a3a;
+  }
 
-.recomen {
-    .titulo{  color:white;
-       font-family: Roboto;
-    } 
-   
-}
+  .recomen {
+    .titulo {
+      color: white;
+      font-family: Roboto;
+    }
+  }
 
-.descricao{
+  .descricao {
     display: flex;
     flex-direction: column;
-   
-}
+  }
 
-.recomendacoes{
+  .recomendacoes {
     display: flex;
     flex-direction: column;
 
     margin-left: 5em;
-    text-align: center; 
-    
-}
-.recomendacoes h2{
+    text-align: center;
+  }
+  .recomendacoes h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-   
-}
+  }
 
-.kahlo{
+  .kahlo {
     margin-right: 1.2em;
-}
+  }
 
-.recomen{
+  .recomen {
     display: flex;
     flex-direction: row;
-}
+  }
 
-.women{
+  .women {
     margin-left: 2.5em;
     margin-right: 3em;
 
     margin-top: 5.6em;
-}
+  }
 
-.descricao{
+  .descricao {
     padding-top: 0.5em;
-    text-align: center; 
+    text-align: center;
 
-    font: 600 .3em Roboto;
+    font: 600 0.3em Roboto;
     font-size: 1em;
     color: white;
-}
+  }
 
-.telefone{
+  .telefone {
     padding-top: 1.3em;
     padding-bottom: 1.7em;
-}
+  }
 
-.contato{
+  .contato {
     padding-top: 2em;
     padding-left: 2em;
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
     color: white;
-}
+  }
 
-
-.descri-2 p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-}
-.descri-3 {
+  .descri-2 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
-}
+  }
+  .descri-3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+  }
 
-.descri-4{
+  .descri-4 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     margin-top: -1em;
-}
-  
-
-`
-export {Conteiners }
+  }
+`;
+export { Conteiners };
