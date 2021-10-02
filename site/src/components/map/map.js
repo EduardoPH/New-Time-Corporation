@@ -48,16 +48,15 @@ export class  Mapa extends Component{
           disableDefaultUI={true}
           containerStyle = {containerStyle}
         >
-          <Circle
-        radius={100}
-        center= {{lat: this.state.lat, lng:  this.state.lng }}
-        strokeColor='transparent'
-        strokeOpacity={0}
-        strokeWeight={5}
-        fillColor='#FF0000'
-        fillOpacity={0.2}
-      />
-
+        <Circle
+          radius={100}
+          center= {{lat: this.state.lat, lng:  this.state.lng }}
+          strokeColor='transparent'
+          strokeOpacity={0}
+          strokeWeight={5}
+          fillColor='#FF0000'
+          fillOpacity={0.2}
+        />
         </Map>
       </div>
     )
