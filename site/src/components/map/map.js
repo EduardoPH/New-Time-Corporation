@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Circle } from 'google-maps-react';
 import {MapStyle, containerStyle} from './mapStyle.js'
 import Geocode from "react-geocode";
 
@@ -13,11 +13,9 @@ Geocode.setApiKey("AIzaSyBmWg6SrxvblQHjMwlinmCLc9RU3bIu3-A")
 
 export class  Mapa extends Component{
 
-  
-
   constructor(){
     super();
-    this.state={lat: -21.5613462, lng: -42.6564872, end: ""}
+    this.state={lat: 37.778519, lng: -122.40564, end: ""}
   }
 
    loc(end) {
@@ -33,9 +31,8 @@ export class  Mapa extends Component{
     );
   }
   
-
+ 
   render(){
-
     return(
       <div>
         <div style={{display: 'flex', flexDirection: 'row'}}>
@@ -50,7 +47,18 @@ export class  Mapa extends Component{
           styles={MapStyle}
           disableDefaultUI={true}
           containerStyle = {containerStyle}
-        />
+        >
+          <Circle
+        radius={100}
+        center= {{lat: this.state.lat, lng:  this.state.lng }}
+        strokeColor='transparent'
+        strokeOpacity={0}
+        strokeWeight={5}
+        fillColor='#FF0000'
+        fillOpacity={0.2}
+      />
+
+        </Map>
       </div>
     )
   }
