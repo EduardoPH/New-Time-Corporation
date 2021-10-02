@@ -1,6 +1,7 @@
 import Containerformulario from './styled.js';
-import Menu from '../../../components/menu'
+import Menu from '../../../components/menu';
 import React from "react";
+import {Link} from 'react-router-dom';
 
 export default function vestimentas (){
     return(
@@ -101,7 +102,7 @@ export default function vestimentas (){
                         <div class="informacoes">Informações complementares</div>
                         <div class="form-2">
                             <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <button>Avançar</button>
+                            <Link to="/formulario3"><button className="btm-avan">Avançar</button></Link>
                         </div>
                     </div>  
                 </div>

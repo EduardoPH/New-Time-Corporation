@@ -16,7 +16,9 @@ const  Containerformulario = styled.div `
         flex-direction: column;
         margin-top: 1.5em;
         padding: 2em;
+        justify-content: space-evenly;
         width: 90%;
+        height: 70%;
     }
     
     .menu-lateral {
@@ -46,6 +48,7 @@ const  Containerformulario = styled.div `
     .conteudo {
         display: flex;
         justify-content: space-between;
+        width: 87%;
     }
 
     .imputs {
@@ -66,7 +69,7 @@ const  Containerformulario = styled.div `
     }
 
     textarea {
-        width: 50em;
+        width: 90%;
         height: 12em; 
         border-radius: 0.6em;
         border: none;
@@ -74,14 +77,17 @@ const  Containerformulario = styled.div `
         
     }
 
-    button {
+    .btm-avan {
         padding: 0.4em 0.5em;
         border: none;
         border-radius: 2em;
         font-size: 1.5em;
         background-color: #FC02A0;
         color: white;
-   
+        cursor: pointer;
+        &:hover{
+            opacity: 0.5;
+        }
     }
 
     .informacoes {
