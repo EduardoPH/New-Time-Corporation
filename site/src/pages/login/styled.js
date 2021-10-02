@@ -14,195 +14,131 @@ width: 100%;
 
 
 .caixa{
-    
     display:flex;
     flex-direction: row;
-    color: white;
-    width: 100%;
     justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
 }
-
-
-
-.esquerda{}
-
-
-
-
 
 .imgPC img{
-    width: 41em;
-    height: 26em;
+   width: 30em;
 }
-
-
 
 .Tit{
     font: 700 2.4em Arial;
-    margin-left: 3em;
+    color: white;
 }
-
 
 .direita{
     display:flex;
     flex-direction: column;
-
     margin-top: 2em;
-    margin-left: 7em;
 }
-
-
 
 .login{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: #E5B3FE;
-    border-radius: 20px;
-    width:26em;
-    height: 21em;
- 
-
+    background-color: rgba(229, 179, 254, 0.8);
+    border-radius: 14px;
 }
-
-
-
 
 .ti{
     display:flex;
-    font: 700 2em Roboto;
+    font: 100 2em arial;
     color:#7F00BF;
-    align-items: center;
-    margin-top: 1em;
+    justify-content: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
-
-
 
 .inputs{
     display:flex;
     align-self: center;
-flex-direction: column;
+    flex-direction: column;
 }
 
-
-input{
-    background-color:#F2F2F2;
-    border-radius: 7px;
+input {
+    border-radius: 5px;
     width: 25em;
     height: 4em; 
-    border: black;
-    margin-top: 1em;
-    cursor:auto;
-    outline: none;
-
+    border: none;
+    margin: 0em 2em 2.2em 2em;
+    cursor: auto;
+    background-color: rgb(242, 242, 242, 80%);
 }
 
+input::-webkit-input-placeholder  { 
+    color: #B133FF;
+    font: 16px arial;
+    padding-top: 2em;
+}
 
-
-.lado{
-    display:flex;
-    flex-direction: row;
-    align-items: flex-end;
-    width: 80%;
+.lado {
+    display: flex;
     justify-content: space-between;
+    width: 20.7em;
+    height: 3em;
+    align-items: center;
+    margin-bottom: 1.5em;
 }
 
-
-
-.bot2{
-    font: 700 4em Roboto;
-    margin-top: .1em;
-    margin-left: .3em;
-}
-
-
-.bot2 button{
-    background-color: #E5B3FE;
-    border: black;
+.bot2 {
+    display: flex;
+    font-size: 1em;
+    color: #3B3B3B;
     cursor:pointer;
-    
+    &:hover {text-decoration: underline};
 }
-
-.bot2 button:hover{
-    text-decoration: underline;
-}
-
-.bot1 button:hover{
-    background-color:rgba(255, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
-
-
-
-.bot1 {
-    font: 700 4em Roboto;
-    
-}
-
 
 .bot1 button{
     background-color:#B133FF;
-    color:white;
-    border-radius: 10px;
-    border: black;
-    width: 11em;
+    color: white;
+    width: 12em;
     height: 3em;
+    border-radius: 5px;
+    border: none;
     cursor:pointer;
+    &:hover {
+        background-color:rgba(255, 0, 0, 0.2);
+        transition: 0.3s;
+        color:#7F00BF;
+    }
 }
 
-
-
-
-.casoJa{
-    margin-top:2em;
-    background-color: #E5B3FE;
-    border-radius: 20px;
-    height: 10em;
-
+.nao-possui {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(229, 179, 254, 0.8);
+    border-radius: 14px;
+    margin-top: 1em;
 }
 
-
-
-
-.np{
-    font: 700 2em Roboto;
+.np {
+    display:flex;
+    font: 100 2em arial;
     color:#7F00BF;
-    margin-left: 1.3em;
-    margin-top: .6em;
+    justify-content: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-
-
-.botC{
-    font: 700 4em Roboto;
-    margin-left: 0.6em;
-    
-}
-
-
-
-.botC button{
+.botC button {
     background-color:#B133FF;
-    color:white;
+    color: white;
     width: 25em;
     height: 3.5em;
-    border-radius: 10px;
-    border: black;
+    border-radius: 5px;
+    border: none;
     cursor:pointer;
+    margin-bottom: 2em;
+    &:hover {
+        background-color:rgba(255, 0, 0, 0.2);
+        transition: 0.3s;
+        color:#7F00BF;
+    }
 }
-
-
-
-.botC button:hover{
-    background-color:rgba(255, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
 `
-
-
-
-
-
 export default Container 
