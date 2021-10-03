@@ -11,10 +11,6 @@ import styled from 'styled-components'
     background-color: rgb(242, 242, 242, 80%);
     display: block;
     &&:focus{ outline: 2.5px solid #d600a3;}
-
-    span {
-        position: absolute;
-    }
     
     
     
