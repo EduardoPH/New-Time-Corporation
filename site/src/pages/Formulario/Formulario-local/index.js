@@ -1,11 +1,13 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
+import {Fundo} from '../../../components/commum/background/styled'
 import React from "react";
 import  Mapa  from '../../../components/map/map';
 import Button from '../../../components/formulario/index'
 
 export default function Local (){
     return(
+        <Fundo height="100vh">
         <Containerformulario>
             <Menu/>
                 <div class="titulo">Formulário de denúncia</div>
@@ -26,5 +28,6 @@ export default function Local (){
                 </div>
 
         </Containerformulario>
+        </Fundo>
     )
 }

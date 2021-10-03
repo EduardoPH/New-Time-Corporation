@@ -4,11 +4,6 @@ import styled from 'styled-components'
 const Container = styled.div `
     display:flex;
     flex-direction: column;
- 
-    background:url(${'../assets/images/estatisticas/fundo.svg'});
-    background-size: cover;
-    height: 100%;
-    width: 100%;
     color: white;
     font-family: arial;
  

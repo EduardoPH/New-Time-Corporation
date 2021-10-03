@@ -1,5 +1,6 @@
 import ContainerApoio from './styled.js';
 import Menu from '../../components/menu'
+import {Fundo} from '../../components/commum/background/styled'
 import React, {useState, useEffect} from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -36,6 +37,7 @@ export default function Apoio (){
 
 
     return(
+        <Fundo height="100vh">
         <ContainerApoio>
             <Menu/>
             <div class="oi">
@@ -48,8 +50,6 @@ export default function Apoio (){
                 </div>
             </div>
         </ContainerApoio>
-
-
-
+        </Fundo>
     )
 }

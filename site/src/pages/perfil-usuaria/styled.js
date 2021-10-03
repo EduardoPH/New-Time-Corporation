@@ -4,12 +4,6 @@
  display:flex;
  flex-direction: column;
 
- background:url(${'/assets/images/estatisticas/fundo.svg'});
- background-size: cover;
- height: 100vh;
- width: 100%;
-
-
  .corpo-central{
      h1{color: white; font-size: 3em;};
      

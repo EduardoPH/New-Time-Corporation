@@ -1,10 +1,12 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import React from "react";
+import {Fundo} from '../../../components/commum/background/styled'
 import Button from '../../../components/formulario/index'
 
 export default function caracteristicas (){
     return(
+        <Fundo height="100vh">
         <Containerformulario>
             <Menu/>
             <div class="titulo">Formulário de denúncia</div>
@@ -107,5 +109,6 @@ export default function caracteristicas (){
                     </div>  
                 </div>
         </Containerformulario>
+        </Fundo>
     )
 }

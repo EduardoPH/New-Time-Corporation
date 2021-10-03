@@ -1,5 +1,8 @@
 import Menu from '../../components/menu/index';
-import { Container, BoxStyled, MenuLateralStyled } from './styled';
+import { Container, MenuLateralStyled } from './styled';
+import InfoUsuaria from '../../components/Info-Usuaria'
+import ItemDenuncia from '../../components/Item-Denuncia-Usu'
+import { BoxStyled } from '../../components/fundo-box-adm/styled'
 import { useState } from 'react';
 import Button from '../../components/administrador/index'
 export default function Administrador(){
@@ -193,33 +196,10 @@ export default function Administrador(){
                     </BoxStyled>:null}
                     {perfil? <BoxStyled>
                     <div className="box-infor-user">
-                        <div className="informas">
-                            <p1>Nome :</p1>
-                            <input type="text" disabled value="teste@gamil"/>
-                            <p1>Email :</p1>
-                            <input type="text" disabled value="teste@gamil"/>
-                            <p1>Telefone :</p1>
-                            <input type="text" disabled value="teste@gamil"/>
-                            <p1>CPF :</p1>
-                            <input typpe="text"disabled value="teste@gamil"/>
-                         </div>
+                        <InfoUsuaria displayButton="none"/>
                         <div className="denunciasCadastradas">
-                        <div className="item-denun">
-                            <div className="lado-esquerdo">
-                                
-                                    <p1>HHiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidddddddddd</p1>
-                               
-                                <div className="btms">
-                                <Button type="alterar" height="30px" width="6em" font="0.9em"/>
-                                    <Button type="excluir" height="30px" width="6em" font="0.9em"/>
-                                </div>
-                            </div>
-                            <div className="lado-direito">
-                                <p1>45/465/654</p1>
-                                <p2> Ver mais...</p2>
-                            </div>
+                            <ItemDenuncia descricao="eeeeeeeeee" data="25/03/2021"/>
                         </div>
-                    </div>
                     </div>
                     </BoxStyled> : null }
                      { denuncia?<BoxStyled className="box-usuarias">

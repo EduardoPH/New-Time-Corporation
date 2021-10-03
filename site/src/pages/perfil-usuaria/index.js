@@ -1,8 +1,12 @@
 import {Container} from './styled'
+import InfoUsuaria from '../../components/Info-Usuaria'
+import ItemDenuncia from '../../components/Item-Denuncia-Usu'
+import {Fundo} from '../../components/commum/background/styled'
 import Menu from '../../components/menu'
 export default function PerfilUsuaria(){
 
     return(
+        <Fundo height="100vh">
         <Container>
             <Menu/>
             <div className="corpo-central">
@@ -17,35 +21,14 @@ export default function PerfilUsuaria(){
                         <button>   Sair da Conta </button>
                     </div>
                     <div className="parte-final-box">
-                        <div className="informas">
-                            <p1>Email :</p1>
-                            <input type="text" disabled value="teste@gamil"/>
-                            <p1>Telefone :</p1>
-                            <input type="text" disabled value="teste@gamil"/>
-                            <p1>CPF :</p1>
-                            <input typpe="text"disabled value="teste@gamil"/>
-                            <button>Alterar suas Informações </button>
-                         </div>
+                        <InfoUsuaria displayNome="none"/>
                         <div className="denunciasCadastradas">
-                        <div className="item-denun">
-                            <div className="lado-esquerdo">
-                                
-                                    <p1>HHiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidddddddddd</p1>
-                               
-                                <div className="btms">
-                                    <button className="alterar">Alterar</button>
-                                    <button className="excluir">excluir</button>
-                                </div>
-                            </div>
-                            <div className="lado-direito">
-                                <p1>45/465/654</p1>
-                                <p2> Ver mais...</p2>
-                            </div>
+                            <ItemDenuncia descricao="aaaaaaaaaaaaaa" data="20/09/2021"/>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
         </Container>
+        </Fundo>
     )
 }

@@ -1,10 +1,12 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
+import {Fundo} from '../../../components/commum/background/styled'
 import React from "react";
 import Button from '../../../components/formulario/index'
 
 export default function depoimento (){
     return(
+        <Fundo height="100vh">
         <Containerformulario>
             <Menu/>
             <div class="titulo">Formulário de denúncia</div>
@@ -28,5 +30,6 @@ export default function depoimento (){
 
                 
         </Containerformulario>
+        </Fundo>
     )
 }

@@ -1,7 +1,7 @@
 import Containers from './styled.js';
 import Menu from '../../components/menu';
+import {Fundo} from '../../components/commum/background/styled'
 import { useState, useEffect } from 'react';
-
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {BarChart, Graf2,  Graf3 } from './grafico.js';
@@ -45,6 +45,7 @@ export default function Estatisticas (){
     console.log(v)
 
     return(
+        <Fundo height="100vh">
         <Containers>
             <Menu/>
             <div class="titulo"> Estatísticas </div>
@@ -55,5 +56,6 @@ export default function Estatisticas (){
                 </Carousel>
              </div>
         </Containers>
+        </Fundo>
     )
 }
