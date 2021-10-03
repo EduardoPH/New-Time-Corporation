@@ -1,54 +1,55 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
+const InputStyle = styled.input`
+  padding: 0pc 1em;
+  margin-top: 1em;
+  border-radius: 5px;
+  width: 25em;
+  height: 4em;
+  border: none;
+  margin: 0em 2em 2.2em 2em;
+  cursor: auto;
+  outline: none;
+  color: #b133ff;
+  ::-webkit-input-placeholder {
+    color: #b133ff;
+    font: 16px arial;
+    padding-top: 2em;
+  }
+  &:focus {
+    border: solid 3px #fff;
+    background-color: rgba(229, 179, 254, 0.8);
+    transition: 0.3s;
+    color: #fff;
+    opacity: initial;
+    box-shadow: 0px 0px 35px #fff, 0px 0px 15px inset;
 
- const InputStyle = styled.input`
-    border-radius: 5px;
-    width: 25em;
-    height: 4em; 
-    border: none;
-    margin: 0em 2em 2.2em 2em;
-    cursor: auto;
-    background-color: rgb(242, 242, 242, 80%);
-    display: block;
-    &&:focus{ outline: 2.5px solid #d600a3;}
-    
-    
-    
- `
+    &::-webkit-input-placeholder {
+      color: #fff;
+      bottom: 2em;
+      transition: 1.5s;
+      transform: translateX(-280px);
+    } 
+  }
+`;
 
- const ButtonsStyle = styled.button`
-    background-color:#B133FF;
+const ButtonsStyle = styled.button`
+  background-color: #b133ff;
+  color: white;
+  width: 25em;
+  height: 3.5em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2em;
+  &:hover {
+    background-color: #b133ff;
+    transition: 0.3s;
+    border: solid 3px #fff;
+    box-shadow: 0px 0px 20px #fff, 0px 0px 10px inset;
+    transition: 0.21s;
     color: white;
-    width: 25em;
-    height: 3.5em;
-    border-radius: 5px;
-    border: none;
-    cursor:pointer;
-    margin-bottom: 2em;
-    &:hover {
-        background-color:rgba(255, 0, 0, 0.2);
-        transition: 0.3s;
-        color:#7F00BF;
-    }
+  }
+`;
 
-   .animated-button {
-  background: linear-gradient(-30deg, #0b1b3d 50%, #08142b 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #d4e0f7;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
- `
-
- export {ButtonsStyle, InputStyle}
+export { ButtonsStyle, InputStyle };

@@ -3,12 +3,7 @@ import {InputStyle, ButtonsStyle} from './styled'
 
 function Inputs(props) {
     return(
-        <InputStyle placeholder={props.place}> 
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </InputStyle>
+        <InputStyle placeholder={props.place}/>
     )
 
 }

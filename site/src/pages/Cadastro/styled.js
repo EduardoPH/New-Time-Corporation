@@ -89,11 +89,6 @@ const Container = styled.div `
         justify-content: center;
     }
 
-    input::-webkit-input-placeholder  { 
-        color: #B133FF;
-        font: 16px arial;
-        padding-top: 2em;
-    }
 `
 
 export default Container 
