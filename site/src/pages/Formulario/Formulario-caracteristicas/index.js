@@ -1,6 +1,7 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import React from "react";
+import Button from '../../../components/formulario/index'
 
 export default function caracteristicas (){
     return(
@@ -101,7 +102,7 @@ export default function caracteristicas (){
                         <div class="informacoes">Informações complementares</div>
                         <div class="form-2">
                             <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <button>Avançar</button>
+                            <Button valor="Avançar"/>
                         </div>
                     </div>  
                 </div>

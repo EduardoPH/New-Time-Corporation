@@ -2,6 +2,7 @@ import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import React from "react";
 import  Mapa  from '../../../components/map/map';
+import Button from '../../../components/formulario/index'
 
 export default function Local (){
     return(
@@ -16,7 +17,7 @@ export default function Local (){
                             <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>Local</div>
                             <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>depoimento</div>
                         </div>
-                        <div class="botao"><button>Avançar</button></div>
+                        <div class="botao"><Button valor="Avançar"/></div>
                     </div>
                     <div class="conteudo-right">
                         <div class="titulo-local">Área Localizada</div>

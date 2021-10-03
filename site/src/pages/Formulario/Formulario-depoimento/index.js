@@ -1,6 +1,7 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import React from "react";
+import Button from '../../../components/formulario/index'
 
 export default function depoimento (){
     return(
@@ -16,7 +17,7 @@ export default function depoimento (){
                             <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>Local</div>
                             <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>depoimento</div>
                         </div>  
-                        <div class="botao"><button>Enviar</button></div>  
+                        <div class="botao"><Button valor="Avançar"/> </div>  
                     </div>
 
                     <div class="conteudo2">

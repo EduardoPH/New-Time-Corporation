@@ -6,8 +6,6 @@ import Geocode from "react-geocode";
 
 Geocode.setApiKey("AIzaSyBmWg6SrxvblQHjMwlinmCLc9RU3bIu3-A")
 
- 
-
 
 
 

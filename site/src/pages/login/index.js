@@ -1,6 +1,7 @@
 import Container from './styled.js'
 import Menu from '../../components/menu'
 import { Link } from "react-router-dom";
+import { Inputs, Buttons } from '../../components/login-cadastro/index.js';
 
 
 
@@ -18,17 +19,17 @@ export default function Login(){
                     <div className="login">
                         <div className="ti">Login</div>
                         <div className="inputs">
-                            <input type = "text" placeholder="Digite seu Email..."/>
-                            <input type = "text" placeholder="Digite sua Senha..."/>
+                            <Inputs place="Digite seu email..."/>
+                            <Inputs place="Digite sua senha..."/>
                         </div>
                         <div className="lado">
                             <div className="bot2">Esqueci minha senha</div>
-                            <div className="bot1"><button>Entrar</button></div>
+                            <div className="bot1"> <Buttons valor="Entar" width="13em"/> </div>
                         </div>
                     </div>
                     <div className="nao-possui">
                         <div className="np">Não Possui uma conta?</div>
-                        <Link to = "/cadastro"><div className="botC"><button>Cadastre-se</button></div></Link>
+                        <Link to = "/cadastro"><div className="botC"><Buttons valor="Cadastrar" width="24em"/></div></Link>
                     </div>
                 </div>
             </div>

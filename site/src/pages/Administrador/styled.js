@@ -105,38 +105,19 @@ const Container = styled.div`
 
                             input{
                             
-                                width: 86%;
+                                width: 82%;
                                 height: 4em;
 
                                 outline: none;
                                 cursor:auto;
 
                                 border-radius: 1em;
-                                margin-bottom: 1em;
-
-                               
+                                margin-bottom: 1em
                             };
-                            button{
-                                width: 10em;
-                                height: 4em;
-                                border-radius: 10px;
-                                background-color: green;
-                                color: white;
-                                border: solid 0px;
-                                cursor:pointer;
-                                &:hover{
-                                    transition: 5ms;
-                                    opacity:0.5;
-                                    background-color: white;
-                                    color: green;
-                                    border: solid 3px;
-                                    border-color: green;
-                                }
-                            }
-
-                            
+   
                         }
         };
+
         .box-usuarias{
             input{
                 width: 86%;
@@ -511,44 +492,8 @@ const Container = styled.div`
                 width: 88%;
                 height: 3em;
                 button{
-                    width: 11em;
-                    border: solid 3px;
-                    color: white;
-                    font-size: 1.5em;
-                    font-family: Arial,Helvetica,sans-serif;
-                    font-weight: 700;
-                    cursor: pointer;
                     margin: 5px 0px;
-                    border-radius:20px;
                 }
-                .excluir{
-                    background: red;
-                    border-color:red;
-                    &:hover{
-                        color: red;
-                        background: white;
-                        transition: 1s;
-                    }
-                }
-                .alterar{
-                    background: blue;
-                    border-color:blue;
-                    &:hover{
-                        color: blue;
-                        background: white;
-                        transition: 1s;
-                    }
-                }
-                .validar{
-                    background: #00C920;
-                    border-color:#00C920;
-                    &:hover{
-                        color: #00C920;
-                        background: white;
-                        transition: 1s;
-                    }
-                }
-                
             }
         }
         

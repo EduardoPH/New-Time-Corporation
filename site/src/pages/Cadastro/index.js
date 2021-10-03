@@ -1,5 +1,6 @@
 import Container from './styled.js'
 import Menu from '../../components/menu'
+import { Inputs, Buttons } from '../../components/login-cadastro/index.js'
 
 
 
@@ -20,14 +21,14 @@ export default function Cadastro (){
                 </div>
                 <div class="formulario">
                     <div class="titulo-form">Cadastro</div>
-                    <input type="text" placeholder="Digite seu nome de Usuário..."/>
+                    <Inputs place="Digite seu nome de Usuário..."/>
                     <div class="gerar-nome">Gerar nome de Usuário</div>
-                    <input type="text" placeholder="Digite seu número para contato..."/>
-                    <input type="text" placeholder="Digite seu Email..."/>
-                    <input type="text" placeholder="Digite sua Senha..."/>
-                    <input type="text" placeholder="Digite novamente sua Senha..."/>
-                    <input type="text" placeholder="Digite seu CPF...(OPCIONAL)"/>
-                    <div class="botao"><button>Cadastrar</button></div>
+                    <Inputs place="Digite seu numero para contato..."/>
+                    <Inputs place="Digite seu email..."/>
+                    <Inputs place="Digite sua senha..."/>
+                    <Inputs place="Digite novamente sua senha..."/>
+                    <Inputs place="DIGITE SEU CPF... (OPCIONAL)"/>
+                    <div class="botao"><Buttons valor="Cadastrar" width="25em"/> </div>
                 </div>
             </div>
         </Container>

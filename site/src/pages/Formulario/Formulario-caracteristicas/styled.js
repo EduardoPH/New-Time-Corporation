@@ -74,16 +74,6 @@ const  Containerformulario = styled.div `
         
     }
 
-    button {
-        padding: 0.4em 0.5em;
-        border: none;
-        border-radius: 2em;
-        font-size: 1.5em;
-        background-color: #FC02A0;
-        color: white;
-   
-    }
-
     .informacoes {
         font-size: 1.8em;
         margin: 0.4em 0em;

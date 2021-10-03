@@ -74,21 +74,6 @@ const Container = styled.div `
         &:hover {text-decoration: underline};
     }
  
-    button {
-        background-color:#B133FF;
-        color: white;
-        width: 25em;
-        height: 3.5em;
-        border-radius: 5px;
-        border: none;
-        cursor:pointer;
-        &:hover {
-            background-color:rgba(255, 0, 0, 0.2);
-            transition: 0.3s;
-            color:#7F00BF;
-        }
-    }
- 
     .botao {
         display: flex;
         justify-content: center;

@@ -1,6 +1,7 @@
 import Menu from '../../components/menu/index';
 import { Container, BoxStyled, MenuLateralStyled } from './styled';
 import { useState } from 'react';
+import Button from '../../components/administrador/index'
 export default function Administrador(){
     const[ vDenuncia, setVDenuncia ] = useState(true);
     const[ apoio, setApoio ] = useState(false);
@@ -91,9 +92,9 @@ export default function Administrador(){
                             </div>
                             <textarea />
                             <div className="btms-acoes">
-                                <button className="excluir">Excluir</button>
-                                <button className="alterar">Alterar</button>
-                                <button className="validar" >Validar</button>
+                                <Button type="alterar" width="16em"/> 
+                                <Button type="excluir" width="16em"/>
+                                <Button type="adicionar" width="16em"/>
                             </div>
 
                         </div>
@@ -106,14 +107,14 @@ export default function Administrador(){
                                     Lute. Acredite. Conquiste. Perca. Deseje. Espere. Alcance. Invada. Caia. Seja tudo o quiser ser, mas acima de tudo, seja você sempre.  
                                 </p1>
                                 <div className="btm-acao">
-                                    <button className="alterar">Alterar</button>
-                                    <button className="excluir">Excluir</button>
+                                    <Button type='alterar' height="25px" font="12px"/>    
+                                    <Button type='excluir' height="25px" font="12px"/>
                                 </div>
                             </div>
                         </div>
                         <div className="input-frase">
                             <input type="text" placeholder="Digite uma nova frase..."/>
-                            <button className="btm-add">Adicionar</button>
+                            <Button type="adicionar" height="50px" width="15%"/>
                         </div>
                     </BoxStyled> : null}
                     { cargos?  <BoxStyled>
@@ -124,12 +125,12 @@ export default function Administrador(){
                                     <div className="nome-senha">
                                         <p1>Nome:</p1>
                                         <span>CLAUDIA</span>
-                                        <button className="btm-alt">Alterar</button>
+                                        <Button type="alterar" height="27px" width="6em" font="0.8em"/>
                                     </div>
                                     <div className="nome-senha">
                                         <p1>Senha:</p1>
                                         <span>CLAUDIA</span>
-                                        <button className="btm-excluir">Excluir</button>
+                                        <Button type="excluir" height="27px" width="6em" font="0.8em"/>
                                     </div>
                                 </div>
                                 
@@ -209,8 +210,8 @@ export default function Administrador(){
                                     <p1>HHiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidddddddddd</p1>
                                
                                 <div className="btms">
-                                    <button className="alterar">Alterar</button>
-                                    <button className="excluir">excluir</button>
+                                <Button type="alterar" height="30px" width="6em" font="0.9em"/>
+                                    <Button type="excluir" height="30px" width="6em" font="0.9em"/>
                                 </div>
                             </div>
                             <div className="lado-direito">

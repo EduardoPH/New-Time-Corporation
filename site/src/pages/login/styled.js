@@ -59,22 +59,6 @@ width: 100%;
     flex-direction: column;
 }
 
-input {
-    border-radius: 5px;
-    width: 25em;
-    height: 4em; 
-    border: none;
-    margin: 0em 2em 2.2em 2em;
-    cursor: auto;
-    background-color: rgb(242, 242, 242, 80%);
-}
-
-input::-webkit-input-placeholder  { 
-    color: #B133FF;
-    font: 16px arial;
-    padding-top: 2em;
-}
-
 .lado {
     display: flex;
     justify-content: space-between;
@@ -91,22 +75,6 @@ input::-webkit-input-placeholder  {
     cursor:pointer;
     &:hover {text-decoration: underline};
 }
-
-.bot1 button{
-    background-color:#B133FF;
-    color: white;
-    width: 12em;
-    height: 3em;
-    border-radius: 5px;
-    border: none;
-    cursor:pointer;
-    &:hover {
-        background-color:rgba(255, 0, 0, 0.2);
-        transition: 0.3s;
-        color:#7F00BF;
-    }
-}
-
 .nao-possui {
     display:flex;
     flex-direction: column;
@@ -125,20 +93,5 @@ input::-webkit-input-placeholder  {
     margin-bottom: 0.5em;
 }
 
-.botC button {
-    background-color:#B133FF;
-    color: white;
-    width: 25em;
-    height: 3.5em;
-    border-radius: 5px;
-    border: none;
-    cursor:pointer;
-    margin-bottom: 2em;
-    &:hover {
-        background-color:rgba(255, 0, 0, 0.2);
-        transition: 0.3s;
-        color:#7F00BF;
-    }
-}
 `
 export default Container 
