@@ -3,6 +3,7 @@ import Menu from '../../../components/menu'
 import React from "react";
 import {Fundo} from '../../../components/commum/background/styled'
 import Button from '../../../components/formulario/index'
+import { Link } from 'react-router-dom';
 
 export default function caracteristicas (){
     return(
@@ -104,7 +105,7 @@ export default function caracteristicas (){
                         <div class="informacoes">Informações complementares</div>
                         <div class="form-2">
                             <div class="textarea"><textarea name="" id="" cols="30" rows="10"></textarea></div>
-                            <div class="botao"><Button valor="Avançar"/></div>
+                            <Link to="/formulario2"><div class="botao"><Button valor="Avançar"/></div></Link>
                         </div>
                     </div>  
                 </div>
