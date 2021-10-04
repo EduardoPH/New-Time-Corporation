@@ -34,9 +34,9 @@ export default function Routes(){
                 <Route path="/perfil" component={PerfilUsuaria}/>
                 <Route path="/apoio" component={Apoio}/>
                 <Route path="/formulario" component={caracteristicas}/>
-                <Route path="/formulario2" component={depoimento}/>
+                <Route path="/formulario2" component={vestimentas}/>
                 <Route path="/formulario3" component={Local}/>
-                <Route path="/formulario4" component={vestimentas}/>
+                <Route path="/formulario4" component={depoimento}/>
                 <Route path="/cadastro" component={Cadastro}/>
                 <Route path="/map-render" component={Map}/>
             </Switch>

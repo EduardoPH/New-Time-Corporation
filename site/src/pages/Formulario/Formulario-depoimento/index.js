@@ -2,7 +2,7 @@ import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import {Fundo} from '../../../components/commum/background/styled'
 import React from "react";
-import Button from '../../../components/formulario/index'
+import Button from '../../../components/formulario/index';
 
 export default function depoimento (){
     return(
