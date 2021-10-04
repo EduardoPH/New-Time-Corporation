@@ -103,8 +103,8 @@ export default function caracteristicas (){
                     <div class="conteudo2">
                         <div class="informacoes">Informações complementares</div>
                         <div class="form-2">
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <Button valor="Avançar"/>
+                            <div class="textarea"><textarea name="" id="" cols="30" rows="10"></textarea></div>
+                            <div class="botao"><Button valor="Avançar"/></div>
                         </div>
                     </div>  
                 </div>

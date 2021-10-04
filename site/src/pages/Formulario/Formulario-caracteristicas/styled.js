@@ -1,84 +1,104 @@
 import styled from 'styled-components';
 
 const  Containerformulario = styled.div `
-    display:flex;
+display:flex;
+flex-direction: column;
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font: 2.5em arial;
+}
+
+.pag {
+    display: flex;
+    align-self: center;
     flex-direction: column;
-    background:url(${'/assets/images/estatisticas/fundo.svg'});
-    background-size: cover;
-    height: 100vh;
+    background-color: rgb(255, 255, 255, 40%);
+    padding: 1.5em;
+    border-radius: 20px;
+    margin-top: 1em;
+    width: 68%;
+    height: auto;
+}
+
+.menu-lateral {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    font: 1.3em arial;
+    width: 8em;
+    height: 8em;
+    border-radius: 7px;
+}
+
+.textos-lateral {
+    display: flex;
+    align-items: center;
+    margin: 0.3em 0em;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 9em;
+}
+
+.titulo-box, .input {
+    font: 1.3em arial;
+}
+
+.conteudo2 {
+
+}
+
+.informacoes {
+    font: 1.8em arial;
+    color: #FC02A0;
+    margin: 0.3em 0em;
+}
+
+.form-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textarea {
     width: 100%;
+    height: 100%;
+}
 
-    .pag {
-        display: flex;
-        align-self: center;
-        background-color: rgb(255, 255, 255, 40%);
-        border-radius: 1.2em;
-        flex-direction: column;
-        margin-top: 1.5em;
-        padding: 2em;
-        width: 90%;
-    }
-    
-    .menu-lateral {
-        padding: 1em 0em;
-        display: flex;
-        background-color: white;
-        font-size: 1.0em;
-        border-radius: 0.3em;
-        flex-direction: column;
-        align-self: center;
-        font-family: arial;
-    }
+textarea {
+    width:96%;
+    height: 50%;
+    border-radius: 10px;
+    resize: none;
+}
 
-    .textos-lateral {
-        padding: 0.2em 0.3em;
-        font-size: 1.4em;
-    }
+.botao {
+    padding: 0em 3em;
+}
 
-    .titulo {
-        display: flex;
-        justify-content: center;
-        font-size: 3.5em;
-        color: white;
-        font-family: arial;
-    }
-
-    .conteudo {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .imputs {
-        display: flex;
-        flex-direction: column;
-        font-family: arial;
-    }
-
-    .titulo-box, .input {
-        font-size: 1.5em;
-        font-family: arial;
-    }
-
-    .form-2 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    textarea {
-        width: 50em;
-        height: 12em; 
-        border-radius: 0.6em;
-        border: none;
-        resize: none;
-        
-    }
-
-    .informacoes {
-        font-size: 1.8em;
-        margin: 0.4em 0em;
-        color: #FC02A0;
-        font-family: arial;
-    }
+.botao button {
+    font: 1.3em arial;
+    color: white;
+    background-color: #FC02A0;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    &:hover{color:#FC02A0; background-color: white;}
+}
 `
 export default Containerformulario;

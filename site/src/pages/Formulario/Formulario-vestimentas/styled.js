@@ -4,87 +4,101 @@ const  Containerformulario = styled.div `
 display:flex;
 flex-direction: column;
 
+.titulo {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font: 2.5em arial;
+}
 
 .pag {
     display: flex;
     align-self: center;
-    background-color: rgb(255, 255, 255, 40%);
-    border-radius: 1.2em;
     flex-direction: column;
-    margin-top: 1.5em;
-    padding: 2em;
-    width: 90%;
+    background-color: rgb(255, 255, 255, 40%);
+    padding: 1.5em;
+    border-radius: 20px;
+    margin-top: 1em;
+    width: 68%;
+    height: auto;
 }
 
 .menu-lateral {
-    padding: 1em 0em;
     display: flex;
-    background-color: white;
-    font-size: 1.0em;
-    border-radius: 0.3em;
+    justify-content: center;
     flex-direction: column;
-    align-self: center;
-    font-family: arial;
+    background-color: white;
+    font: 1.3em arial;
+    width: 8em;
+    height: 8em;
+    border-radius: 7px;
 }
 
 .textos-lateral {
-    padding: 0.2em 0.3em;
-    font-size: 1.4em;
-}
-
-.titulo {
     display: flex;
-    justify-content: center;
-    font-size: 3.5em;
-    color: white;
-    font-family: arial;
+    align-items: center;
+    margin: 0.3em 0em;
 }
 
 .conteudo {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.imputs {
+.box {
     display: flex;
     flex-direction: column;
-    font-family: arial;
+    width: 9em;
 }
 
 .titulo-box, .input {
-    font-size: 1.5em;
-    font-family: arial;
+    font: 1.3em arial;
 }
 
-.form-2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+.conteudo2 {
 
-textarea {
-    width: 50em;
-    height: 12em; 
-    border-radius: 0.6em;
-    border: none;
-    resize: none;
-    
-}
-
-button {
-    padding: 0.4em 0.5em;
-    border: none;
-    border-radius: 2em;
-    font-size: 1.5em;
-    background-color: #FC02A0;
-    color: white;
 }
 
 .informacoes {
-    font-size: 1.8em;
-    margin: 0.4em 0em;
+    font: 1.8em arial;
     color: #FC02A0;
-    font-family: arial;
+    margin: 0.3em 0em;
+}
+
+.form-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textarea {
+    width: 100%;
+    height: 100%;
+}
+
+textarea {
+    width:96%;
+    height: 50%;
+    border-radius: 10px;
+    resize: none;
+}
+
+.botao {
+    padding: 0em 3em;
+}
+
+.botao button {
+    font: 1.3em arial;
+    color: white;
+    background-color: #FC02A0;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    &:hover{color:#FC02A0; background-color: white;}
 }
 `
 export default Containerformulario;
