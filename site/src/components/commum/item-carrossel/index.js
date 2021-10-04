@@ -2,7 +2,7 @@ import { Container } from "./styled"
 
 
 export default function Index (props){
-    if(props.cgrafico == true){
+    if(props.cgrafico === true){
     return(
         <Container >
         <div class="centro">
@@ -16,7 +16,7 @@ export default function Index (props){
         </div>
     </Container> 
 
-    )} else if(props.cgrafico == false){
+    )} else if(props.cgrafico === false){
         return (<Container>
                    <div class="frases"> {props.frase} </div>
                </Container>
