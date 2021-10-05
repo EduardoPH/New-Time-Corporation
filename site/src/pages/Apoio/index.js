@@ -28,11 +28,11 @@ export default function Apoio (){
             }
         ]
         setEventos(apiResponse)
-    }
+    };
  
     useEffect(
         () => {SobreSite() }, [] 
-    )
+    );
 
 
 

@@ -1,7 +1,9 @@
+
+import Button from '../../../../administrador/index';
+import Container from './styled';
 export default function index(props) {
     return (
         <Container>
-        <div className="item-frase">
             <p1>
                 {props.frase}
             </p1>
@@ -9,7 +11,6 @@ export default function index(props) {
                 <Button type='alterar' height="25px" font="12px" />
                 <Button type='excluir' height="25px" font="12px" />
             </div>
-        </div>
         </Container>
     )
 }

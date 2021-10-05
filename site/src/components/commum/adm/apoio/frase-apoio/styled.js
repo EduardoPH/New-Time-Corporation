@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 
 const Container = styled.div`
-.item-frase{
 
     display: flex;
 
@@ -24,7 +23,6 @@ const Container = styled.div`
         width: 10em;
         align-items: center;
     }
-}
 `
 
 
