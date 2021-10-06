@@ -4,10 +4,6 @@ const  Containers = styled.div `
 display:flex;
 flex-direction: column;
 
-background:url(${'../assets/images/estatisticas/fundo.svg'});
-background-size: cover;
-height: 100vh;
-width: 100%;
 
 .titulo {
     display:flex;

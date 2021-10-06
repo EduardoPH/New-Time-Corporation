@@ -1,12 +1,13 @@
 import Container from './styled.js'
 import Menu from '../../components/menu'
 import { Inputs, Buttons } from '../../components/login-cadastro/index.js'
+import {Fundo} from '../../components/commum/background/styled'
 
 
 
 export default function Cadastro (){
     return(
-
+        <Fundo height="100%">
         <Container>
             <Menu/>
             <div class="conteudo">
@@ -32,5 +33,6 @@ export default function Cadastro (){
                 </div>
             </div>
         </Container>
+        </Fundo>
     )
 }

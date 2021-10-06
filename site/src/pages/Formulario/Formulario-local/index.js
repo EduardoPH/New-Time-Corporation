@@ -1,11 +1,15 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
+import {Fundo} from '../../../components/commum/background/styled'
 import React from "react";
 import  Mapa  from '../../../components/map/map';
-import Button from '../../../components/formulario/index'
+import Button from '../../../components/formulario/index';
+import { Link } from 'react-router-dom';
+
 
 export default function Local (){
     return(
+        <Fundo height="100vh">
         <Containerformulario>
             <Menu/>
                 <div class="titulo">Formulário de denúncia</div>
@@ -17,7 +21,7 @@ export default function Local (){
                             <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>Local</div>
                             <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>depoimento</div>
                         </div>
-                        <div class="botao"><Button valor="Avançar"/></div>
+                        <Link to="/formulario4"><div class="botao"><Button valor="Avançar"/></div></Link>
                     </div>
                     <div class="conteudo-right">
                         <div class="titulo-local">Área Localizada</div>
@@ -26,5 +30,6 @@ export default function Local (){
                 </div>
 
         </Containerformulario>
+        </Fundo>
     )
 }

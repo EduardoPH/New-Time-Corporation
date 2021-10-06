@@ -1,5 +1,6 @@
 import Container from './styled.js'
 import Menu from '../../components/menu'
+import {Fundo} from '../../components/commum/background/styled'
 import { Link } from "react-router-dom";
 import { Inputs, Buttons } from '../../components/login-cadastro/index.js';
 
@@ -7,7 +8,7 @@ import { Inputs, Buttons } from '../../components/login-cadastro/index.js';
 
 export default function Login(){
     return(
-
+        <Fundo height="100vh">
         <Container>
             <Menu/>
             <div className="caixa">
@@ -40,5 +41,6 @@ export default function Login(){
         
         
         </Container>
+        </Fundo>
     )
 }

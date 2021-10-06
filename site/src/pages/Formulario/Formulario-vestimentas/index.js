@@ -1,10 +1,14 @@
 import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
+import {Fundo} from '../../../components/commum/background/styled'
 import React from "react";
-import Button from '../../../components/formulario/index'
+import Button from '../../../components/formulario/index';
+import { Link } from 'react-router-dom';
+
 
 export default function vestimentas (){
     return(
+        <Fundo height="100vh">
         <Containerformulario>
             <Menu/>
             <div class="titulo">Formulário de denúncia</div>
@@ -101,11 +105,12 @@ export default function vestimentas (){
                     <div class="conteudo2">
                         <div class="informacoes">Informações complementares</div>
                         <div class="form-2">
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <Button valor="Avançar"/>
+                            <div class="textarea"><textarea name="" id="" cols="30" rows="10"></textarea></div>
+                            <Link to="/formulario3"><div class="botao"><Button valor="Avançar"/></div></Link>
                         </div>
                     </div>  
                 </div>
         </Containerformulario>
+        </Fundo>
     )
 }
