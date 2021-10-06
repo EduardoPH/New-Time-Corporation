@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import BoxStyled from "./styled";
 
 
@@ -7,20 +8,20 @@ export default function Index(props){
     function SobreSite(){
         const apiResponse = [
             {
-                nome: "ludiarne",
-                emial: "luane@gamil.com",
+                nome: "ludiarne1",
+                email: "luane@gamil.com",
                 tel: "11 9999-9999",
                 cpf: "6545645464" 
             },
             {
-                nome: "ludiarne",
-                emial: "luane@gamil.com",
+                nome: "ludiarn2e",
+                email: "luane@gamil.com",
                 tel: "11 9999-9999",
                 cpf: "6545645464" 
             },
             {
-                nome: "ludiarne",
-                emial: "luane@gamil.com",
+                nome: "ludiarn3e",
+                email: "luane@gamil.com",
                 tel: "11 9999-9999",
                 cpf: "6545645464" 
             }
@@ -48,10 +49,10 @@ export default function Index(props){
                     {eventos.map (item => 
                         <tr>
                             <td>{item.nome}</td>
-                            <td>{item.emial}</td>
+                            <td>{item.email}</td>
                             <td>{item.tel}</td>
                             <td>{item.cpf}</td>
-                            <td className="coluna-acao"><button>Ver Perfil</button></td>
+                            <td className="coluna-acao">< Link to={{pathname: "/administrador/perfil/usuaria", state: {item}}}><button>Ver Perfil</button></Link></td>
                         </tr>
                     )}
                 </tbody>

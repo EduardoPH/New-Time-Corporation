@@ -1,7 +1,7 @@
 import { Container } from "./styled";
 
 export default function InfoUsuaria(props) {
-
+    console.log(props.info)
     return (
         <Container>
             <p1 style={{display: props.displayNome}}>Nome :</p1>

@@ -1,6 +1,7 @@
 import BoxStyled from "./styled";
 import Button from '../../../administrador/index';
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 
 export default function Index(props){
     const [eventos, setEventos] = useState([]);
@@ -29,7 +30,7 @@ export default function Index(props){
                             <p1>   {item.nome} </p1>
                             <span> {item.email} </span>
                             <span> {item.tel} </span>
-                            <button > Perfil</button>
+                            <Link to={{pathname: "/administrador/perfil/usuaria", state: {item}}}><button > Perfil</button></Link>
                         </div>
                         )}
                 </div>
