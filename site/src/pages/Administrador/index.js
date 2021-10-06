@@ -12,7 +12,6 @@ import usuarias from '../../components/commum/adm/usuarias/';
 
 export default function Administrador(props){
     const [eventos, setEventos] = useState([]);
-    let v = 0; 
     function SobreSite(){
         const apiResponse = [
             {
@@ -37,6 +36,7 @@ export default function Administrador(props){
                 denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur"
             }
         ]
+        setEventos(apiResponse)
         
     };
     useEffect(

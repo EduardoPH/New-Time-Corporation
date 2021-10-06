@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import InfoUsuaria from '../../../Info-Usuaria/';
 import ItemDenuncia from '../../../Item-Denuncia-Usu';
 export default function Index(props){
