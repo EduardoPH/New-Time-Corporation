@@ -3,15 +3,16 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Container, MenuLateralStyled, BoxStyled } from './styled';
 
-import validarDenuncia from '../../components/commum/adm/validarDenuncia/';
+import ValidarDenuncia from '../../components/commum/adm/validarDenuncia/';
 import apoio from '../../components/commum/adm/apoio/';
 import cargos from '../../components/commum/adm/cargos/';
 import listaDenuncia from '../../components/commum/adm/listaDenuncia/';
 import perfilUsuaria from '../../components/commum/adm/perfilUsuaria/';
 import usuarias from '../../components/commum/adm/usuarias/';
 
-export default function Administrador(){
+export default function Administrador(props){
     const [eventos, setEventos] = useState([]);
+    let v = 0; 
     function SobreSite(){
         const apiResponse = [
             {
@@ -36,11 +37,13 @@ export default function Administrador(){
                 denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur"
             }
         ]
-        setEventos(apiResponse)
+        
     };
     useEffect(
         () => {SobreSite() }, [] 
     );
+    
+   
     return(
         <Container>
             <Menu/>
@@ -80,9 +83,10 @@ export default function Administrador(){
                     </MenuLateralStyled>
                     
                         <div className="box-direita">
+                            
                             <BoxStyled>
                                 <Switch>
-                                    <Route path="/administrador/validarDenuncia" exact={true} component={validarDenuncia} />
+                                    <Route path="/administrador/validarDenuncia" exact={true} render={() =><ValidarDenuncia info={eventos[0]}/>} />
                                     <Route path="/administrador/frases/apoio" exact={true} component={apoio} />
                                     <Route path="/administrador/cargo" exact={true} component={cargos} />
                                     <Route path="/administrador/perfil/usuaria" exact={true} component={perfilUsuaria} />
