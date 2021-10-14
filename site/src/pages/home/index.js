@@ -37,16 +37,16 @@ export default function Home() {
 
     return(
         <Conteiners> 
+            <div className="parte1">
+                <Menu/>
 
-            <Menu/>
-
-              
-             <Carousel> 
-             {eventos.map(
-                 i=> <Item titulo ={i.titulo } imagem={i.imagem} legenda={i.legenda}/> 
-             )}
-           </Carousel>
-
+                
+                <Carousel> 
+                {eventos.map(
+                    i=> <Item titulo ={i.titulo } imagem={i.imagem} legenda={i.legenda}/> 
+                )}
+                </Carousel>
+            </div>
 
            
            

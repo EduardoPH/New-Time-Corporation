@@ -8,10 +8,12 @@ flex-direction: column;
 
 background: url(${'/assets/images/home/fundo.svg'});
 background-size: cover;
-height: 100vh;
 
 
 
+.parte1{
+    height: 97vh;
+}
 
 .rodape{
     display: flex;
