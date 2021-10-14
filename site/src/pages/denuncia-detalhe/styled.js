@@ -89,10 +89,8 @@ const Pag = styled.div`
         height: 100%;
         padding: 1em;
         background-color: white;
-        margin: 1.2% 0% 0% -7.4%;
+        margin: 0.7% 0% 0% -7.4%;
         border-radius: 8px;
-
-    
     }
 
     .msg-denuncia {
@@ -113,7 +111,7 @@ const Pag = styled.div`
     .box-msg img {
         height: 42px;
         width: 13%;
-        top: 1em;
+        top: 2em;
     }
 
 `

@@ -17,7 +17,7 @@ export default function Mensagem(props) {
                     <img className="setinha" src="/assets/images/denuncias-recentes/Setinha.png" alt=""/>
                     <div className="caixa-msg"> 
                         <div className="mensagem" > {props.denuncia.msg} </div> 
-                        {/* <Link to={{pathname='/denuncia-details', state=props.denuncia  }} style={{textDecoration: "none"}}> <div className="ver-mais-dt"> Ver mais...</div> </Link> */}
+                        <Link to={{pathname:'/denuncia-details', state:props.denuncia  }} style={{textDecoration: "none"}}> <div className="ver-mais-dt"> Ver mais...</div> </Link>
                     </div>
                 </div>
             </div>

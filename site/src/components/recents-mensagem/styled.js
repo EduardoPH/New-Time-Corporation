@@ -30,7 +30,6 @@ const Container = styled.div`
         padding: 1em;
         max-width: 30em;
         max-height: 7em;
-        overflow-y: scroll;
     }
 
     .mensagem {

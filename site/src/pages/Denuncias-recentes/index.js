@@ -1,7 +1,7 @@
 import { Container } from "./styled";
 import Menu from '../../components/menu'
 import Mensagem from '../../components/recents-mensagem'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Details() {
 
@@ -26,15 +26,17 @@ export default function Details() {
         setDenuncia(r)
     }
 
+    useEffect(ApiResponse, [])
+
     return(
         <Container>
             <Menu/>
             <div className="rc-titulo"> Denúncias Recentes </div>
             <div className="rc-conteudo">
                 <div className="rc-denuncias"> 
-                    {denuncia.map(item => {
+                    {denuncia.map(item => 
                         <Mensagem  denuncia={item} />
-                    })}
+                    )}
                 </div>
             </div>
         </Container>
