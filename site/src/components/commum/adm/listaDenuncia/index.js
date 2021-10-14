@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import BoxStyled from "./styled";
 
 
@@ -8,17 +7,17 @@ export default function Index(props){
     function SobreSite(){
         const apiResponse = [
             {
-                nome: "ludiarne1",
+                nome: "ludiarne",
                 denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur",
                 tel: "11 9999-9999"
             },
             {
-                nome: "ludiarne2",
+                nome: "ludiarne",
                 denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur",
                 tel: "11 9999-9999"
             },
             {
-                nome: "ludiarne3",
+                nome: "ludiarne",
                 denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur",
                 tel: "11 9999-9999"
             }
@@ -50,7 +49,7 @@ export default function Index(props){
                             <td className="previa">
                                 {item.denuncia}
                             </td>
-                            <td className="coluna-acao"><Link to={{pathname: "/administrador/validarDenuncia", state: {item}}}><button>Ver Denúncia</button></Link></td>
+                            <td className="coluna-acao"><button>Ver Denúncia</button></td>
                         </tr>
                     )}
                 </tbody>

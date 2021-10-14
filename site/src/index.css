@@ -3,8 +3,3 @@ body{margin: 0px}
     box-sizing: border-box;
     cursor: default;
 }
-
-a, a:visited, a:link {
-    text-decoration: none;
-    color: inherit;
-  }

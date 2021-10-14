@@ -2,11 +2,7 @@ import sytled from 'styled-components';
 
 const Container= sytled.div`
     
-    
-    a, a:visited, a:link {
-        text-decoration: none;
-        color: inherit;
-    }
+    text-decoration-line: underline;
 
     display: flex;
     flex-direction: row;
@@ -54,7 +50,6 @@ const Container= sytled.div`
         font-weight: 700;
         font-family: 'Roboto';
         &:hover{background-color:purple; ; transition: 0.3s}
-        cursor: pointer;
     }
 `
 export {Container}

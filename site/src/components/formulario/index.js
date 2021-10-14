@@ -1,7 +1,7 @@
 import { ButtonStyle } from "./styled";
 
-export default function Index (props){
+export default function App(props){
     return(
         <ButtonStyle> {props.valor} </ButtonStyle>
-    )
-}
+    );
+} 
