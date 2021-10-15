@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import BoxStyled from "./styled";
+import { Link } from "react-router-dom";
 
 
 export default function Index(props){
@@ -8,18 +9,27 @@ export default function Index(props){
         const apiResponse = [
             {
                 nome: "ludiarne",
-                denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur",
-                tel: "11 9999-9999"
+                email: "luane@gamil.com",
+                tel: "11 9999-9999",
+                cpf: "6545645464",
+                data: "22020-25-25",
+                denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur"
             },
             {
-                nome: "ludiarne",
-                denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur",
-                tel: "11 9999-9999"
+                nome: "ludiarne2",
+                email: "luane@gamil.com",
+                tel: "11 9999-9999",
+                cpf: "6545645464",
+                data: "22020-25-25",
+                denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur"
             },
             {
-                nome: "ludiarne",
-                denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur",
-                tel: "11 9999-9999"
+                nome: "ludiarn3e",
+                email: "luane@gamil.com",
+                tel: "11 9999-9999",
+                cpf: "6545645464",
+                data: "22020-25-25",
+                denuncia: "Os conceitos de Indústria Cultural e Cultura de Massa foram cunhados pela famosa Escola de Frankfurt, na Alemanha. ... A Cultura de Massa é produzida pela Indústria Cultural, ou seja, um conjunto de grandes empresas que pertencem à classe dominante que tem por objetivo produzir cultur"
             }
         ]
         setEventos(apiResponse)
@@ -49,7 +59,7 @@ export default function Index(props){
                             <td className="previa">
                                 {item.denuncia}
                             </td>
-                            <td className="coluna-acao"><button>Ver Denúncia</button></td>
+                            <td className="coluna-acao"><Link to={{pathname:"/administrador/validar/denuncia", state:{item}}}><button>Ver Denúncia</button></Link></td>
                         </tr>
                     )}
                 </tbody>

@@ -1,25 +1,26 @@
 import { useState, useEffect } from "react";
 import BoxStyled from "./styled";
-
+import { Link } from "react-router-dom";
 
 export default function Index(props){
     const [eventos, setEventos] = useState([]);
+    const [usuaria, setUsuaria] = useState('')
     function SobreSite(){
         const apiResponse = [
             {
-                nome: "ludiarne",
+                nome: "ludiar2ne",
                 emial: "luane@gamil.com",
                 tel: "11 9999-9999",
                 cpf: "6545645464" 
             },
             {
-                nome: "ludiarne",
+                nome: "ludiar3ne",
                 emial: "luane@gamil.com",
                 tel: "11 9999-9999",
                 cpf: "6545645464" 
             },
             {
-                nome: "ludiarne",
+                nome: "ludia54rne",
                 emial: "luane@gamil.com",
                 tel: "11 9999-9999",
                 cpf: "6545645464" 
@@ -33,7 +34,7 @@ export default function Index(props){
     return(
         <BoxStyled>
             <h1>Usuárias</h1>
-            <input type="text" placeholder="Pesquisar por usuária..."/>
+            <input type="text" placeholder="Pesquisar por usuária..." onChange={e => setUsuaria(e.target.value)}/>
             <table className="tabela-usuaria">
                 <thead>
                     <tr>
@@ -51,7 +52,7 @@ export default function Index(props){
                             <td>{item.emial}</td>
                             <td>{item.tel}</td>
                             <td>{item.cpf}</td>
-                            <td className="coluna-acao"><button>Ver Perfil</button></td>
+                            <td className="coluna-acao"><Link to={{pathname:"/administrador/usuaria/perfil", state:{item}}}><button>Ver Perfil</button></Link></td>
                         </tr>
                     )}
                 </tbody>
