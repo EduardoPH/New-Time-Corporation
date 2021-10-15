@@ -35,6 +35,12 @@ const BarChart = () =>{
                 height={650}
                 options={{ 
                     maintainAspectRatio: false,
+
+                    plugins: {
+                        legend: {
+                          display: false,
+                        },
+                      },
                                    
                     legend:{labels:{fontSize: 25, fontColor: '#FFFFF'}}, 
 
@@ -85,6 +91,12 @@ const BarChart = () =>{
                     height={650}
                     options={{ 
                         maintainAspectRatio: false,
+
+                        plugins: {
+                            legend: {
+                              display: false,
+                            },
+                          },
                                        
                         legend:{labels:{fontSize: 25, fontColor: '#FFFFF'}}, 
     
@@ -135,6 +147,12 @@ const BarChart = () =>{
             height={650}
             options={{ 
                 maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                      display: false,
+                    },
+                  },
                                
                 legend:{labels:{fontSize: 25, fontColor: '#FFFFF'}}, 
 
