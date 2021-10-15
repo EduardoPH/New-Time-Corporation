@@ -22,6 +22,23 @@ const Container = styled.div`
         justify-content: space-evenly;
         width: 10em;
         align-items: center;
+        button{
+            border-radius: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1em;
+            padding: 5px 5px ;
+            color: #FFFFFF;
+            border: solid 0px;
+            cursor: pointer;
+        }    
+        .excluir{
+            background-color: red;
+        }
+        .alterar{
+            
+            background-color: blue;
+        }
     }
 `
 

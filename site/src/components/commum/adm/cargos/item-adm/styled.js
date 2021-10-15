@@ -34,10 +34,9 @@ const BoxStyled=styled.div`
             color: white;
             cursor: pointer;
             border-radius: 5px;
+            cursor: pointer;
             &:hover{
-                color: blue;
-                background-color: white;
-                transition: 1s;
+               opacity: 0.6;
             }
         }
         .btm-excluir{
@@ -48,10 +47,9 @@ const BoxStyled=styled.div`
             color: white;
             cursor: pointer;
             border-radius: 5px;
+            cursor: pointer;
             &:hover{
-                color: red;
-                background-color: white;
-                transition: 1s;
+               opacity: 0.6;
             }
         }
     }

@@ -33,12 +33,18 @@ export default function Index(){
     useEffect(
         () => SobreSite() , [] 
     )
-    
+    function alterar(x){
+      setFrase(x.frase)
+    }
+    function excluir(id){
+        alert(id)
+    }
+   
     return(
     <BoxStyled>
         <h1>Administrar Frases de Apoio</h1>                      
         <div className="lista-apoio">
-            {eventos.map(item=> <ItemFrase frase={item}/>)}
+            {eventos.map(item=> <ItemFrase frase={item} Excluir={excluir} Alterar={alterar}/>)}
         </div>
         <div className="input-frase">
             <input type="text" placeholder="Digite uma nova frase..." value={frase} onChange={e => setFrase(e.target.value)}/>
