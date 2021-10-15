@@ -22,6 +22,16 @@ flex-direction: column;
 }
 
 
+.hCukPS{
+    margin-top:1em;
+}
+
+
+.lnfQpq .grafico {
+    height: 93%;
+    width: 40%;}
+
+
 
 `
 
