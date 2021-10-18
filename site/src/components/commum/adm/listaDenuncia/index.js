@@ -52,16 +52,20 @@ export default function Index(props){
                     </tr>
                 </thead>
                 <tbody>
-                    {eventos.map( item =>
-                        <tr>
+                    {eventos.map((item,i) =>
+                        <tr key={i}>
                             <td>{item.nome}</td>
                             <td>{item.tel}</td>
                             <td className="previa">
                                 {item.denuncia}
                             </td>
-                            <td className="coluna-acao"><Link to={{pathname:"/administrador/validar/denuncia", state:{item}}}><button>Ver Denúncia</button></Link></td>
+                            <td className="coluna-acao">
+                                <Link to={{pathname:"/administrador", state: item}}>
+                                    <button>Ver Denúncia</button>
+                                </Link>
+                            </td>
                         </tr>
-                    )}
+                    )} 
                 </tbody>
             </table>
         </BoxStyled>
