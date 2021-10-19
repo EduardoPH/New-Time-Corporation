@@ -4,7 +4,7 @@ import ItemDenuncia from '../../../Item-Denuncia-Usu';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 export default function Index(props){
-    const [eventos, setEventos] = useState(props.location.state.item);
+    const [eventos, setEventos] = useState(props.location.state);
     
     const excluir = async(id) =>{
         confirmAlert({
