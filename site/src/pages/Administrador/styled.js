@@ -8,6 +8,8 @@ const Container = styled.div`
     background-size: cover;
     height: auto;
     min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
     
     .Top-Adm{
         

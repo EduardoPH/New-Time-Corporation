@@ -11,10 +11,14 @@ const Container = styled.div`
 
     .mensagem {
         display: flex;
-        flex-direction: row;
         align-items: center;
         font-size: 1.2em;
         text-align: start;
+        cursor: pointer;
+
+        & :hover{
+            text-decoration: underline;
+        }
     }
     
     .mensagem img {
