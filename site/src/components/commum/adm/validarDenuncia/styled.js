@@ -6,6 +6,8 @@ const BoxStyled=styled.div`
     flex-direction: column;
     align-items: center ;
     width: 100%;
+
+    overflow-x: none;
     .box-denuncia{
         width: 80%;
     }
@@ -57,7 +59,21 @@ const BoxStyled=styled.div`
         width: 100%;
         height: 3em;
         button{
+            border: solid 0px;
             margin: 5px 0px;
+            color: white;
+            border-radius: 10px;
+            width: 16em;
+            font-family: arial;
+            font-size: 1em;
+            font-weigth: 800;
+            cursor:pointer;
+        }
+        .excluir{
+            background-color:red;
+        }
+        .adicionar{
+            background-color:green;
         }
     }
 

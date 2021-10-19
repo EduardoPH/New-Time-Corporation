@@ -2,33 +2,9 @@ import BoxStyled from "./styled";
 import Button from '../../../administrador/index';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
 export default function Index(props){
     const [eventos, setEventos] = useState([]);
     const [item, setItem] = useState({});
-    const [denun, setDenun] = useState('')
-    const notificacao = () => toast.success("Denúncia Cadastrada com sucesso!");
-
-    const excluir = async(id) =>{
-        confirmAlert({
-            title: 'Remover Denúncia',
-            message: `Tem certeza que deseja remover esta denúncia ${item.nome}`,
-            buttons:[
-                {
-                    label: 'Sim',
-                    onClick: async () => {
-                        alert('apagou ' + item.nome)
-                    }
-                },
-                {label: 'Não'}
-            ]
-        })
-    }
     
     useEffect(() => {
         const r = [
@@ -70,11 +46,11 @@ export default function Index(props){
 
     }, []);
 
+    const [denun, setDenun] = useState('')
+
     return(
         <BoxStyled>
-            <ToastContainer/>
             <h1>Validar Denúncia</h1>
-            
             <div className="box-denuncia">
                 <div className="cabecalho">
                     < img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/>
@@ -88,8 +64,8 @@ export default function Index(props){
                 <textarea value={denun}  onChange={  e => setDenun(e.target.value)}/>
                 <div className="btms-acoes">
                     <Button type="alterar" width="16em"/> 
-                    <button className="excluir" onClick={() => excluir(item.id)}>Excluir</button>
-                    <button className="adicionar" onClick={ notificacao}> adicionar</button>
+                    <Button type="excluir" width="16em"/>
+                    <Button type="adicionar" width="16em"/>
                 </div>
             </div>
         </BoxStyled>
