@@ -37,7 +37,6 @@ const Container = styled.div`
         flex-direction: column;
         height: auto;
         width: 93%;
-        overflow-y: scroll;
         max-height: 90%;
         margin-left: -1em;
     }
@@ -63,56 +62,7 @@ const Container = styled.div`
 `
 
 const Pag = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    .pt1 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .pack-user {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .user-name {
-        color: white;
-        font-size: 1.8em;
-        margin-left: 0.5em;
-    }
-
-    .cx-mensagem {
-
-        width: 87%;
-        height: 100%;
-        padding: 1em;
-        background-color: white;
-        margin: 0.7% 0% 0% -7.4%;
-        border-radius: 8px;
-    }
-
-    .msg-denuncia {
-        padding-left: 1em;
-        font-size: 1.4em;
-    }
-
-    .pt2 {
-        margin-left: 4em;
-    }
-
-    .box-msg {
-        display: flex;
-        flex-direction: row;
-        height: 40vh;
-    }
-
-    .box-msg img {
-        height: 42px;
-        width: 13%;
-        top: 2em;
-    }
+    
 
 `
 
@@ -162,10 +112,4 @@ const Caracteristicas = styled.div`
         
 `
 
-const Map = styled.div`
-    input {
-        display: none;
-    }
-`
-
-export {Container, Caracteristicas, Pag, Map}
+export {Container, Caracteristicas, Pag}
