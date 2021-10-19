@@ -1,9 +1,5 @@
 import Containerformulario from './styled.js';
-import Menu from '../../../components/menu'
 import React from "react";
-import {Fundo} from '../../../components/commum/background/styled'
-import Button from '../../../components/formulario/index'
-import { Link } from 'react-router-dom';
 import { useState } from "react";
 
 export default function Caracteristicas (props){
@@ -13,11 +9,9 @@ export default function Caracteristicas (props){
     const [complemento, setComplemento] = useState([]);
 
     return(
-        <Fundo height="100vh">
         <Containerformulario>
-            <Menu/>
-            <div class="titulo">Formulário de denúncia</div>
                 <div class="pag">
+                    
                     <div class="conteudo">
                         
                             <div class="box">
@@ -112,6 +106,5 @@ export default function Caracteristicas (props){
                     </div>  
                 </div>
         </Containerformulario>
-        </Fundo>
     )
 }

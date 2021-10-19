@@ -2,9 +2,19 @@ import Containerformulario from './styled.js';
 import Menu from '../../../components/menu'
 import {Fundo} from '../../../components/commum/background/styled'
 import React from "react";
+import { useState } from "react";
 import Button from '../../../components/formulario/index';
 
-export default function depoimento (){
+export default function Depoimento (){
+    const [complemento, setComplemento] = useState([]);
+
+    function ValorTextarea() {
+        let capturando = "";
+
+        capturando = document.getElementById('valor').value;
+        setComplemento(capturando);
+    }
+
     return(
         <Fundo height="100vh">
         <Containerformulario>
@@ -23,10 +33,12 @@ export default function depoimento (){
                     </div>
 
                     <div class="conteudo2">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea onChange={ValorTextarea} name="" id="valor" cols="30" rows="10"></textarea>
+                        <div>{complemento}</div>
                     </div>
                 </div>
                 </div>
+                
 
                 
         </Containerformulario>

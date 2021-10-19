@@ -1,9 +1,5 @@
 import Containerformulario from './styled.js';
-import Menu from '../../../components/menu'
-import {Fundo} from '../../../components/commum/background/styled'
 import React from "react";
-import Button from '../../../components/formulario/index';
-import { Link } from 'react-router-dom';
 import { useState } from "react";
 
 
@@ -14,20 +10,10 @@ export default function Vestimentas (props){
     const [complemento, setComplemento] = useState([]);
 
     return(
-        <Fundo height="100vh">
         <Containerformulario>
-            <Menu/>
-            <div class="titulo">Formulário de denúncia</div>
                 <div class="pag">
                     <div class="conteudo">
-                        <div class="menu-lateral"> 
-                            <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>Caract. físicas</div>
-                            <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>Vestimentas</div>
-                            <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>Local</div>
-                            <div class="textos-lateral"><img src="/assets/images/formulario/seta.svg" alt=""/>depoimento</div>
-                        </div>
 
-                        
                             <div class="box">
                                 <div class="titulo-box">Parte de cima</div>
                                 <div class="imputs">
@@ -112,7 +98,6 @@ export default function Vestimentas (props){
                         <div class="informacoes">Informações complementares</div>
                         <div class="form-2">
                         <div class="textarea"><textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10"></textarea></div>
-                            <Link to="/formulario3"><div class="botao"><Button valor="Avançar"/></div></Link>
                         </div>
                         <div>{parteCima}</div>
                         <div>{parteBaixo}</div>
@@ -121,6 +106,5 @@ export default function Vestimentas (props){
                     </div>  
                 </div>
         </Containerformulario>
-        </Fundo>
     )
 }
