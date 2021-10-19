@@ -13,6 +13,7 @@ background-size: cover;
 
 .parte1{
     height: 97vh;
+    align-items:center;
 }
 
 .rodape{
