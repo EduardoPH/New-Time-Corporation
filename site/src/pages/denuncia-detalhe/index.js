@@ -4,7 +4,8 @@ import {MenuLeft} from '../../components/details-denuncia'
 import {BrowserRouter,Route, Switch} from 'react-router-dom'
 import Mensagem from   '../../components/details-denuncia/mensage'
 import Caracters from '../../components/details-denuncia/caracter'
-import Map from '../../components/map/map.js'
+import Map from './MapaDetalhes.js'
+
 
 export default function Pag(){
     return(

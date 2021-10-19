@@ -61,55 +61,24 @@ const Container = styled.div`
     }
 `
 
-const Pag = styled.div`
-    
+const MapStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    input, button{
+        display: none;
+    }
 
-`
+    height: 30em;
+    width: 78%;
 
-const Caracteristicas = styled.div`
-        display: flex;
-        flex-direction: column;
+    .tiitle {
         text-align: center;
+        font-size: 2.7em;
+        color: #FFFFFF;
+        margin: 0.3em;
+    }
 
-        .container-caracter {
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 3em;
-            width: 83%;
-            height: 12.6em;
-            padding: 1.5em;
-            border-radius: 7px;
-
-            background-color: white;
-        }
-
-        .box-detalhes {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .titulo-caracter {
-            padding-top: 1.2em;
-            font-size: 2.7em;
-            color: #FFFFFF
-        }
-
-        .title-details-caracters {
-            font-size: 2em;
-        }
-
-        .box-carac {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .box-detalhe {
-            text-align: start;
-        }
-
-        
 `
 
-export {Container, Caracteristicas, Pag}
+export {Container, MapStyle}
