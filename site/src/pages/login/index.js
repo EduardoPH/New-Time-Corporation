@@ -26,7 +26,7 @@ export default function Login(){
         if(r.erro){
             toast.error(r.erro)
         } else {
-            alert(r)
+            navigation.push('/perfil')
         }
     }
 
@@ -45,12 +45,12 @@ export default function Login(){
                     <div className="login">
                         <div className="ti">Login</div>
                         <div className="inputs">
-                            <Inputs valor={ valor => setEmail(valor)} place="Digite seu email..."/>
-                            <Inputs valor={ valor => setSenha(valor)}place="Digite sua senha..."/>
+                            <Inputs value={email} valor={ valor => setEmail(valor)} place="Digite seu email..."/>
+                            <Inputs value={senha} valor={ valor => setSenha(valor)} place="Digite sua senha..."/>
                         </div>
                         <div className="lado">
-                            <div className="bot2">Esqueci minha senha</div>
-                            <div className="bot1"> <button onClick={() => login()} valor="Entar" width="13em"/> </div>
+                            <Link to='/recuperacao'><div className="bot2">Esqueci minha senha</div></Link>
+                            <div className="bot1"> <Buttons clicado={login} valor="Entar" width="13em"/> </div>
                         </div>
                     </div>
                     <div className="nao-possui">
@@ -59,12 +59,6 @@ export default function Login(){
                     </div>
                 </div>
             </div>
-        
-        
-        
-        
-        
-        
         </Container>
         </Fundo>
     )

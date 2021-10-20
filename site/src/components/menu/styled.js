@@ -1,8 +1,7 @@
-import sytled from 'styled-components';
+import styled from 'styled-components';
 
-const Container= sytled.div`
+const Container= styled.div`
     
-    text-decoration-line: underline;
 
     display: flex;
     flex-direction: row;
@@ -27,6 +26,8 @@ const Container= sytled.div`
         display: flex;
         align-items: center;
 
+        cursor:pointer;
+
         color: white;
 
         font-size: 22px;
@@ -49,6 +50,7 @@ const Container= sytled.div`
         font-size: 18px;
         font-weight: 700;
         font-family: 'Roboto';
+        cursor:pointer;
         &:hover{background-color:purple; ; transition: 0.3s}
     }
 `

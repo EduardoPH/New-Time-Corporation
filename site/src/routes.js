@@ -14,7 +14,8 @@ import Local from './pages/Formulario/Formulario-local';
 import vestimentas from './pages/Formulario/Formulario-vestimentas';
 import Cadastro from './pages/Cadastro';
 import TelaRoteamento from './pages/telaRoteamento';
-import Map from './components/map/map.js'
+import Map from './components/map/map.js';
+import RecSenha from './pages/recSenha/';
 import Formulario from './pages/Formulario';
 
 
@@ -39,6 +40,7 @@ export default function Routes(){
                 <Route path="/formulario4" component={depoimento}/>
                 <Route path="/cadastro" component={Cadastro}/>
                 <Route path="/formulario" component={Formulario}/>
+                <Route path="/recuperacao" component={RecSenha}/>
                 <Route path="/map-render" component={Map}/>
             </Switch>
         </BrowserRouter>
