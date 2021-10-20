@@ -10,6 +10,11 @@ const BoxStyled=styled.div`
     overflow-x: none;
     .box-denuncia{
         width: 80%;
+        .carateristicas{
+            .titulo-caracter{
+                display: none;
+            }   
+        }
     }
     .cabecalho{
         display: flex;
@@ -50,6 +55,14 @@ const BoxStyled=styled.div`
         align-self: flex-end;
         border-radius: 15px;
         cursor: pointer;
+    }
+    .map{
+        width: 100%;
+        input{display:none}
+        button{display:none}
+        .mapas div{
+            width: 100%!important;
+        }
     }
     .btms-acoes{
         display: flex;

@@ -40,7 +40,8 @@ const Container = styled.div`
             flex-direction: column; 
             align-items: center;
             height: 100%;
-            width: 100%;
+            width: 90%;
+            margin-left: 2em;
             
         };
        
@@ -233,12 +234,9 @@ const BoxStyled = styled.div`
             align-items: center;
             align-self: center;
 
-            width: 93%;
+            width: 100%;
             height: auto;
             
-            margin-left: 3em;
-            margin-right: 3em;
-            margin-top: 1em;
             
             background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(7px);
