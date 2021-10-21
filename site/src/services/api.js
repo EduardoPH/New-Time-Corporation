@@ -10,5 +10,11 @@ export default class Api{
         let r = await api.post('/login', {email , senha});
         return r.data;
     }
+
+
+    async cadastrar(nome, email, senha, telefone, cpf){
+        let r = await api.post('/cadastrar', {nome, email, senha, telefone, cpf});
+        return r.data;
+    }
 }
 
