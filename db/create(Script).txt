@@ -1,11 +1,10 @@
+drop table infoC_ntc_denuncia;
 drop table infoC_ntc_usuario;
 drop table infoC_ntc_administrador;
 drop table infoC_ntc_apoio_frase;
 drop table infoC_ntc_local;	
 drop table infoC_ntc_caracteristica_fisica;
 drop table infoC_ntc_vestimento;
-drop table infoC_ntc_denuncia;
-
 
 CREATE TABLE infoC_ntc_usuario (
 id_usuario  int primary Key auto_increment,
@@ -62,3 +61,5 @@ Foreign Key (id_local) references infoC_ntc_local(id_local) on delete cascade,
 Foreign Key (id_fisico) references infoC_ntc_caracteristica_fisica(id_fisico) on delete cascade,
 Foreign Key (id_vestimento) references infoC_ntc_vestimento(id_vestimento) on delete cascade
 )ENGINE=InnoDB;
+
+npx sequelize-auto -h my01.winhost.com -d mysql_17753_nsftcc -u nsftcc -x nsf@tcc -e mysql -o models -l esm/
