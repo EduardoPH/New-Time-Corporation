@@ -4,8 +4,8 @@ import ItemDenuncia from '../../components/Item-Denuncia-Usu'
 import {Fundo} from '../../components/commum/background/styled'
 import Menu from '../../components/menu'
 
-export default function PerfilUsuaria(){
-    
+export default function PerfilUsuaria(props){
+    const info = props.info
     return(
         <Fundo height="100vh">
         <Container>
@@ -16,15 +16,15 @@ export default function PerfilUsuaria(){
                     <div className="cabecalho">
                         <div className="infos-usuarias">
                             <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/>
-                            <p1>Usuária 5456486</p1>
+                            <p1>{info.nome}</p1>
                         </div>
                         <h2>Denúncias</h2>
                         <button>   Sair da Conta </button>
                     </div>
                     <div className="parte-final-box">
-                        <InfoUsuaria displayNome="none"/>
+                        <InfoUsuaria displayNome="none" info={info}/>
                         <div className="denunciasCadastradas">
-                            <ItemDenuncia descricao="aaaaaaaaaaaaaa" data="20/09/2021"/>
+                            <ItemDenuncia descricao={info.denuncia} data={info.data}/>
                         </div>
                     </div>
                 </div>

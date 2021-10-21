@@ -1,13 +1,20 @@
 import Container from './styled.js'
+
 import Menu from '../../components/menu'
+
 import {Fundo} from '../../components/commum/background/styled'
+
 import { Link } from "react-router-dom";
+
 import { Inputs, Buttons } from '../../components/login-cadastro/index.js';
+
 import Api from '../../services/api.js';
 
 import { useHistory } from 'react-router-dom';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 import { useState } from 'react';
 
 const api = new Api();
