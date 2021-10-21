@@ -12,6 +12,8 @@ import Api from '../../services/api.js';
 
 import { useHistory } from 'react-router-dom';
 
+import Cookie from 'js-cookie'
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -33,11 +35,10 @@ export default function Login(){
         if(r.erro){
             toast.error(r.erro)
         } else {
+            Cookie.set('usuariaLogada', JSON.stringify(r))
             navigation.push('/perfil')
         }
     }
-
-
     return(
         <Fundo height="100vh">
             <ToastContainer/>

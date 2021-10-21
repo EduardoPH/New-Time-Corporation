@@ -1,5 +1,4 @@
 import Menu from '../../components/menu/index';
-import { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Container, MenuLateralStyled, BoxStyled } from './styled';
 
