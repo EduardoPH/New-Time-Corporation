@@ -105,10 +105,6 @@ export default function Caracteristicas (props){
                             <div class="textarea"><textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10"></textarea></div>
                             
                         </div>
-                        <div>{pele}</div>
-                        <div>{cabelo}</div>
-                        <div>{corCabelo}</div>
-                        <div>{complemento}</div>
                     </div>  
                 </div>
         </Containerformulario>

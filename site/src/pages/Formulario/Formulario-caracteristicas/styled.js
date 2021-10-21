@@ -100,5 +100,7 @@ textarea {
     cursor: pointer;
     &:hover{color:#FC02A0; background-color: white;}
 }
+
+
 `
 export default Containerformulario;
