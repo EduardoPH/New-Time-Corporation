@@ -26,7 +26,7 @@ const  Containerformulario = styled.div `
     .informacoes {
         font: 1.8em arial;
         color: #FC02A0;
-        margin: 0.3em 0em;
+        margin: 0.6em 0em;
     }
 
     .form-2 {

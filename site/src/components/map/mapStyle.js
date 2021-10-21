@@ -338,9 +338,9 @@ const MapStyle = [
     }
 ]
 const containerStyle={
-    position: 'fixed',
-    width: '100%',
-    height:'100%'
+    position: 'absolute',
+    width: '60%',
+    height: '60%'
 }
 
 export {MapStyle, containerStyle}

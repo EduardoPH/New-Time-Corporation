@@ -34,7 +34,6 @@ export default function Depoimento (){
 
                     <div class="conteudo2">
                         <textarea onChange={ValorTextarea} name="" id="valor" cols="30" rows="10"></textarea>
-                        <div>{complemento}</div>
                     </div>
                 </div>
                 </div>

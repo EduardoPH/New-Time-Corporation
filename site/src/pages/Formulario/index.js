@@ -22,28 +22,28 @@ export default function Administrador(){
                     <div className="boxs">
                         <div className="conteudo-esquerda">
                             <div class="menu-lateral">
-                                <Link to="/caracteristicas/">
+                                <Link to="/formulario">
                                     <div className="item-menu">
-                                        <img src="" alt=""/>
-                                        > Caract. Físicas
+                                        <img src="../assets/images/formulario/seta.svg" alt="" />
+                                        Caract. Físicas
                                     </div>
                                 </Link>
-                                <Link to="/vestimentas/">
-                                    <div className="item-menu"  >
-                                        <img src ="" alt=""/>
-                                        > Vestimentas
+                                <Link to="/formulario/vestimentas">
+                                    <div className="item-menu" >
+                                        <img src="../assets/images/formulario/seta.svg" alt="" />
+                                        Vestimentas
                                     </div>
                                 </Link>
-                                <Link to="/local/">
+                                <Link to="/formulario/local">
                                     <div div className="item-menu">
-                                        <img src ="" alt=""/>
-                                        > Local
+                                        <img src="../assets/images/formulario/seta.svg" alt="" />
+                                        Local
                                     </div>
                                 </Link>
-                                <Link to="/administrador/usuaria">
+                                <Link to="/formulario/depoimento">
                                     <div div className="item-menu">
-                                        <img src ="" alt=""/>
-                                        > Depoimento
+                                        <img src="../assets/images/formulario/seta.svg" alt="" />
+                                        Depoimento
                                     </div>
                                 </Link>
                             </div>
@@ -54,10 +54,10 @@ export default function Administrador(){
                                 
                                 <div>
                                     <Switch>
-                                        <Route path="/caracteristicas/" exact={true} component={caracteristicas}/>
-                                        <Route path="/vestimentas/" exact={true} component={vestimentas}/>
-                                        <Route path="/local/" exact={true} component={local}/>
-                                        <Route path="/depoimento/" exact={true} component={depoimento}/>
+                                        <Route path="/formulario" exact={true} component={caracteristicas}/>
+                                        <Route path="/formulario/vestimentas" exact={true} component={vestimentas}/>
+                                        <Route path="/formulario/local" exact={true} component={local}/>
+                                        <Route path="/formulario/depoimento" exact={true} component={depoimento}/>
                                     </Switch>
                                 </div>
                             </div>

@@ -13,11 +13,26 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
     }
-
+    .conteudo-direita{
+        width: 61em;
+        display: flex;
+        align-items: baseline;
+        height: 37em;
+    }
     .botao {
         display: flex;
         justify-content: center;
         margin-top: 5em;
+    }
+
+    button:hover {
+        color: #FC02A0;
+        transition: 1s;
+        background-color: white;
+        &:hover {
+            border: 2px solid #FC02A0;
+            transition: 1.5s;
+        }
     }
 
     .boxs {
@@ -56,6 +71,8 @@ const Container = styled.div`
         justify-content: center;
         color: white;
         font: 2.5em arial;
+        padding-top: 5%;
+        margin-bottom: 1em;
     }
 `
 

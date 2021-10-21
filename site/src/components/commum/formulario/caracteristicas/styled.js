@@ -5,7 +5,6 @@ const  Containerformulario = styled.div `
     flex-direction: column;
     justify-content: center;
 
-
 .conteudo {
     display: flex;
     flex-direction: row;
@@ -26,7 +25,7 @@ const  Containerformulario = styled.div `
 .informacoes {
     font: 1.8em arial;
     color: #FC02A0;
-    margin: 0.3em 0em;
+    margin: 0.6em 0em;
 }
 
 .form-2 {
@@ -47,5 +46,6 @@ textarea {
     resize: none;
     border: none;
 }
+
 `
 export default Containerformulario;
