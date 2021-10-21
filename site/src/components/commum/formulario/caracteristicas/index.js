@@ -11,7 +11,6 @@ export default function Caracteristicas (props){
     return(
         <Containerformulario>
                 <div class="pag">
-                    
                     <div class="conteudo">
                         
                             <div class="box">
@@ -97,7 +96,6 @@ export default function Caracteristicas (props){
                         <div class="informacoes">Informações complementares</div>
                         <div class="form-2">
                             <div class="textarea"><textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10"></textarea></div>
-                            
                         </div>
                         <div>{pele}</div>
                         <div>{cabelo}</div>
