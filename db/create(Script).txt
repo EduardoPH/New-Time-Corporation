@@ -1,11 +1,10 @@
+drop table infoC_ntc_denuncia;
 drop table infoC_ntc_usuario;
 drop table infoC_ntc_administrador;
 drop table infoC_ntc_apoio_frase;
 drop table infoC_ntc_local;	
 drop table infoC_ntc_caracteristica_fisica;
 drop table infoC_ntc_vestimento;
-drop table infoC_ntc_denuncia;
-
 
 CREATE TABLE infoC_ntc_usuario (
 id_usuario  int primary Key auto_increment,
@@ -19,7 +18,7 @@ ds_senha_rec varchar(100)
 
 create table infoC_ntc_administrador(
 id_administrador int primary Key auto_increment,
-nm_administrador varchar(255),]
+nm_administrador varchar(255),
 ds_senha varchar(255)
 )ENGINE=InnoDB; 
 
@@ -37,15 +36,18 @@ ds_bairro    varchar(255)
 
 create table infoC_ntc_caracteristica_fisica(
 id_fisico int primary key auto_increment,
-tp_fisido varchar(255),
-ds_valor  boolean,
+ds_pele  varchar(255),
+ds_cabelo  varchar(255),
+ds_cor_cabelo  varchar(255),
 ds_complemento varchar(255)
 )ENGINE=InnoDB;
 
 create table infoC_ntc_vestimento(
 id_vestimento int primary key auto_increment,
 tp_vestimento varchar(255),
-ds_valor  boolean,
+ds_inferior  varchar(255),
+ds_superior  varchar(255),
+ds_calcado  varchar(255),
 ds_complemento varchar(255)
 )ENGINE=InnoDB;
 
@@ -62,3 +64,4 @@ Foreign Key (id_local) references infoC_ntc_local(id_local) on delete cascade,
 Foreign Key (id_fisico) references infoC_ntc_caracteristica_fisica(id_fisico) on delete cascade,
 Foreign Key (id_vestimento) references infoC_ntc_vestimento(id_vestimento) on delete cascade
 )ENGINE=InnoDB;
+npx sequelize-auto -h my01.winhost.com -d mysql_17753_nsftcc -u nsftcc -x nsf@tcc -e mysql -o models -l esm/
