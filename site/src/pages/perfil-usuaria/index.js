@@ -3,8 +3,9 @@ import InfoUsuaria from '../../components/Info-Usuaria'
 import ItemDenuncia from '../../components/Item-Denuncia-Usu'
 import {Fundo} from '../../components/commum/background/styled'
 import Menu from '../../components/menu'
-export default function PerfilUsuaria(){
 
+export default function PerfilUsuaria(){
+    
     return(
         <Fundo height="100vh">
         <Container>
