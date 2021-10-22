@@ -5,16 +5,15 @@ import {Fundo} from '../../components/commum/background/styled'
 import Menu from '../../components/menu'
 import Cookie from 'js-cookie'
 import { useEffect, useState } from 'react'
+import { useHistory } from 'react-router'
+export default function PerfilUsuaria(){
 
-export default function PerfilUsuaria(props){
-    const [info, setInfo] = useState({})
+    const navigation = useHistory();
+
+    const [info, setInfo] = useState(JSON.parse(Cookie.get('usuariaLogada')))
+
     
-    function carregarUsuaria(){
-        return setInfo(JSON.parse(Cookie.get('usuariaLogada')))
-    }
-
-
-    useEffect(carregarUsuaria,[])
+    
     return(
         <Fundo height="100vh">
         <Container>
@@ -25,7 +24,7 @@ export default function PerfilUsuaria(props){
                     <div className="cabecalho">
                         <div className="infos-usuarias">
                             <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/>
-                            <p1>{info.nm_usuario}</p1>
+                            <p1> {info.nm_usuario} </p1>
                         </div>
                         <h2>Denúncias</h2>
                         <button>   Sair da Conta </button>

@@ -39,10 +39,15 @@ export default function Estatisticas (){
     let v = 0
     function GraC (){
         v=v+1
-        switch(v){case 1: return <BarChart/>; case 2: return <Graf2/>;  default: return <Graf3/>;}
+        switch(v) {
+            case 1: 
+                return <BarChart/>; 
+            case 2: 
+                return <Graf2/>;  
+            default: 
+                return <Graf3/>;}
     }
 
-    console.log(v)
 
     return(
         <Fundo height="100vh">

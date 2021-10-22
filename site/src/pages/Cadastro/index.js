@@ -1,12 +1,13 @@
 import Container from "./styled.js";
 import Menu from "../../components/menu";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import { Inputs, Buttons } from "../../components/login-cadastro/index.js";
 import { Fundo } from "../../components/commum/background/styled";
 import { useState } from "react";
 import Api from "../../services/api.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Cookie from "js-cookie";
 const api = new Api();
 
 export default function Cadastro() {
@@ -15,7 +16,7 @@ export default function Cadastro() {
   const [senha, setSenha] = useState("");
   const [cpf, setCpf] = useState("");
   const [telefone, setTelefone] = useState("");
-  
+
   const navigation = useHistory();
 
   function numeroAleatorio(min, max) {
@@ -24,12 +25,13 @@ export default function Cadastro() {
 
   async function cadastrar() {
     let r = await api.cadastrar(nome, email, senha, telefone, cpf);
-    
-    if (r.erro) 
-        toast.error(r.erro)
-    else
-        navigation.push("/perfil")
 
+    if (r.erro) {
+      toast.error(r.erro);
+    } else {
+      Cookie.set("usuariaLogada", JSON.stringify(r));
+      navigation.push("/perfil");
+    }
   }
   return (
     <Fundo height="100vh">

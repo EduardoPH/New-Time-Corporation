@@ -27,6 +27,9 @@ export default function Login(){
     const[senha, setSenha] = useState('');
 
     const navigation = useHistory();
+    
+    if(Cookie.get('usuariaLogada'))
+        navigation.push('/perfil')
 
     async function login(){
 
