@@ -3,26 +3,25 @@ import styled from 'styled-components';
 const  Containerformulario = styled.div`
 display:flex;
 flex-direction: column;
-height: 100vh;
 
     .conteudo-right{
+        display: flex;
         width: 100%;
         height: 100%;
+        backdrop-filter: blur(1px);
     }
+
     .titulo-local {
         font-family: arial;
         color: white;
-        font-size: 2.5em;
+        font-size: 2em;
         display: flex;
         justify-content: center;
     }
 
     .mapa {
-        border: 1px solid red;
-        width: 55em;
-        
-       
-        
+        width: 45em;
+        height: 25em;
     }
 
     button {

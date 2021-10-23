@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 const Container = styled.div`
 
-
-
     .conteudo {
         display: flex;
         justify-content: center;
+    }
+
+    .pag2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .conteudo-esquerda {
@@ -14,10 +18,8 @@ const Container = styled.div`
         flex-direction: column;
     }
     .conteudo-direita{
-        width: 61em;
         display: flex;
         align-items: baseline;
-        height: 37em;
     }
     .botao {
         display: flex;
@@ -71,7 +73,6 @@ const Container = styled.div`
         justify-content: center;
         color: white;
         font: 2.5em arial;
-        padding-top: 5%;
         margin-bottom: 1em;
     }
 `
