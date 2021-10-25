@@ -17,4 +17,9 @@ export default class Api{
         let r = await api.post('/cadastrar', {nome, email, senha, telefone, cpf});
         return r.data;
     }
+
+    async frases(){
+        let r = await api.get('/apoio')
+        return r.data;
+    }
 }
