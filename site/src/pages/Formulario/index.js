@@ -16,6 +16,7 @@ export default function Administrador(){
         <Fundo height="100vh">
         <Container>
             <Menu/>
+            <div className="pag2">
             <div class="titulo">Formulário de Denúncia</div>
             <BrowserRouter>
                 <div className="conteudo">
@@ -64,6 +65,7 @@ export default function Administrador(){
                     </div>
                 </div>
             </BrowserRouter>
+            </div>
         </Container>
         </Fundo>
     )
