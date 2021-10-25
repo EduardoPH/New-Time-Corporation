@@ -31,7 +31,8 @@ create table infoC_ntc_local(
 id_local     int primary key auto_increment,
 ds_latitude  varchar(255),
 ds_longitude varchar(255),
-ds_bairro    varchar(255)
+ds_bairro    varchar(255),
+ds_cidade    varchar(255)
 )ENGINE=InnoDB;  
 
 create table infoC_ntc_caracteristica_fisica(
