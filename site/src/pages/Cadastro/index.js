@@ -7,7 +7,7 @@ import { useState } from "react";
 import Api from "../../services/api.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Cookie from "js-cookie";
+import Cookies from "js-cookie";
 const api = new Api();
 
 export default function Cadastro() {
@@ -29,7 +29,8 @@ export default function Cadastro() {
     if (r.erro) {
       toast.error(r.erro);
     } else {
-      Cookie.set("usuariaLogada", JSON.stringify(r));
+      Cookies.set("usuariaLogada", JSON.stringify(r));
+      navigation.push('/perfil')
     }
   }
   return (

@@ -3,15 +3,31 @@ import InfoUsuaria from '../../components/Info-Usuaria'
 import ItemDenuncia from '../../components/Item-Denuncia-Usu'
 import {Fundo} from '../../components/commum/background/styled'
 import Menu from '../../components/menu'
-import Cookie from 'js-cookie'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
-export default function PerfilUsuaria(){
+import Cookies from 'js-cookie'
 
+function VerLogado(navigation){
+    let c = Cookies.get('usuariaLogada') 
+    
+    
+    if(c === null){
+        navigation.push('/login')
+        return null;
+    }
+    let usuaria = JSON.parse(c)
+    return usuaria
+}
+
+
+export default function PerfilUsuaria(){
+    
     const navigation = useHistory();
 
-    const [info, setInfo] = useState(JSON.parse(Cookie.get('usuariaLogada')))
+    let i = VerLogado(navigation) || {}
 
+    const [info, setInfo] = useState(i)
+    const sair = () => {Cookies.remove('usuariaLogada'); navigation.push("/home")}
     return(
         <Fundo height="100vh">
         <Container>
@@ -25,7 +41,7 @@ export default function PerfilUsuaria(){
                             <p1> {info.nm_usuario} </p1>
                         </div>
                         <h2>Denúncias</h2>
-                        <button>   Sair da Conta </button>
+                        <button onClick={sair}>   Sair da Conta </button>
                     </div>
                     <div className="parte-final-box">
                         <InfoUsuaria displayNome="none" info={info}/>

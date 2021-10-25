@@ -12,23 +12,28 @@ import Api from '../../services/api.js';
 
 import { useHistory } from 'react-router-dom';
 
-import Cookie from 'js-cookie'
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { useState } from 'react';
+import Cookies from 'js-cookie';
 
 const api = new Api();
 
 export default function Login(){
     
+    const navigation = useHistory();
+
+    let usuariaLogada = Cookies.get('usuariaLogada')
+    if( usuariaLogada !== undefined ){
+        navigation.push('/perfil')
+    }
     const[email, setEmail] = useState('');
     const[senha, setSenha] = useState('');
 
-    const navigation = useHistory();
+    console.log(usuariaLogada)
     
-  
+    
     async function login(){
 
         let r = await api.login(email, senha);
@@ -36,7 +41,7 @@ export default function Login(){
         if(r.erro){
             toast.error(r.erro)
         } else {
-            Cookie.set('usuariaLogada', JSON.stringify(r))
+            Cookies.set('usuariaLogada', JSON.stringify(r))
             navigation.push('/perfil')
         }
     }
