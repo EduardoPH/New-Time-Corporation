@@ -8,12 +8,10 @@ import  Mapa  from '../../../map/map';
 export default function Local (){
     return(
         <Containerformulario>
-                <div class="conteudo">
-                    <div class="conteudo-right">
-                        <div className="mapa">
-                            <div class="titulo-local">Área Localizada</div>
-                            <Mapa width="50em"/>
-                        </div>
+                <div className="conteudo">
+                    <div className="cont">
+                        <div className="titulo-local">Área Localizada</div>
+                        <div className="mapa"><Mapa/></div>
                     </div>
                 </div>
         </Containerformulario>

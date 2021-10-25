@@ -8,13 +8,9 @@ export default function Depoimento (){
 
     return(
         <Containerformulario>
-            <div class="tudo">
-                <div class="pag">
-                    <div class="conteudo2">
-                        <div class="textarea"><textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Aqui é onde vc pode descrever o ocorrido aconteceu."></textarea></div>
-                    </div>
-                </div>
-                </div>        
+            <div class="conteudo2">
+                <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Aqui você pode descrever o ocorrido."></textarea>
+            </div>   
         </Containerformulario>
     )
 }

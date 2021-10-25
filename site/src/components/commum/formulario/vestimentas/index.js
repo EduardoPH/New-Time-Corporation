@@ -96,9 +96,7 @@ export default function Vestimentas (props){
 
                     <div class="conteudo2">
                         <div class="informacoes">Informações complementares</div>
-                        <div class="form-2">
-                        <div class="textarea"><textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10"></textarea></div>
-                        </div>
+                        <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Área para escrever informações complementares"></textarea>
                     </div>  
                 </div>
         </Containerformulario>

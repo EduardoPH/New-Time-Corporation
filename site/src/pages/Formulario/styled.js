@@ -11,40 +11,52 @@ const Container = styled.div`
         display: flex;
         justify-content: center;
         flex-direction: column;
-    }
-
-    .conteudo-esquerda {
-        display: flex;
-        flex-direction: column;
-    }
-    .conteudo-direita{
-        display: flex;
-        align-items: baseline;
-    }
-    .botao {
-        display: flex;
-        justify-content: center;
-        margin-top: 5em;
-    }
-
-    button:hover {
-        color: #FC02A0;
-        transition: 1s;
-        background-color: white;
-        &:hover {
-            border: 2px solid #FC02A0;
-            transition: 1.5s;
-        }
+        width: 100%;
     }
 
     .boxs {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: rgb(255, 255, 255, 40%);
+        background-color: rgba(85, 26, 132, 30%);
         border-radius: 20px;
         padding: 1.5em;
-        width: 60em;
+        width: 70%;
+        height: 26em;
+    }
+
+    .conteudo-esquerda {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conteudo-direita{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+    }
+
+    .botao {
+        display: flex;
+        justify-content: center;
+        margin-top: 5em;
+    }
+
+    .botao button:hover {
+        color: rgba(85, 26, 132, 100%);
+        transition: 1s;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: #b133ff;
+            transition: 0.3s;
+            border: solid 3px #fff;
+            box-shadow: 0px 0px 20px #fff, 0px 0px 10px inset;
+            transition: 0.21s;
+            color: white;
+        }
     }
 
     .menu-lateral {
@@ -62,9 +74,10 @@ const Container = styled.div`
         display: flex;
         align-items: center;
         margin: 0.3em 0em;
+        cursor: pointer;
         &:hover {
             color: #FC02A0;
-            transition: 0.5s;
+            transition: 0.21s;
         }
     }
 
