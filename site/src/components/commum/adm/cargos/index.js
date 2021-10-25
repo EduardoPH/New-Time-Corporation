@@ -53,7 +53,7 @@ export default function Index(){
                         <p1>
                             Nome :
                         </p1>
-                        <input value={nome} onChange={e => setSenha(e.target.value)} type="text"/>
+                        <input value={nome} onChange={e => setNome(e.target.value)} type="text"/>
                     </div>
                     <div className="nv-senha">
                         <p1>

@@ -28,13 +28,11 @@ export default function Login(){
 
     const navigation = useHistory();
     
-    if(Cookie.get('usuariaLogada'))
-        navigation.push('/perfil')
-
+  
     async function login(){
 
         let r = await api.login(email, senha);
-
+    
         if(r.erro){
             toast.error(r.erro)
         } else {
@@ -61,7 +59,7 @@ export default function Login(){
                         </div>
                         <div className="lado">
                             <Link to='/recuperacao'><div className="bot2">Esqueci minha senha</div></Link>
-                            <div className="bot1"> <Buttons clicado={login} valor="Entar" width="13em"/> </div>
+                            <div className="bot1"> <Buttons clicado={login} valor="Entra" width="13em"/> </div>
                         </div>
                     </div>
                     <div className="nao-possui">

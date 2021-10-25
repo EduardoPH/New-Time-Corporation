@@ -30,7 +30,6 @@ export default function Cadastro() {
       toast.error(r.erro);
     } else {
       Cookie.set("usuariaLogada", JSON.stringify(r));
-      navigation.push("/perfil");
     }
   }
   return (

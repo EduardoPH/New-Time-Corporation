@@ -12,8 +12,6 @@ export default function PerfilUsuaria(){
 
     const [info, setInfo] = useState(JSON.parse(Cookie.get('usuariaLogada')))
 
-    
-    
     return(
         <Fundo height="100vh">
         <Container>
