@@ -11,7 +11,7 @@ export default function Index(props){
     }
     useEffect(
         () => {SobreSite() }, [] 
-    );
+    );  
     return(
         <BoxStyled >
             <h1>Denúncias</h1>
@@ -28,7 +28,7 @@ export default function Index(props){
                 <tbody>
                     {eventos.map((item,i) =>
                         <tr key={i}>
-                            <td>{buscarNome(item.id_usuario)}</td>
+                            <td>{item.nm_usuario}</td>
                             <td>{item.tel}</td>
                             <td className="previa">
                                 {item.ds_depoimento}
