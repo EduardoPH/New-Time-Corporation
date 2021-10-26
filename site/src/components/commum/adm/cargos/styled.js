@@ -72,8 +72,13 @@ const BoxStyled=styled.div`
                     transition: 1s;
                 }
             }
+            .Alterar{
+                background-color: blue;
+                border: solid 0px;
+            }
             
     }
+        
         .cadastrados{
             height: 90%;
             background-color: rgba(196,196,196,0.5);

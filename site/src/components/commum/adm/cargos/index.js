@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import 'react-toastify/dist/ReactToastify.css';
+import { Loading } from 'react-loading-ui';
 import Api from '../../../../services/api'
 const api = new Api()
 
@@ -15,8 +16,20 @@ export default function Index(){
     const [idAlterado, setIdAlterado] = useState(0);
 
     async function listarAdm(){
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+        });
+        
         let r = await api.listarAdms()
         setEventos(r)
+
+        setTimeout(() => {
+            Loading();
+          }, 100)
     };
 
     async function cadastrarAdm(){
@@ -26,7 +39,8 @@ export default function Index(){
                 toast.error(r.erro)
             } else {
                 toast.success('Novo Administrador Cadastrado com suceso')
-                listarAdm()
+                LimparDados()
+                
             }   
         } else {
             let r = await api.alterarAdm(idAlterado, nome, senha)
@@ -35,6 +49,7 @@ export default function Index(){
                 toast.error('Houve um erro na Alteração')
             } else {
                 toast.success('Alteração Feita com sucesso')
+                LimparDados()
             }
         }
     }
@@ -61,14 +76,25 @@ export default function Index(){
             ]
         })
     }
+
+    function LimparDados(){
+        setNome("")
+        setSenha("")
+        setIdAlterado("")
+        listarAdm()
+    }
+
+    
+    function Alterar(info){
+        setSenha(info.ds_senha);
+        setNome(info.nm_administrador)
+        setIdAlterado(info.id_administrador)
+    }
+
+    
     useEffect(
         () => {listarAdm() }, [] 
     );
-
-    function Alterar(info){
-        setSenha(info.senha);
-        setNome(info.nome)
-    }
     return(
         <BoxStyled>
             <ToastContainer/>
@@ -91,7 +117,7 @@ export default function Index(){
                         </p1>
                         <input value={senha} onChange={e => setSenha(e.target.value)} type="text"/>
                     </div>
-                    <button onClick={cadastrarAdm}> Cadastrar </button>
+                    <button onClick={cadastrarAdm} className={idAlterado === 0 ? "Cadastrar" : "Alterar"}   > {idAlterado === 0 ? "Cadastrar" : "Alterar"} </button>
                 </div>
             </div>
         </BoxStyled>

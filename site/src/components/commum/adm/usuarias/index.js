@@ -1,43 +1,52 @@
 import { useState, useEffect } from "react";
 import BoxStyled from "./styled";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+import { Loading } from 'react-loading-ui';
+import Api from "../../../../services/api";
+const api = new Api()
 
 export default function Index(props){
     const [eventos, setEventos] = useState([]);
-    const [usuaria, setUsuaria] = useState('')
-    function SobreSite(){
-        const apiResponse = [
-            {
-                id: "1",
-                nome: "ludiar2ne",
-                emial: "luane@gamil.com",
-                tel: "11 9999-9999",
-                cpf: "6545645464" 
-            },
-            {
-                id: "2",
-                nome: "ludiar3ne",
-                emial: "luane@gamil.com",
-                tel: "11 9999-9999",
-                cpf: "6545645464" 
-            },
-            {
-                id: "3",
-                nome: "ludia54rne",
-                emial: "luane@gamil.com",
-                tel: "11 9999-9999",
-                cpf: "6545645464" 
-            }
-        ]
-        setEventos(apiResponse)
+    const [usuaria, setUsuaria] = useState('');
+    async function listarUsu(){
+       
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+        });
+        
+        let r = await api.ListarUsu()
+        setEventos(r)
+        setTimeout(() => {
+            Loading();
+          }, 100)
     };
+
+    async function buscarUsu(){
+        let r = await api.buscarUsu(usuaria)
+        if(r.erro){
+            return toast.error(r.erro)
+        } else {
+            setEventos(r)
+        }
+    }
     useEffect(
-        () => {SobreSite() }, [] 
-    );
+        () => {listarUsu() }, [] 
+    )
     return(
         <BoxStyled>
+            <ToastContainer/>
             <h1>Usuárias</h1>
-            <input type="text" placeholder="Pesquisar por usuária..." onChange={e => setUsuaria(e.target.value)}/>
+                <div className="pesquisa">
+                    <input type="text" placeholder="Pesquisar por usuária..." onChange={e => setUsuaria(e.target.value)}/>
+                    <button className="btm-pesquisar" onClick={buscarUsu}><img src="/assets/images/administrador/icons8-search.svg"alt="erro"/></button>
+                </div>
             <table className="tabela-usuaria">
                 <thead>
                     <tr>
@@ -51,11 +60,11 @@ export default function Index(props){
                 <tbody>
                     {eventos.map (item => 
                         <tr>
-                            <td>{item.nome}</td>
-                            <td>{item.emial}</td>
-                            <td>{item.tel}</td>
-                            <td>{item.cpf}</td>
-                            <td className="coluna-acao"><Link to={{pathname:"/administrador/usuaria/perfil", state:{item}}}><button>Ver Perfil</button></Link></td>
+                            <td>{item.nm_usuario}</td>
+                            <td>{item.ds_email}</td>
+                            <td>{item.ds_telefone}</td>
+                            <td>{item.ds_cpf}</td>
+                            <td className="coluna-acao"><Link to={{pathname:"/administrador/usuaria/perfil", state:item}}><button>Ver Perfil</button></Link></td>
                         </tr>
                     )}
                 </tbody>

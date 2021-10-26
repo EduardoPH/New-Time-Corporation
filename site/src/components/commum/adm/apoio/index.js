@@ -3,6 +3,7 @@ import ItemFrase from './frase-apoio/';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { useState, useEffect } from "react";
+import { Loading } from 'react-loading-ui';
 import Api from '../../../../services/api'
 import { toast, ToastContainer } from "react-toastify";
 const api = new Api()
@@ -13,14 +14,25 @@ export default function Index(){
     const [idAlterado, setIdAlterado] = useState(0);
     console.log(idAlterado)
     async function frasesGet(){
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+        });
+        
         const apiResponse = await api.frases()
         setEventos(apiResponse)
+
+        setTimeout(() => {
+            Loading();
+          }, 100)  
     }
 
     async function FrasesPost(){
         if(idAlterado > 0){
             let r = await api.alterarFrase(idAlterado, frase)
-            console.log(r)
             if(r !== "OK"){
                 return toast.error(r.erro)
             } else {
