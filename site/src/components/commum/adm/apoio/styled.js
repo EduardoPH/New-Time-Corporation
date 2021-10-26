@@ -6,6 +6,7 @@ const BoxStyled=styled.div`
 
     align-self: center;
     align-items: center ;
+    padding: 3em;
     h1{
         color: black;
         font-size: 2em;
@@ -35,7 +36,31 @@ const BoxStyled=styled.div`
             border-radius: 1em;
             margin-bottom: 1em
         };
-
+        button{
+                width: 12em;
+                height: 2.5em;
+                background: #01BC1F;
+                color: white;
+                border: solid 3px;
+                border-color: #01BC1F;
+                font-size: 1.3em;
+                cursor: pointer;
+                border-radius: 5px;
+                &:hover{
+                    background: white;
+                    color: #01BC1F;
+                    transition: 1s;
+                }
+            }
+            .btmAlt{
+                background-color: BLUE;
+                border: solid 0px;
+                &:hover{
+                    background: white;
+                    color: blue;
+                    transition: 1s;
+                }
+            }
     }
 
 `

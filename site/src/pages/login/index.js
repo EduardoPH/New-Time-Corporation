@@ -30,9 +30,6 @@ export default function Login(){
     }
     const[email, setEmail] = useState('');
     const[senha, setSenha] = useState('');
-
-    console.log(usuariaLogada)
-    
     
     async function login(){
 
