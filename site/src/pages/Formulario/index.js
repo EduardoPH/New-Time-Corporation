@@ -24,7 +24,7 @@ export default function Administrador(){
                         <div className="conteudo-esquerda">
                             <div class="menu-lateral">
                                 <Link to="/formulario">
-                                    <div className="item-menu">
+                                    <div className="item-menu" >
                                         <img src="../assets/images/formulario/seta.svg" alt="" />
                                         Caract. Físicas
                                     </div>
@@ -52,15 +52,12 @@ export default function Administrador(){
                         </div>
                         
                             <div className="conteudo-direita">
-                                
-                                <div>
-                                    <Switch>
-                                        <Route path="/formulario" exact={true} component={caracteristicas}/>
-                                        <Route path="/formulario/vestimentas" exact={true} component={vestimentas}/>
-                                        <Route path="/formulario/local" exact={true} component={local}/>
-                                        <Route path="/formulario/depoimento" exact={true} component={depoimento}/>
-                                    </Switch>
-                                </div>
+                                <Switch>
+                                    <Route path="/formulario" exact={true} component={caracteristicas}/>
+                                    <Route path="/formulario/vestimentas" exact={true} component={vestimentas}/>
+                                    <Route path="/formulario/local" exact={true} component={local}/>
+                                    <Route path="/formulario/depoimento" exact={true} component={depoimento}/>
+                                </Switch>
                             </div>
                     </div>
                 </div>
