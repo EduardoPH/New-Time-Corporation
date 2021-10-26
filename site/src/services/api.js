@@ -76,4 +76,11 @@ export default class Api{
         return r.data
     }
 
+
+
+    async listarDenun(){
+        let r = await api.get('/denuncias')
+        return r.data
+    }
+
 }

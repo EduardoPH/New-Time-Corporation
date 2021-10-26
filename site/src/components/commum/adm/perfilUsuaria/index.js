@@ -25,8 +25,7 @@ export default function Index(props){
                             toast.error(r.erro)
                         } else {
                             toast.success('Excluido com sucesso')
-                            navegacao.push('/administrador/usuaria')
-                            
+                            navegacao.push('/administrador/usuaria') 
                         }
                     }
                 },

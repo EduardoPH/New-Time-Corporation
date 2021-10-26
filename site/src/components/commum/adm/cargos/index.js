@@ -33,14 +33,13 @@ export default function Index(){
     };
 
     async function cadastrarAdm(){
-        if(idAlterado < 0){
+        if(idAlterado === 0){
             let r = await api.cadastrarAdm(nome, senha)
             if(r.erro){
                 toast.error(r.erro)
             } else {
                 toast.success('Novo Administrador Cadastrado com suceso')
                 LimparDados()
-                
             }   
         } else {
             let r = await api.alterarAdm(idAlterado, nome, senha)
@@ -80,7 +79,7 @@ export default function Index(){
     function LimparDados(){
         setNome("")
         setSenha("")
-        setIdAlterado("")
+        setIdAlterado(0)
         listarAdm()
     }
 
