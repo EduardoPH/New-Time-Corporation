@@ -1,13 +1,13 @@
 import React from 'react'
 import * as C from './styled'
 
-export default function App() {
+export default function App(props) {
     return (
         <C.Container> 
             <div className="pt1"> 
                 <div className="pack-user"> 
                     <img className="img-user" src="/assets/images/denuncia-detalhe/Perfil.png"alt=""/>
-                    <div className="user-name"> User 275625</div>
+                    <div className="user-name"> {props.name}</div>
                 </div>
 
             </div>
@@ -16,7 +16,7 @@ export default function App() {
                 <div className="box-msg"> 
                     <img src="/assets/images/denuncia-detalhe/Setinha.svg" alt=""/>
                     <div className="cx-mensagem"> 
-                        <div className="msg-denuncia"> declaração da testemunha ou da parte sobre determinado fato, do qual tem conhecimento ou que se relacione com seus interesses e que figura no processo como prova testemunhal. </div>
+                        <div className="msg-denuncia"> {props.msg} </div>
                     </div>
                 </div>
             </div>

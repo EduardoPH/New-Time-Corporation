@@ -11,15 +11,15 @@ export default function Details() {
         let r = [
             {
                 name: "Dudu",
-                msg: "opaaa testando"
+                msg: "opaaa testando1"
             }, 
             {
                 name: "Erik",
-                msg: "opaaa testando"
+                msg: "opaaa testando2"
             }, 
             {
                 name: "Jhow",
-                msg: "opaaa testando"
+                msg: "opaaa testando3"
             },
         ]
 
