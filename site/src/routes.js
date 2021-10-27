@@ -17,9 +17,8 @@ import TelaRoteamento from './pages/telaRoteamento';
 import Map from './components/map/map.js';
 import RecSenha from './pages/recSenha/';
 import Formulario from './pages/Formulario';
-
-
-
+import Code from './pages/recSenha/recSenhaCode'
+import New from './pages/recSenha/recSenhaNew'
 
 export default function Routes(){
     return(
@@ -42,6 +41,8 @@ export default function Routes(){
                 <Route path="/formulario" component={Formulario}/>
                 <Route path="/recuperacao" component={RecSenha}/>
                 <Route path="/map-render" component={Map}/>
+                <Route path="/code" component={Code} />
+                <Route path="/nova-senha" component={New} />
             </Switch>
         </BrowserRouter>
 

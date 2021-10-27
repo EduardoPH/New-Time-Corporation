@@ -1,21 +1,42 @@
 import { useState, useEffect } from "react";
 import BoxStyled from "./styled";
 import { Link } from "react-router-dom";
+import { Loading } from 'react-loading-ui';
 import Api from "../../../../services/api";
 const api = new Api()
 export default function Index(props){
     const [eventos, setEventos] = useState([]);
+    const [busca, setBuscar ] = useState('');
     async function SobreSite(){
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+        });
         let r = await api.listarDenun()
         setEventos(r)
+        Loading()
     }
+
+    async function Pesquisar(){
+        let r = await api.BuscarDen(busca)
+        setEventos(r)
+    }
+
+
     useEffect(
         () => {SobreSite() }, [] 
     );  
+
     return(
         <BoxStyled >
             <h1>Denúncias</h1>
-            <input type="text" placeholder="PESQUISAR POR PALAVRAS CHAVES..."/>
+            <div className="pesquisar">
+                <input type="text" value={busca} onChange={(e) => setBuscar(e.target.value)} placeholder="PESQUISAR POR PALAVRAS CHAVES..."/>
+                <button className="btm-pesquisar" onClick={() => Pesquisar()}><img src="/assets/images/administrador/icons8-search.svg"alt="erro"/></button>
+            </div>
             <table className="tabela-denun">
                 <thead>
                     <tr>
@@ -28,14 +49,15 @@ export default function Index(props){
                 <tbody>
                     {eventos.map((item,i) =>
                         <tr key={i}>
-                            <td>{item.nm_usuario}</td>
-                            <td>{item.tel}</td>
+                            <td>{item.id_usuario_infoc_ntc_usuario.nm_usuario}</td>
+                            <td>{item.id_usuario_infoc_ntc_usuario.ds_telefone}</td>
                             <td className="previa">
                                 {item.ds_depoimento}
                             </td>
                             <td className="coluna-acao">
                                 <Link to={{pathname:"/administrador", state: item}}>
-                                    <button>Ver Denúncia</button>
+                                    <button>Alterar</button>
+                                    <button>Visualizer</button>
                                 </Link>
                             </td>
                         </tr>

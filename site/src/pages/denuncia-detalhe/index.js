@@ -7,7 +7,9 @@ import Caracters from '../../components/details-denuncia/caracter'
 import Map from './MapaDetalhes.js'
 
 
-export default function Pag(){
+export default function Pag(props){
+    let denuncia = props.location.state
+
     return(
         <Container>
             <Menu  className="menu"/>
@@ -21,7 +23,7 @@ export default function Pag(){
 
                     <div className="pt2-body">
                         <Switch> 
-                            <Route path="/denuncia-details" exact={true} render={() => <Mensagem/>}/>
+                            <Route path="/denuncia-details" exact={true} render={() => <Mensagem msg={denuncia.msg} name={denuncia.name}/>}/>
                             <Route path="/denuncia-details/caracters" exact={true} component={Caracters}/>
                             <Route path="/denuncia-details/map" exact={true} component={Map} />
                         </Switch>
