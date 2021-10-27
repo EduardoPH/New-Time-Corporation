@@ -83,4 +83,24 @@ export default class Api{
         return r.data
     }
 
+
+
+
+
+
+
+
+    async qtdBairro(){
+        let r = await api.get('/localBairro')
+        return r.data
+    }
+
+    
+    
+    async qtdCidade(){
+        let r = await api.get('/localCidade')
+        return r.data
+    }
+
+
 }
