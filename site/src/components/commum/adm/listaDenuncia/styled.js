@@ -5,6 +5,7 @@ const BoxStyled=styled.div`
     width: 100%;
     flex-direction: column;
     align-items: center;
+    padding: 4em;
     h1{
         color: black;
         font-size: 2em;
@@ -15,6 +16,14 @@ const BoxStyled=styled.div`
         height: 3em;
         outline:none;
         cursor:auto;
+    }
+    .pesquisar{
+        display: flex;
+        width: 100%;
+        button{
+            width: 14%;
+            height: 3em;
+        }
     }
     .tabela-denun{
         margin-top:1em;

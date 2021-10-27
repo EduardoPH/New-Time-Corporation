@@ -79,10 +79,13 @@ export default class Api{
 
 
     async listarDenun(){
-        let r = await api.get('/denuncias')
+        let r = await api.get('/denuncia')
         return r.data
     }
-
+    async BuscarDen(busca){
+        let r = await api.post('/Buscardenuncia',{ busca})
+        return r.data
+    }
 
 
 
