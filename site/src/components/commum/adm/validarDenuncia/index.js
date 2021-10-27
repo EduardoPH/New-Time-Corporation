@@ -24,26 +24,24 @@ const api = new Api()
 
 export default function Index(props){
     const [eventos, setEventos] = useState([]);
-    const [item, setItem] = useState({});
     const [denun, setDenun] = useState('')
 
     async function listarDenun(){
-        let r = await api.listarDenun()
-        setEventos(r);
-        setItem(r[0]);
-        setDenun(r[0].denuncia);
+        let r = await api.validarDenuncia()
+        setDenun(r[0].ds_depoimento)
+        setEventos(r)        
     } 
 
 
     const excluir = async(id) =>{
         confirmAlert({
             title: 'Remover Denúncia',
-            message: `Tem certeza que deseja remover esta denúncia ${item.nome}`,
+            message: `Tem certeza que deseja remover esta denúncia ${eventos.snome}`,
             buttons:[
                 {
                     label: 'Sim',
                     onClick: async () => {
-                        alert('apagou ' + item.nome)
+                        alert('apagou ' + eventos.nome)
                     }
                 },
                 {label: 'Não'}
@@ -72,10 +70,9 @@ export default function Index(props){
         
         listarDenun()
         if(props.location.state !== undefined)
-            eventos.unshift(props.location.state);
+            setEventos([props.location.state]);
 
     }, []);
-    console.log(item)
     return(
         <BoxStyled>
             <ToastContainer/>
@@ -83,20 +80,22 @@ export default function Index(props){
             
             <div className="box-denuncia">
                 <div className="cabecalho">
-                    < img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/>
-                    <div className="informacoes-usuaria">
-                        <p1>   {item.id_usuario_infoc_ntc_usuario.nm_usuario} </p1>
-                        <span> {item.email} </span>
-                        <span> {item.tel} </span>
-                        <Link 
-                            to={{
-                            pathname:"/administrador/usuaria/perfil", 
-                            state:item
-                            }}
-                        >
-                            <button > Perfil</button>
-                        </Link>
-                    </div>
+                    <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/>
+                    {eventos.map(  i => 
+                        <div className="informacoes-usuaria">
+                            <p1>   {i.id_usuario_infoc_ntc_usuario.nm_usuario} </p1>
+                            <span>  {i.id_usuario_infoc_ntc_usuario.ds_email} </span>
+                            <span>  {i.id_usuario_infoc_ntc_usuario.ds_telefone} </span>
+                            <Link 
+                                to={{
+                                pathname:"/administrador/usuaria/perfil", 
+                                state:i
+                                }}
+                            >
+                                <button > Perfil</button>
+                            </Link>
+                        </div>
+                    )}
                 </div>
                 <Carousel 
                     responsive={responsive}
@@ -109,7 +108,7 @@ export default function Index(props){
                 </Carousel>
                 <div className="btms-acoes">
                     <Button type="alterar" width="16em"/> 
-                    <button className="excluir" onClick={() => excluir(item.id)}>Excluir</button>
+                    <button className="excluir" onClick={() => excluir(eventos.id)}>Excluir</button>
                     <button className="adicionar" > adicionar</button>
                 </div>
             </div>

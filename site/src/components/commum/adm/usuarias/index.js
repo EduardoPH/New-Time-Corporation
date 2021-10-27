@@ -21,7 +21,7 @@ export default function Index(props){
             topBarColor: 'red'
         });
         
-        let r = await api.ListarUsu()
+        let r = await api.listarDenun()
         setEventos(r)
         setTimeout(() => {
             Loading();
@@ -60,10 +60,10 @@ export default function Index(props){
                 <tbody>
                     {eventos.map (item => 
                         <tr>
-                            <td>{item.nm_usuario}</td>
-                            <td>{item.ds_email}</td>
-                            <td>{item.ds_telefone}</td>
-                            <td>{item.ds_cpf}</td>
+                            <td>{item.id_usuario_infoc_ntc_usuario.nm_usuario}</td>
+                            <td>{item.id_usuario_infoc_ntc_usuario.ds_email}</td>
+                            <td>{item.id_usuario_infoc_ntc_usuario.ds_telefone}</td>
+                            <td>{item.id_usuario_infoc_ntc_usuario.ds_cpf}</td>
                             <td className="coluna-acao"><Link to={{pathname:"/administrador/usuaria/perfil", state:item}}><button>Ver Perfil</button></Link></td>
                         </tr>
                     )}

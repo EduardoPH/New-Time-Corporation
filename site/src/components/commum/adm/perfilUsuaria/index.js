@@ -11,11 +11,12 @@ const api = new Api();
 
 export default function Index(props){
     const [eventos, setEventos] = useState(props.location.state);
+    console.log(eventos)
     const navegacao = useHistory();
     const excluir = async() =>{
         confirmAlert({
             title: 'Remover Usuaria',
-            message: `Tem certeza que deseja remover a usuaria ${eventos.nm_usuario}`,
+            message: `Tem certeza que deseja remover  ${eventos.id_usuario_infoc_ntc_usuario.nm_usuario}`,
             buttons:[
                 {
                     label: 'Sim',
@@ -39,7 +40,7 @@ export default function Index(props){
             <div className="box-infor-user">
                 <InfoUsuaria info={eventos} displayButton="none"></InfoUsuaria>
                 <div className="denunciasCadastradas">
-                    <ItemDenuncia descricao={eventos.denuncia} data={eventos.data}/>
+                    <ItemDenuncia descricao={eventos.ds_depoimento} data={eventos.dt_cadastro}/>
                     <button className="btm-excluir" 
                     style={{ height: '25%', 
                              background: 'red',

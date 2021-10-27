@@ -87,7 +87,10 @@ export default class Api{
         return r.data
     }
 
-
+    async validarDenuncia(){
+        let r = await api.get('/validarDenuncia')
+        return r.data
+    }
 
 
 

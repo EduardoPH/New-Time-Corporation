@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Container } from "./styled";
 
 export default function InfoUsuaria(props) {
-    const[ nome, setNome ] = useState(props.info.nm_usuario);
-    const[ email, setEmail ] = useState(props.info.ds_email);
-    const[ telefone, setTelefone ] = useState(props.info.ds_tel);
-    const[ cpf, setCpf ] = useState(props.info.ds_cpf);
+    const[ nome, setNome ] = useState(props.info.id_usuario_infoc_ntc_usuario.nm_usuario);
+    const[ email, setEmail ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_email);
+    const[ telefone, setTelefone ] = useState(props.info.ds_telefone);
+    const[ cpf, setCpf ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_cpf);
     const[ habilitar, setHabiltar] = useState(false);
 
     function alterarDados(){
-            setHabiltar(!habilitar)
+        setHabiltar(!habilitar)
     }
     return (
         <Container>
