@@ -1,17 +1,36 @@
 import { Bar } from "react-chartjs-2";
+import Api from "../../services/api";
+import { useEffect, useState } from "react";
+
+const api = new Api()
+function BarChart (){
+    const [bairros, setBairros] = useState([]) 
 
 
 
-const BarChart = () =>{
+    async function QtdBairro(){
+        let r = await api.qtdBairro()
+        setBairros(r)
+
+    }
+    useEffect(
+        () => {QtdBairro() }, [] 
+    );
+
+
+
+
+
+
     return (
         <div>
             <Bar
                 data={{
-                    labels: ["Sé (São Paulo)", "Barra Funda (São Paulo)", "Cidade de Deus (Rio de Janeiro)", "Campo Grande (Rio de Janeiro)", "Sítio Cercado (Curitiba)"],
+                    labels: bairros.map(i => i.ds_bairro),
                     datasets: [
                         {
                             label: "",
-                            data: [77,70,86,64,56],
+                            data:  bairros.map(i => i.qtd), 
                             backgroundColor:[
                                 '#A3E5F6',
                                 '#A3E5F6',
@@ -58,16 +77,35 @@ const BarChart = () =>{
    }
 
 
-  const Graf2 = () => {
+  
+
+  function Graf2(){
+
+    const [cidades, setCidades] = useState([])
+
+
+   
+    async function QtdCidade(){
+        let r = await api.qtdCidade()
+            setCidades(r)
+            console.log(r)
+        
+    }
+
+    useEffect(
+        () => {QtdCidade() }, [] 
+    );
+
+
       return(
           <div>
               <Bar
                     data={{
-                       labels: ["Salvador", "Rio de Janeiro", "Curitiba", "São Paulo", "Porto Alegre"],
+                       labels: cidades.map(i => i.ds_cidade),
                         datasets: [
                             {
                                 label: "",
-                                data: [71,89,96,83,67],
+                                data: cidades.map(i => i.qtd),
                                 backgroundColor:[
                                     '#A3E5F6',
                                     '#A3E5F6',
@@ -112,18 +150,17 @@ const BarChart = () =>{
   }
 
 
-
   const Graf3 = () =>{
       return (
           <div>
               <Bar
               
               data={{
-                labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set"],
+                labels: ["jan"],
                 datasets: [
                     {
                         label: "",
-                        data: [23,36,48,28,33,43,62,69,73],
+                        data: [2],
                         backgroundColor:[
                             '#A3E5F6',
                             '#A3E5F6',
