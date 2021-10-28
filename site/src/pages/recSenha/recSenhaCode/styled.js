@@ -34,7 +34,7 @@ export const Container = styled.div`
   .box-code{
     background: rgba(255, 255, 255, 0.59);
     border-radius: 25px;
-    width: 50%;
+    width: 40%;
     margin: auto;
     padding: 1em 3em;
     height: 33vh;
@@ -68,6 +68,9 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    max-width: 37em;
+    margin: 1.5em auto 0em;
   }
 
   .box-code-pt2 {
