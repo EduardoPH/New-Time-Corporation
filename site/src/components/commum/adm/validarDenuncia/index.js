@@ -14,34 +14,53 @@ import "react-multi-carousel/lib/styles.css";
 
 import { Link } from 'react-router-dom';
 
+import { Loading } from 'react-loading-ui';
+
 import Mensagem from   '../../../../components/details-denuncia/mensage/';
 import Caracters from '../../../../components/details-denuncia/caracter/';
-import Map from '../../../../components/map/map'
+import Map from '../../../../components/map/map';
 
-import Api from '../../../../services/api'
+import { useHistory } from "react-router";
+
+
+import Api from '../../../../services/api';
 const api = new Api()
 
 
 export default function Index(props){
     const [eventos, setEventos] = useState([]);
     const [denun, setDenun] = useState('')
-
+    const [alterar, setAlterar] = useState(false)
+    const navegacao = useHistory();
+    console.log(eventos)
     async function listarDenun(){
+
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+        });
+
         let r = await api.validarDenuncia()
         setDenun(r[0].ds_depoimento)
         setEventos(r)        
+
+        Loading()
     } 
 
 
-    const excluir = async(id) =>{
+    const excluir = async() =>{
         confirmAlert({
             title: 'Remover Denúncia',
-            message: `Tem certeza que deseja remover esta denúncia ${eventos.snome}`,
+            message: `Tem certeza que deseja remover esta denúncia `,
             buttons:[
                 {
                     label: 'Sim',
                     onClick: async () => {
-                        alert('apagou ' + eventos.nome)
+                       let r = await api.deletarDen(eventos.id_denuncia)
+
                     }
                 },
                 {label: 'Não'}
@@ -100,15 +119,15 @@ export default function Index(props){
                 <Carousel 
                     responsive={responsive}
                 >
-                    <textarea value={denun}  onChange={  e => setDenun(e.target.value)}/>
+                    <textarea value={denun} disabled={alterar === false ? true : false} onChange={  e => setDenun(e.target.value)}/>
                     <Caracters className="carateristicas"/>
                     <div className="map">
                         <Map className="mapas"/>
                     </div>
                 </Carousel>
                 <div className="btms-acoes">
-                    <Button type="alterar" width="16em"/> 
-                    <button className="excluir" onClick={() => excluir(eventos.id)}>Excluir</button>
+                    <button onClick={() => setAlterar(!alterar)}>Alterar</button> 
+                    <button className="excluir" onClick={() => excluir()}>Excluir</button>
                     <button className="adicionar" > adicionar</button>
                 </div>
             </div>

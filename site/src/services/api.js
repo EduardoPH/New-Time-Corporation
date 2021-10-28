@@ -70,7 +70,11 @@ export default class Api{
         let r = await api.post('/buscarUsuario', {busca})
         return r.data
     }
-
+    async denUsu(id){
+        let r = await api.get(`/buscarden/${id}`)
+        return r.data
+    }
+    
     async deletarUsu(id){
         let r = await api.delete(`/usuario/${id}`)
         return r.data
@@ -86,15 +90,12 @@ export default class Api{
         let r = await api.post('/Buscardenuncia',{ busca})
         return r.data
     }
-
     async validarDenuncia(){
         let r = await api.get('/validarDenuncia')
         return r.data
     }
-
-    async denUsu(id){
-        let r = await api.get(`/buscarden/${id}`)
-        return r.data
+    async deletarDen(id){
+        let r = await api.delete(`/denuncia/ ${id}`)
     }
 
 
@@ -104,9 +105,6 @@ export default class Api{
         let r = await api.get('/localBairro')
         return r.data
     }
-
-    
-    
     async qtdCidade(){
         let r = await api.get('/localCidade')
         return r.data

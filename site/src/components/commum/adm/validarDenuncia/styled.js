@@ -48,13 +48,18 @@ const BoxStyled=styled.div`
         }
     } 
     textarea{
-        width: 100%;
+        width: 99%;
         height: 27em;
         resize: none;
         outline: none;
         align-self: flex-end;
-        border-radius: 15px;
+        border-radius: 10px;
         cursor: pointer;
+        background-color: white;
+        color: black;
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-family: 2em;
     }
     .map{
         width: 100%;
@@ -79,7 +84,7 @@ const BoxStyled=styled.div`
             width: 16em;
             font-family: arial;
             font-size: 1em;
-            font-weigth: 800;
+            font-weight: 800;
             cursor:pointer;
         }
         .excluir{
@@ -87,6 +92,9 @@ const BoxStyled=styled.div`
         }
         .adicionar{
             background-color:green;
+        }
+        .alt{
+            background-color: blue;
         }
     }
 
