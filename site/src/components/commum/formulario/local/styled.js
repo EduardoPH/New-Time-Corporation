@@ -7,6 +7,7 @@ const  Containerformulario = styled.div`
 
     .conteudo{
         display: flex;
+        flex-direction: row;
         width: 100%;
         height: 100%;
         backdrop-filter: blur(1px);
@@ -28,14 +29,10 @@ const  Containerformulario = styled.div`
         width: 100%;
     }
 
-    button {
-        height: 3em;
-    }
-
     input {
         border-radius: 2em;
         border: none;
-        width: 89%;
+        width: 85%;
         margin-right: 1.2em;
         height: 3em;
         margin-top: 1em;
@@ -59,6 +56,25 @@ const  Containerformulario = styled.div`
               transform: translateX(-280px);
             } 
           }
+    }
+
+    Button {
+        margin-top: 1.6em;
+    }
+
+    Button:hover {
+        color: rgba(85, 26, 132, 100%);
+        transition: 1s;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: #b133ff;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px #fff, 0px 0px 0px inset;
+            transition: 0.21s;
+            color: white;
+        }
     }
 `
 export default Containerformulario;

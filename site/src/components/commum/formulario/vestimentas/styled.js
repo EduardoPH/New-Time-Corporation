@@ -31,7 +31,7 @@ const  Containerformulario = styled.div `
 .informacoes {
     font: 1.8em arial;
     color: #FC02A0;
-    margin: 0.6em 0em;
+    margin: 0.5em 0em;
 }
 
 .form-2 {
@@ -45,12 +45,20 @@ const  Containerformulario = styled.div `
     width: 100%;
 }
 
+.info2 {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 textarea {
     width: 100%;
     height: auto;
     border-radius: 10px;
     resize: none;
     border: none;
+    margin-right: 2em;
     &:focus {
         box-shadow: 0 0 0 0;
         border: 0 none;
@@ -86,6 +94,21 @@ input {
     } 
     &:hover {
         border: 2px solid #FC02A0;
+    }
+}
+
+Button:hover {
+    color: rgba(85, 26, 132, 100%);
+    transition: 1s;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background-color: #b133ff;
+        transition: 0.3s;
+        box-shadow: 0px 0px 10px #fff, 0px 0px 0px inset;
+        transition: 0.21s;
+        color: white;
     }
 }
 `

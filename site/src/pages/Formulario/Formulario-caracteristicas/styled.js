@@ -40,10 +40,10 @@ flex-direction: column;
     margin: 0.3em 0em;
 }
 
-.conteudo {
+.conteudo3 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around!important; 
     align-items: center;
 }
 
@@ -55,10 +55,6 @@ flex-direction: column;
 
 .titulo-box, .input {
     font: 1.3em arial;
-}
-
-.conteudo2 {
-
 }
 
 .informacoes {
