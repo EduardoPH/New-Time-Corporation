@@ -156,7 +156,7 @@ function BarChart (){
               <Bar
               
               data={{
-                labels: ["jan"],
+                labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set"],
                 datasets: [
                     {
                         label: "",
