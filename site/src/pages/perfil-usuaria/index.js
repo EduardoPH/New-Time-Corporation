@@ -6,10 +6,12 @@ import Menu from '../../components/menu'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import Cookies from 'js-cookie'
+import { Loading } from 'react-loading-ui'
 import Api from '../../services/api'
 const api = new Api();
 
 function VerLogado(navigation){
+
     let c = Cookies.get('usuariaLogada') 
     
     
@@ -18,35 +20,50 @@ function VerLogado(navigation){
         return null;
     }
     let usuaria = JSON.parse(c)
+    
     return usuaria
 }
 
 
 export default function PerfilUsuaria(){
+      
     
     const navigation = useHistory();
-
+    
     let i = VerLogado(navigation)
     const [info, setInfo] = useState(i)
-  
+    
     const [denun, setDenun] = useState([])
     
     async function BuscaDenu(){
-
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+        });
+    
         let r = await api.denUsu(info.id_usuario)
         if(r[0] === undefined){
+            Loading()
             setDenun([{erro: 'Voce não possue nenhuma denúncia cadastrada'}])
         } else {
+            Loading()
             setDenun(r)
         }
+
+       
     }
 
     useEffect(
-        () => {BuscaDenu() }, [] 
+        () => {
+    
+            BuscaDenu();
+        }, [] 
     ); 
     
     const sair = () => {Cookies.remove('usuariaLogada'); navigation.push("/home")}
-    
     
     return(
         <Fundo height="100vh">
