@@ -2,7 +2,8 @@ import Containerformulario from './styled.js';
 import React from "react";
 import { useState } from "react";
 import  Mapa  from '../../../map/map';
-
+import Button from '../../../formulario';
+import { Link } from 'react-router-dom';
 
 
 export default function Local (){
@@ -13,6 +14,7 @@ export default function Local (){
                         <div className="titulo-local">Área Localizada</div>
                         <div className="mapa"><Mapa/></div>
                     </div>
+                    <Link to="/formulario/depoimento"><Button valor="Avançar"/></Link>  
                 </div>
         </Containerformulario>
     )

@@ -18,7 +18,7 @@ export default function Caracteristicas (props){
             <Menu/>
             <div class="titulo">Formulário de denúncia</div>
                 <div class="pag">
-                    <div class="conteudo">
+                    <div class="conteudo3">
                         
                             <div class="box">
                                 <div class="titulo-box">Tom de pele</div>

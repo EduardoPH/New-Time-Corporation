@@ -20,14 +20,15 @@ const Container = styled.div`
         justify-content: space-between;
         background-color: rgba(85, 26, 132, 30%);
         border-radius: 20px;
-        padding: 1.5em;
-        width: 70%;
-        height: 26em;
+        padding: 2em;
+        width: 90%;
+        height: 28em;
     }
 
     .conteudo-esquerda {
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
 
     .conteudo-direita{
@@ -43,38 +44,39 @@ const Container = styled.div`
         margin-top: 5em;
     }
 
-    .botao button:hover {
-        color: rgba(85, 26, 132, 100%);
-        transition: 1s;
-        background-color: white;
-        border: none;
-        cursor: pointer;
-        &:hover {
-            background-color: #b133ff;
-            transition: 0.3s;
-            border: solid 3px #fff;
-            box-shadow: 0px 0px 20px #fff, 0px 0px 10px inset;
-            transition: 0.21s;
-            color: white;
-        }
-    }
-
     .menu-lateral {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-direction: column;
+        align-items: center;
         background-color: white;
-        font: 1.3em arial;
-        width: 8em;
-        height: 8em;
-        border-radius: 7px;
+        width: 7em;
+        height: 100%;
+        border-radius: 4px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
-    .item-menu {
+    .item-lateral {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .item-lateral img{
+        cursor: pointer;
+    }
+
+    .textos-lateral {
         display: flex;
         align-items: center;
         margin: 0.3em 0em;
         cursor: pointer;
+        font: 0.9em arial;
+        font-weight: 700;
+        text-align: center;
         &:hover {
             color: #FC02A0;
             transition: 0.21s;
