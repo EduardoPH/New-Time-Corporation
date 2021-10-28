@@ -12,11 +12,11 @@ export default function Mensagem(props) {
                 <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/> 
             </div>
             <div className="pt2-msg">
-                <div className="name-user"> {props.denuncia.name}</div>
+                <div className="name-user"> {props.denuncia.id_usuario_infoc_ntc_usuario.nm_usuario}</div>
                 <div className="ct-msg"> 
                     <img className="setinha" src="/assets/images/denuncias-recentes/Setinha.png" alt=""/>
                     <div className="caixa-msg"> 
-                        <div className="mensagem" > {props.denuncia.msg} </div> 
+                        <div className="mensagem" > {props.denuncia.ds_depoimento} </div> 
                         <Link to={{pathname:'/denuncia-details', state:props.denuncia  }} style={{textDecoration: "none"}}> <div className="ver-mais-dt"> Ver mais...</div> </Link>
                     </div>
                 </div>
