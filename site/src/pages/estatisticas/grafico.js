@@ -150,17 +150,48 @@ function BarChart (){
   }
 
 
-  const Graf3 = () =>{
+ function Graf3 (){
+
+ 
+    const [qtd, setQtd] = useState([])
+    const [meses, setMeses] = useState([])
+
+   
+    async function QtdMes(){
+        let r = await api.qtdMes()
+            r.map(i =>{if(i.mes === "01")
+                setMeses(...meses,{mes:"Jan", qtd:i.qtd})
+               
+            if(i.mes === "02")
+            setMeses(...meses,{mes:"Fev", qtd:i.qtd})
+
+            if(i.mes === "03")
+                setMeses(...meses,{mes:"Mar", qtd:i.qtd})
+
+
+    })
+
+            
+        
+    }
+    console.log(meses)
+
+    useEffect(
+        () => {QtdMes() }, [] 
+    );
+
+
+
       return (
           <div>
               <Bar
               
               data={{
-                labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set"],
+                labels: meses.map(i=> i.mes),
                 datasets: [
                     {
                         label: "",
-                        data: [2],
+                        data: meses.map(i => i.qtd),
                         backgroundColor:[
                             '#A3E5F6',
                             '#A3E5F6',

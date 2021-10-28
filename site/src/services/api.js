@@ -109,6 +109,10 @@ export default class Api{
         let r = await api.get('/localCidade')
         return r.data
     }
+    async qtdMes(){
+        let r = await api.get('/qtdMes')
+        return r.data
+    }
 
 
 }
