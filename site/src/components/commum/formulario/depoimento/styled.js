@@ -26,7 +26,8 @@ const  Containerformulario = styled.div `
             cursor: text;
         } 
         ::-webkit-input-placeholder {
-            color: #b133ff;
+            color: #FC02A0;
+            opacity: 80%;
             font: 16px arial;
         }  
     }
