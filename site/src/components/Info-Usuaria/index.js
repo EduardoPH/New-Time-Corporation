@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container } from "./styled";
 
 export default function InfoUsuaria(props) {
+    
     const[ nome, setNome ] = useState(props.info.id_usuario_infoc_ntc_usuario.nm_usuario);
     const[ email, setEmail ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_email);
     const[ telefone, setTelefone ] = useState(props.info.ds_telefone);

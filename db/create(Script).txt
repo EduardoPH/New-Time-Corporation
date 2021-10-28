@@ -45,7 +45,6 @@ ds_complemento varchar(255)
 
 create table infoC_ntc_vestimento(
 id_vestimento int primary key auto_increment,
-tp_vestimento varchar(255),
 ds_inferior  varchar(255),
 ds_superior  varchar(255),
 ds_calcado  varchar(255),
@@ -56,6 +55,7 @@ create table  infoC_ntc_denuncia(
 id_denuncia int primary key auto_increment,
 id_usuario int,
 ds_depoimento varchar(255),
+dt_cadastro datetime,
 id_local int,
 bt_ativo boolean,
 id_fisico int,

@@ -6,6 +6,8 @@ import Menu from '../../components/menu'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import Cookies from 'js-cookie'
+import Api from '../../services/api'
+const api = new Api();
 
 function VerLogado(navigation){
     let c = Cookies.get('usuariaLogada') 
@@ -24,10 +26,28 @@ export default function PerfilUsuaria(){
     
     const navigation = useHistory();
 
-    let i = VerLogado(navigation) || {}
-
+    let i = VerLogado(navigation)
     const [info, setInfo] = useState(i)
+  
+    const [denun, setDenun] = useState([])
+    
+    async function BuscaDenu(){
+
+        let r = await api.denUsu(info.id_usuario)
+        if(r[0] === undefined){
+            setDenun([{erro: 'Voce não possue nenhuma denúncia cadastrada'}])
+        } else {
+            setDenun(r)
+        }
+    }
+
+    useEffect(
+        () => {BuscaDenu() }, [] 
+    ); 
+    
     const sair = () => {Cookies.remove('usuariaLogada'); navigation.push("/home")}
+    
+    
     return(
         <Fundo height="100vh">
         <Container>
@@ -44,9 +64,16 @@ export default function PerfilUsuaria(){
                         <button onClick={sair}>   Sair da Conta </button>
                     </div>
                     <div className="parte-final-box">
-                        <InfoUsuaria displayNome="none" info={info}/>
                         <div className="denunciasCadastradas">
-                            <ItemDenuncia descricao={info.denuncia} data={info.data}/>
+                            {denun.map( i =>
+                             {
+                                if(i.erro){
+                                    return 'Voce ainda não possui nenhuma denuncia'
+                                } else{
+                                    return( <ItemDenuncia info={i}/>)                             
+                                }
+                             }
+                            )}
                         </div>
                     </div>
                 </div>

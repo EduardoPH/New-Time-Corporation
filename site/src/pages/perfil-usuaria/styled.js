@@ -110,6 +110,10 @@
             .denunciasCadastradas{
                 width: 100%;
                 margin: 1em;
+                text-align: center;
+                color: white;
+                font-family: 'Roboto';
+                font-weight: bolder;
                 overflow-y: auto;
                 overflow-x: hidden;
 
