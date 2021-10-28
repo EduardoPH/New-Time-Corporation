@@ -40,7 +40,7 @@ export default function Index(props){
             <div className="box-infor-user">
                 <InfoUsuaria info={eventos} displayButton="none"></InfoUsuaria>
                 <div className="denunciasCadastradas">
-                    <ItemDenuncia descricao={eventos.ds_depoimento} data={eventos.dt_cadastro}/>
+                    <ItemDenuncia info={eventos}/>
                     <button className="btm-excluir" 
                     style={{ height: '25%', 
                              background: 'red',

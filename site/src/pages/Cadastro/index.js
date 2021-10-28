@@ -24,7 +24,7 @@ export default function Cadastro() {
   }
 
   async function cadastrar() {
-    let r = await api.cadastrar(nome, email, senha, telefone, cpf);
+    let r = await api.cadastrarUsu(nome, email, senha, telefone, cpf);
 
     if (r.erro) {
       toast.error(r.erro);

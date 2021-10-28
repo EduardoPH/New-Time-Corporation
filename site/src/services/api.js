@@ -92,6 +92,10 @@ export default class Api{
         return r.data
     }
 
+    async denUsu(id){
+        let r = await api.get(`/buscarden/${id}`)
+        return r.data
+    }
 
 
 

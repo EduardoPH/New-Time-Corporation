@@ -21,6 +21,7 @@ const Container = styled.div`
         font-size:1em;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bolder;
+        color: black;
 
         p2{
             cursor: pointer;
@@ -32,7 +33,6 @@ const Container = styled.div`
         }
     }
     .lado-esquerdo{
-        width: 85%;
         height: 100%;
 
         display: flex;
@@ -40,14 +40,13 @@ const Container = styled.div`
         justify-content: space-between;
 
         p1{
-            width: 80%;
+            color: black;
+            width: 100%;
             word-wrap: break-word;
         }
 
         .btms{
-            width: 25%;
             display: flex;
-            justify-content: space-between;
             margin-top: 1em;
             .alterar{
                 background: #111AE3;
