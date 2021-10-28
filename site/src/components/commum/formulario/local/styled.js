@@ -37,7 +37,7 @@ const  Containerformulario = styled.div`
         height: 3em;
         margin-top: 1em;
         ::-webkit-input-placeholder {
-            color: #b133ff;
+            color: #FC02A0;
             font: 16px arial;
             padding-top: 2em;
         }
