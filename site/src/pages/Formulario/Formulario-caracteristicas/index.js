@@ -12,6 +12,8 @@ export default function Caracteristicas (props){
     const [corCabelo, setcorCabelo] = useState([]);
     const [complemento, setComplemento] = useState([]);
 
+    
+
     return(
         <Fundo height="100vh">
         <Containerformulario>

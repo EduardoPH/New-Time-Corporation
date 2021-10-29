@@ -10,6 +10,22 @@ export default function Vestimentas (props){
     const [calcado, setcalcado] = useState([]);
     const [complemento, setComplemento] = useState([]);
 
+    const [vestimentas, setVestimentas] = useState([]);
+    console.log(vestimentas)
+
+    function SobreSite(){
+
+        const apiResponse = [
+            {
+                ds_partecima: (parteCima),
+                ds_partebaixo: (parteBaixo),
+                ds_calcado: (calcado),
+                ds_complemento: (complemento)
+            }
+        ]
+        setVestimentas(apiResponse)
+    }
+
     return(
         <Containerformulario>
                 <div class="pag">

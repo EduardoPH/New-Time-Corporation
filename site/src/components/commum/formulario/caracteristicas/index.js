@@ -1,6 +1,6 @@
 import Containerformulario from './styled.js';
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Button from '../../../formulario';
 
@@ -10,11 +10,26 @@ export default function Caracteristicas (props){
     const [corCabelo, setcorCabelo] = useState([]);
     const [complemento, setComplemento] = useState([]);
 
+    const [caracteristicas, setCaracteristicas] = useState([]);
+    console.log(caracteristicas)
+
+    function SobreSite(){
+
+        const apiResponse = [
+            {
+                ds_pele: (pele) ,
+                ds_cabelo: (cabelo),
+                ds_corcabelo: (corCabelo),
+                ds_complemento: (complemento)
+            }
+        ]
+        setCaracteristicas(apiResponse)
+    }
+
     return(
         <Containerformulario>
                 <div class="pag">
                     <div class="conteudo">
-                        
                             <div class="box">
                                 <div class="titulo-box">Tom de pele</div>
                                 <div class="imputs">
