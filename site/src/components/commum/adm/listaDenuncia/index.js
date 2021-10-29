@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import { Loading } from 'react-loading-ui';
 import Api from "../../../../services/api";
 const api = new Api()
-export default function Index(props){
+export default function Index(){
     const [eventos, setEventos] = useState([]);
-    const [busca, setBuscar ] = useState('');
     async function SobreSite(){
         Loading({
             text: "Por Favor Aguarde",
@@ -20,12 +19,6 @@ export default function Index(props){
         Loading()
     }
 
-    async function Pesquisar(){
-        let r = await api.BuscarDen(busca)
-        setEventos(r)
-    }
-
-
     useEffect(
         () => {SobreSite() }, [] 
     );  
@@ -33,10 +26,6 @@ export default function Index(props){
     return(
         <BoxStyled >
             <h1>Denúncias</h1>
-            <div className="pesquisar">
-                <input type="text" value={busca} onChange={(e) => setBuscar(e.target.value)} placeholder="PESQUISAR POR PALAVRAS CHAVES..."/>
-                <button className="btm-pesquisar" onClick={() => Pesquisar()}><img src="/assets/images/administrador/icons8-search.svg"alt="erro"/></button>
-            </div>
             <table className="tabela-denun">
                 <thead>
                     <tr>

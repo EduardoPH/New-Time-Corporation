@@ -109,7 +109,6 @@ export default class Api{
     }
 
 
-
     async qtdBairro(){
         let r = await api.get('/localBairro')
         return r.data
