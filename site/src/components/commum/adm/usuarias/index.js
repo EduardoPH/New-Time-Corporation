@@ -30,9 +30,11 @@ export default function Index(props){
 
     async function buscarUsu(){
         let r = await api.buscarUsu(usuaria)
+        console.log(r)
         if(r.erro){
             return toast.error(r.erro)
         } else {
+            if(r === [])
             setEventos(r)
         }
     }
@@ -54,6 +56,7 @@ export default function Index(props){
                         <th>E-mail</th>
                         <th>Telefone</th>
                         <th>CPF</th>
+                        <th>D. Ativa</th>
                         <th className="coluna-acao"></th>
                     </tr>
                 </thead>
@@ -64,6 +67,7 @@ export default function Index(props){
                             <td>{item.id_usuario_infoc_ntc_usuario.ds_email}</td>
                             <td>{item.id_usuario_infoc_ntc_usuario.ds_telefone}</td>
                             <td>{item.id_usuario_infoc_ntc_usuario.ds_cpf}</td>
+                            <td>{item.bt_ativo === true ? 'Ativa' : 'Inativa'}</td>
                             <td className="coluna-acao"><Link to={{pathname:"/administrador/usuaria/perfil", state:item}}><button>Ver Perfil</button></Link></td>
                         </tr>
                     )}

@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom';
 
 import { Loading } from 'react-loading-ui';
 
-import Mensagem from   '../../../../components/details-denuncia/mensage/';
 import Caracters from '../../../../components/details-denuncia/caracter/';
 import Map from '../../../../components/map/map';
 
@@ -28,11 +27,11 @@ const api = new Api()
 
 
 export default function Index(props){
+    
     const [eventos, setEventos] = useState([]);
     const [denun, setDenun] = useState('')
     const [alterar, setAlterar] = useState(false)
-    const navegacao = useHistory();
-    console.log(eventos)
+
     async function listarDenun(){
 
         Loading({
@@ -43,14 +42,28 @@ export default function Index(props){
             topBarColor: 'red'
         });
 
-        let r = await api.validarDenuncia()
+        let r = await api.validarDenunciaF()
         setDenun(r[0].ds_depoimento)
         setEventos(r)        
-
+        if(props.location.state !== undefined)
+            setEventos([props.location.state]);
         Loading()
     } 
+    async function listarDenunD(){
 
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+        });
 
+        let r = await api.validarDenunciaF()
+        setDenun(r[0].ds_depoimento)
+        setEventos(r)        
+        Loading()
+    } 
     const excluir = async() =>{
         confirmAlert({
             title: 'Remover Denúncia',
@@ -59,13 +72,25 @@ export default function Index(props){
                 {
                     label: 'Sim',
                     onClick: async () => {
-                       let r = await api.deletarDen(eventos.id_denuncia)
-
+                       let r = await api.deletarDen(eventos[0].id_denuncia)
+                       toast('Denúncia Apagada')
+                       listarDenunD()
                     }
                 },
                 {label: 'Não'}
             ]
         })
+    }
+
+    async function Validar(){
+        let r =  await api.AtivarDenun(eventos[0].id_denuncia,denun)
+        if(r.erro){
+            toast.error(r.erro)
+        } else {
+            toast.success('Cadastrada com sucesso')
+            listarDenunD()
+            
+        }
     }
     const responsive={
         superLargeDesktop: {
@@ -92,6 +117,7 @@ export default function Index(props){
             setEventos([props.location.state]);
 
     }, []);
+    
     return(
         <BoxStyled>
             <ToastContainer/>
@@ -126,9 +152,9 @@ export default function Index(props){
                     </div>
                 </Carousel>
                 <div className="btms-acoes">
-                    <button onClick={() => setAlterar(!alterar)}>Alterar</button> 
+                    <button className="alt" onClick={() => setAlterar(!alterar)}>Alterar</button> 
                     <button className="excluir" onClick={() => excluir()}>Excluir</button>
-                    <button className="adicionar" > adicionar</button>
+                    <button className="adicionar" onClick={() => Validar()}> adicionar</button>
                 </div>
             </div>
         </BoxStyled>

@@ -43,6 +43,7 @@ export default function Index(props){
                         <th>Nome</th>
                         <th>Telefone</th>
                         <th >Denúncia</th>
+                        <th>D Ativa</th> 
                         <th className="coluna-acao"></th>
                     </tr>
                 </thead>
@@ -54,11 +55,14 @@ export default function Index(props){
                             <td className="previa">
                                 {item.ds_depoimento}
                             </td>
+                            <td>{item.bt_ativo === true ? 'Ativa' : 'Inativa'}</td>
                             <td className="coluna-acao">
+                                
                                 <Link to={{pathname:"/administrador", state: item}}>
                                     <button>Alterar</button>
-                                    <button>Visualizer</button>
                                 </Link>
+                                    <button>Visualizer</button>
+                                
                             </td>
                         </tr>
                     )} 

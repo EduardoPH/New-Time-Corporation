@@ -66,8 +66,8 @@ export default class Api{
         return r.data
     }
 
-    async buscarUsu(busca){
-        let r = await api.post('/buscarUsuario', {busca})
+    async buscarUsu(usuaria){
+        let r = await api.post('/buscarUsuario', {busca: usuaria})
         return r.data
     }
     async denUsu(id){
@@ -96,8 +96,17 @@ export default class Api{
     }
     async deletarDen(id){
         let r = await api.delete(`/denuncia/ ${id}`)
+        return r.data;
+    }
+    async AtivarDenun(id, descricao){
+        let r = await api.put(`/cadastrarDenuncia/${id}`, descricao)
+        return r.data;
     }
 
+    async validarDenunciaF(){
+        let r = await api.get("/validarDenunciaFalse")
+        return r.data
+    }
 
 
 
