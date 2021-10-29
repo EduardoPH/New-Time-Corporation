@@ -77,8 +77,6 @@ function BarChart (){
    }
 
 
-  
-
   function Graf2(){
 
     const [cidades, setCidades] = useState([])
@@ -147,38 +145,89 @@ function BarChart (){
                     }}/>
           </div>
       )
-  }
+  } 
 
 
- function Graf3 (){
+ function Graf3(){
 
- 
+ /* 
     const [qtd, setQtd] = useState([])
     const [meses, setMeses] = useState([])
 
    
     async function QtdMes(){
         let r = await api.qtdMes()
-            r.map(i =>{if(i.mes === "01")
-                setMeses(...meses,{mes:"Jan", qtd:i.qtd})
+              r.map(i =>{if(i.mes === "01")
+                setMeses({mes:"Jan", qtd:i.qtd})
                
             if(i.mes === "02")
-            setMeses(...meses,{mes:"Fev", qtd:i.qtd})
+                setMeses({mes:"Fev", qtd:i.qtd})
 
             if(i.mes === "03")
-                setMeses(...meses,{mes:"Mar", qtd:i.qtd})
+                setMeses({mes:"Mar", qtd:i.qtd})
+            })
 
+            if(i.mes === "04")
+                setMeses({mes:"Abr", qtd:i.qtd})
 
-    })
+            if(i.mes === "05")
+                setMeses({mes:"Mai", qtd:i.qtd})
 
-            
-        
+            if(i.mes === "06")
+                setMeses({mes:"Jun", qtd:i.qtd})
+
+            if(i.mes === "07")
+                setMeses({mes:"Jul", qtd:i.qtd})
+
+            if(i.mes === "08")
+                setMeses({mes:"Ago", qtd:i.qtd})
+
+            if(i.mes === "09")
+                setMeses({mes:"Set", qtd:i.qtd})
+
+            if(i.mes === "10")
+                setMeses({mes:"Out", qtd:i.qtd})
+
+            if(i.mes === "11")
+                setMeses({mes:"Nov", qtd:i.qtd})
+
+            if(i.mes === "12")
+                setMeses({meses:"Dez", qtd:i.qtd})
+   
+
+             
+         
+
+    
+    setQtd(r.meses) 
+    console.log(r.meses)
     }
-    console.log(meses)
 
     useEffect(
         () => {QtdMes() }, [] 
     );
+ */
+
+
+
+
+
+    const [dm, setDM] = useState([])
+    const [dqtd, setDqtd] = useState([])
+
+   
+    async function QtdDM(){
+        let r = await api.qtdMes()
+            setDM(r)
+            console.log(r)
+        
+    }
+
+    useEffect(
+        () => {QtdDM()}, [] 
+    );
+
+
 
 
 
@@ -187,11 +236,11 @@ function BarChart (){
               <Bar
               
               data={{
-                labels: meses.map(i=> i.mes),
+                labels: dm.map(i=> i.dt_cadastro),
                 datasets: [
                     {
                         label: "",
-                        data: meses.map(i => i.qtd),
+                        data: dm.map(i => i.qtd),
                         backgroundColor:[
                             '#A3E5F6',
                             '#A3E5F6',
@@ -237,4 +286,4 @@ function BarChart (){
 
 
 
-export { BarChart, Graf2, Graf3}
+export { BarChart, Graf2,  Graf3}
