@@ -6,14 +6,11 @@ export default function ItemDenuncia(props) {
     function dataFormatada(){
         var data = new Date(info.dt_cadastro),
             dia  = data.getDate().toString(),
-            diaF = (dia.length == 1) ? '0'+dia : dia,
+            diaF = (dia.length === 1) ? '0'+dia : dia,
             mes  = (data.getMonth()+1).toString(), 
-            mesF = (mes.length == 1) ? '0'+mes : mes,
+            mesF = (mes.length === 1) ? '0'+mes : mes,
             anoF = data.getFullYear();
         return diaF+"/"+mesF+"/"+anoF;
-    }
-    function alterar(){
-
     }
     function excluir(id){
         props.ex(id)

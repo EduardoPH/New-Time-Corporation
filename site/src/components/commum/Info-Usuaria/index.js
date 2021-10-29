@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Container } from "./styled";
-import Api from "../../services/api";
-const api = new Api();
 export default function InfoUsuaria(props) {
     console.log(props)
-    const[ nome, setNome ] = useState(props.info.id_usuario_infoc_ntc_usuario.nm_usuario);
-    const[ email, setEmail ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_email);
-    const[ telefone, setTelefone ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_telefone);
-    const[ cpf, setCpf ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_cpf);
+    const[ nome ] = useState(props.info.id_usuario_infoc_ntc_usuario.nm_usuario);
+    const[ email ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_email);
+    const[ telefone ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_telefone);
+    const[ cpf ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_cpf);
     const[ habilitar, setHabiltar] = useState(false);
 
     function alterarDados(){

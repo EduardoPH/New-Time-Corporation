@@ -1,9 +1,7 @@
-import Menu from '../../components/menu/index';
-import { useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route, Link, useHistory } from "react-router-dom";
+import Menu from '../../components/commum/menu/index';
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Container } from './styled';
-import {Fundo} from '../../components/commum/background/styled'
-import Button from '../../components/formulario/';
+import {Fundo} from '../../components/styled/background/styled'
 
 import caracteristicas from '../../components/commum/formulario/caracteristicas'
 import vestimentas from '../../components/commum/formulario/vestimentas'

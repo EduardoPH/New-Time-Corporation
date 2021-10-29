@@ -1,8 +1,7 @@
 import Containerformulario from './styled.js';
 import React from "react";
-import { useState } from "react";
-import  Mapa  from '../../../map/map';
-import Button from '../../../formulario';
+import  Mapa  from '../../../commum/map/map';
+import Button from '../../../styled/buttonformulario';
 import { Link } from 'react-router-dom';
 
 

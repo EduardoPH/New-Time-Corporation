@@ -1,8 +1,8 @@
 import Container from "./styled.js";
-import Menu from "../../components/menu";
+import Menu from "../../components/commum/menu";
 import { useHistory } from "react-router-dom";
-import { Inputs, Buttons } from "../../components/login-cadastro/index.js";
-import { Fundo } from "../../components/commum/background/styled";
+import { Inputs, Buttons } from "../../components/styled/buttonlogin-cadastro/index.js";
+import { Fundo } from "../../components/styled/background/styled";
 import { useState } from "react";
 import Api from "../../services/api.js";
 import { ToastContainer, toast } from "react-toastify";

@@ -1,5 +1,4 @@
 
-import Button from '../../../../administrador/index';
 import BoxStyled from "./styled";
 
 export default function Index(props){

@@ -1,4 +1,4 @@
-import Menu from '../../components/menu/index';
+import Menu from '../../components/commum/menu/index';
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Container, MenuLateralStyled, BoxStyled } from './styled';
 

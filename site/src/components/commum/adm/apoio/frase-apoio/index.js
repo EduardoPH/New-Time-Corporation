@@ -1,5 +1,4 @@
 
-import Button from '../../../../administrador/index';
 import Container from './styled';
 export default function index(props) {
    const infos = props.frase;

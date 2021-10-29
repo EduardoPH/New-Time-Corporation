@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import InfoUsuaria from "../../../Info-Usuaria/";
-import ItemDenuncia from "../../../Item-Denuncia-Usu";
+import { useState } from "react";
+import InfoUsuaria from "../../Info-Usuaria/";
+import ItemDenuncia from "../../Item-Denuncia-Usu";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Api from "../../../../services/api";

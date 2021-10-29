@@ -1,13 +1,17 @@
+import React from "react";  
 import Containerformulario from './styled.js';
-import React from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import Button from '../../../formulario';
+import Button from '../../../styled/buttonformulario';
 
 export default function Caracteristicas (props){
+    // eslint-disable-next-line
     const [pele, setPele] = useState([]);
+    // eslint-disable-next-line
     const [cabelo, setcabelo] = useState([]);
+    // eslint-disable-next-line
     const [corCabelo, setcorCabelo] = useState([]);
+    // eslint-disable-next-line
     const [complemento, setComplemento] = useState([]);
 
     return(

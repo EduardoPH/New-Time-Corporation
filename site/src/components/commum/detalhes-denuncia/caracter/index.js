@@ -2,7 +2,7 @@ import React from 'react'
 import * as C from './styled.js'
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {BoxDetails} from '../../details-denuncia'
+import {BoxDetails} from '../../detalhes-denuncia'
 
 
 

@@ -1,6 +1,6 @@
 import Containers from './styled.js';
-import Menu from '../../components/menu';
-import {Fundo} from '../../components/commum/background/styled'
+import Menu from '../../components/commum/menu';
+import {Fundo} from '../../components/styled/background/styled'
 import { useState, useEffect } from 'react';
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";

@@ -1,5 +1,5 @@
 import { Container } from "./styled"
-import MenuTop from '../../components/menu/'
+import MenuTop from '../../components/commum/menu/'
 import { Link } from "react-router-dom"
 export default function Index(){
     return(

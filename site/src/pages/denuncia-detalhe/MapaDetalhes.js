@@ -1,4 +1,4 @@
-import Map from '../../components/map/map.js'
+import Map from '../../components/commum/map/map.js'
 import {MapStyle} from './styled'
 
 export default function App(){

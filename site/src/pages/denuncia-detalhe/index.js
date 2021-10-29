@@ -1,9 +1,9 @@
 import { Container } from "./styled";
-import Menu from "../../components/menu";
-import {MenuLeft} from '../../components/details-denuncia'
+import Menu from "../../components/commum/menu";
+import {MenuLeft} from '../../components/commum/detalhes-denuncia/'
 import {BrowserRouter,Route, Switch} from 'react-router-dom'
-import Mensagem from   '../../components/details-denuncia/mensage'
-import Caracters from '../../components/details-denuncia/caracter'
+import Mensagem from   '../../components/commum/detalhes-denuncia/mensage'
+import Caracters from '../../components/commum/detalhes-denuncia/caracter'
 import Map from './MapaDetalhes.js'
 
 

@@ -1,5 +1,4 @@
 import BoxStyled from "./styled";
-import Button from "../../../administrador/index";
 
 import { useState, useEffect } from "react";
 
@@ -16,10 +15,8 @@ import { Link } from "react-router-dom";
 
 import { Loading } from "react-loading-ui";
 
-import Caracters from "../../../../components/details-denuncia/caracter/";
-import Map from "../../../../components/map/map";
-
-import { useHistory } from "react-router";
+import Caracters from "../../../../components/commum/detalhes-denuncia/caracter/";
+import Map from "../../../../components/commum/map/map";
 
 import Api from "../../../../services/api";
 const api = new Api();
@@ -77,7 +74,7 @@ export default function Index(props) {
         {
           label: "Sim",
           onClick: async () => {
-            let r = await api.deletarDen(eventos[0].id_denuncia);
+            await api.deletarDen(eventos[0].id_denuncia);
             toast("Denúncia Apagada");
             listarDenunD();
           },
@@ -116,7 +113,8 @@ export default function Index(props) {
   };
   useEffect(() => {
     listarDenun();
-    if (props.location.state !== undefined) setEventos([props.location.state]);
+    if (props.location.state !== undefined) 
+      setEventos([props.location.state]);
   }, []);
 
   return (

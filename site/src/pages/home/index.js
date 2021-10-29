@@ -1,5 +1,5 @@
 import {Conteiners} from "./styled"
-import Menu from "../../components/menu"
+import Menu from "../../components/commum/menu"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Item from "../../components/commum/home";

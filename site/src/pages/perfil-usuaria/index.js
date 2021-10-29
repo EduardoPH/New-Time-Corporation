@@ -1,8 +1,8 @@
+import React from 'react'
 import {Container} from './styled'
-import InfoUsuaria from '../../components/Info-Usuaria'
-import ItemDenuncia from '../../components/Item-Denuncia-Usu'
-import {Fundo} from '../../components/commum/background/styled'
-import Menu from '../../components/menu'
+import ItemDenuncia from '../../components/commum/Item-Denuncia-Usu'
+import {Fundo} from '../../components/styled/background/styled'
+import Menu from '../../components/commum/menu'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import Cookies from 'js-cookie'
@@ -31,7 +31,7 @@ export default function PerfilUsuaria(){
     const navigation = useHistory();
     
     let i = VerLogado(navigation)
-    const [info, setInfo] = useState(i)
+    const [info] = useState(i)
     
     const [denun, setDenun] = useState([])
     
@@ -58,7 +58,6 @@ export default function PerfilUsuaria(){
 
     useEffect(
         () => {
-    
             BuscaDenu();
         }, [] 
     ); 

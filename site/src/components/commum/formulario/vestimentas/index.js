@@ -2,12 +2,16 @@ import Containerformulario from './styled.js';
 import React from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import Button from '../../../formulario';
+import Button from '../../../styled/buttonformulario';
 
 export default function Vestimentas (props){
+    // eslint-disable-next-line
     const [parteCima, setparteCima] = useState([]);
+    // eslint-disable-next-line
     const [parteBaixo, setparteBaixo] = useState([]);
+    // eslint-disable-next-line
     const [calcado, setcalcado] = useState([]);
+    // eslint-disable-next-line
     const [complemento, setComplemento] = useState([]);
 
     return(

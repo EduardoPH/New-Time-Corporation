@@ -1,6 +1,6 @@
 import { Container } from "./styled";
-import Menu from '../../components/menu'
-import Mensagem from '../../components/recents-mensagem'
+import Menu from '../../components/commum/menu'
+import Mensagem from '../../components/commum/recentes-mensagem'
 import { useEffect, useState } from "react";
 import Api from '../../services/api'
 const api = new Api()

@@ -1,11 +1,11 @@
 import ContainerApoio from './styled.js';
-import Menu from '../../components/menu'
-import {Fundo} from '../../components/commum/background/styled'
+import Menu from '../../components/commum/menu'
+import {Fundo} from '../../components/styled/background/styled'
 import React, {useState, useEffect} from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Caixa from '../../components/commum/item-carrossel'
-import Api from '../../services/api'
+import Caixa from '../../components/commum/item-carrossel';
+import Api from '../../services/api';
 const api = new Api()
 
 export default function Apoio (){

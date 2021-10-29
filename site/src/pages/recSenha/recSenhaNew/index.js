@@ -1,7 +1,6 @@
 import {Container} from './styled'
-import MenuTop from '../../../components/menu'
-import { useEffect, useState } from 'react'
-import { Buttons, Inputs } from '../../../components/login-cadastro'
+import MenuTop from '../../../components/commum/menu'
+import { Buttons, Inputs } from '../../../components/styled/buttonlogin-cadastro'
 
 export default function App(){
 

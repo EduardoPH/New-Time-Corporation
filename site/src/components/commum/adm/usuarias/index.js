@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import BoxStyled from "./styled";
 import { Link } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Loading } from 'react-loading-ui';

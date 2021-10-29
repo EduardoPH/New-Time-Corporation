@@ -213,6 +213,7 @@ function BarChart (){
 
 
     const [dm, setDM] = useState([])
+    // eslint-disable-next-line
     const [dqtd, setDqtd] = useState([])
 
    

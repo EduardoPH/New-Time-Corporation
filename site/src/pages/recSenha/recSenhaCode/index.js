@@ -1,12 +1,13 @@
 import {Container} from './styled'
-import MenuTop from '../../../components/menu'
-import { useEffect, useState } from 'react'
-import { Buttons } from '../../../components/login-cadastro'
+import MenuTop from '../../../components/commum/menu'
+import { useState } from 'react'
+import { Buttons } from '../../../components/styled/buttonlogin-cadastro'
 
 export default function App(){
   const [one, setOne] = useState('')
   const [two, setTwo] = useState('')
   const [thre, setThre] = useState('')
+  // eslint-disable-next-line
   const [four, setFour] = useState('')
 
   function move(text, position){

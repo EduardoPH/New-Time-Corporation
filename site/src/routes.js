@@ -8,13 +8,8 @@ import DenunciaDetalhada from './pages/denuncia-detalhe'
 import Login from './pages/login'
 import PerfilUsuaria from './pages/perfil-usuaria'
 import Apoio from './pages/Apoio';
-import caracteristicas from './pages/Formulario/Formulario-caracteristicas';
-import depoimento from './pages/Formulario/Formulario-depoimento';
-import Local from './pages/Formulario/Formulario-local';
-import vestimentas from './pages/Formulario/Formulario-vestimentas';
 import Cadastro from './pages/Cadastro';
 import TelaRoteamento from './pages/telaRoteamento';
-import Map from './components/map/map.js';
 import RecSenha from './pages/recSenha/';
 import Formulario from './pages/Formulario';
 import Code from './pages/recSenha/recSenhaCode'
@@ -33,14 +28,9 @@ export default function Routes(){
                 <Route path="/login" component={Login}/>
                 <Route path="/perfil" component={PerfilUsuaria}/>
                 <Route path="/apoio" component={Apoio}/>
-                <Route path="/formulario1" component={caracteristicas}/>
-                <Route path="/formulario2" component={vestimentas}/>
-                <Route path="/formulario3" component={Local}/>
-                <Route path="/formulario4" component={depoimento}/>
                 <Route path="/cadastro" component={Cadastro}/>
                 <Route path="/formulario" component={Formulario}/>
                 <Route path="/recuperacao" component={RecSenha}/>
-                <Route path="/map-render" component={Map}/>
                 <Route path="/code" component={Code} />
                 <Route path="/nova-senha" component={New} />
             </Switch>
