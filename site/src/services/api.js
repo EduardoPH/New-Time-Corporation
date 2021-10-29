@@ -66,8 +66,8 @@ export default class Api{
         return r.data
     }
 
-    async buscarUsu(busca){
-        let r = await api.post('/buscarUsuario', {busca})
+    async buscarUsu(usuaria){
+        let r = await api.post('/buscarUsuario', {busca: usuaria})
         return r.data
     }
     async denUsu(id){

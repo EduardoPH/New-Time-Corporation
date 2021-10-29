@@ -30,9 +30,11 @@ export default function Index(props){
 
     async function buscarUsu(){
         let r = await api.buscarUsu(usuaria)
+        console.log(r)
         if(r.erro){
             return toast.error(r.erro)
         } else {
+            if(r === [])
             setEventos(r)
         }
     }
