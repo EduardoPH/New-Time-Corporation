@@ -1,40 +1,27 @@
-
 import Containerformulario from './styled.js';
-import { useState } from "react";
+import Menu from '../../../components/menu'
 import React from "react";
+import {Fundo} from '../../../components/commum/background/styled'
+import Button from '../../../components/formulario/index'
 import { Link } from 'react-router-dom';
-import Button from '../../../styled/buttonformulario';
+import { useState } from "react";
 
 export default function Caracteristicas (props){
-    // eslint-disable-next-line
     const [pele, setPele] = useState([]);
-    // eslint-disable-next-line
     const [cabelo, setcabelo] = useState([]);
-    // eslint-disable-next-line
     const [corCabelo, setcorCabelo] = useState([]);
-    // eslint-disable-next-line
     const [complemento, setComplemento] = useState([]);
 
-    const [caracteristicas, setCaracteristicas] = useState([]);
-    console.log(caracteristicas)
-
-    function SobreSite(){
-
-        const apiResponse = [
-            {
-                ds_pele: (pele) ,
-                ds_cabelo: (cabelo),
-                ds_corcabelo: (corCabelo),
-                ds_complemento: (complemento)
-            }
-        ]
-        setCaracteristicas(apiResponse)
-    }
+    
 
     return(
+        <Fundo height="100vh">
         <Containerformulario>
+            <Menu/>
+            <div class="titulo">Formulário de denúncia</div>
                 <div class="pag">
-                    <div class="conteudo">
+                    <div class="conteudo3">
+                        
                             <div class="box">
                                 <div class="titulo-box">Tom de pele</div>
                                 <div class="imputs">
@@ -116,12 +103,13 @@ export default function Caracteristicas (props){
 
                     <div class="conteudo2">
                         <div class="informacoes">Informações complementares</div>
-                        <div className="info2">
-                            <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Área para escrever informações complementares"></textarea>
-                            <Link to="/formulario/vestimentas"><Button valor="Avançar"/></Link> 
+                        <div class="form-2">
+                            <div class="textarea"><textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10"></textarea></div>
+                            
                         </div>
-                    </div> 
+                    </div>  
                 </div>
         </Containerformulario>
+        </Fundo>
     )
 }
