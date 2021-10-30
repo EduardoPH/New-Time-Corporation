@@ -1,5 +1,5 @@
 import { Bar } from "react-chartjs-2";
-import Api from "../../services/api";
+import Api from "../../services/grafico";
 import { useEffect, useState } from "react";
 
 const api = new Api()
@@ -84,7 +84,7 @@ function BarChart (){
 
    
     async function QtdCidade(){
-        let r = await api.qtdCidade()
+        let r = await api.qtdCidade ()
             setCidades(r)
             console.log(r)
         
