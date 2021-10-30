@@ -13,7 +13,9 @@ import TelaRoteamento from './pages/telaRoteamento';
 import RecSenha from './pages/recSenha/';
 import Formulario from './pages/Formulario';
 import Code from './pages/recSenha/recSenhaCode'
-import New from './pages/recSenha/recSenhaNew'
+import New from './pages/recSenha/recSenhaNew';
+import LoginAdm from './pages/loginAdm/index';
+
 
 export default function Routes(){
     return(
@@ -33,6 +35,7 @@ export default function Routes(){
                 <Route path="/recuperacao" component={RecSenha}/>
                 <Route path="/code" component={Code} />
                 <Route path="/nova-senha" component={New} />
+                <Route path="/login-administrador" component={LoginAdm}/>
             </Switch>
         </BrowserRouter>
 

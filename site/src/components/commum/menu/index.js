@@ -4,7 +4,9 @@ export default function Menu(){
     return(
         <Container>
              <div className="logo" style={{textDecoration: "none"}}>
-                <img src="/assets/images/menu/Logo-ntc.svg" alt="logo"/>
+                <Link to="/login-administrador">
+                    <img src="/assets/images/menu/Logo-ntc.svg" alt="logo"/>
+                </Link>
             </div>
             <Link to="/formulario"><button className="butao">  DENUNCIAR! </button></Link>
             <Link to="/" style={{textDecoration: "none"}}>

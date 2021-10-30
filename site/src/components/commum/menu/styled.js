@@ -18,6 +18,7 @@ const Container= styled.div`
 
         height: 4em;
         margin-top: 5px;
+        cursor: pointer;
 
     }
 
