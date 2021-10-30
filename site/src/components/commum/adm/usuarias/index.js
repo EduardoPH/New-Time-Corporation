@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
 import BoxStyled from "./styled";
-import { Link } from "react-router-dom";
+
+import { Link } from "react-router-dom"
+import { Loading } from 'react-loading-ui';
+import { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
+
 import 'react-toastify/dist/ReactToastify.css';
 
-import { Loading } from 'react-loading-ui';
-import Api from "../../../../services/api";
+import Api from "../../../../services/adm.js";
 const api = new Api()
 
 export default function Index(props){
@@ -48,10 +50,10 @@ export default function Index(props){
                 <tbody>
                     {eventos.map (item => 
                         <tr>
-                            <td>{item.nm_usuario}</td>
-                            <td>{item.ds_email}</td>
-                            <td>{item.ds_telefone}</td>
-                            <td>{item.ds_cpf}</td>
+                            <td>{item.nome}</td>
+                            <td>{item.email}</td>
+                            <td>{item.telefone}</td>
+                            <td>{item.cpf}</td>
                             <td className="coluna-acao"><Link to={{pathname:"/administrador/usuaria/perfil", state:item}}><button>Ver Perfil</button></Link></td>
                         </tr>
                     )}

@@ -1,18 +1,23 @@
 import BoxStyled from "./styled";
 import ItemFrase from './frase-apoio/';
-import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css';
-import { useState, useEffect } from "react";
+
 import { Loading } from 'react-loading-ui';
-import Api from '../../../../services/api'
+import { confirmAlert } from 'react-confirm-alert';
+import { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
+
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import 'react-toastify/dist/ReactToastify.css';
+
+import Api from '../../../../services/adm.js'
 const api = new Api()
+
 export default function Index(){
 
     const [eventos, setEventos] = useState([]);
     const [frase, setFrase] = useState('');
     const [idAlterado, setIdAlterado] = useState(0);
-    console.log(idAlterado)
+    
     async function frasesGet(){
         Loading({
             text: "Por Favor Aguarde",
@@ -22,7 +27,7 @@ export default function Index(){
             topBarColor: 'red'
         });
         
-        const apiResponse = await api.frases()
+        const apiResponse = await api.ListaFrases()
         setEventos(apiResponse)
 
         setTimeout(() => {
@@ -56,19 +61,19 @@ export default function Index(){
     }
     
     function alterar(frase){
-        setIdAlterado(frase.id_frase);
-        setFrase(frase.ds_frase)   
+        setIdAlterado(frase.id);
+        setFrase(frase.frase)   
     }
 
     function excluir(frase){
         confirmAlert({
             title: 'Remover Frase',
-            message: `Tem certeza que deseja remover a Frase: " ${frase.ds_frase} "`,
+            message: `Tem certeza que deseja remover a Frase: " ${frase.frase} "`,
             buttons:[
                 {
                     label: 'Sim',
                     onClick: async () => {
-                        let r = await api.removerFrase(frase.id_frase)
+                        let r = await api.removerFrase(frase.id)
                         if(r.erro){
                             return toast.error(r.erro)
                         } else {

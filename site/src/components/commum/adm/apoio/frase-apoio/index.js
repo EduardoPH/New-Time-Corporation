@@ -12,7 +12,7 @@ export default function index(props) {
     return (
         <Container>
             <p1>
-                {infos.ds_frase}
+                {infos.frase}
             </p1>
             <div className="btm-acao">
                 <button className="alterar" onClick={Alterar}> Alterar </button>

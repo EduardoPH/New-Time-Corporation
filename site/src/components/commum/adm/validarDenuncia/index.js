@@ -21,26 +21,15 @@ import Map from "../../../../components/commum/map/map";
 import Api from "../../../../services/adm.js";
 const api = new Api();
 
-export default function Index(props) {
-  const [evento, setEvento] = useState({});
+export default function Index() {
+  const [eventos, setEventos] = useState({});
   const [denun, setDenun] = useState("");
   const [alterar, setAlterar] = useState(false);
 
   async function ListarValidacoes() {
-    Loading({
-      text: "Por Favor Aguarde",
-      title: "CARREGANDO",
-      theme: "dark",
-      topBar: true,
-      topBarColor: "red",
-    });
     let r = await api.ListaValidacoes();
-    console.log(r)
-    setEvento(r)
-    console.log(evento)
-    Loading();
+    setEventos(r)
   }
-
   const excluir = async () => {
     confirmAlert({
       title: "Remover Denúncia",
@@ -49,7 +38,7 @@ export default function Index(props) {
         {
           label: "Sim",
           onClick: async () => {
-            await api.deletarDen(evento[0].id_denuncia);
+            await api.deletarDen(eventos[0].id_denuncia);
             toast("Denúncia Apagada");
           },
         },
@@ -57,18 +46,14 @@ export default function Index(props) {
       ],
     });
   };
-
   async function Validar() {
-    let r = await api.AtivarDenun(evento[0].id_denuncia, denun);
-
+    let r = await api.AtivarDenun(eventos[0].id_denuncia, denun);
     if (r.erro) {
       toast.error(r.erro);
     } else {
       toast.success("Cadastrada com sucesso");
     }
-
   }
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -87,23 +72,27 @@ export default function Index(props) {
       items: 1,
     },
   };
+  useEffect(() => {
+      ListarValidacoes()
+  }, [eventos])
 
-  useEffect( ListarValidacoes() ,[]);
   return (
     <BoxStyled>
       <ToastContainer />
       <h1>Validar Denúncia</h1>
+
       <div className="box-denuncia">
         <div className="cabecalho">
           <img src="/assets/images/denuncias-recentes/Perfil.png" alt="" />
+          
             <div className="informacoes-usuaria">
-              <p1>   {evento.id_usuario_infoc_ntc_usuario.nome} </p1>
-              <span> {evento.id_usuario_infoc_ntc_usuario.email} </span>
-              <span> {evento.id_usuario_infoc_ntc_usuario.telefone} </span>
+              <p1>   </p1>
+              <span>  </span>
+              <span>  </span>
               <Link
                 to={{
                   pathname: "/administrador/usuaria/perfil",
-                  state: evento,
+                  state: eventos,
                 }}
               >
                 <button> Perfil</button>
@@ -128,7 +117,7 @@ export default function Index(props) {
           <button className="excluir" onClick={() => excluir()}>
             Excluir
           </button>
-          <button className="adicionar" onClick={() => Validar()}>
+          <button className="adicionar" onClick={() => ListarValidacoes()}>
             adicionar
           </button>
         </div>

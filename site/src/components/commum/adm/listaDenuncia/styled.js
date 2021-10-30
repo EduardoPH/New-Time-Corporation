@@ -49,11 +49,12 @@ const BoxStyled=styled.div`
         .coluna-acao button{
             color: white;
             font-family: arial;
-            border: solid 4px;
+            border: solid 1px;
             border-color: #111AE3;
             background: #111AE3;
             border-radius: 100px;
             cursor :pointer;  
+            height: 2em;
             width: 6em;
             &:hover{
                 background: #FFFF;
@@ -61,6 +62,13 @@ const BoxStyled=styled.div`
                 transition: 1s;
 
             }         
+        }
+        .coluna-acao{
+            .visu{
+                background-color: white;
+                color: black;
+                
+            }
         }
         .previa{
             background: #DCDCDC;
