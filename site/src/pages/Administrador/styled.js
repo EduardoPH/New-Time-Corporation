@@ -199,7 +199,7 @@ const MenuLateralStyled= styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
+    text-align: center;
     width: 6em;
     height: 35em;
 

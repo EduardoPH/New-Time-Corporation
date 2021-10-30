@@ -1,31 +1,29 @@
-import ContainerApoio from './styled.js';
-import Menu from '../../components/commum/menu'
-import {Fundo} from '../../components/styled/background/styled'
+
 import React, {useState, useEffect} from "react";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {Fundo} from '../../components/styled/background/styled';
+
+import ContainerApoio from './styled.js';
 import Caixa from '../../components/commum/item-carrossel';
-import Api from '../../services/api';
+import Menu from '../../components/commum/menu';
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import Api from '../../services/apoio.js';
 const api = new Api()
 
 export default function Apoio (){
 
     const [eventos, setEventos] = useState([]);
 
-
     async function SobreSite(){
-        
-        const apiResponse = await api.frases() 
-        
+        const apiResponse = await api.listarFrase() 
         setEventos(apiResponse)
     };
- 
+
     useEffect(
         () => {SobreSite() }, [] 
     );
-
-
-    console.log(eventos)
     return(
         <Fundo height="100vh">
         <ContainerApoio>
@@ -35,7 +33,7 @@ export default function Apoio (){
             
             <div class="carrousel1">
                 <Carousel autoPlay infiniteLoop>
-                    {eventos.map(i => <Caixa frase = {i.ds_frase} cgrafico = {false}/>)}
+                    {eventos.map(i => <Caixa frase = {i.frase} cgrafico = {false}/>)}
                 </Carousel>
                 </div>
             </div>

@@ -1,7 +1,9 @@
 import BoxStyled from "./styled";
 import ItemAdm from './item-adm/';
 
+import Cookies from 'js-cookie';
 import { Loading } from 'react-loading-ui';
+import { useHistory } from "react-router";
 import { useEffect, useState } from 'react';
 import { confirmAlert } from 'react-confirm-alert';
 import { ToastContainer, toast } from 'react-toastify';
@@ -13,6 +15,13 @@ import Api from '../../../../services/adm.js'
 const api = new Api()
 
 export default function Index(){
+
+    const navigation = useHistory()
+    let admlogado = Cookies.get('admlogado')
+    if( admlogado !== undefined ){
+        navigation.push('/administrador')
+    } 
+   
 
     const [eventos,    setEventos] = useState([]);
     const [nome,       setNome]  = useState('');
@@ -57,7 +66,7 @@ export default function Index(){
         }
     }
 
-  
+    console.log(eventos) 
     function deletarAdm(admin){
         confirmAlert({
             title: 'Remover Administrador',

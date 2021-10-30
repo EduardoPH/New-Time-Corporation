@@ -1,4 +1,7 @@
 import Menu from '../../components/commum/menu/index';
+
+import Cookies from 'js-cookie';
+import { useHistory } from "react-router";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Container, MenuLateralStyled, BoxStyled } from './styled';
 
@@ -10,7 +13,8 @@ import perfilUsuaria from '../../components/commum/adm/perfilUsuaria/';
 import usuarias from '../../components/commum/adm/usuarias/';
 
 export default function Administrador(){
-    
+    const navigation = useHistory()
+    const sair = () => {Cookies.remove('admlogado');Cookies.remove('masterlogado'); navigation.push("/home")}
     return(
         <Container>
             <Menu/>
@@ -47,6 +51,10 @@ export default function Administrador(){
                                 Denúncias
                             </div>
                         </Link>
+                        <div className="item-menu" onClick={sair}>
+                            <img src ="/assets/images/menu/Exit.svg" alt=""/>
+                            SAIR
+                        </div>
                     </MenuLateralStyled>
                     
                         <div className="box-direita">

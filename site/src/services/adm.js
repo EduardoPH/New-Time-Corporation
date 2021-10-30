@@ -53,7 +53,11 @@ export default class Api{
         let r = await api.delete(`/cargos/${id}`)
         return r.data
     }
-
+    // LOGIN ADM
+    async LoginAdm(nome, senha){
+        let r = await api.post('/login', {nome, senha})
+        return r.data
+    }
 
 
     //VERBO LISTAR AS USUARIAS

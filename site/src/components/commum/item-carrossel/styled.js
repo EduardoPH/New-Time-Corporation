@@ -9,13 +9,14 @@ const Container = styled.div `
     height: 26em;
     align-items: center;
     justify-content: space-around;
-
+    text-align: center;
 
 .centro{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     width: 30%;
 }
 
@@ -44,6 +45,7 @@ const Container = styled.div `
 
 
 .frases {
+        text-align: center;
         display:flex;
         font: 1.8em arial;
         color: white;    

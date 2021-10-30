@@ -9,6 +9,7 @@ export default function Index(props){
     function Excluir(){
         props.excluir(info)
     }
+
     return(
         <BoxStyled>
             <div className="nome-senha">
@@ -24,7 +25,7 @@ export default function Index(props){
                     <p1>Senha:</p1>
                     <span>{info.senha}</span>
                 </div>
-               <button className="btm-excluir" onClick={Excluir}>Excluir</button>
+               <button className="btm-excluir" disabled={info.id === 9 ? true : false}onClick={Excluir}>Excluir</button>
             </div>
             
         </BoxStyled>

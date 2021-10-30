@@ -57,7 +57,6 @@ export default function Estatisticas (){
             <div className="carrousel1">
                 <Carousel >
                     {eventos.map ((i, x) =>  <EstC  cgrafico = {true}  titulo = {i.titulo} grafico = {GraC()} /> )}
-                  
                 </Carousel>
              </div>
         </Containers>
