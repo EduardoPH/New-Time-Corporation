@@ -225,7 +225,7 @@ function BarChart (){
     }
 
     useEffect(
-        () => {QtdDM()}, [] 
+        (dt_cadastro) => {QtdDM()}, [] 
     );
 
 

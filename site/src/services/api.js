@@ -110,11 +110,11 @@ export default class Api{
 
 
     async qtdBairro(){
-        let r = await api.get('/localBairro')
+        let r = await api.get('/')
         return r.data
     }
     async qtdCidade(){
-        let r = await api.get('/localCidade')
+        let r = await api.get('/Cidades')
         return r.data
     }
     async qtdMes(){
