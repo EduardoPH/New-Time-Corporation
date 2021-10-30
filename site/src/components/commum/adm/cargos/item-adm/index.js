@@ -14,7 +14,7 @@ export default function Index(props){
             <div className="nome-senha">
                 <div className="text">
                     <p1>Nome:</p1>
-                    <span>{info.nm_administrador}</span>
+                    <span>{info.nome}</span>
                 </div>
                 <button className="btm-alt" onClick={Alterar}>Alterar</button>
             </div>
@@ -22,7 +22,7 @@ export default function Index(props){
             <div className="nome-senha">
                 <div className="text">
                     <p1>Senha:</p1>
-                    <span>{info.ds_senha}</span>
+                    <span>{info.senha}</span>
                 </div>
                <button className="btm-excluir" onClick={Excluir}>Excluir</button>
             </div>

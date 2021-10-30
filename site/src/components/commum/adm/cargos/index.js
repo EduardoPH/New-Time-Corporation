@@ -1,15 +1,19 @@
 import BoxStyled from "./styled";
 import ItemAdm from './item-adm/';
+
+import { Loading } from 'react-loading-ui';
 import { useEffect, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
+import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import 'react-toastify/dist/ReactToastify.css';
-import { Loading } from 'react-loading-ui';
-import Api from '../../../../services/api'
+
+import Api from '../../../../services/adm.js'
 const api = new Api()
 
 export default function Index(){
+
     const [eventos,    setEventos] = useState([]);
     const [nome,       setNome]  = useState('');
     const [senha,      setSenha] = useState('');
@@ -24,7 +28,7 @@ export default function Index(){
             topBarColor: 'red'
         });
         
-        let r = await api.listarAdms()
+        let r = await api.ListarAdms()
         setEventos(r)
 
         setTimeout(() => {
@@ -57,12 +61,12 @@ export default function Index(){
     function deletarAdm(admin){
         confirmAlert({
             title: 'Remover Administrador',
-            message: `Tem certeza que deseja remover a Administrador: " ${admin.nm_administrador} "`,
+            message: `Tem certeza que deseja remover a Administrador: " ${admin.nome} "`,
             buttons:[
                 {
                     label: 'Sim',
                     onClick: async () => {
-                        let r = await api.deletarAdm(admin.id_administrador)
+                        let r = await api.deletarAdm(admin.id)
                         if(r !== "OK"){
                             return toast.error('Houve um erro')
                         } else {
@@ -85,14 +89,14 @@ export default function Index(){
 
     
     function Alterar(info){
-        setSenha(info.ds_senha);
-        setNome(info.nm_administrador)
-        setIdAlterado(info.id_administrador)
+        setSenha(info.senha);
+        setNome(info.nome)
+        setIdAlterado(info.id)
     }
 
     
     useEffect(
-        () => {listarAdm() }, [] 
+        () => {listarAdm()}, [] 
     );
     return(
         <BoxStyled>
