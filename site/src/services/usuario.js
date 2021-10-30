@@ -11,4 +11,9 @@ export default class Api{
         return r.data
     }
 
+    async login(nome,telefone, email, cpf, senha) {
+        let r = api.post('/cadastrar', {nome, telefone, email, cpf, senha})
+        return r.data
+    }
+
 }
