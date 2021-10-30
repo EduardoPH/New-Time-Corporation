@@ -18,53 +18,17 @@ import { Loading } from "react-loading-ui";
 import Caracters from "../../../../components/commum/detalhes-denuncia/caracter/";
 import Map from "../../../../components/commum/map/map";
 
-import Api from "../../../../services/api";
+import Api from "../../../../services/adm.js";
 const api = new Api();
 
-export default function Index(props) {
-  const [eventos, setEventos] = useState([]);
+export default function Index() {
+  const [eventos, setEventos] = useState({});
   const [denun, setDenun] = useState("");
   const [alterar, setAlterar] = useState(false);
 
-  async function listarDenun() {
-    Loading({
-      text: "Por Favor Aguarde",
-      title: "CARREGANDO",
-      theme: "dark",
-      topBar: true,
-      topBarColor: "red",
-    });
-
-    let r = await api.validarDenunciaF();
-    if (r[0] !== undefined) {
-      setDenun(r[0].ds_depoimento);
-      setEventos(r);
-      if (props.location.state !== undefined)
-        setEventos([props.location.state]);
-    } else {
-      setEventos([
-        {
-          id_usuario_infoc_ntc_usuario: {
-            ds_email: "SEM DENÚNCIAS PARA VALIDA",
-          },
-        },
-      ]);
-    }
-    Loading();
-  }
-  async function listarDenunD() {
-    Loading({
-      text: "Por Favor Aguarde",
-      title: "CARREGANDO",
-      theme: "dark",
-      topBar: true,
-      topBarColor: "red",
-    });
-
-    let r = await api.validarDenunciaF();
-    setDenun(r[0].ds_depoimento);
-    setEventos(r);
-    Loading();
+  async function ListarValidacoes() {
+    let r = await api.ListaValidacoes();
+    setEventos(r)
   }
   const excluir = async () => {
     confirmAlert({
@@ -76,21 +40,18 @@ export default function Index(props) {
           onClick: async () => {
             await api.deletarDen(eventos[0].id_denuncia);
             toast("Denúncia Apagada");
-            listarDenunD();
           },
         },
         { label: "Não" },
       ],
     });
   };
-
   async function Validar() {
     let r = await api.AtivarDenun(eventos[0].id_denuncia, denun);
     if (r.erro) {
       toast.error(r.erro);
     } else {
       toast.success("Cadastrada com sucesso");
-      listarDenunD();
     }
   }
   const responsive = {
@@ -112,10 +73,8 @@ export default function Index(props) {
     },
   };
   useEffect(() => {
-    listarDenun();
-    if (props.location.state !== undefined) 
-      setEventos([props.location.state]);
-  }, []);
+      ListarValidacoes()
+  }, [eventos])
 
   return (
     <BoxStyled>
@@ -125,21 +84,20 @@ export default function Index(props) {
       <div className="box-denuncia">
         <div className="cabecalho">
           <img src="/assets/images/denuncias-recentes/Perfil.png" alt="" />
-          {eventos.map((i) => (
+          
             <div className="informacoes-usuaria">
-              <p1> {i.id_usuario_infoc_ntc_usuario.nm_usuario} </p1>
-              <span> {i.id_usuario_infoc_ntc_usuario.ds_email} </span>
-              <span> {i.id_usuario_infoc_ntc_usuario.ds_telefone} </span>
+              <p1>   </p1>
+              <span>  </span>
+              <span>  </span>
               <Link
                 to={{
                   pathname: "/administrador/usuaria/perfil",
-                  state: i,
+                  state: eventos,
                 }}
               >
                 <button> Perfil</button>
               </Link>
             </div>
-          ))}
         </div>
         <Carousel responsive={responsive}>
           <textarea
@@ -159,7 +117,7 @@ export default function Index(props) {
           <button className="excluir" onClick={() => excluir()}>
             Excluir
           </button>
-          <button className="adicionar" onClick={() => Validar()}>
+          <button className="adicionar" onClick={() => ListarValidacoes()}>
             adicionar
           </button>
         </div>

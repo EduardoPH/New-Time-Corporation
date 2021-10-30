@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Container } from "./styled";
 export default function InfoUsuaria(props) {
     console.log(props)
-    const[ nome ] = useState(props.info.id_usuario_infoc_ntc_usuario.nm_usuario);
-    const[ email ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_email);
-    const[ telefone ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_telefone);
-    const[ cpf ] = useState(props.info.id_usuario_infoc_ntc_usuario.ds_cpf);
+    const[ nome ] = useState(props);
+    const[ email ] = useState(props);
+    const[ telefone ] = useState(props);
+    const[ cpf ] = useState(props);
     const[ habilitar, setHabiltar] = useState(false);
 
     function alterarDados(){
