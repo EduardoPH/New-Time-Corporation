@@ -1,14 +1,47 @@
+import { Link } from 'react-router-dom'
 import {Container} from './styled'
-import MenuTop from '../../../components/commum/menu'
 import { useState } from 'react'
+import MenuTop from '../../../components/commum/menu'
 import { Buttons } from '../../../components/styled/buttonlogin-cadastro'
+import { useHistory } from 'react-router'
+import { toast , ToastContainer} from 'react-toastify'
 
-export default function App(){
+import Api from '../../../services/usuario.js'
+const api = new Api()
+
+
+export default function App(props){
   const [one, setOne] = useState('')
   const [two, setTwo] = useState('')
   const [thre, setThre] = useState('')
-  // eslint-disable-next-line
   const [four, setFour] = useState('')
+  const navegacao = useHistory()
+
+  const code = `${one}${two}${thre}${four}`
+  const email = props.location.state;
+
+  async function verificar() {
+
+    let r = await api.code(code, email)
+    
+    if(r.erro){
+      toast.error(r.erro)
+    } else {
+      navegacao.push({
+        pathname: '/nova-senha',
+        state: {email, code}
+      })
+    }
+  }
+
+  async function rec() {
+    let r = await api.recuperacao(email)
+    if(r.erro){
+        toast.error(r.erro)
+    } else {
+      toast.warn('Vou enviado outro E-mail')
+    }
+  }
 
   function move(text, position){
     let value = text.length
@@ -18,10 +51,11 @@ export default function App(){
 
   return(
     <Container> 
+      <ToastContainer/>
       <MenuTop/>
       <div className="container2"> 
         <div className="pt1"> 
-          <Buttons width="11em" valor="Voltar" />
+          <Link to='/login'><Buttons width="11em" valor="Voltar" /></Link>
         </div>
         <div className="pt2"> 
           <div className="title"> Recuperação de senha</div>
@@ -35,8 +69,8 @@ export default function App(){
             </div>
 
             <div className="box-code-pt2"> 
-              <div className="aviso"> Não recebeu? <span> Reenviar </span> </div>
-              <Buttons width="13em" valor="Enviar" />
+              <div className="aviso"> Não recebeu? <span onClick={rec}> Reenviar </span></div>
+               <Buttons clicado={verificar} width="13em" valor="Enviar" />
             </div>
           </div>
         </div>

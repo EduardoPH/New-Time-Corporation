@@ -20,4 +20,16 @@ export default class Api{
         let r = await api.post('/recuperacao', {email})
         return r.data
     }
+
+    async code(codigo, email){
+        let r = await api.post('/validarCodigo',{codigo, email})
+        return r.data 
+    }
+
+    async novaSenha(codigo, email, senha){
+        let r = await api.put('/novaSenha', {codigo, email, senha})
+        return r.data
+    }
+
+
 }

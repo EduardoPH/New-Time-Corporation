@@ -7,7 +7,7 @@ const Container=styled.div`
 
     background: url(${'/assets/images/home/fundo.svg'});
     background-size: cover;
-
+    font-family: 'Roboto';
     height: 100vh;
     width: 100%;
     .tituloVoltar{

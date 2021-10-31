@@ -13,14 +13,17 @@ const api = new Api()
 export default function Index(){
 
     const [ email, setEmail ] = useState('');
-    const navigation = useHistory()
+    const navigation = useHistory();
+
     async function rec() {
-        alert('pas')
         let r = await api.recuperacao(email)
         if(r.erro){
             toast.error(r.erro)
         } else {
-            navigation.push('/code')
+            navigation.push({
+                pathname:'/code',
+                state: email
+            })
         }
     }
     return(

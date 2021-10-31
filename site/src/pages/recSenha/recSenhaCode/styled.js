@@ -4,7 +4,7 @@ export const Container = styled.div`
   background: url(${'/assets/images/home/fundo.svg'});
   background-size: cover;
   height: 100vh;
-
+  font-family: 'Roboto';
   .container2 {
     display: flex;
     flex-direction: row;
@@ -37,7 +37,7 @@ export const Container = styled.div`
     width: 40%;
     margin: auto;
     padding: 1em 3em;
-    height: 33vh;
+    height: 44vh;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
