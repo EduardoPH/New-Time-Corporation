@@ -11,7 +11,6 @@ const Container = styled.div `
         display:flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin: 3em 0em;
     }
  
     .titulo {
