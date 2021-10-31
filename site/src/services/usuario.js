@@ -7,13 +7,17 @@ const api = new axios.create({
 export default class Api{
 
     async login(email, senha){
-        let r = api.post('/login', {email, senha})
+        let r = await api.post('/login', {email, senha})
         return r.data
     }
 
-    async login(nome,telefone, email, cpf, senha) {
-        let r = api.post('/cadastrar', {nome, telefone, email, cpf, senha})
+    async cadastro(nome, email, senha, telefone, cpf) {
+        let r = await api.post('/cadastrar', {nome, email, senha, telefone, cpf})
         return r.data
     }
 
+    async recuperacao (email){
+        let r = await api.post('/recuperacao', {email})
+        return r.data
+    }
 }

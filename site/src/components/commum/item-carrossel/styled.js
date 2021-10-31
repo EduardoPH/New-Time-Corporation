@@ -6,7 +6,7 @@ const Container = styled.div `
     display:flex;
     flex-direction: row;
     align-self:center;
-    height: 26em;
+    height: 60vh;
     align-items: center;
     justify-content: space-around;
     text-align: center;
@@ -54,5 +54,26 @@ const Container = styled.div `
     }
 
 `
+const Container2=styled.div`
 
-export {Container}
+display:flex;
+    flex-direction: row;
+    align-self:center;
+    height: 57vh;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+.frases {
+        text-align: center;
+        display:flex;
+        font: 1.8em arial;
+        color: white;    
+        width: 25em;
+        padding: 8% 0%;
+    }
+
+`
+
+
+
+export {Container, Container2}

@@ -1,26 +1,24 @@
 import React from 'react'
-import {Container} from './styled'
-import ItemDenuncia from '../../components/commum/Item-Denuncia-Usu'
-import {Fundo} from '../../components/styled/background/styled'
-import Menu from '../../components/commum/menu'
-import { useEffect, useState } from 'react'
-import { useHistory } from 'react-router'
 import Cookies from 'js-cookie'
+import {Container} from './styled'
+import { useHistory } from 'react-router'
 import { Loading } from 'react-loading-ui'
-import Api from '../../services/api'
+import { useEffect, useState } from 'react'
+import Menu from '../../components/commum/menu'
+import {Fundo} from '../../components/styled/background/styled'
+import ItemDenuncia from '../../components/commum/Item-Denuncia-Usu'
+
+import Api from '../../services/adm'
 const api = new Api();
 
 function VerLogado(navigation){
 
     let c = Cookies.get('usuariaLogada') 
-    
-    
     if(c === null){
         navigation.push('/login')
         return null;
     }
     let usuaria = JSON.parse(c)
-    
     return usuaria
 }
 
@@ -43,19 +41,15 @@ export default function PerfilUsuaria(){
             topBar: true,
             topBarColor: 'red'
         });
-    
-        let r = await api.denUsu(info.id_usuario)
+        let r = await api.BuscarDenuncia(info.idUsu)
         if(r[0] === undefined){
             Loading()
             setDenun([{erro: 'Voce não possue nenhuma denúncia cadastrada'}])
         } else {
             Loading()
             setDenun(r)
-        }
-
-       
+        }  
     }
-
     useEffect(
         () => {
             BuscaDenu();
@@ -63,7 +57,7 @@ export default function PerfilUsuaria(){
     ); 
     
     const sair = () => {Cookies.remove('usuariaLogada'); navigation.push("/home")}
-    
+    console.log(info)
     return(
         <Fundo height="100vh">
         <Container>
@@ -74,7 +68,7 @@ export default function PerfilUsuaria(){
                     <div className="cabecalho">
                         <div className="infos-usuarias">
                             <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/>
-                            <p1> {info.nm_usuario} </p1>
+                            <p1> {info.nome} </p1>
                         </div>
                         <h2>Denúncias</h2>
                         <button onClick={sair}>   Sair da Conta </button>

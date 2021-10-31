@@ -1,13 +1,17 @@
+
 import Container from "./styled.js";
 import Menu from "../../components/commum/menu";
-import { useHistory } from "react-router-dom";
-import { Inputs, Buttons } from "../../components/styled/buttonlogin-cadastro/index.js";
-import { Fundo } from "../../components/styled/background/styled";
-import { useState } from "react";
-import Api from "../../services/api.js";
-import { ToastContainer, toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
+
 import Cookies from "js-cookie";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import { Fundo } from "../../components/styled/background/styled";
+import { Inputs, Buttons } from "../../components/styled/buttonlogin-cadastro/index.js";
+
+import Api from "../../services/usuario.js";
 const api = new Api();
 
 export default function Cadastro() {
@@ -24,12 +28,18 @@ export default function Cadastro() {
   }
 
   async function cadastrar() {
-    let r = await api.cadastrarUsu(nome, email, senha, telefone, cpf);
+    let r = await api.cadastro(nome, email, senha, telefone, cpf);
 
     if (r.erro) {
       toast.error(r.erro);
     } else {
-      Cookies.set("usuariaLogada", JSON.stringify(r));
+      let c = {
+        "nome": r.nm_usuario,
+        "email": r.ds_email,
+        "cpf": r.ds_cpf,
+        "telefone": r.ds_telefone,
+      }
+      Cookies.set("usuariaLogada", JSON.stringify(c));
       navigation.push('/perfil')
     }
   }

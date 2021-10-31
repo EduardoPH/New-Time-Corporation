@@ -1,4 +1,4 @@
-import { Container } from "./styled"
+import { Container,Container2 } from "./styled"
 
 
 export default function Index (props){
@@ -17,9 +17,9 @@ export default function Index (props){
     </Container> 
 
     )} else if(props.cgrafico === false){
-        return (<Container>
+        return (<Container2>
                    <div class="frases"> {props.frase} </div>
-               </Container>
+               </Container2>
     )
     }
 }
