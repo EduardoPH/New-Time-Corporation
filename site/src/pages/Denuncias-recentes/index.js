@@ -2,7 +2,7 @@ import { Container } from "./styled";
 import Menu from '../../components/commum/menu'
 import Mensagem from '../../components/commum/recentes-mensagem'
 import { useEffect, useState } from "react";
-import Api from '../../services/api'
+import Api from '../../services/denuncias.js'
 const api = new Api()
 
 export default function Details() {
@@ -15,9 +15,11 @@ export default function Details() {
         setDenuncia(apiResponse)
     }
 
-    useEffect(
-        () => ListDen(), [] 
-    );
+    useEffect(() => {
+        ListDen();
+      }, [])
+
+      console.log(denuncia)
 
     return(
         <Container>
@@ -25,8 +27,8 @@ export default function Details() {
             <div className="rc-titulo"> Denúncias Recentes </div>
             <div className="rc-conteudo">
                 <div className="rc-denuncias">
-                {denuncia.map(i => 
-                    <Mensagem denuncia={i} />
+                {denuncia.map((i) => 
+                    <Mensagem denuncia={i} nome='dudu'/>
                 )}
                 </div>
             </div>

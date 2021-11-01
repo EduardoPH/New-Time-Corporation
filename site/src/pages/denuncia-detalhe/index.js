@@ -23,7 +23,7 @@ export default function Pag(props){
 
                     <div className="pt2-body">
                         <Switch> 
-                            <Route path="/denuncia-details" exact={true} render={() => <Mensagem msg={denuncia.ds_depoimento} name={denuncia.id_usuario_infoc_ntc_usuario.nm_usuario}/>}/>
+                            <Route path="/denuncia-details" exact={true} render={() => <Mensagem msg={denuncia.msg} name={denuncia.id_usuario_infoc_ntc_usuario.nm_usuario}/>}/>
                             <Route path="/denuncia-details/caracters" exact={true} component={Caracters}/>
                             <Route path="/denuncia-details/map" exact={true} component={Map} />
                         </Switch>
