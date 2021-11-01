@@ -8,13 +8,25 @@ import { toast, ToastContainer } from 'react-toastify';
 import { useHistory } from 'react-router';
 const api = new Api()
 
+
+function codigo(navigation, email) {
+
+    if(email === undefined){
+      navigation.push('/login')
+    }
+} 
+
+
 export default function App(props){
 
   const navigation = useHistory()
 
-  const code = props.location.state.code
-  const email = props.location.state.email
+  codigo(navigation, props.location.state)
 
+  const code = props.location.state === undefined ? "" : props.location.state.code
+  const email =  props.location.state === undefined ? "" : props.location.state.email
+
+  
 
   const[ nSenha, setNsenha ] = useState('')
   const[ nrSenha, setNrsenha ] = useState('')
