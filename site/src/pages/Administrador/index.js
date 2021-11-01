@@ -56,9 +56,7 @@ export default function Administrador(){
                             SAIR
                         </div>
                     </MenuLateralStyled>
-                    
                         <div className="box-direita">
-                            
                             <BoxStyled>
                                 <Switch>
                                     

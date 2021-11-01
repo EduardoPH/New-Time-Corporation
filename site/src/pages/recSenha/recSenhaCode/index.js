@@ -10,15 +10,27 @@ import Api from '../../../services/usuario.js'
 const api = new Api()
 
 
+function codigo(navigation, email) {
+
+  if(email === undefined){
+    navigation.push('/login')
+  }
+
+} 
+
 export default function App(props){
   const [one, setOne] = useState('')
   const [two, setTwo] = useState('')
   const [thre, setThre] = useState('')
   const [four, setFour] = useState('')
+  
   const navegacao = useHistory()
 
+  codigo(navegacao, props.location.state)
+
   const code = `${one}${two}${thre}${four}`
-  const email = props.location.state;
+  const email =  props.location.state === undefined ? "" : props.location.state.email
+
 
   async function verificar() {
 
@@ -39,7 +51,7 @@ export default function App(props){
     if(r.erro){
         toast.error(r.erro)
     } else {
-      toast.warn('Vou enviado outro E-mail')
+      toast.warn('foi enviado outro E-mail')
     }
   }
 
