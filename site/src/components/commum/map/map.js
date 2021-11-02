@@ -15,14 +15,16 @@ export class  Mapa extends Component{
 
   constructor(){
     super();
-    this.state={lat: -21.5613462, lng: -42.6564872, end: "", late: -0, lngo: -0}
+    this.state={lat: -21.5613462, lng: -42.6564872, end: "", late: -0, lngo: -0, bairro: "", cidade: ""}
   }
 
    loc(end) {
     Geocode.fromAddress(end).then(
       (response) => {
         const { lat, lng } = response.results[0].geometry.location;
-        this.setState({...this.state, late: lat, lngo: lng})
+        let bairro = response.results[0].address_components[1].long_name
+        let cidade = response.results[0].address_components[2].long_name
+        this.setState({...this.state, late: lat, lngo: lng, bairro, cidade })
       },
       (error) => {
         console.error(error);
@@ -36,7 +38,7 @@ export class  Mapa extends Component{
     let p = this.state.late
 
     if(p !== -0){
-      this.props.loca({lat: this.state.late, lng: this.state.lngo})
+      this.props.loca({lat: this.state.late, lng: this.state.lngo, bairro: this.state.bairro, cidade: this.state.cidade })
     }
 
     return(
