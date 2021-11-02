@@ -7,7 +7,7 @@ export default function App(props) {
             <div className="pt1"> 
                 <div className="pack-user"> 
                     <img className="img-user" src="/assets/images/denuncia-detalhe/Perfil.png"alt=""/>
-                    <div className="user-name"> {props.name}</div>
+                    <div className="user-name"> {props.nome}</div>
                 </div>
 
             </div>

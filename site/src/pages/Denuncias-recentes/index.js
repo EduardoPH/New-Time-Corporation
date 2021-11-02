@@ -27,8 +27,8 @@ export default function Details() {
             <div className="rc-titulo"> Denúncias Recentes </div>
             <div className="rc-conteudo">
                 <div className="rc-denuncias">
-                {denuncia.map((i) => 
-                    <Mensagem denuncia={i} nome='dudu'/>
+                {denuncia.map(i =>
+                    <Mensagem denuncia={i}/>
                 )}
                 </div>
             </div>
