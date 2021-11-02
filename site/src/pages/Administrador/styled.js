@@ -34,6 +34,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         height: 100%;
+        align-items: center;
 
         .box-direita{
             display: flex; 

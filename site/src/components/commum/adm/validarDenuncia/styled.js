@@ -49,10 +49,9 @@ const BoxStyled=styled.div`
     } 
     textarea{
         width: 99%;
-        height: 27em;
+        height: 100%;
         resize: none;
         outline: none;
-        align-self: flex-end;
         border-radius: 10px;
         cursor: pointer;
         background-color: white;
