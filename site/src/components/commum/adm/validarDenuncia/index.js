@@ -135,7 +135,7 @@ export default function Index(props) {
             onChange={(e) => setDenun(e.target.value)}
           />
           <Caracters depoimento={info && info.id_fisico_infoc_ntc_caracteristica_fisica} caracter={info && info.vestimento} className="carateristicas" />
-          <div className="map">
+          <div >
             <Map className="mapas" />
           </div>
         </Carousel>

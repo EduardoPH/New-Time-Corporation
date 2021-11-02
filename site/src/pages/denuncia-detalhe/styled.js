@@ -39,6 +39,7 @@ const Container = styled.div`
         width: 93%;
         max-height: 90%;
         margin-left: -1em;
+        position: relative;
     }
 
     .btn-voltar button {
@@ -65,6 +66,8 @@ const MapStyle = styled.div`
     display: flex;
     flex-direction: column;
     margin: auto;
+    position: relative;
+    width: 100%;
     input, button{
         display: none;
     }
