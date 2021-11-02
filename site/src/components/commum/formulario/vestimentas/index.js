@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import Button from '../../../styled/buttonformulario';
 
-export default function Vestimentas (props){
+export default function Index (props){
     // eslint-disable-next-line
     const [parteCima, setparteCima] = useState([]);
     // eslint-disable-next-line
@@ -14,20 +14,13 @@ export default function Vestimentas (props){
     // eslint-disable-next-line
     const [complemento, setComplemento] = useState([]);
 
-    const [vestimentas, setVestimentas] = useState([]);
-    console.log(vestimentas)
-
-    function SobreSite(){
-
-        const apiResponse = [
-            {
-                ds_partecima: (parteCima),
-                ds_partebaixo: (parteBaixo),
-                ds_calcado: (calcado),
-                ds_complemento: (complemento)
-            }
-        ]
-        setVestimentas(apiResponse)
+    const caracteristicas = props.location.state;
+    
+    let vestimentas = {
+        "ds_partecima": parteCima,
+        "ds_partebaixo": parteBaixo,
+        "ds_calcado": calcado,
+        "ds_complemento": complemento
     }
 
 
@@ -120,7 +113,7 @@ export default function Vestimentas (props){
                         <div class="informacoes">Informações complementares</div>
                         <div className="info2">
                             <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Área para escrever informações complementares"></textarea>
-                            <Link to="/formulario/local"><Button valor="Avançar"/></Link>
+                            <Link to={{ pathname:'/formulario/local', state: {caracteristicas, vestimentas} }}><Button valor="Avançar"/></Link>
                         </div>
                     </div>  
                 </div>

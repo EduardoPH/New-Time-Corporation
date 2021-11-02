@@ -1,4 +1,3 @@
-
 import Containerformulario from './styled.js';
 import { useState } from "react";
 import React from "react";
@@ -14,23 +13,15 @@ export default function Caracteristicas (props){
     const [corCabelo, setcorCabelo] = useState([]);
     // eslint-disable-next-line
     const [complemento, setComplemento] = useState([]);
-
-    const [caracteristicas, setCaracteristicas] = useState([]);
-    console.log(caracteristicas)
-
-    function SobreSite(){
-
-        const apiResponse = [
-            {
-                ds_pele: (pele) ,
-                ds_cabelo: (cabelo),
-                ds_corcabelo: (corCabelo),
-                ds_complemento: (complemento)
-            }
-        ]
-        setCaracteristicas(apiResponse)
+    
+    let caracteristicas = {
+        "ds_caractPele": pele,
+        "ds_cabelo": cabelo,
+        "ds_corcabelo": corCabelo,
+        "ds_complemento": complemento
     }
-
+        
+    
     return(
         <Containerformulario>
                 <div class="pag">
@@ -55,7 +46,7 @@ export default function Caracteristicas (props){
                                         <label for=""> Outra </label>
                                     </div>
                                     <div class="input">
-                                        <input onClick={() => setPele("não sei")} type="radio" name="base1" value=""/>
+                                        <input onClick={() => setPele("Não sei")} type="radio" name="base1" value=""/>
                                         <label for=""> Não sei </label>
                                     </div>
                                 </div>
@@ -118,7 +109,7 @@ export default function Caracteristicas (props){
                         <div class="informacoes">Informações complementares</div>
                         <div className="info2">
                             <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Área para escrever informações complementares"></textarea>
-                            <Link to="/formulario/vestimentas"><Button valor="Avançar"/></Link> 
+                            <Link to={{ pathname:'/formulario/vestimentas', state: caracteristicas }}><Button valor="Avançar"/></Link> 
                         </div>
                     </div> 
                 </div>

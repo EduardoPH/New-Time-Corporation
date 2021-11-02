@@ -22,7 +22,7 @@ import Api from "../../../../services/adm.js";
 const api = new Api();
 
 export default function Index() {
-  const [eventos, setEventos] = useState({});
+  const [eventos, setEventos] = useState();
   const [denun, setDenun] = useState("");
   const [alterar, setAlterar] = useState(false);
 
@@ -72,9 +72,13 @@ export default function Index() {
       items: 1,
     },
   };
+  
+  
   useEffect(() => {
       ListarValidacoes()
-  }, [eventos])
+  }, [])
+
+  
 
   return (
     <BoxStyled>
@@ -86,7 +90,7 @@ export default function Index() {
           <img src="/assets/images/denuncias-recentes/Perfil.png" alt="" />
           
             <div className="informacoes-usuaria">
-              <p1>   </p1>
+              <p1>  {eventos && eventos.id_usuario_infoc_ntc_usuario.nome} </p1>
               <span>  </span>
               <span>  </span>
               <Link

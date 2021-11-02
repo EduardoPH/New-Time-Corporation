@@ -14,14 +14,18 @@ import 'react-toastify/dist/ReactToastify.css';
 import Api from '../../../../services/adm.js'
 const api = new Api()
 
-export default function Index(){
-
-    const navigation = useHistory()
+function logado(navigation) {
     let admlogado = Cookies.get('admlogado')
     if( admlogado !== undefined ){
         navigation.push('/administrador')
     } 
-   
+} 
+
+export default function Index(){
+
+    const navigation = useHistory()
+    
+    logado(navigation)
 
     const [eventos,    setEventos] = useState([]);
     const [nome,       setNome]  = useState('');
@@ -66,7 +70,6 @@ export default function Index(){
         }
     }
 
-    console.log(eventos) 
     function deletarAdm(admin){
         confirmAlert({
             title: 'Remover Administrador',

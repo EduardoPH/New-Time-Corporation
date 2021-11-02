@@ -56,12 +56,10 @@ export default function Administrador(){
                             SAIR
                         </div>
                     </MenuLateralStyled>
-                    
                         <div className="box-direita">
-                            
                             <BoxStyled>
                                 <Switch>
-                                    
+                                    <Route path="/administrador/" exact={true} component={ValidarDenuncia} />
                                     <Route path="/administrador/frases/apoio" exact={true} component={apoio} />
                                     <Route path="/administrador/cargo" exact={true} component={cargos} />
                                     <Route path="/administrador/usuaria/perfil" exact={true} component={perfilUsuaria} />

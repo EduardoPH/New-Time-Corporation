@@ -32,11 +32,16 @@ const  Containerformulario = styled.div `
         }  
     }
 
-    Button {
-        padding: 0.36em 0.8em;
+    .conteudo2 button {
+        padding: 0.5em 0.8em;
+        border: none;
+        border-radius: 2em;
+        font-size: 1.5em;
+        background-color: #FC02A0;
+        color: white;
     }
 
-    Button:hover {
+    .conteudo2 button:hover {
         color: rgba(85, 26, 132, 100%);
         transition: 1s;
         background-color: white;
