@@ -134,7 +134,7 @@ export default function Index(props) {
             disabled={alterar === false ? true : false}
             onChange={(e) => setDenun(e.target.value)}
           />
-          <Caracters caracter={info && info.vestimento} className="carateristicas" />
+          <Caracters depoimento={info && info.id_fisico_infoc_ntc_caracteristica_fisica} caracter={info && info.vestimento} className="carateristicas" />
           <div className="map">
             <Map className="mapas" />
           </div>

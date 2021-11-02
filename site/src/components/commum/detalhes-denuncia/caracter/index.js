@@ -16,21 +16,21 @@ export default function App(props) {
             <div className="container-caracter">
                 <Carousel showIndicators={false} > 
                     <div className="box-carac">
-                        <BoxDetails caracter={props.caracter.partInferior} />
-                        <BoxDetails caracter={props.caracter.partSuperior}/>
-                        <BoxDetails caracter={props.caracter.calcado}/>
+                        <BoxDetails caracter={props.caracter === undefined ? "" : props.caracter.partSuperior} />
+                        <BoxDetails caracter={props.caracter === undefined ? "" : props.caracter.partInferior}/>
+                        <BoxDetails caracter={props.caracter === undefined ? "" : props.caracter.calcado}/>
                     </div>
 
                     <div className="box-carac">
-                        <BoxDetails caracter={props.depoimento.pele} />
-                        <BoxDetails caracter={props.depoimento.cabelo} />
-                        <BoxDetails caracter={props.depoimento.corCabelo} />
+                        <BoxDetails caracter={ props.caracter === undefined ? "" :  props.depoimento.pele} />
+                        <BoxDetails caracter={ props.caracter === undefined ? "" :  props.depoimento.cabelo} />
+                        <BoxDetails caracter={ props.caracter === undefined ? "" : props.depoimento.corCabelo} />
                     </div>
 
                     <div className="box-detalhes">
                         <div className="title-details-caracters"> Características Físicas </div>
                         <div className="box-detalhe"> 
-                            {props.depoimento.complemento}
+                            {props.caracter === undefined ? "" : props.depoimento.complemento}
                         </div>
                     </div>
                 </Carousel>
