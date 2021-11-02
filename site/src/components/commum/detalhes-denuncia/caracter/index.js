@@ -6,17 +6,17 @@ import {BoxDetails} from '../../detalhes-denuncia'
 
 
 
-export default function App() {
+export default function App(props) {
     return (
         <C.Container>
             <div className="titulo-caracter"> Características</div>
 
             <div className="container-caracter">
-                <Carousel> 
+                <Carousel showIndicators={false} autoPlay={true}> 
                     <div className="box-carac">
-                        <BoxDetails/>
-                        <BoxDetails/>
-                        <BoxDetails/>
+                        <BoxDetails caracter={props.caracter.partInferior} />
+                        <BoxDetails caracter={props.caracter.partSuperior}/>
+                        <BoxDetails caracter={props.caracter.calcado}/>
                     </div>
 
                     <div className="box-carac">

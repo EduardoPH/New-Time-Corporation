@@ -9,8 +9,11 @@ const Container = styled.div`
     }
 
     .name-user {
-        font-size: 1.3em;
+        font-size: 1.5em;
         color: white;
+        display: flex;
+        align-items: center;
+        margin: 0.9em 0em 0em 0.6em
     }
 
     .ct-msg {
