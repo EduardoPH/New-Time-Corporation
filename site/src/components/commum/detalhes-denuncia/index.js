@@ -17,12 +17,12 @@ function MenuLeft() {
     )
 }
 
-function BoxDetails() {
+function BoxDetails(props) {
     return(
         <BoxCaracter> 
                 <div className="box-caracter-image"> 
-                    <img src="/assets/images/denuncia-detalhe/chinelo.svg" alt=""/>
-                <div className="desc-caracter"> Chinelo </div>
+                     <img src={props.image} alt=""/>
+                <div className="desc-caracter"> {props.caracter} </div>
             </div>
         </BoxCaracter>
     )

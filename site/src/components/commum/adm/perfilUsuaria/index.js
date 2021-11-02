@@ -7,7 +7,6 @@ import { confirmAlert } from "react-confirm-alert";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-
 import "react-confirm-alert/src/react-confirm-alert.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -15,28 +14,36 @@ import Api from "../../../../services/adm.js";
 const api = new Api();
 
 export default function Index(props) {
-  
   const navegacao = useHistory();
   
-  const [usuario, setUsuario] = useState();
+  const [usuario, setUsuario] = useState('');
   const [denuncias, setDenuncias] = useState([]);
   const [id, setId] = useState(props.location.state.idUsu)
-  
-   async function ListarD(){
-    let r = await api.BuscarDenuncia(props.location.state.idUsu);
-    setDenuncias(r)
-  }
 
+  
+  async function ListarD(){
+    Loading({
+      text: "Por Favor Aguarde",
+      title: "CARREGANDO",
+      theme: "dark",
+      topBar: true,
+      topBarColor: 'red'
+    });
+
+    let r = await api.BuscarDenuncia(id);
+    setDenuncias(r)
+
+    Loading()
+  }
   async function buscarUsu() {
-    let r = await api.BuscarUsu(props.location.state.idUsu)
+    let r = await api.BuscarUsu(id)
     setUsuario(r)
   }
-
 
   const excluir = async () => {
     confirmAlert({
       title: "Remover Usuaria",
-      message: `Tem certeza que deseja remover  ${usuario.id_usuario_infoc_ntc_usuario.nm_usuario}`,
+      message: `Tem certeza que deseja remover  ${usuario.id_usuario_infoc_ntc_usuario.nome}`,
       buttons: [
         {
           label: "Sim",
@@ -58,7 +65,7 @@ export default function Index(props) {
   const excluirDenu = async (id) => {
     confirmAlert({
       title: "Remover Usuaria",
-      message: `Tem certeza que deseja remover denúncia ${id}`,
+      message: `Tem certeza que deseja remover denúncia`,
       buttons: [
         {
           label: "Sim",
@@ -69,6 +76,7 @@ export default function Index(props) {
             } else {
               toast.success("Excluido com sucesso");
             }
+            ListarD(); 
           },
         },
         { label: "Não" },
@@ -76,31 +84,37 @@ export default function Index(props) {
     });
   };
 
+  function alterarDenun(denun) {
+    navegacao.push({
+      pathname: "/administrador",
+      state: {... denun, id_usuario_infoc_ntc_usuario: usuario }
+    })
+  } 
+
   useEffect( () => {
-
-  })
-
-
+    ListarD(); buscarUsu()
+  }, [])
   return (
     <div style={{ width: "100%" }}>
       <ToastContainer />
-      <div className="box-infor-user">
+      <div className="box-infor-user" style={{maxHeight: '80vh'}}>
         <InfoUsuaria info={usuario} displayButton="none" />
         <div className="denunciasCadastradas">
             {denuncias.map((i) => (
-                  <ItemDenuncia ex={excluirDenu} info={i} />
+                  <ItemDenuncia ex={excluirDenu} alt={alterarDenun} info={i} />
               ))}
           <button
             className="btm-excluir"
             style={{
-              height: "25%",
+              height: "5em",
+              width: '100%',
               background: "red",
               border: "solid",
               color: "white",
               borderRadius: "13px",
               cursor: "pointer",
             }}
-            onClick={() => excluir(usuario.id_usuario)}
+            onClick={() => excluir(usuario.idUsu)}
           >
             Excluir Conta
           </button>
