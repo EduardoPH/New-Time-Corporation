@@ -19,6 +19,8 @@ const Container = styled.div`
         color: black;
         font-family: 'Roboto';
         font-size: 1em;
+        outline: 2px;
+        outline-color: blue;
     }
     button{
         color: white;

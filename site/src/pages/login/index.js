@@ -27,7 +27,6 @@ export default function Login(){
     async function login(){
 
         let r = await api.login(email, senha);
-    
         if(r.erro){
             toast.error(r.erro)
         } else {

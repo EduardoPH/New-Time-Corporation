@@ -60,13 +60,18 @@ const BoxStyled=styled.div`
         font-weight: 700;
         font-family: 2em;
     }
-    .map{
-        width: 100%;
-        input{display:none}
-        button{display:none}
-        .mapas div{
-            width: 100%!important;
+    .btma{
+        margin-top: 2em;
+        input, button{
+            display: none;
         }
+    }
+    .container-caracter{
+        height: 14em;
+        margin-top: 0em;
+    }
+    .titulo-caracter{
+        display: none;
     }
     .btms-acoes{
         display: flex;

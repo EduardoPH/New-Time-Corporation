@@ -33,7 +33,7 @@ export class  Mapa extends Component{
   
 
   render(){
-
+    let r = this.props.info === undefined ? "" : this.props.info
     return(
       <div >
         <div style={{display: 'flex', flexDirection: 'row'}}>
@@ -44,7 +44,7 @@ export class  Mapa extends Component{
         <Map 
           google={this.props.google}
           zoom={16}
-          center={{lat: this.state.lat, lng: this.state.lng}}
+          center={{lat: r.lat, lng: r.lgn}}
           styles={MapStyle}
           disableDefaultUI={true}
           containerStyle = {containerStyle}

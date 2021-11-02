@@ -33,13 +33,7 @@ export default function Cadastro() {
     if (r.erro) {
       toast.error(r.erro);
     } else {
-      let c = {
-        "nome": r.nm_usuario,
-        "email": r.ds_email,
-        "cpf": r.ds_cpf,
-        "telefone": r.ds_telefone,
-      }
-      Cookies.set("usuariaLogada", JSON.stringify(c));
+      Cookies.set("usuariaLogada", JSON.stringify(r));
       navigation.push('/perfil')
     }
   }

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { Container } from "./styled";
 
 
@@ -19,19 +18,37 @@ export default function ItemDenuncia(props) {
     function alterar(denun) {
         props.alt(denun)
     }
-    return (
-        <Container>
-            <div className="lado-esquerdo">
-                <p1>{item.depoimento}</p1>
-                <div className="btms">
-                    <button className="alterar" onClick={() => alterar(item)}>Alterar</button>
-                    <button className="excluir" onClick={() => excluir(item.id)}>excluir</button>
+    if(props.tipo === false){
+        return (
+            <Container>
+                <div className="lado-esquerdo">
+                    <p1>{item.depoimento}</p1>
+                    <div className="btms">
+                        <button className="alterar" onClick={() => alterar(item)}>Alterar</button>
+                        <button className="excluir" onClick={() => excluir(item.id)}>excluir</button>
+                    </div>
                 </div>
-            </div>
-            <div className="lado-direito">
-                <p1>{dataFormatada()}</p1>
-                <p2> Ver mais...</p2>
-            </div>
-        </Container>
-    )
+                <div className="lado-direito">
+                    <p1>{dataFormatada()}</p1>
+                    <p2> Ver mais...</p2>
+                </div>
+            </Container>
+        )
+    } else {
+        return(
+            <Container>
+                <div className="lado-esquerdo">
+                    <p1>{item.depoimento}</p1>
+                    <div className="btms">
+                        <button className="alterar" onClick={() => alterar(item)}>Alterar</button>
+                        <button className="excluir" onClick={() => excluir(item.id)}>excluir</button>
+                    </div>
+                </div>
+                <div className="lado-direito">
+                    <p1>{dataFormatada()}</p1>
+                    <p2> Ver mais...</p2>
+                </div>
+            </Container>
+        )
+    }
 }

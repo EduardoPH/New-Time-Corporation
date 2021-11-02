@@ -18,7 +18,6 @@ export default function InfoUsuaria(props) {
             <input type="text" disabled={habilitar === true? false : true}  value={props.info.telefone}/>
             <p1>CPF :</p1>
             <input typpe="text"disabled={habilitar === true? false : true}  value={props.info.cpf}/>
-            <button onClick={() => alterarDados()} style={{display: props.displayButton}}>{habilitar === false ? "Alterar suas Informações" : "Confirmar Alteração"} </button>
         </Container>
     )
 }

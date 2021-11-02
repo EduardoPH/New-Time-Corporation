@@ -7,6 +7,13 @@ import { useEffect, useState } from 'react'
 import Menu from '../../components/commum/menu'
 import {Fundo} from '../../components/styled/background/styled'
 import ItemDenuncia from '../../components/commum/Item-Denuncia-Usu'
+import InfoUsuaria from '../../components/commum/Info-Usuaria'
+import { confirmAlert } from 'react-confirm-alert';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import Api from '../../services/adm'
 const api = new Api();
@@ -50,6 +57,30 @@ export default function PerfilUsuaria(){
             setDenun(r)
         }  
     }
+
+    function excluir(id){
+        confirmAlert({
+            title: 'Remover denúncia',
+            message: `Tem certeza que deseja remover sua denúncia"`,
+            buttons:[
+                {
+                    label: 'Sim',
+                    onClick: async () => {
+                        let r = await api.deletarDen(id)
+                        if(r !== "OK"){
+                            return toast.error('Houve um erro')
+                        } else {
+                            toast('denúncia removida com sucesso!')
+                            BuscaDenu()
+                        }
+                    }
+                },
+                {label: 'Não'}
+            ]
+        })
+    }
+
+
     useEffect(
         () => {
             BuscaDenu();
@@ -60,6 +91,7 @@ export default function PerfilUsuaria(){
     console.log(info)
     return(
         <Fundo height="100vh">
+        <ToastContainer/>
         <Container>
             <Menu/>
             <div className="corpo-central">
@@ -74,13 +106,14 @@ export default function PerfilUsuaria(){
                         <button onClick={sair}>   Sair da Conta </button>
                     </div>
                     <div className="parte-final-box">
+                        <InfoUsuaria info={info}/>
                         <div className="denunciasCadastradas">
                             {denun.map( i =>
                              {
                                 if(i.erro){
                                     return 'Voce ainda não possui nenhuma denuncia'
                                 } else{
-                                    return( <ItemDenuncia info={i}/>)                             
+                                    return( <ItemDenuncia ex={excluir} info={i}/>)                             
                                 }
                              }
                             )}

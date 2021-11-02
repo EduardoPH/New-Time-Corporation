@@ -13,7 +13,7 @@
      display: flex;
      align-items: center;
      flex-direction: column;
-
+     align-self: center;
      .box{
         width: 90%;
         display: flex;
@@ -23,7 +23,7 @@
         background-color: rgba(127, 0, 191, 0.59);
         backdrop-filter: blur(7px);
         border-radius: 6px;
-
+        overflow-x: auto;
         .cabecalho{
             display: flex;
             flex-direction: row;
@@ -69,6 +69,8 @@
             flex-direction: row;
             height:100%;
             width: 100%;
+            max-height: 23.5em;
+            overflow-x: auto;
 
             .informas{
                 display: flex;
