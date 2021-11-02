@@ -5,6 +5,8 @@ const BoxStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 80vh;
+  overflow-x: auto;
   .pesquisa {
     display: flex;
     align-items: center;

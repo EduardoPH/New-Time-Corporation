@@ -6,6 +6,8 @@ const BoxStyled=styled.div`
     flex-direction: column;
     align-items: center;
     padding: 4em;
+    max-height: 80vh;
+    overflow-x: auto;
     h1{
         color: black;
         font-size: 2em;
