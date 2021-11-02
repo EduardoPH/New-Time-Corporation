@@ -105,7 +105,6 @@ export default function Index(props) {
       ListarValidacoes()
   }, [])
 
-  
   return (
     <BoxStyled>
       <ToastContainer />
@@ -135,7 +134,7 @@ export default function Index(props) {
             disabled={alterar === false ? true : false}
             onChange={(e) => setDenun(e.target.value)}
           />
-          <Caracters className="carateristicas" />
+          <Caracters caracter={info && info.vestimento} className="carateristicas" />
           <div className="map">
             <Map className="mapas" />
           </div>
