@@ -7,12 +7,14 @@ import {BoxDetails} from '../../detalhes-denuncia'
 
 
 export default function App(props) {
+    console.log(props.depoimento)
+
     return (
         <C.Container>
             <div className="titulo-caracter"> Características</div>
 
             <div className="container-caracter">
-                <Carousel showIndicators={false} autoPlay={true}> 
+                <Carousel showIndicators={false} > 
                     <div className="box-carac">
                         <BoxDetails caracter={props.caracter.partInferior} />
                         <BoxDetails caracter={props.caracter.partSuperior}/>
@@ -20,15 +22,15 @@ export default function App(props) {
                     </div>
 
                     <div className="box-carac">
-                        <BoxDetails/>
-                        <BoxDetails/>
-                        <BoxDetails/>
+                        <BoxDetails caracter={props.depoimento.pele} />
+                        <BoxDetails caracter={props.depoimento.cabelo} />
+                        <BoxDetails caracter={props.depoimento.corCabelo} />
                     </div>
 
                     <div className="box-detalhes">
                         <div className="title-details-caracters"> Características Físicas </div>
                         <div className="box-detalhe"> 
-                        aqui será escrito informações complementares, ex: tatuagem, cicatriz, etc...
+                            {props.depoimento.complemento}
                         </div>
                     </div>
                 </Carousel>

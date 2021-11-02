@@ -21,7 +21,7 @@ function BoxDetails(props) {
     return(
         <BoxCaracter> 
                 <div className="box-caracter-image"> 
-                    {/* <img src={props.image} alt=""/> */}
+                     <img src={props.image} alt=""/>
                 <div className="desc-caracter"> {props.caracter} </div>
             </div>
         </BoxCaracter>
