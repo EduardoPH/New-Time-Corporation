@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
 import { Container } from "./styled";
 
+
 export default function ItemDenuncia(props) {
-    const info = props.info
-    console.log(info)
+    const item = props.info
     function dataFormatada(){
-        var data = new Date(info.dt_cadastro),
+        var data = new Date(item.data),
             dia  = data.getDate().toString(),
             diaF = (dia.length === 1) ? '0'+dia : dia,
             mes  = (data.getMonth()+1).toString(), 
@@ -15,13 +16,16 @@ export default function ItemDenuncia(props) {
     function excluir(id){
         props.ex(id)
     }
+    function alterar(denun) {
+        props.alt(denun)
+    }
     return (
         <Container>
             <div className="lado-esquerdo">
-                <p1>{info.ds_depoimento}</p1>
+                <p1>{item.depoimento}</p1>
                 <div className="btms">
-                    <button className="alterar" >Alterar</button>
-                    <button className="excluir" onClick={() => excluir(info.id_usuario)}>excluir</button>
+                    <button className="alterar" onClick={() => alterar(item)}>Alterar</button>
+                    <button className="excluir" onClick={() => excluir(item.id)}>excluir</button>
                 </div>
             </div>
             <div className="lado-direito">

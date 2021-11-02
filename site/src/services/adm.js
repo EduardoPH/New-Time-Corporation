@@ -13,7 +13,14 @@ export default class Api{
         let r = await api.get('/denuncia')
         return r.data
     }
-
+    async AtivarDenun(id, depoimento){
+        let r = await api.put(`/denuncia/${id}`, {depoimento})
+        return r.data
+    }
+    async deletarDen(id){
+        let r = await api.delete(`/denuncia/${id}`)
+        return r.data
+    }
 
 
     // VERBOS DA AREA DE APOIO

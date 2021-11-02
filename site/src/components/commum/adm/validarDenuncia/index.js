@@ -21,39 +21,12 @@ import Map from "../../../../components/commum/map/map";
 import Api from "../../../../services/adm.js";
 const api = new Api();
 
-export default function Index() {
-  const [eventos, setEventos] = useState();
+export default function Index(props) {
+  
+  const [info, setInfo] = useState();
   const [denun, setDenun] = useState("");
   const [alterar, setAlterar] = useState(false);
 
-  async function ListarValidacoes() {
-    let r = await api.ListaValidacoes();
-    setEventos(r)
-  }
-  const excluir = async () => {
-    confirmAlert({
-      title: "Remover Denúncia",
-      message: `Tem certeza que deseja remover esta denúncia `,
-      buttons: [
-        {
-          label: "Sim",
-          onClick: async () => {
-            await api.deletarDen(eventos[0].id_denuncia);
-            toast("Denúncia Apagada");
-          },
-        },
-        { label: "Não" },
-      ],
-    });
-  };
-  async function Validar() {
-    let r = await api.AtivarDenun(eventos[0].id_denuncia, denun);
-    if (r.erro) {
-      toast.error(r.erro);
-    } else {
-      toast.success("Cadastrada com sucesso");
-    }
-  }
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -74,12 +47,65 @@ export default function Index() {
   };
   
   
+  async function ListarValidacoes() {
+    Loading({
+      text: "Por Favor Aguarde",
+      title: "CARREGANDO",
+      theme: "dark",
+      topBar: true,
+      topBarColor: 'red'
+    });
+
+    let r = await api.ListaValidacoes();
+    
+    if (props.location.state !== undefined) {
+      setInfo(props.location.state)
+      setDenun(props.location.state.depoimento)
+    } else {
+      setInfo(r)
+      setDenun(r.depoimento)
+    }
+    Loading()
+  }
+
+  console.log(info)
+
+  async function Validar() {
+    let r = await api.AtivarDenun(info.id, denun);
+    if (r.erro) {
+      toast.error(r.erro);
+    } else {
+      toast.success("Cadastrada com sucesso");
+      props.location.state = undefined
+      ListarValidacoes()
+    }
+  }
+
+  const excluir = async () => {
+    confirmAlert({
+      title: "Remover Denúncia",
+      message: `Tem certeza que deseja remover esta denúncia `,
+      buttons: [
+        {
+          label: "Sim",
+          onClick: async () => {
+            await api.deletarDen(info.id);
+            toast("Denúncia Apagada");
+            props.location.state = undefined
+            ListarValidacoes()
+          },
+        },
+        { label: "Não" },
+      ],
+    });
+  };
+
+
   useEffect(() => {
       ListarValidacoes()
   }, [])
 
   
-
   return (
     <BoxStyled>
       <ToastContainer />
@@ -90,13 +116,13 @@ export default function Index() {
           <img src="/assets/images/denuncias-recentes/Perfil.png" alt="" />
           
             <div className="informacoes-usuaria">
-              <p1>  {eventos && eventos.id_usuario_infoc_ntc_usuario.nome} </p1>
-              <span>  </span>
-              <span>  </span>
+              <p1>  {info && info.id_usuario_infoc_ntc_usuario.nome} </p1>
+              <span>{info && info.id_usuario_infoc_ntc_usuario.email}  </span>
+              <span> {info && info.id_usuario_infoc_ntc_usuario.telefone} </span>
               <Link
                 to={{
                   pathname: "/administrador/usuaria/perfil",
-                  state: eventos,
+                  state: info,
                 }}
               >
                 <button> Perfil</button>
@@ -121,7 +147,7 @@ export default function Index() {
           <button className="excluir" onClick={() => excluir()}>
             Excluir
           </button>
-          <button className="adicionar" onClick={() => ListarValidacoes()}>
+          <button className="adicionar" onClick={() => Validar()}>
             adicionar
           </button>
         </div>
