@@ -15,6 +15,7 @@ export default function Depoimento (props){
     const [depoimento, setDepoimentomento] = useState("");
 
     const dados = props.location.state;
+    console.log(dados)
   
     const pele = dados.dados.caracteristicas["ds_caractPele"];
     const cabelo = dados.dados.caracteristicas["ds_cabelo"];
@@ -28,10 +29,10 @@ export default function Depoimento (props){
     
     const tipoVestimenta = "teste";
     
-    const latitude = "585858585";
-    const longitude = "5858585858";
-    const bairro = "grajau";
-    const cidade = "são paulo";
+    const latitude = dados.local.ds_lat;
+    const longitude = dados.local.ds_long;
+    const bairro = dados.local.ds_bairro;
+    const cidade = dados.local.ds_cidade;
 
     const infoCookie = Cookies.get('usuariaLogada')
     const convert = JSON.parse(infoCookie)

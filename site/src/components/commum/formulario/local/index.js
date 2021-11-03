@@ -16,7 +16,7 @@ export default function Index (props){
     const dados = props.location.state;
 
     const [local, setLocal] = useState() 
-
+    console.log(local)
     function dadosLocal(localizacao){
     
         let r = {
