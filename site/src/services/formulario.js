@@ -6,6 +6,13 @@ const api = new axios.create({
 
 export default class Api{
 
+
+
+    async ListarUsu( nomeUsu ){
+        let r = await api.post('/buscarUsu', {nomeUsu})
+        return r.data
+    }
+
     async cadastrarDenuncia( tipoVestimenta, inferior, superior, calcado, complementoV,
                              pele, cabelo, corCabelo, complementoC,
                              latitude, longitude, bairro, cidade,

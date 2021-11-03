@@ -31,9 +31,10 @@ export default function Index (props){
             ds_cidade: localizacao.cidade,
             ds_bairro: localizacao.bairro
         }
-        
+        return(local)
         console.log(local)
     }
+    
 
     return(
         <Containerformulario>
@@ -42,7 +43,7 @@ export default function Index (props){
                         <div className="titulo-local">Área Localizada</div>
                         <div className="mapa"><Mapa loca={dadosLocal}/></div>
                     </div>
-                    <Link to={{ pathname:'/formulario/depoimento', state: {dados: dadosLocal, local} }}><Button valor="Avançar"/></Link>  
+                    <Link to={{ pathname:'/formulario/depoimento', state: {dados, local} }}><Button valor="Avançar"/></Link>  
                 </div>
         </Containerformulario>
     )

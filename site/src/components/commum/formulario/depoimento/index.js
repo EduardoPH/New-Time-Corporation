@@ -1,11 +1,11 @@
 import Containerformulario from './styled.js';
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { Loading } from 'react-loading-ui';
+import Cookies from 'js-cookie';
 
 import Api from "../../../../services/formulario.js";
 
@@ -35,7 +35,21 @@ export default function Depoimento (props){
     const cidade = "são paulo";
     const idusu = 6;
 
-  
+    const [idusuario, setIdusuario] = useState([])
+    const infoCookie = Cookies.get('usuariaLogada')
+    const convert = JSON.parse(infoCookie)
+    const nomeUsu = convert["nome"]
+    console.log(nomeUsu)
+
+    console.log(idusuario)
+
+
+    async function busca(){
+        const r = await api.ListarUsu(nomeUsu);
+        console.log(r)
+    }
+
+
     const cadastrar = async () => {
 
         if (pele.length < 1) {
@@ -72,6 +86,8 @@ export default function Depoimento (props){
         <Containerformulario>
         <ToastContainer/>
             <div class="conteudo2">
+                <button onClick={busca}></button>
+                <div>{idusuario}</div>
                 <textarea value={depoimento} onChange={ e => setDepoimentomento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Aqui você pode descrever o ocorrido."></textarea>
                 <button onClick={cadastrar} valor="Enviar">Enviar</button>
             </div>   
