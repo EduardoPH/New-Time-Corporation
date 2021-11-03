@@ -15,8 +15,7 @@ export default function Depoimento (props){
     const [depoimento, setDepoimentomento] = useState("");
 
     const dados = props.location.state;
-    console.log(dados);
-
+  
     const pele = dados.dados.caracteristicas["ds_caractPele"];
     const cabelo = dados.dados.caracteristicas["ds_cabelo"];
     const corCabelo = dados.dados.caracteristicas["ds_corcabelo"];
@@ -39,7 +38,6 @@ export default function Depoimento (props){
 
     const idusu = convert["idUsu"]
     console.log(idusu)
-
 
     const cadastrar = async () => {
 

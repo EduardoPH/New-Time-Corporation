@@ -25,7 +25,6 @@ export default function Caracteristicas (props){
         "ds_corcabelo": corCabelo,
         "ds_complemento": complemento
     }
-        
     
     return(
         <Containerformulario>

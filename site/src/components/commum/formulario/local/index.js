@@ -15,27 +15,23 @@ export default function Index (props){
 
     const dados = props.location.state;
 
-    let local = {
-        ds_lat: (lat),
-        ds_long: (long),
-    }
+    const [local, setLocal] = useState() 
 
     function dadosLocal(localizacao){
-        
-        // este parametro localização é quem contem os dados de lat, logn, só cadastrar junto com a denun
-        
-        
-        local = {
+    
+        let r = {
             ds_lat : localizacao.lat,
             ds_long: localizacao.lng,
             ds_cidade: localizacao.cidade,
             ds_bairro: localizacao.bairro
         }
-        return(local)
-        console.log(local)
+        if(local === undefined){
+            setLocal(r) 
+        } else{
+            return   
+        }
     }
     
-
     return(
         <Containerformulario>
                 <div className="conteudo">
@@ -43,7 +39,7 @@ export default function Index (props){
                         <div className="titulo-local">Área Localizada</div>
                         <div className="mapa"><Mapa loca={dadosLocal}/></div>
                     </div>
-                    <Link to={{ pathname:'/formulario/depoimento', state: {dados, local} }}><Button valor="Avançar"/></Link>  
+                    <Link to={{ pathname:'/formulario/depoimento', state: { dados, local} }}><Button valor="Avançar"/></Link>  
                 </div>
         </Containerformulario>
     )
