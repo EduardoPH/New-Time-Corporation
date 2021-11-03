@@ -1,31 +1,51 @@
-import Containerformulario from './styled.js';
 import React from "react";
+import Containerformulario from './styled.js';
+import { toast, ToastContainer } from "react-toastify";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
-import Button from '../../../styled/buttonformulario';
+import { useHistory } from 'react-router-dom';
+import Cookies from "js-cookie";
 
-export default function Index (props){
-    // eslint-disable-next-line
-    const [parteCima, setparteCima] = useState([]);
-    // eslint-disable-next-line
-    const [parteBaixo, setparteBaixo] = useState([]);
-    // eslint-disable-next-line
-    const [calcado, setcalcado] = useState([]);
-    // eslint-disable-next-line
-    const [complemento, setComplemento] = useState([]);
+export default function Index (){
+    const [parteCima, setparteCima] = useState(Cookies.get('dadosDenuncia').vestimenta === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).vestimenta.parteCima);
+    const [parteBaixo, setparteBaixo] = useState('');
+    const [calcado, setcalcado] = useState('');
+    const [complemento, setComplemento] = useState('');
 
-    const caracteristicas = props.location.state;
+    const navigation = useHistory()
+
+    function proximatela() {
     
-    let vestimentas = {
-        "ds_partecima": parteCima,
-        "ds_partebaixo": parteBaixo,
-        "ds_calcado": calcado,
-        "ds_complemento": complemento
+        if(parteCima === '')
+            return toast.error('o campo PARTE SUPERIOR deve ser preenchido')
+
+        if(parteBaixo === '')
+            return toast.error('o campo PARTE INFERIOR deve ser preenchido')
+        
+        if(calcado === '')
+            return toast.error('o campo CALÇADO deve ser preenchido')
+        
+
+        let vestimentas = {
+            parteCima: parteCima,
+            parteBaixo: parteBaixo,
+            calcado: calcado,
+            complemento: complemento
+        }   
+
+        
+        let dados = {
+            caracteristicas: Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')),
+            vestimenta: vestimentas
+        }
+        Cookies.set('dadosDenuncia', JSON.stringify(dados))  
+        navigation.push('/formulario/local')
     }
+
 
 
     return(
         <Containerformulario>
+            <ToastContainer/>
                 <div class="pag">
                     <div class="conteudo">
 
@@ -33,7 +53,7 @@ export default function Index (props){
                                 <div class="titulo-box">Parte de cima</div>
                                 <div class="imputs">
                                     <div class="input">
-                                        <input onClick={() => setparteCima("Moletom")} type="radio" name="base1" value=""/>
+                                        <input onClick={() => setparteCima("Moletom")} type="radio" name="base1" checked={parteCima === "Moletom" ?  true : false}/>
                                         <label for=""> Moletom </label>
                                     </div>
                                     <div class="input">
@@ -113,7 +133,7 @@ export default function Index (props){
                         <div class="informacoes">Informações complementares</div>
                         <div className="info2">
                             <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Área para escrever informações complementares"></textarea>
-                            <Link to={{ pathname:'/formulario/local', state: {caracteristicas, vestimentas} }}><Button valor="Avançar"/></Link>
+                            <button  className="btm-avan" onClick={proximatela}>Avançar</button>
                         </div>
                     </div>  
                 </div>
