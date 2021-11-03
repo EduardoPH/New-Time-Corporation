@@ -33,21 +33,12 @@ export default function Depoimento (props){
     const longitude = "5858585858";
     const bairro = "grajau";
     const cidade = "são paulo";
-    const idusu = 6;
 
-    const [idusuario, setIdusuario] = useState([])
     const infoCookie = Cookies.get('usuariaLogada')
     const convert = JSON.parse(infoCookie)
-    const nomeUsu = convert["nome"]
-    console.log(nomeUsu)
 
-    console.log(idusuario)
-
-
-    async function busca(){
-        const r = await api.ListarUsu(nomeUsu);
-        console.log(r)
-    }
+    const idusu = convert["idUsu"]
+    console.log(idusu)
 
 
     const cadastrar = async () => {
@@ -86,8 +77,6 @@ export default function Depoimento (props){
         <Containerformulario>
         <ToastContainer/>
             <div class="conteudo2">
-                <button onClick={busca}></button>
-                <div>{idusuario}</div>
                 <textarea value={depoimento} onChange={ e => setDepoimentomento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Aqui você pode descrever o ocorrido."></textarea>
                 <button onClick={cadastrar} valor="Enviar">Enviar</button>
             </div>   
