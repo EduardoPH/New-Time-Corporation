@@ -3,6 +3,7 @@ import { useState } from "react";
 import React from "react";
 import { Link } from 'react-router-dom';
 import Button from '../../../styled/buttonformulario';
+import Cookies from 'js-cookie';
 
 export default function Caracteristicas (props){
     // eslint-disable-next-line
@@ -14,6 +15,10 @@ export default function Caracteristicas (props){
     // eslint-disable-next-line
     const [complemento, setComplemento] = useState([]);
     
+    let usuariaLogada = JSON.parse(Cookies.get('usuariaLogada'))// pegando o cookie do usuario, nele tem o id
+    
+    console.log(usuariaLogada.idUsu)// aqui um exemplo, de como chamar o id 
+
     let caracteristicas = {
         "ds_caractPele": pele,
         "ds_cabelo": cabelo,

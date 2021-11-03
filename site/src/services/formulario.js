@@ -15,8 +15,7 @@ export default class Api{
 
     async cadastrarDenuncia( tipoVestimenta, inferior, superior, calcado, complementoV,
                              pele, cabelo, corCabelo, complementoC,
-                             latitude, longitude, bairro, cidade,
-                             idusu, depoimento ) {
+                             latitude, longitude, bairro, cidade,  idusu, depoimento ) {
                                  
         const r = await api.post('/form', 
         { tipoVestimenta, inferior, superior, calcado, complementoV,

@@ -23,8 +23,9 @@ flex-direction: column;
 }
 
 .Tit{
-    font: 700 2.4em Arial;
+    font: 700 2em Arial;
     color: white;
+    text-align: center;
 }
 
 .direita{
@@ -32,7 +33,12 @@ flex-direction: column;
     flex-direction: column;
     margin-top: 2em;
 }
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
 .login{
     display:flex;
     flex-direction: column;

@@ -1,14 +1,28 @@
 import Menu from '../../components/commum/menu/index';
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+
+import Cookies from 'js-cookie';
 import { Container } from './styled';
 import {Fundo} from '../../components/styled/background/styled'
+import { BrowserRouter, Switch, Route, Link, useHistory } from "react-router-dom";
 
 import caracteristicas from '../../components/commum/formulario/caracteristicas'
 import vestimentas from '../../components/commum/formulario/vestimentas'
 import local from '../../components/commum/formulario/local'
 import depoimento from '../../components/commum/formulario/depoimento'
 
+function logado(navigation) {
+    let usuariaLogada = Cookies.get('usuariaLogada')
+    if( usuariaLogada === undefined ){
+        navigation.push('/login')
+    }
+} 
+
 export default function Administrador(){
+
+    const navigation = useHistory()
+
+    logado(navigation)
+
     return(
         <Fundo height="100vh">
         <Container>
