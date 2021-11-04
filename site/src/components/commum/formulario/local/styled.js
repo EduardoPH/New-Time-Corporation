@@ -13,7 +13,16 @@ const  Containerformulario = styled.div`
         height: 100%;
         backdrop-filter: blur(1px);
     }
-
+        
+    .btm-avan{
+        padding: 0.4em 0.5em;
+        border: none;
+        border-radius: 2em;
+        font-size: 1.5em;
+        background-color: #FC02A0;
+        color: white;
+        height: 2em;
+    }
     .mapa {
         margin-top: -0.5em;
     }

@@ -40,17 +40,18 @@ export class  Mapa extends Component{
     if(p !== -0){
       this.props.loca({lat: this.state.late, lng: this.state.lngo, bairro: this.state.bairro, cidade: this.state.cidade })
     }
-
+    
     return(
       <div >
         <div style={{display: 'flex', flexDirection: 'row'}}>
-          <input style={{padding: '5px', outline: 'none', marginBottom: '10px'}} onChange={(e) => this.setState({...this.state, end: e.target.value} )} placeholder="digite o endereço..."/>
+          <input style={{padding: '5px', outline: 'none', marginBottom: '10px', cursor: 'auto'}} onChange={(e) => this.setState({...this.state, end: e.target.value} )} placeholder="digite o endereço..."/>
           <button style={{backgroundColor: 'white', outline: 'none',cursor: 'pointer', borderRadius: '30px',border:'0px', marginTop: '1em', marginBottom: '10px'}} onClick={() => this.loc(this.state.end)}> Localização </button> 
         </div>
         
         <Map 
           google={this.props.google}
           zoom={16}
+          initialCenter={{lat: r.lat, lng: r.lgn}}
           center={p === -0 ? {lat: r.lat, lng: r.lgn} : {lat: this.state.late, lng: this.state.lngo}}
           styles={MapStyle}
           disableDefaultUI={true}

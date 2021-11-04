@@ -40,15 +40,15 @@ export default function Index(props) {
     setUsuario(r)
   }
 
-  const excluir = async () => {
+  const excluir = async (id) => {
     confirmAlert({
       title: "Remover Usuaria",
-      message: `Tem certeza que deseja remover  ${usuario.id_usuario_infoc_ntc_usuario.nome}`,
+      message: `Tem certeza que deseja remover  ${usuario.nome}`,
       buttons: [
         {
           label: "Sim",
           onClick: async () => {
-            let r = await api.deletarUsu(usuario.id_usuario);
+            let r = await api.deletarUsu(id);
             if (r.erro) {
               toast.error(r.erro);
             } else {

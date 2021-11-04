@@ -3,43 +3,49 @@ import React from "react";
 import { useState } from "react";
 import  Mapa  from '../../map/map';
 import Button from '../../../styled/buttonformulario';
-import { Link } from 'react-router-dom';
-        
+import { useHistory } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 export default function Index (props){
 
-    // eslint-disable-next-line
-    const [lat, setLat] = useState("021020202");
-    // eslint-disable-next-line
-    const [long, setLong] = useState("303030303");
+    const navigation = useHistory()
 
-    const dados = props.location.state;
+    let denuncia =  Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia'))
 
-    const [local, setLocal] = useState() 
-    console.log(local)
+    const [local, setLocal] = useState(denuncia.local === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).local) 
+
     function dadosLocal(localizacao){
-    
         let r = {
-            ds_lat : localizacao.lat,
-            ds_long: localizacao.lng,
-            ds_cidade: localizacao.cidade,
-            ds_bairro: localizacao.bairro
+            lat : localizacao.lat,
+            lgn: localizacao.lng,
+            cidade: localizacao.cidade,
+            bairro: localizacao.bairro
         }
-        if(local === undefined){
+        if(local === '' || local.lat !== localizacao.lat){
             setLocal(r) 
         } else{
             return   
         }
     }
-    
+    console.log(local)
+    function proximaTela() {
+        let dados = {
+            caracteristicas: denuncia.caracteristicas,
+            vestimenta: denuncia.vestimenta,
+            local: local
+        }
+        Cookies.set('dadosDenuncia', JSON.stringify(dados))  
+        navigation.push('/formulario/depoimento')
+    }
+
     return(
         <Containerformulario>
                 <div className="conteudo">
                     <div className="cont">
                         <div className="titulo-local">Área Localizada</div>
-                        <div className="mapa"><Mapa loca={dadosLocal}/></div>
+                        <div className="mapa"><Mapa  info={local && denuncia.local } loca={dadosLocal}/></div>
                     </div>
-                    <Link to={{ pathname:'/formulario/depoimento', state: { dados, local} }}><Button valor="Avançar"/></Link>  
+                    <button className="btm-avan" onClick={proximaTela}>Avançar</button>  
                 </div>
         </Containerformulario>
     )

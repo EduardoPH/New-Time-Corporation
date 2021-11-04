@@ -58,6 +58,37 @@ export default function PerfilUsuaria(){
         }  
     }
 
+      function alterar(dados) {
+        let local = dados.id_local_infoc_ntc_local
+        let caracteristicas =  dados.id_fisico_infoc_ntc_caracteristica_fisica
+        let vestimenta =  dados.vestimento
+
+        let r = {
+            caracteristicas:{
+                pele: caracteristicas.pele ,
+                cabelo: caracteristicas.cabelo ,
+                corCabelo: caracteristicas.corCabelo ,
+                complemento: caracteristicas.complemento 
+            },
+            vestimenta:{
+                parteCima: vestimenta.partSuperior,
+                parteBaixo: vestimenta.partInferior,
+                calcado:  vestimenta.calcado,
+                complemento: vestimenta.complemento
+            },
+            local:{
+                lat: local.lat,
+                lgn: local.lgn,
+                cidade: local.cidade,
+                bairro: local.bairro
+            },
+            complemento: dados.depoimento,
+            idDen: dados.id
+        }
+        Cookies.set('dadosDenuncia', JSON.stringify(r))
+        navigation.push('/formulario')
+    } 
+
     function excluir(id){
         confirmAlert({
             title: 'Remover denúncia',
@@ -88,7 +119,7 @@ export default function PerfilUsuaria(){
     ); 
     
     const sair = () => {Cookies.remove('usuariaLogada'); navigation.push("/home")}
-    console.log(info)
+    console.log(denun)
     return(
         <Fundo height="100vh">
         <ToastContainer/>
@@ -113,7 +144,7 @@ export default function PerfilUsuaria(){
                                 if(i.erro){
                                     return 'Voce ainda não possui nenhuma denuncia'
                                 } else{
-                                    return( <ItemDenuncia ex={excluir} info={i}/>)                             
+                                    return( <ItemDenuncia ex={excluir} alt={alterar} info={i}/>)                             
                                 }
                              }
                             )}

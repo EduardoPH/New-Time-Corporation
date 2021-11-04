@@ -21,6 +21,10 @@ export default class Api{
         let r = await api.delete(`/denuncia/${id}`)
         return r.data
     }
+    async deletarUsu(id){
+        let r = await api.delete(`/usuario/${id}`)
+        return r.data
+    }
 
 
     // VERBOS DA AREA DE APOIO

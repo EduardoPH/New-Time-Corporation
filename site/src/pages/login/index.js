@@ -43,7 +43,7 @@ export default function Login(){
                 <div className="esquerda">
                     <div className="imgPC"><img src="/assets/images/login/imgPC.svg" alt=""/></div>
                     <div className="Tit">Protegemos sua Privacidade</div>
-                    <div className="Tit">Faça login ou cadastre para realizar uma denuncia</div>
+                    <div className="Tit">Faça login ou cadastre-se para realizar uma denúncia</div>
                 </div>
                 <div className="direita">
                     <div className="login">
@@ -54,7 +54,7 @@ export default function Login(){
                         </div>
                         <div className="lado">
                             <Link to='/recuperacao'><div className="bot2">Esqueci minha senha</div></Link>
-                            <div className="bot1"> <Buttons clicado={login} valor="Entra" width="13em"/> </div>
+                            <div className="bot1"> <Buttons clicado={login} valor="Entrar" width="13em"/> </div>
                         </div>
                     </div>
                     <div className="nao-possui">
