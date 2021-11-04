@@ -25,7 +25,7 @@ export default function Pag(props){
                         <Switch> 
                             <Route path="/denuncia-details" exact={true} render={() => <Mensagem msg={denuncia.msg} nome={denuncia.id_usuario_infoc_ntc_usuario.nome}/>}/>
                             <Route path="/denuncia-details/caracters" exact={true} render={() => <Caracters caracter={denuncia.vestimento} depoimento={denuncia.id_fisico_infoc_ntc_caracteristica_fisica}/>}/>
-                            <Route path="/denuncia-details/map" exact={true} component={Map} />
+                            <Route path="/denuncia-details/map" exact={true} render={() => <Map info={denuncia && denuncia.id_local_infoc_ntc_local}/>} />
                         </Switch>
                    </div>
                    </BrowserRouter>

@@ -16,7 +16,7 @@ export default function App(props) {
             <div className="container-caracter">
                 <Carousel showIndicators={false} > 
                     <div className="box-carac">
-                        <BoxDetails image='/assets/images/denuncia-detalhe/parteCima/camiseta.svg' caracter={props.caracter === undefined ? "" : props.caracter.partSuperior} />
+                        <BoxDetails image='/assets/images/denuncia-detalhe/Perfil.png' caracter={props.caracter === undefined ? "" : props.caracter.partSuperior} />
                         <BoxDetails caracter={props.caracter === undefined ? "" : props.caracter.partInferior}/>
                         <BoxDetails caracter={props.caracter === undefined ? "" : props.caracter.calcado}/>
                     </div>
