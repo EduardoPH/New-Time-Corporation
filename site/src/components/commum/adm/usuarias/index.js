@@ -29,7 +29,7 @@ export default function Index(props){
           }, 100)
     };
 
-    
+    console.log(eventos)
     useEffect(
         () => {listarUsu() }, [] 
     )

@@ -8,18 +8,15 @@ import { toast, ToastContainer } from 'react-toastify';
 
 export default function Caracteristicas (props){
 
+    let denuncia = Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia'))
+
     const navigation = useHistory();
-    const [pele, setPele] = useState(Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.pele);
-    const [cabelo, setcabelo] =  useState(Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.cabelo);
-    const [corCabelo, setcorCabelo] =  useState(Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.corCabelo);
-    const [complemento, setComplemento] =  useState(Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.complemento);;
+    const [pele, setPele] = useState(denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.pele );
+    const [cabelo, setcabelo] =  useState(denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.cabelo);
+    const [corCabelo, setcorCabelo] =  useState(denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.corCabelo);
+    const [complemento, setComplemento] =  useState( denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.complemento);;
     
-    let caracteristicas = {
-        pele: pele,
-        cabelo: cabelo,
-        corCabelo: corCabelo,
-        complemento: complemento
-    }
+   
     
     function proximaTela() {
         if(pele === '')
@@ -31,7 +28,18 @@ export default function Caracteristicas (props){
         if(corCabelo === '')
             return toast.error('o campo COR DE CABELO deve ser preenchido')
         
-        Cookies.set('dadosDenuncia', JSON.stringify({caracteristicas: caracteristicas}))    
+            let caracteristicas = {
+            pele: pele,
+            cabelo: cabelo,
+            corCabelo: corCabelo,
+            complemento: complemento
+        }
+        let r = {
+            caracteristicas: caracteristicas,
+            vestimenta: denuncia.vestimenta,
+            local: denuncia.local
+        }
+        Cookies.set('dadosDenuncia', JSON.stringify(r))    
         navigation.push('/formulario/vestimentas')
     }
 

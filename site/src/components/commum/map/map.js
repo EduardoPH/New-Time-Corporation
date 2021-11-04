@@ -41,6 +41,7 @@ export class  Mapa extends Component{
       this.props.loca({lat: this.state.late, lng: this.state.lngo, bairro: this.state.bairro, cidade: this.state.cidade })
     }
 
+    console.log(r)
     return(
       <div >
         <div style={{display: 'flex', flexDirection: 'row'}}>
@@ -51,6 +52,7 @@ export class  Mapa extends Component{
         <Map 
           google={this.props.google}
           zoom={16}
+          initialCenter={{lat: r.lat, lng: r.lgn}}
           center={p === -0 ? {lat: r.lat, lng: r.lgn} : {lat: this.state.late, lng: this.state.lngo}}
           styles={MapStyle}
           disableDefaultUI={true}
