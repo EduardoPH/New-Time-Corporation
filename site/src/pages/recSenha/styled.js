@@ -10,6 +10,10 @@ const Container=styled.div`
     font-family: 'Roboto';
     height: 100vh;
     width: 100%;
+
+    .inp{
+        cursor: auto
+    }
     .tituloVoltar{
         display: flex;
         justify-content: space-around;

@@ -18,7 +18,7 @@ export default function Index(props) {
   
   const [usuario, setUsuario] = useState('');
   const [denuncias, setDenuncias] = useState([]);
-  const [id, setId] = useState(props.location.state.idUsu)
+  const [id] = useState(props.location.state.idUsu)
 
   
   async function ListarD(){

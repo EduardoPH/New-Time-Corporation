@@ -7,7 +7,7 @@ const Container = styled.div `
 display:flex;
 flex-direction: column;
 
-
+height: 84vh;
 
 
 .caixa{

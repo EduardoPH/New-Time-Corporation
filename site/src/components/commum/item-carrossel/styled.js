@@ -59,7 +59,7 @@ const Container2=styled.div`
 display:flex;
     flex-direction: row;
     align-self:center;
-    height: 57vh;
+    height: 51vh;
     align-items: center;
     justify-content: space-around;
     text-align: center;

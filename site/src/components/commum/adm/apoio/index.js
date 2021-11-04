@@ -99,7 +99,7 @@ export default function Index(){
             {eventos.map(item => <ItemFrase frase={item} Excluir={excluir} Alterar={alterar}/>)}
         </div>
         <div className="input-frase">
-            <input type="text" placeholder="Digite uma nova frase..." value={frase} onChange={e => setFrase(e.target.value)}/>
+            <input className="input-t" type="text" placeholder="Digite uma nova frase..." value={frase} onChange={e => setFrase(e.target.value)}/>
             <button className={idAlterado === 0 ? "btm": "btmAlt"} onClick={() => FrasesPost()}>{idAlterado === 0 ? "Cadastrar": "Alterar"}</button>
         </div>
     </BoxStyled>

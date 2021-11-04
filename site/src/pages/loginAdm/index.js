@@ -52,10 +52,10 @@ export default function Index() {
                     <div className="box-Login">
                         <h1>LOGIN ADMINISTRATIVO</h1>
                         <p1>NOME:</p1>
-                        <input onChange={e => setNome(e.target.value)} type="text" />
+                        <input className="inp" onChange={e => setNome(e.target.value)} type="text" />
                         <p1>SENHA:</p1>
-                        <input onChange={e => setSenha(e.target.value)} type="password"/>
-                        <button onClick={Logar}>ENTRAR</button>
+                        <input className="inp" onChange={e => setSenha(e.target.value)} type="password"/>
+                        <button className="inp" onClick={Logar}>ENTRAR</button>
                     </div>
                 </div>
                 

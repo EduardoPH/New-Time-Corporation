@@ -25,16 +25,22 @@ background-size: cover;
 }
 
 .recomen {
-    .titulo{  color:white;
+    .titulo{  
+       color:white;
+        cursor: pointer;
        font-family: Roboto;
     } 
+   
    
 }
 
 .descricao{
     display: flex;
     flex-direction: column;
-   
+    cursor: pointer;
+}
+.recom-img{
+    cursor:pointer
 }
 
 .recomendacoes{

@@ -2,7 +2,6 @@ import Containerformulario from './styled.js';
 import React from "react";
 import { useState } from "react";
 import  Mapa  from '../../map/map';
-import Button from '../../../styled/buttonformulario';
 import { useHistory } from 'react-router-dom';
 import Cookies from 'js-cookie';
 

@@ -7,7 +7,9 @@ const Container = styled.div`
     justify-content:space-between;
     height: 100vh;
     font-family: 'Roboto';
-
+    .inp{
+        cursor: auto
+    }
     .inferior{
         height: 100%;
         width: 100%;

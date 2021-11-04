@@ -36,6 +36,11 @@ const Container= styled.div`
         font-family: 'Roboto';
         
         img{margin-left: 10px;}
+        &:hover {
+            margin-bottom: 1em;
+            color: purple;
+            transition: 0.5s;
+        }
         
     }
 

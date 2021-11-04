@@ -9,7 +9,6 @@ import Login from './pages/login'
 import PerfilUsuaria from './pages/perfil-usuaria'
 import Apoio from './pages/Apoio';
 import Cadastro from './pages/Cadastro';
-import TelaRoteamento from './pages/telaRoteamento';
 import RecSenha from './pages/recSenha/';
 import Formulario from './pages/Formulario';
 import Code from './pages/recSenha/recSenhaCode'
@@ -21,8 +20,7 @@ export default function Routes(){
     return(
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact={true} component={TelaRoteamento}/>
-                <Route path="/home"  component={Home} />
+                <Route path="/"  exact={true} component={Home} />
                 <Route path="/estatisticas"  component={Estatisticas} />
                 <Route path="/administrador"  component={Administrador} />
                 <Route path="/denuncia-recentes"  component={DenunciasRecents} />

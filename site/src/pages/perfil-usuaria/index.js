@@ -118,7 +118,7 @@ export default function PerfilUsuaria(){
         }, [] 
     ); 
     
-    const sair = () => {Cookies.remove('usuariaLogada'); navigation.push("/home")}
+    const sair = () => {Cookies.remove('usuariaLogada'); Cookies.remove('dadosDenuncia'); navigation.push("/login")}
     console.log(denun)
     return(
         <Fundo height="100vh">

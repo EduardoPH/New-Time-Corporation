@@ -59,6 +59,7 @@ const BoxStyled=styled.div`
         font-family: 'Roboto';
         font-weight: 700;
         font-family: 2em;
+        padding: 2em;
     }
     .btma{
         margin-top: 2em;

@@ -53,8 +53,8 @@ const BoxStyled=styled.div`
                     height: 3em;
                     border: solid 2px;
                     border-radius: 50px;
-                    cursor: pointer;
                     outline: none;
+                    cursor: auto;
                 }
             }
             button{
@@ -88,6 +88,7 @@ const BoxStyled=styled.div`
             overflow-y: auto;
         }
     }
+
 `;
 
 export default BoxStyled;

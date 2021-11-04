@@ -7,6 +7,8 @@ import ContainerApoio from './styled.js';
 import Caixa from '../../components/commum/item-carrossel';
 import Menu from '../../components/commum/menu';
 
+import { Loading } from "react-loading-ui";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Api from '../../services/apoio.js';
@@ -17,8 +19,18 @@ export default function Apoio (){
     const [eventos, setEventos] = useState([]);
 
     async function SobreSite(){
+        Loading({
+            text: "Por Favor Aguarde",
+            title: "CARREGANDO",
+            theme: "dark",
+            topBar: true,
+            topBarColor: 'red'
+          });
+      
         const apiResponse = await api.listarFrase() 
         setEventos(apiResponse)
+        
+        Loading()
     };
 
     useEffect(

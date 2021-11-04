@@ -6,11 +6,14 @@ const Container = styled.div `
     flex-direction: column;
     color: white;
     font-family: arial;
+    HEIGHT: 100vh;
  
     .conteudo {
         display:flex;
         flex-direction: row;
         justify-content: space-evenly;
+        HEIGHT: 100%;
+        ALIGN-ITEMS: center;
     }
  
     .titulo {

@@ -46,7 +46,7 @@ export default function Index(){
                             Apenas digite seu email para que possamos enviar um link para que você cadastre sua nova senha.
                             </div>
                         </div>
-                        <input onChange={e => setEmail(e.target.value)} placeholder="Digite seu E-mail..."/>
+                        <input className="inp" onChange={e => setEmail(e.target.value)} placeholder="Digite seu E-mail..."/>
                         <button onClick={rec}>ENVIAR</button>
                     </div>
                 </div>

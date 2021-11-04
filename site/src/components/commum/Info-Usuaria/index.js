@@ -2,12 +2,10 @@ import { useState } from "react";
 import { Container } from "./styled";
 export default function InfoUsuaria(props) {
 
-    const[ habilitar, setHabiltar] = useState(false);
+    const[ habilitar ] = useState(false);
 
 
-    function alterarDados(){
-        setHabiltar(!habilitar)
-    }
+    
     return (
         <Container>
             <p1 style={{display: props.displayNome}}>Nome :</p1>
