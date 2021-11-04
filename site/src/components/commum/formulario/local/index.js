@@ -21,7 +21,7 @@ export default function Index (props){
             cidade: localizacao.cidade,
             bairro: localizacao.bairro
         }
-        if(local === ''){
+        if(local === '' || local.lat !== localizacao.lat){
             setLocal(r) 
         } else{
             return   
@@ -35,7 +35,7 @@ export default function Index (props){
             local: local
         }
         Cookies.set('dadosDenuncia', JSON.stringify(dados))  
-        //navigation.push('/formulario/depoimento')
+        navigation.push('/formulario/depoimento')
     }
 
     return(

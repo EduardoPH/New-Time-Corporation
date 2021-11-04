@@ -40,8 +40,7 @@ export class  Mapa extends Component{
     if(p !== -0){
       this.props.loca({lat: this.state.late, lng: this.state.lngo, bairro: this.state.bairro, cidade: this.state.cidade })
     }
-
-    console.log(r)
+    
     return(
       <div >
         <div style={{display: 'flex', flexDirection: 'row'}}>

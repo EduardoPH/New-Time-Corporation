@@ -2,7 +2,6 @@ import Containerformulario from './styled.js';
 import { useState } from "react";
 import React from "react";
 import { useHistory } from 'react-router-dom';
-import Button from '../../../styled/buttonformulario';
 import Cookies from 'js-cookie';
 import { toast, ToastContainer } from 'react-toastify';
 

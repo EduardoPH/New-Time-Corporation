@@ -6,15 +6,15 @@ const api = new axios.create({
 
 export default class Api{
 
-    async cadastrarDenuncia( tipoVestimenta, inferior, superior, calcado, complementoV,
-                             pele, cabelo, corCabelo, complementoC,
-                             latitude, longitude, bairro, cidade,  idusu, depoimento ) {
-                                 
-        const r = await api.post('/form', 
-        { tipoVestimenta, inferior, superior, calcado, complementoV,
-          pele, cabelo, corCabelo, complementoC,
-          latitude, longitude, bairro, cidade,
-          idusu, depoimento })
+    async cadastrarDenuncia( infos ) {
+        let dados = JSON.parse(infos)                  
+        const r = await api.post('/', dados)
+        return r.data
+    }
+
+    async updateDenuncia( infos ) {
+        let dados = JSON.parse(infos)                  
+        const r = await api.put('/', dados)
         return r.data
     }
 }
