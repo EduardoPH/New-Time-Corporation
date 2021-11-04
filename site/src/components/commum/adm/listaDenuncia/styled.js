@@ -46,7 +46,11 @@ const BoxStyled=styled.div`
             font-size: 18px;
             font-family: arial;
             font-weight: 600;
-
+            
+            margin-bottom: 1em;
+        }
+        .previa{
+            margin-bottom: 1em;
         }
         .coluna-acao button{
             color: white;

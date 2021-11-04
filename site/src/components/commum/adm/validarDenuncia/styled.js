@@ -81,7 +81,7 @@ const BoxStyled=styled.div`
         width: 100%;
         height: 3em;
         button{
-            border: solid 0px;
+            border: solid 2px;
             margin: 5px 0px;
             color: white;
             border-radius: 10px;
@@ -93,12 +93,30 @@ const BoxStyled=styled.div`
         }
         .excluir{
             background-color:red;
+            border-color: red;
+            &:hover{
+                background-color: white;
+                color: red;
+                transition: 0.3s;
+            }
         }
         .adicionar{
             background-color:green;
+            border-color: green;
+            &:hover{
+                background-color: white;
+                color: green;
+                transition: 0.3s;
+            }
         }
         .alt{
             background-color: blue;
+            border-color: blue;
+            &:hover{
+                background-color: white;
+                color: blue;
+                transition: 0.3s;
+            }
         }
     }
 

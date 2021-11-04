@@ -44,7 +44,7 @@ export class  Mapa extends Component{
     return(
       <div >
         <div style={{display: 'flex', flexDirection: 'row'}}>
-          <input style={{padding: '5px', outline: 'none', marginBottom: '10px'}} onChange={(e) => this.setState({...this.state, end: e.target.value} )} placeholder="digite o endereço..."/>
+          <input style={{padding: '5px', outline: 'none', marginBottom: '10px', cursor: 'auto'}} onChange={(e) => this.setState({...this.state, end: e.target.value} )} placeholder="digite o endereço..."/>
           <button style={{backgroundColor: 'white', outline: 'none',cursor: 'pointer', borderRadius: '30px',border:'0px', marginTop: '1em', marginBottom: '10px'}} onClick={() => this.loc(this.state.end)}> Localização </button> 
         </div>
         
