@@ -55,14 +55,14 @@ export default function Home() {
 
            <div className="rodape"> 
               <div className="contato">
-                    <h2> contato </h2>
+                    <h2> Contato </h2>
                     <div className="email"> Email: contato@NTC.com.br</div>
                     <div className="telefone">Telefone: 9999-9999 </div>
                     <div className="endereco"> Endereço: Av. Coronel Octaviano de Freitas Costa, 463 - Socorro, São Paulo - SP, 04773-000 </div>
                </div>
 
                <div className="recomendacoes">
-                    <h2> Recomendacoes </h2>
+                    <h2> Recomendações </h2>
                     
                  <div className="recomen"> 
                         <a href="https://ladydriver.com.br/#/inicio">

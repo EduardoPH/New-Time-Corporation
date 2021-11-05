@@ -40,7 +40,7 @@ background-size: cover;
     cursor: pointer;
 }
 .recom-img{
-    cursor:pointer
+    cursor:pointer;
 }
 
 .recomendacoes{
@@ -64,13 +64,14 @@ background-size: cover;
 .recomen{
     display: flex;
     flex-direction: row;
+    padding-bottom: 1.5em;
 }
 
 .women{
     margin-left: 2.5em;
     margin-right: 3em;
 
-    margin-top: 5.6em;
+
 }
 
 .descricao{
@@ -112,6 +113,9 @@ background-size: cover;
     margin-top: -1em;
 }
   
+.kahlo img {
+    width: 3.2em;
+}
 
 `
-export {Conteiners }
+export { Conteiners }

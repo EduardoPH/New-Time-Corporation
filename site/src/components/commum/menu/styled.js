@@ -37,9 +37,8 @@ const Container= styled.div`
         
         img{margin-left: 10px;}
         &:hover {
-            margin-bottom: 1em;
             color: purple;
-            transition: 0.5s;
+            transition: 0.3s;
         }
         
     }
