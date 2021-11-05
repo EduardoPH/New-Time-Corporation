@@ -87,8 +87,8 @@ export default function Index (){
                                         <label for=""> Jeans </label>
                                     </div>
                                     <div class="input">
-                                        <input onClick={() => setparteBaixo("Moletom")} type="radio" name="base2" checked={parteBaixo === "Moletom" ?  true : false}/>
-                                        <label for=""> Moletom </label>
+                                        <input onClick={() => setparteBaixo("Calça")} type="radio" name="base2" checked={parteBaixo === "Calça" ?  true : false}/>
+                                        <label for=""> Calça </label>
                                     </div>
                                     <div class="input">
                                         <input onClick={() => setparteBaixo("Bermuda")} type="radio" name="base2"checked={parteBaixo === "Bermuda" ?  true : false}/>

@@ -16,15 +16,15 @@ export default function App(props) {
             <div className="container-caracter">
                 <Carousel showIndicators={false} > 
                     <div className="box-carac">
-                        <BoxDetails image='/assets/images/denuncia-detalhe/Perfil.png' caracter={props.caracter === undefined ? "" : props.caracter.partSuperior} />
-                        <BoxDetails caracter={props.caracter === undefined ? "" : props.caracter.partInferior}/>
-                        <BoxDetails caracter={props.caracter === undefined ? "" : props.caracter.calcado}/>
+                        <BoxDetails vestimento={props.caracter.partSuperior} caracter={props.caracter === undefined ? "" : props.caracter.partSuperior} />
+                        <BoxDetails vestimento={props.caracter.partInferior} caracter={props.caracter === undefined ? "" : props.caracter.partInferior}/>
+                        <BoxDetails vestimento={props.caracter.calcado} caracter={props.caracter === undefined ? "" : props.caracter.calcado}/>
                     </div>
 
                     <div className="box-carac">
-                        <BoxDetails caracter={ props.caracter === undefined ? "" :  props.depoimento.pele} />
-                        <BoxDetails caracter={ props.caracter === undefined ? "" :  props.depoimento.cabelo} />
-                        <BoxDetails caracter={ props.caracter === undefined ? "" : props.depoimento.corCabelo} />
+                        <BoxDetails vestimento={props.caracter.calcado} caracter={ props.caracter === undefined ? "" :  props.depoimento.pele} />
+                        <BoxDetails vestimento={props.depoimento.cabelo} caracter={ props.caracter === undefined ? "" :  props.depoimento.cabelo} />
+                        <BoxDetails vestimento={props.depoimento.corCabelo} caracter={ props.caracter === undefined ? "" : props.depoimento.corCabelo} />
                     </div>
 
                     <div className="box-detalhes">

@@ -48,6 +48,7 @@ function DenunFilter() {
 app.get('/', async (req, resp) => {
   try{
     let value = await db.infoc_ntc_denuncia.findAll({
+      order:[['id_denuncia', 'desc']],
       include: DenunFilter(),
       attributes: [
         ['ds_depoimento', 'msg']
