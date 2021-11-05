@@ -87,12 +87,13 @@ export default function Index(props) {
   function alterarDenun(denun) {
     navegacao.push({
       pathname: "/administrador",
-      state: {... denun, id_usuario_infoc_ntc_usuario: usuario }
+      state: {...denun, id_usuario_infoc_ntc_usuario: usuario }
     })
   } 
 
   useEffect( () => {
     ListarD(); buscarUsu()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <div style={{ width: "100%" }}>

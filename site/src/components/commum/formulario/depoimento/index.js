@@ -28,7 +28,7 @@ export default function Depoimento (){
             let usu = JSON.parse(Cookies.get('usuariaLogada')).idUsu
             let id = denuncia.idDen
             if(denuncia.idDen !== undefined){
-                let d = {dados: {... denuncia, depoimento, usu, id} }
+                let d = {dados: {...denuncia, depoimento, usu, id} }
                 let r = await api.updateDenuncia(JSON.stringify(d));
                 if(r.erro){
                     toast.error(r.erro)
@@ -39,7 +39,7 @@ export default function Depoimento (){
                     Cookies.remove('dadosDenuncia')
                 }
             } else {
-                let d = {dados: {... denuncia, depoimento, usu} }
+                let d = {dados: {...denuncia, depoimento, usu} }
                 let r = await api.cadastrarDenuncia(JSON.stringify(d));
                 if(r.erro){
                     toast.error(r.erro)

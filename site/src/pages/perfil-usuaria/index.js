@@ -115,6 +115,7 @@ export default function PerfilUsuaria(){
     useEffect(
         () => {
             BuscaDenu();
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [] 
     ); 
     

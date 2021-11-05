@@ -103,6 +103,7 @@ export default function Index(props) {
 
   useEffect(() => {
       ListarValidacoes()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
