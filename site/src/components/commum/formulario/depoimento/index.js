@@ -23,7 +23,7 @@ export default function Depoimento (){
 
     const cadastrar = async () => {
         if (depoimento.length < 1) {
-            toast.error("❌ O campo (Depoimento) deve ser preenchido corretamente.");
+            toast.error("❌ O campo DEPOIMENTO deve ser preenchido corretamente.");
         } else {
             let usu = JSON.parse(Cookies.get('usuariaLogada')).idUsu
             let id = denuncia.idDen

@@ -64,7 +64,7 @@ export default function Index(props) {
 
   const excluirDenu = async (id) => {
     confirmAlert({
-      title: "Remover Usuaria",
+      title: "Remover Usuária",
       message: `Tem certeza que deseja remover denúncia`,
       buttons: [
         {
@@ -74,7 +74,7 @@ export default function Index(props) {
             if (r.erro) {
               toast.error(r.erro);
             } else {
-              toast.success("Excluido com sucesso");
+              toast.success("Excluído com sucesso");
             }
             ListarD(); 
           },
