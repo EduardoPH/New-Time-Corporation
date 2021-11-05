@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = new axios.create({
-    baseURL: 'http://localhost:3030/apoio'
+    baseURL: 'https://api-ntc.herokuapp.com/apoio'
 })
 
 

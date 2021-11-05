@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = new axios.create({
-    baseURL: 'http://localhost:3030/administrador'
+    baseURL: 'https://api-ntc.herokuapp.com/administrador'
 })
 
 export default class Api{
