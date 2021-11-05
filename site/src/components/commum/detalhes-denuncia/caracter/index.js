@@ -7,8 +7,6 @@ import {BoxDetails} from '../../detalhes-denuncia'
 
 
 export default function App(props) {
-    console.log(props.depoimento)
-
     return (
         <C.Container>
             <div className="titulo-caracter"> Características</div>
@@ -16,15 +14,15 @@ export default function App(props) {
             <div className="container-caracter">
                 <Carousel showIndicators={false} > 
                     <div className="box-carac">
-                        <BoxDetails vestimento={props.caracter.partSuperior} caracter={props.caracter === undefined ? "" : props.caracter.partSuperior} />
-                        <BoxDetails vestimento={props.caracter.partInferior} caracter={props.caracter === undefined ? "" : props.caracter.partInferior}/>
-                        <BoxDetails vestimento={props.caracter.calcado} caracter={props.caracter === undefined ? "" : props.caracter.calcado}/>
+                        <BoxDetails  caracter={props.caracter === undefined ? "" : props.caracter.partSuperior} />
+                        <BoxDetails  caracter={props.caracter === undefined ? "" : props.caracter.partInferior}/>
+                        <BoxDetails  caracter={props.caracter === undefined ? "" : props.caracter.calcado}/>
                     </div>
 
                     <div className="box-carac">
-                        <BoxDetails vestimento={props.caracter.calcado} caracter={ props.caracter === undefined ? "" :  props.depoimento.pele} />
-                        <BoxDetails vestimento={props.depoimento.cabelo} caracter={ props.caracter === undefined ? "" :  props.depoimento.cabelo} />
-                        <BoxDetails vestimento={props.depoimento.corCabelo} caracter={ props.caracter === undefined ? "" : props.depoimento.corCabelo} />
+                        <BoxDetails caracter={ props.caracter === undefined ? "" :  props.caracter.pele} />
+                        <BoxDetails caracter={ props.caracter === undefined ? "" :  props.caracter.cabelo} />
+                        <BoxDetails caracter={ props.caracter === undefined ? "" : props.caracter.corCabelo} />
                     </div>
 
                     <div className="box-detalhes">

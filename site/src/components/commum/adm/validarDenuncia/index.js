@@ -100,6 +100,7 @@ export default function Index(props) {
     });
   };
 
+  console.log(info)
 
   useEffect(() => {
       ListarValidacoes()
@@ -148,7 +149,7 @@ export default function Index(props) {
             Excluir
           </button>
           <button className="adicionar" onClick={() => Validar()}>
-            adicionar
+            Adicionar
           </button>
         </div>
       </div>

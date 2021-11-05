@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Circle } from 'google-maps-react';
 import {MapStyle, containerStyle} from './mapStyle.js'
 import Geocode from "react-geocode";
 
@@ -50,13 +50,25 @@ export class  Mapa extends Component{
         
         <Map 
           google={this.props.google}
-          zoom={16}
+          zoom={17}
           initialCenter={{lat: r.lat, lng: r.lgn}}
           center={p === -0 ? {lat: r.lat, lng: r.lgn} : {lat: this.state.late, lng: this.state.lngo}}
           styles={MapStyle}
           disableDefaultUI={true}
           containerStyle = {containerStyle}
-        />
+        >
+
+          <Circle
+            radius={100}
+            center= {p === -0 ? {lat: Number(r.lat), lng: Number(r.lgn)} : {lat: this.state.late, lng: this.state.lngo}} 
+            strokeColor='transparent'
+            strokeOpacity={0}
+            strokeWeight={5}
+            fillColor='#FF0000'
+            fillOpacity={0.2}
+          />
+
+        </Map>
       </div>
     )
   }
