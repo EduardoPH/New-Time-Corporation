@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
 import { Container } from "./styled";
+
+import Cookies from 'js-cookie';
+
+
+
+function VerLogado(){
+
+    let c = Cookies.get('usuariaLogada') 
+    if(c === undefined  ){
+        return "Login"
+        
+    }
+
+    let usuaria = JSON.parse(c).nome
+    let nomecompleto = usuaria.substring(usuaria.indexOf(" "),usuaria.indexOf(" ")-usuaria.length)
+    return nomecompleto
+}
+
+
 export default function Menu(){
+
     return(
         <Container>
              <div className="logo" style={{textDecoration: "none"}}>
@@ -35,7 +55,7 @@ export default function Menu(){
             </Link>
             <Link to="/login" style={{textDecoration: "none"}}>
                 <div className="item-menu">
-                    Login
+                   {VerLogado()}
                     <img src="/assets/images/menu/login.svg" alt="login-svg"/>
                 </div>
             </Link>

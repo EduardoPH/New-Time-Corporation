@@ -31,16 +31,21 @@ export default function App(props){
   const[ nSenha, setNsenha ] = useState('')
   const[ nrSenha, setNrsenha ] = useState('')
 
+  
   function senhasIguais() {
+    
       if(nSenha !== nrSenha){
         toast.error('As senhas não são iguais')
+      
       } else {
         alterar()
       }
   }
 
   async function alterar() {
+    alert("passou aqui")
       let r = await api.novaSenha(code, email, nSenha)
+      console.log()
       if(r.erro){
         toast.error(r.erro)
       } else{
@@ -66,7 +71,8 @@ export default function App(props){
               <Inputs valor={e => setNsenha(e)}  place="Digite sua senha"/>
               <Inputs valor={e => setNrsenha(e)}  place="Digite novamente sua senha"/>
             </div>
-              <Buttons clicado={senhasIguais} width="25em" valor="Enviar"/>
+              <Buttons clicado={senhasIguais} width="25em" valor="Redefinir"/> 
+              
           </div>
         </div>
       </div>

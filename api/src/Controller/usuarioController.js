@@ -162,6 +162,7 @@ app.post("/validarCodigo", async (req, resp) => {
 app.put("/novaSenha", async (req, resp) => {
 
   let { email, senha, codigo } = req.body
+ 
 
   const usuaria = await db.infoc_ntc_usuario.findOne({
     where: { ds_email: email },
@@ -184,6 +185,7 @@ app.put("/novaSenha", async (req, resp) => {
       where: { id_usuario: usuaria.id_usuario },
     }
   );
+  console.log(email, senha, codigo)
 
   resp.send("Senha alterada com sucesso.");
 });
