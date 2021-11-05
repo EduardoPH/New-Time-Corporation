@@ -80,7 +80,7 @@ function BoxDetails(props) {
     return(
         <BoxCaracter> 
                 <div className="box-caracter-image"> 
-                     <img src={Image(props.vestimento)} alt=""/>
+                     <img src={Image(props.caracter)} alt=""/>
                 <div className="desc-caracter"> {props.caracter} </div>
             </div>
         </BoxCaracter>
