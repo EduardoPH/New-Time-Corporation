@@ -13,8 +13,7 @@ export default function Caracteristicas (props){
     const [pele, setPele] = useState(denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.pele );
     const [cabelo, setcabelo] =  useState(denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.cabelo);
     const [corCabelo, setcorCabelo] =  useState(denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.corCabelo);
-    const [complemento, setComplemento] =  useState( denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.complemento);;
-    
+    const [complemento, setComplemento] =  useState( denuncia.caracteristicas === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).caracteristicas.complemento);
    
     
     function proximaTela() {
