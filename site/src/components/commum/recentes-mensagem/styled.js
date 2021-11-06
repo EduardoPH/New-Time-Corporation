@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
     display:flex;
     flex-direction: row;
-
+    font-family: Arial, Helvetica, sans-serif;
     .pt2-msg{
         width: 100vw;
     }
@@ -13,6 +13,7 @@ const Container = styled.div`
         color: white;
         display: flex;
         align-items: center;
+        font-weight: 700;
         margin: 0.9em 0em 0em 0.6em
     }
 
@@ -32,7 +33,6 @@ const Container = styled.div`
         border-radius: 8px;
         padding: 1em;
         max-width: 30em;
-        max-height: 7em;
     }
 
     .mensagem {
@@ -51,7 +51,10 @@ const Container = styled.div`
         padding-top: 0.5em;
         text-align: end;
         color: black;
+        cursor: pointer;
+        font-style: italic;
         &:hover {
+            font-weight: 600;
             text-decoration: underline;
         }
     }

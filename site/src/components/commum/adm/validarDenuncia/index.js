@@ -99,9 +99,6 @@ export default function Index(props) {
       ],
     });
   };
-
-  console.log(info)
-
   useEffect(() => {
       ListarValidacoes()
       // eslint-disable-next-line react-hooks/exhaustive-deps

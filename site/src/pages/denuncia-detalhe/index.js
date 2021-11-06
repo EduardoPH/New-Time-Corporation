@@ -9,19 +9,18 @@ import {  Buttons } from "../../components/styled/buttonlogin-cadastro/index.js"
 import { useHistory} from "react-router-dom";
 
 
-
+function nave(navigation, denuncia) {
+    if(denuncia === undefined)
+        navigation.push('/denuncia-recentes')
+}
 
 
 export default function Pag(props){
-    let denuncia = props.location.state;
-    console.log()
+        let denuncia = props.location.state;
     
-
-
-
-    // --------------
-
         const navigation = useHistory()
+
+        nave(navigation, denuncia)
 
         function Back(){
             if(denuncia.perfil === true)

@@ -28,8 +28,6 @@ export default function Details() {
         ListDen();
       }, [])
 
-      console.log(denuncia)
-
     return(
         <Container>
             <Menu/>

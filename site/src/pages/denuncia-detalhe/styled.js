@@ -8,12 +8,13 @@ const Container = styled.div`
     background-repeat: no-repeat;
     height: 100vh;
     top: 0px;
-
+    font-family: 'Roboto';
     .titulo {
         text-align: center;
         margin: 0.8em;
         font-size: 3em;
-        color: #FFF
+        color: #FFF;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
 

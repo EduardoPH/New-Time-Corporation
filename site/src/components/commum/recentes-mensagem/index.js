@@ -2,10 +2,7 @@ import { Container } from "./styled";
 import { Link} from "react-router-dom";
 
 export default function Mensagem(props) {
-
-
     const {depoimento} = props.denuncia;
-    console.log(depoimento)
     return(
         <Container style={{display: props.visible}}> 
             <div className="pt1-msg">
