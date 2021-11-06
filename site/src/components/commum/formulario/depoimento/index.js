@@ -46,7 +46,7 @@ export default function Depoimento (){
                 } else {
                     toast.success("💕 Denúncia cadastrada com sucesso")
                     toast.warning("Sua denúncia irá ser analisada por nossa equipe, Voltaremos para as denúncias")
-                    setTimeout(() => navigation.push('/formulario'), 3500);
+                    setTimeout(() => navigation.push('/formulario'), 5000);
                     Cookies.remove('dadosDenuncia')
                 }
             }
@@ -57,7 +57,7 @@ export default function Depoimento (){
         <Containerformulario>
         <ToastContainer/>
             <div class="conteudo2">
-                <textarea value={depoimento} onChange={ e => setDepoimentomento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Aqui você pode descrever o ocorrido."></textarea>
+                <textarea value={depoimento} onChange={ e => setDepoimentomento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Aqui você pode descrever o ocorrido."/>
                 <button onClick={cadastrar} valor="Enviar">Enviar</button>
             </div>   
         </Containerformulario>

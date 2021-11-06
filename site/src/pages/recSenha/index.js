@@ -20,10 +20,10 @@ export default function Index(){
         if(r.erro){
             toast.error(r.erro)
         } else {
-            navigation.push({
-                pathname:'/code',
-                state: email
-            })
+            navigation.push(
+                '/code',
+                {email}
+            )
         }
     }
     return(

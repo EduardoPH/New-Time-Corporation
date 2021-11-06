@@ -8,14 +8,17 @@ import Cookies from 'js-cookie';
 function VerLogado(){
 
     let c = Cookies.get('usuariaLogada') 
-    if(c === undefined  ){
+
+    if(c === undefined  )
         return "Login"
-        
-    }
 
     let usuaria = JSON.parse(c).nome
     let nomecompleto = usuaria.substring(usuaria.indexOf(" "),usuaria.indexOf(" ")-usuaria.length)
-    return nomecompleto
+
+    if(usuaria.includes(" "))
+       return nomecompleto;    
+    else 
+       return usuaria;
 }
 
 
@@ -28,7 +31,7 @@ export default function Menu(){
                     <img src="/assets/images/menu/Logo-ntc.svg" alt="logo"/>
                 </Link>
             </div>
-            <Link to="/formulario"><button className="butao">  DENUNCIAR! </button></Link>
+            <Link to="/formulario"><button className="butao" onClick={() => Cookies.remove('dadosDenuncia')}>  DENUNCIAR! </button></Link>
             <Link to="/" style={{textDecoration: "none"}}>
                 <div className="item-menu">
                     Home
