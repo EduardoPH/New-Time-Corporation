@@ -3,6 +3,7 @@
  const Container = styled.div`
  display:flex;
  flex-direction: column;
+ height: 92vh;
 
  .corpo-central{
      h1{color: white; font-size: 3em;};
@@ -18,8 +19,8 @@
         width: 90%;
         display: flex;
         flex-direction: column;
-        height: 76%;
-        padding: 4em;
+        height: 72%;
+        padding: 3em;
         background-color: rgba(127, 0, 191, 0.59);
         backdrop-filter: blur(7px);
         border-radius: 6px;
