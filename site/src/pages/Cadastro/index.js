@@ -86,7 +86,6 @@ export default function Cadastro() {
               place="Digite seu email..."
             />
             <Inputs
-              type={"password"}
               value={senha}
               valor={(valor) => setSenha(valor)}
               place="Digite sua senha..."
