@@ -23,7 +23,7 @@ export default function Index(props) {
   
   async function ListarD(){
     Loading({
-      text: "Por Favor Aguarde",
+      text: "Por Favor, Aguarde",
       title: "CARREGANDO",
       theme: "dark",
       topBar: true,
@@ -43,7 +43,7 @@ export default function Index(props) {
   const excluir = async (id) => {
     confirmAlert({
       title: "Remover Usuaria",
-      message: `Tem certeza que deseja remover  ${usuario.nome}`,
+      message: `Tem certeza que deseja remover  ${usuario.nome}?`,
       buttons: [
         {
           label: "Sim",
@@ -52,7 +52,7 @@ export default function Index(props) {
             if (r.erro) {
               toast.error(r.erro);
             } else {
-              toast.success("Excluido com sucesso");
+              toast.success("Excluído com sucesso");
               navegacao.push("/administrador/usuaria");
             }
           },
@@ -65,7 +65,7 @@ export default function Index(props) {
   const excluirDenu = async (id) => {
     confirmAlert({
       title: "Remover Usuária",
-      message: `Tem certeza que deseja remover denúncia`,
+      message: `Tem certeza que deseja remover denúncia?`,
       buttons: [
         {
           label: "Sim",
