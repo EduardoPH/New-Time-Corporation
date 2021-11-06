@@ -1,7 +1,7 @@
 import db from '../db.js'
 import Router from 'express'
 import Sequelize from 'sequelize';
-const { Op, col, fn } = Sequelize;
+const { col, fn } = Sequelize;
 
 const app = Router();
 
