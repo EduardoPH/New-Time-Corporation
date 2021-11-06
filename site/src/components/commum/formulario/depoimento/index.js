@@ -1,5 +1,5 @@
 import Containerformulario from './styled.js';
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 import { useHistory } from 'react-router-dom';
@@ -15,21 +15,33 @@ const api = new Api();
 
 export default function Depoimento (){
     
-    let denuncia =  Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia'))
+    let denuncia = Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia'))
 
     const [depoimento, setDepoimentomento] = useState(denuncia.complemento === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).complemento);
     
     const navigation = useHistory()
+      
+    function setCookies() {
+        Cookies.set('dadosDenuncia',JSON.stringify( {... denuncia, complemento: depoimento}))
+        let novosCookies = Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia'))
+        setDepoimentomento(novosCookies.complemento)
+    }
 
     const cadastrar = async () => {
+
         if (depoimento.length < 1) {
             toast.error("❌ O campo DEPOIMENTO deve ser preenchido corretamente.");
+
         } else {
+            
             let usu = JSON.parse(Cookies.get('usuariaLogada')).idUsu
             let id = denuncia.idDen
-            if(denuncia.idDen !== undefined){
+
+            if(denuncia.idDen !== ''){
                 let d = {dados: {...denuncia, depoimento, usu, id} }
+
                 let r = await api.updateDenuncia(JSON.stringify(d));
+                
                 if(r.erro){
                     toast.error(r.erro)
                 } else {
@@ -38,9 +50,13 @@ export default function Depoimento (){
                     setTimeout(() => navigation.push('/formulario'), 3500);
                     Cookies.remove('dadosDenuncia')
                 }
+
             } else {
+
                 let d = {dados: {...denuncia, depoimento, usu} }
+                
                 let r = await api.cadastrarDenuncia(JSON.stringify(d));
+                
                 if(r.erro){
                     toast.error(r.erro)
                 } else {
@@ -52,7 +68,7 @@ export default function Depoimento (){
             }
         }
     }
-
+    useEffect(setCookies, [depoimento])
     return(
         <Containerformulario>
         <ToastContainer/>

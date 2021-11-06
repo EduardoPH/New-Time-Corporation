@@ -62,21 +62,23 @@ export default function PerfilUsuaria(){
         let local = dados.id_local_infoc_ntc_local
         let caracteristicas =  dados.id_fisico_infoc_ntc_caracteristica_fisica
         let vestimenta =  dados.vestimento
-
         let r = {
             caracteristicas:{
+                id: caracteristicas.id,
                 pele: caracteristicas.pele ,
                 cabelo: caracteristicas.cabelo ,
                 corCabelo: caracteristicas.corCabelo ,
                 complemento: caracteristicas.complemento 
             },
             vestimenta:{
+                id: vestimenta.id,
                 parteCima: vestimenta.partSuperior,
                 parteBaixo: vestimenta.partInferior,
                 calcado:  vestimenta.calcado,
                 complemento: vestimenta.complemento
             },
             local:{
+                id: local.id,
                 lat: local.lat,
                 lgn: local.lgn,
                 cidade: local.cidade,

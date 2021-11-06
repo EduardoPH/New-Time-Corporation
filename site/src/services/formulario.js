@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = new axios.create({
-    baseURL: 'https://api-ntc.herokuapp.com/formulario'
+    baseURL: 'http://localhost:3030/formulario'
 })
 
 export default class Api{

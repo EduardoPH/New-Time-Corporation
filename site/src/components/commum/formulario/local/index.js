@@ -12,9 +12,10 @@ export default function Index (props){
     let denuncia =  Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia'))
 
     const [local, setLocal] = useState(denuncia.local === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).local) 
-
+    
     function dadosLocal(localizacao){
         let r = {
+            id: denuncia.local === undefined ? "" :  denuncia.local.id,
             lat : localizacao.lat,
             lgn: localizacao.lng,
             cidade: localizacao.cidade,
@@ -26,14 +27,29 @@ export default function Index (props){
             return   
         }
     }
-    console.log(local)
+
     function proximaTela() {
-        let dados = {
-            caracteristicas: denuncia.caracteristicas,
-            vestimenta: denuncia.vestimenta,
-            local: local
+        
+        let r = {
+            caracteristicas:{
+                id: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.id ,
+                pele: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.pele ,
+                cabelo: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.cabelo ,
+                corCabelo: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.corCabelo ,
+                complemento: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.complemento 
+            },
+            vestimenta:{
+                id: denuncia.vestimenta === undefined ? "" :  denuncia.vestimenta.id,
+                parteCima: denuncia.vestimenta === undefined ? "" :  denuncia.vestimenta.parteCima,
+                parteBaixo: denuncia.vestimenta === undefined ? "" : denuncia.vestimenta.parteBaixo,
+                calcado:  denuncia.vestimenta === undefined ? "" : denuncia.vestimenta.calcado,
+                complemento: denuncia.vestimenta === undefined ? "" : denuncia.vestimenta.complemento
+            },
+            local: local,
+            complemento: denuncia.complemento === undefined ? "" : denuncia.complemento,
+            idDen: denuncia.idDen === undefined ? "" : denuncia.idDen
         }
-        Cookies.set('dadosDenuncia', JSON.stringify(dados))  
+        Cookies.set('dadosDenuncia', JSON.stringify(r))  
         navigation.push('/formulario/depoimento')
     }
 
