@@ -51,7 +51,7 @@ export default function PerfilUsuaria(){
         let r = await api.BuscarDenuncia(info.idUsu)
         if(r[0] === undefined){
             Loading()
-            setDenun([{erro: 'Voce não possui nenhuma denúncia cadastrada'}])
+            setDenun([{erro: 'Você não possui nenhuma denúncia cadastrada'}])
         } else {
             Loading()
             setDenun(r)

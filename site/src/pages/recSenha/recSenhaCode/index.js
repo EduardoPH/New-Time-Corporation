@@ -50,7 +50,7 @@ export default function App(props){
     if(r.erro){
         toast.error(r.erro)
     } else {
-      toast.warn('foi enviado outro E-mail')
+      toast.warn('Foi enviado outro E-mail')
     }
   }
 
