@@ -8,10 +8,10 @@ const Container = styled.div`
         .container-caracter {
             margin-left: auto;
             margin-right: auto;
-            margin-top: 3.5em;
             width: 83%;
             padding: 1em;
             border-radius: 7px;
+            
 
             background-color: white;
         }
