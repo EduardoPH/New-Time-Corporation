@@ -24,6 +24,7 @@ const Container = styled.div`
         text-align: center;
         font-size: 3em;
         color: white;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .rc-user {

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
     background-color: white;
-    height: 100;
-    width: 100;
+    height: 100%;
+    width: 100%;
     padding: 1em;
     border-radius: 4px;
     border-top-right-radius: 20px;
@@ -13,6 +13,7 @@ const Container = styled.div`
     justify-content: center;
 
     img{
+        cursor: pointer;
         margin: 0.8em;
         width: 55px;
     }
@@ -37,8 +38,8 @@ const Container = styled.div`
         cursor: pointer;
         justify-content: center;
 
-        & :hover{
-            text-decoration: underline;
+        &:hover{
+            color: #FC02A0;
         }
     }
     
