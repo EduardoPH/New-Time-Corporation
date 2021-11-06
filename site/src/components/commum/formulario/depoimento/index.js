@@ -22,7 +22,7 @@ export default function Depoimento (){
     const navigation = useHistory()
       
     function setCookies() {
-        Cookies.set('dadosDenuncia',JSON.stringify( {... denuncia, complemento: depoimento}))
+        Cookies.set('dadosDenuncia',JSON.stringify( {...denuncia, complemento: depoimento}))
         let novosCookies = Cookies.get('dadosDenuncia') === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia'))
         setDepoimentomento(novosCookies.complemento)
     }
@@ -68,6 +68,7 @@ export default function Depoimento (){
             }
         }
     }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(setCookies, [depoimento])
     return(
         <Containerformulario>
