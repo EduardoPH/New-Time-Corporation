@@ -3,7 +3,7 @@ import {InputStyle, ButtonsStyle} from './styled'
 
 function Inputs(props) {
     return(
-        <InputStyle value={props.value}  onChange={e => props.valor(e.target.value)} placeholder={props.place}/>
+        <InputStyle value={props.value} type={props.type === undefined ? "text" : props.type } onChange={e => props.valor(e.target.value)} placeholder={props.place}/>
     )
 
 }
