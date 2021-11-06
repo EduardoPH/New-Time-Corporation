@@ -25,7 +25,7 @@ app.post("/cadastrar", async (req, resp) => {
         return resp.send({ erro: "O E-mail deve ser valido" });
   
       if (senha.length <= 4)
-        return resp.send({ erro: "A senha deve Maior que 4 digitos" });
+        return resp.send({ erro: "A senha deve ser maior que 4 digitos" });
       
       let r = await db.infoc_ntc_usuario.create({
         nm_usuario: nome,

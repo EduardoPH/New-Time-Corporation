@@ -36,7 +36,7 @@ export default function Administrador(){
                             <div class="menu-lateral">
                                 <Link to="/formulario">
                                     <div className="item-lateral">
-                                        <div className="textos-lateral"> Caracteristicas <br/> Físicas </div>
+                                        <div className="textos-lateral"> Características <br/> Físicas </div>
                                         <img width="35px" src="/assets/images/formulario/face.png" alt=""></img>
                                     </div>
                                 </Link>

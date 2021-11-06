@@ -43,7 +43,7 @@ export default function Index(props) {
   const excluir = async (id) => {
     confirmAlert({
       title: "Remover Usuaria",
-      message: `Tem certeza que deseja remover  ${usuario.nome}?`,
+      message: `Tem certeza que deseja remover  ${usuario.nome} "?`,
       buttons: [
         {
           label: "Sim",

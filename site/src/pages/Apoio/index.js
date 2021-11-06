@@ -20,7 +20,7 @@ export default function Apoio (){
 
     async function SobreSite(){
         Loading({
-            text: "Por Favor Aguarde",
+            text: "Por Favor, Aguarde",
             title: "CARREGANDO",
             theme: "dark",
             topBar: true,
