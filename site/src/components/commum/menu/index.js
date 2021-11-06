@@ -8,14 +8,19 @@ import Cookies from 'js-cookie';
 function VerLogado(){
 
     let c = Cookies.get('usuariaLogada') 
-    if(c === undefined  ){
+
+    if(c === undefined  )
         return "Login"
         
-    }
+
 
     let usuaria = JSON.parse(c).nome
     let nomecompleto = usuaria.substring(usuaria.indexOf(" "),usuaria.indexOf(" ")-usuaria.length)
-    return nomecompleto
+
+    if(usuaria.includes(" "))
+       return nomecompleto;    
+    else 
+       return usuaria;
 }
 
 
