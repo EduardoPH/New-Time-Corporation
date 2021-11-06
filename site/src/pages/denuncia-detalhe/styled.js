@@ -58,7 +58,6 @@ const Container = styled.div`
     .pt-menuLeft {
         display: flex;
         flex-direction: column;
-        height: 30%;
     }
 `
 

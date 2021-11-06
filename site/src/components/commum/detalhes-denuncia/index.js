@@ -2,16 +2,22 @@ import { Container, BoxCaracter } from "./styled";
 import {Link} from 'react-router-dom'
 
 function MenuLeft() {
+    //
+
+
     return(
         <Container>
             <Link to="/denuncia-details"> 
                 <div className="mensagem"> Mensagens </div>
+                <img className="msg" src='/assets/images/formulario/depoimento.svg' alt='' />
             </Link>
             <Link to="/denuncia-details/caracters">
                 <div className="mensagem"> Características  </div>
+                <img className="carac" src='/assets/images/formulario/face.png' alt='' />
             </Link>
             <Link to="/denuncia-details/map">
                 <div className="mensagem"> Local  </div>
+                <img className="local" src='/assets/images/denuncia-detalhe/menu/location.svg' alt='' />
             </Link>
         </Container>
     )
