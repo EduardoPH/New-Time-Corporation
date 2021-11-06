@@ -44,7 +44,7 @@ app.post('/', async (req, resp) => {
             id_vestimento: vestimentasCriada.id_vestimento
         })
 
-        resp.send({mensagem: 'Denuncia cadastrada'})
+        resp.send({mensagem: 'Denúncia cadastrada'})
     } catch (e) {
         resp.send({erro: 'Houve um erro durante o cadastro, todos os campos devem ser preenchidos!'})
     }
@@ -97,10 +97,9 @@ app.put('/', async (req, resp) => {
         }, {
             where: {'id_denuncia': dados.id }
         })
-
         resp.send({mensagem: 'Denúncia Alterada'})
     } catch (e) {
-        resp.send({erro: e.toString()})
+        resp.send({erro: 'Todos os campos devem ser preenchidos'})
     }
 })
 

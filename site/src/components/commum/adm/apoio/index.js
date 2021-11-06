@@ -20,7 +20,7 @@ export default function Index(){
     
     async function frasesGet(){
         Loading({
-            text: "Por Favor Aguarde",
+            text: "Por Favor, Aguarde",
             title: "CARREGANDO",
             theme: "dark",
             topBar: true,
@@ -68,7 +68,7 @@ export default function Index(){
     function excluir(frase){
         confirmAlert({
             title: 'Remover Frase',
-            message: `Tem certeza que deseja remover a Frase: " ${frase.frase} "`,
+            message: `Tem certeza que deseja remover a Frase: " ${frase.frase} "?`,
             buttons:[
                 {
                     label: 'Sim',

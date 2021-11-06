@@ -42,7 +42,7 @@ export default function PerfilUsuaria(){
     
     async function BuscaDenu(){
         Loading({
-            text: "Por Favor Aguarde",
+            text: "Por Favor, Aguarde",
             title: "CARREGANDO",
             theme: "dark",
             topBar: true,
@@ -51,7 +51,7 @@ export default function PerfilUsuaria(){
         let r = await api.BuscarDenuncia(info.idUsu)
         if(r[0] === undefined){
             Loading()
-            setDenun([{erro: 'Voce não possue nenhuma denúncia cadastrada'}])
+            setDenun([{erro: 'Você não possui nenhuma denúncia cadastrada'}])
         } else {
             Loading()
             setDenun(r)
@@ -94,7 +94,7 @@ export default function PerfilUsuaria(){
     function excluir(id){
         confirmAlert({
             title: 'Remover denúncia',
-            message: `Tem certeza que deseja remover sua denúncia"`,
+            message: `Tem certeza que deseja remover a sua denúncia?"`,
             buttons:[
                 {
                     label: 'Sim',
@@ -103,7 +103,7 @@ export default function PerfilUsuaria(){
                         if(r !== "OK"){
                             return toast.error('Houve um erro')
                         } else {
-                            toast('denúncia removida com sucesso!')
+                            toast('Denúncia removida com sucesso!')
                             BuscaDenu()
                         }
                     }
@@ -145,7 +145,7 @@ export default function PerfilUsuaria(){
                             {denun.map( i =>
                              {
                                 if(i.erro){
-                                    return 'Voce ainda não possui nenhuma denuncia'
+                                    return 'Você ainda não possui nenhuma denúncia'
                                 } else{
                                     return( <ItemDenuncia ex={excluir} alt={alterar} info={i}/>)                             
                                 }

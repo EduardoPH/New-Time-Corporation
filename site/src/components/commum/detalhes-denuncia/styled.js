@@ -5,16 +5,37 @@ const Container = styled.div`
     height: 100;
     width: 100;
     padding: 1em;
-    border-radius: 7px;
+    border-radius: 4px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     position: sticky;
-    top: 40%;
+    text-align: center;
+    justify-content: center;
+
+    img{
+        margin: 0.8em;
+        width: 55px;
+    }
+
+    .carac {
+        width: 40px;
+    }
+
+    .msg {
+        width: 40px;
+    }
+
+    .local {
+        margin: 0em;
+        width: 70px;
+    }
 
     .mensagem {
         display: flex;
         align-items: center;
         font-size: 1.2em;
-        text-align: start;
         cursor: pointer;
+        justify-content: center;
 
         & :hover{
             text-decoration: underline;
@@ -39,6 +60,7 @@ const BoxCaracter = styled.div`
     background-color: rgba(196, 196, 196, 0.54);;
     padding: 1em;
     border-radius: 15px ;
+    margin: 0.5em;
 
     .box-caracter {
         display: flex;
@@ -49,6 +71,7 @@ const BoxCaracter = styled.div`
     .box-caracter-image img {
         width: 110px;
         height: 100px;
+        margin: 0.3em;
     }
 `
 
