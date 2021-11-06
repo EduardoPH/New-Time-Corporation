@@ -48,6 +48,7 @@ background-size: cover;
     flex-direction: column;
 
     margin-left: 5em;
+    margin-top: 2em;
     text-align: center; 
     
 }
