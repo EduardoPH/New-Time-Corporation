@@ -37,7 +37,7 @@ export default function Details() {
             <div className="rc-conteudo">
                 <div className="rc-denuncias">
                 {denuncia.map(i =>
-                    <Mensagem visible={i.ativo === 1? 'none': ''} denuncia={i}/>
+                    <Mensagem visible={i.ativo === 0? 'none': ''} denuncia={i}/>
                 )}
                 </div>
             </div>
