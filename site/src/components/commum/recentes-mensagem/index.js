@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Mensagem(props) {
 
     return(
-        <Container>
+        <Container style={{display: props.visible}}> 
             <div className="pt1-msg">
                 <img src="/assets/images/denuncias-recentes/Perfil.png" alt=""/> 
             </div>

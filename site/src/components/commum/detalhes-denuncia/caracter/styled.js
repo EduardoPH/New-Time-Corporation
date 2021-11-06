@@ -8,10 +8,9 @@ const Container = styled.div`
         .container-caracter {
             margin-left: auto;
             margin-right: auto;
-            margin-top: 3em;
+            margin-top: 3.5em;
             width: 83%;
-            height: 12.6em;
-            padding: 1.5em;
+            padding: 1em;
             border-radius: 7px;
 
             background-color: white;
@@ -40,6 +39,12 @@ const Container = styled.div`
 
         .box-detalhe {
             text-align: start;
+        }
+
+        .title-box{
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: column;
         }
 `;
 

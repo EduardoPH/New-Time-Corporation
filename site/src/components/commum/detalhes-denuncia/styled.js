@@ -39,6 +39,7 @@ const BoxCaracter = styled.div`
     background-color: rgba(196, 196, 196, 0.54);;
     padding: 1em;
     border-radius: 15px ;
+    margin: 0.5em;
 
     .box-caracter {
         display: flex;
@@ -49,6 +50,7 @@ const BoxCaracter = styled.div`
     .box-caracter-image img {
         width: 110px;
         height: 100px;
+        margin: 0.3em;
     }
 `
 
