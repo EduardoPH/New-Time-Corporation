@@ -45,9 +45,9 @@ export default function Depoimento (){
                 if(r.erro){
                     toast.error(r.erro)
                 } else {
-                    toast.success("💕 Denúncia cadastrada com sucesso")
+                    toast.success("💕 Denúncia Alterada com sucesso")
                     toast.warning("Sua denúncia irá ser analisada por nossa equipe, Voltaremos para as denúncias")
-                    setTimeout(() => navigation.push('/formulario'), 3500);
+                    setTimeout(() => navigation.push('/formulario'), 5000);
                     Cookies.remove('dadosDenuncia')
                 }
 
