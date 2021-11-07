@@ -7,6 +7,8 @@ export default function Index(props){
         props.alterar(info)
     }
     function Excluir(){
+        if(info.nome === 'master')
+            return props.excluir('0')
         props.excluir(info)
     }
 
