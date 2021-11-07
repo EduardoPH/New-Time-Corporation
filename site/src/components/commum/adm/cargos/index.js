@@ -44,9 +44,8 @@ export default function Index(){
         let r = await api.ListarAdms()
         setEventos(r)
 
-        setTimeout(() => {
-            Loading();
-          }, 100)
+       Loading();
+         
     };
 
     async function cadastrarAdm(){
