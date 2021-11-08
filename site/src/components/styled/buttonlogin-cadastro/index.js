@@ -3,14 +3,14 @@ import {InputStyle, ButtonsStyle} from './styled'
 
 function Inputs(props) {
     return(
-        <InputStyle value={props.value}  onChange={e => props.valor(e.target.value)} placeholder={props.place}/>
+        <InputStyle value={props.value} type={props.type === undefined ? "text" : props.type } onChange={e => props.valor(e.target.value)} placeholder={props.place}/>
     )
 
 }
 
 function Buttons(props) {
     return(
-        <ButtonsStyle onClick={props.clicado} style={{width: props.width }}> {props.valor} </ButtonsStyle> 
+        <ButtonsStyle onClick={props.clicado} style={{width: props.width, position: props.position, right: props.right, top: props.top}}> {props.valor} </ButtonsStyle> 
     )
 }
 

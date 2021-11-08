@@ -14,7 +14,7 @@ import usuarias from '../../components/commum/adm/usuarias/';
 
 export default function Administrador(){
     const navigation = useHistory()
-    const sair = () => {Cookies.remove('admlogado');Cookies.remove('masterlogado'); navigation.push("/w")}
+    const sair = () => {Cookies.remove('admlogado');Cookies.remove('masterlogado'); navigation.push("/")}
     return(
         <Container>
             <Menu/>

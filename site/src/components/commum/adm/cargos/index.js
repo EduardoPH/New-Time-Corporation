@@ -34,7 +34,7 @@ export default function Index(){
 
     async function listarAdm(){
         Loading({
-            text: "Por Favor Aguarde",
+            text: "Por Favor, Aguarde",
             title: "CARREGANDO",
             theme: "dark",
             topBar: true,
@@ -44,9 +44,8 @@ export default function Index(){
         let r = await api.ListarAdms()
         setEventos(r)
 
-        setTimeout(() => {
-            Loading();
-          }, 100)
+       Loading();
+         
     };
 
     async function cadastrarAdm(){
@@ -55,7 +54,7 @@ export default function Index(){
             if(r.erro){
                 toast.error(r.erro)
             } else {
-                toast.success('Novo Administrador Cadastrado com suceso')
+                toast.success('Novo Administrador Cadastrado com sucesso!')
                 LimparDados()
             }   
         } else {
@@ -73,7 +72,7 @@ export default function Index(){
     function deletarAdm(admin){
         confirmAlert({
             title: 'Remover Administrador',
-            message: `Tem certeza que deseja remover a Administrador: " ${admin.nome} "`,
+            message: `Tem certeza que deseja remover o Administrador: " ${admin.nome} "?`,
             buttons:[
                 {
                     label: 'Sim',
@@ -82,7 +81,7 @@ export default function Index(){
                         if(r !== "OK"){
                             return toast.error('Houve um erro')
                         } else {
-                            toast('Administador removida com sucesso!')
+                            toast('Administrador removido com sucesso!')
                             listarAdm()
                         }
                     }

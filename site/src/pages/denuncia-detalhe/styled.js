@@ -8,12 +8,13 @@ const Container = styled.div`
     background-repeat: no-repeat;
     height: 100vh;
     top: 0px;
-
+    font-family: 'Roboto';
     .titulo {
         text-align: center;
         margin: 0.8em;
         font-size: 3em;
-        color: #FFF
+        color: #FFF;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
 
@@ -23,7 +24,7 @@ const Container = styled.div`
         margin-left: auto;
         margin-right: auto;
         justify-content: space-between;
-        width: 85%;
+        width: 90%;
         height: 60vh;
         background: rgba(127, 0, 191, 0.63);
         backdrop-filter: blur(7px);
@@ -38,7 +39,7 @@ const Container = styled.div`
         height: auto;
         width: 93%;
         max-height: 90%;
-        margin-left: -1em;
+        margin-left: 1.5em;
         position: relative;
     }
 
@@ -58,7 +59,6 @@ const Container = styled.div`
     .pt-menuLeft {
         display: flex;
         flex-direction: column;
-        height: 30%;
     }
 `
 

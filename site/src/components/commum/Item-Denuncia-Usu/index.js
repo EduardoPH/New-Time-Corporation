@@ -1,8 +1,10 @@
 import { Container } from "./styled";
+import {Link} from 'react-router-dom'
 
 
 export default function ItemDenuncia(props) {
     const item = props.info
+    console.log(item)
     function dataFormatada(){
         var data = new Date(item.data),
             dia  = data.getDate().toString(),
@@ -25,7 +27,7 @@ export default function ItemDenuncia(props) {
                     <p1>{item.depoimento}</p1>
                     <div className="btms">
                         <button className="alterar" onClick={() => alterar(item)}>Alterar</button>
-                        <button className="excluir" onClick={() => excluir(item.id)}>excluir</button>
+                        <button className="excluir" onClick={() => excluir(item.id)}>Excluir</button>
                     </div>
                 </div>
                 <div className="lado-direito">
@@ -41,12 +43,14 @@ export default function ItemDenuncia(props) {
                     <p1>{item.depoimento}</p1>
                     <div className="btms">
                         <button className="alterar" onClick={() => alterar(item)}>Alterar</button>
-                        <button className="excluir" onClick={() => excluir(item.id)}>excluir</button>
+                        <button className="excluir" onClick={() => excluir(item.id)}>Excluir</button>
                     </div>
                 </div>
                 <div className="lado-direito">
                     <p1>{dataFormatada()}</p1>
-                    <p2> Ver mais...</p2>
+                    <Link to={{pathname: '/denuncia-details', state: {...item, perfil: true}}}>
+                        <p2> Ver mais...</p2>
+                    </Link>
                 </div>
             </Container>
         )

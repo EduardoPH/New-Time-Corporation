@@ -33,7 +33,7 @@ export default function Index() {
         if(r.erro){
             toast.error(r.erro)
         } else {
-            if(r.id_administrador === 9){
+            if(r.id_administrador === 1){
                 Cookies.set('masterlogado', JSON.stringify(r))
                 navigation.push('/administrador')
             } else {
