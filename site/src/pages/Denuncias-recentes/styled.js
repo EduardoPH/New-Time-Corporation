@@ -70,6 +70,18 @@ const Container = styled.div`
         overflow-y: scroll;
     }
 
+    @media (max-width: 1000px){
+        transform: scale(0.8);
+        .rc-denuncias{
+            width: 100%;
+        }
+
+        .rc-titulo{
+            font-size: 2em;
+        }
+        
+    }
+
 `
 
 export {Container}

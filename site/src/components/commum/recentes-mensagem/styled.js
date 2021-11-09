@@ -5,7 +5,7 @@ const Container = styled.div`
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
     .pt2-msg{
-        width: 100vw;
+        width: 20px;
     }
 
     .name-user {
@@ -27,12 +27,11 @@ const Container = styled.div`
 
     .caixa-msg {
         margin-top: 1em;
-        width: 100%;
+        width: 50%;
         height: 100;
         background-color: white;
         border-radius: 8px;
         padding: 1em;
-        max-width: 30em;
     }
 
     .mensagem {
@@ -57,6 +56,18 @@ const Container = styled.div`
             font-weight: 600;
             text-decoration: underline;
         }
+    }
+
+    @media (max-width: 1000px){
+        transform: scale(0.8);
+
+        .caixa-msg {
+        width: 100%;
+    }
+
+    .ct-msg{
+        width: 14em;
+    }
     }
 
     

@@ -27,7 +27,7 @@ export default function Menu(){
     return(
         <Container>
              <div className="logo" style={{textDecoration: "none"}}>
-                <Link to="/login-administrador">
+                <Link  to="/login-administrador">
                     <img src="/assets/images/menu/Logo-ntc.svg" alt="logo"/>
                 </Link>
             </div>
