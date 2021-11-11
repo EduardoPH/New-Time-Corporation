@@ -66,7 +66,7 @@ export default function Cadastro() {
             <div className="titulo-form">Cadastro</div>
             <Inputs
               value={nome}
-              valor={(valor) => setNome(valor)}
+              valor={(valor) => setNome(valor)}P
               place="Digite seu nome de Usuário..."
             />
             <div
@@ -78,7 +78,7 @@ export default function Cadastro() {
             <Inputs
               value={telefone}
               valor={(valor) => setTelefone(valor)}
-              place="Digite seu numero para contato..."
+              place="Digite seu número para contato..."
             />
             <Inputs
               value={email}

@@ -15,7 +15,7 @@ export default function Index(props){
     async function listarUsu(){
        
         Loading({
-            text: "Por Favor Aguarde",
+            text: "Por Favor, Aguarde",
             title: "CARREGANDO",
             theme: "dark",
             topBar: true,

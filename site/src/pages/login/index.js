@@ -50,7 +50,7 @@ export default function Login(){
                         <div className="ti">Login</div>
                         <div className="inputs">
                             <Inputs value={email} valor={ valor => setEmail(valor)} place="Digite seu email..."/>
-                            <Inputs value={senha} valor={ valor => setSenha(valor)} place="Digite sua senha..."/>
+                            <Inputs value={senha} type={"password"} valor={ valor => setSenha(valor)} place="Digite sua senha..."/>
                         </div>
                         <div className="lado">
                             <Link to='/recuperacao'><div className="bot2">Esqueci minha senha</div></Link>

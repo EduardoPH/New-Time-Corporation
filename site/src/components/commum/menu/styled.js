@@ -10,7 +10,8 @@ const Container= styled.div`
     align-items: center;
 
     width: 100%;
-    max-height: 6em;
+    flex-wrap: wrap;
+    max-height: auto;
 
     padding: 0em 3em 0em 1em; 
 
@@ -57,6 +58,12 @@ const Container= styled.div`
         font-family: 'Roboto';
         cursor:pointer;
         &:hover{background-color:purple; ; transition: 0.3s}
+    }
+
+    @media (max-width: 1000px){
+        justify-content: none;
+
+        
     }
 `
 export {Container}

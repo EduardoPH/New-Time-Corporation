@@ -24,6 +24,7 @@ const Container = styled.div`
         text-align: center;
         font-size: 3em;
         color: white;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .rc-user {
@@ -67,6 +68,18 @@ const Container = styled.div`
     .rc-denuncias {
         max-height: 100%;
         overflow-y: scroll;
+    }
+
+    @media (max-width: 1000px){
+        transform: scale(0.8);
+        .rc-denuncias{
+            width: 100%;
+        }
+
+        .rc-titulo{
+            font-size: 2em;
+        }
+        
     }
 
 `

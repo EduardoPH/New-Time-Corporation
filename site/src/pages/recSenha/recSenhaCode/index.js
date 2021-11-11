@@ -31,7 +31,6 @@ export default function App(props){
   const code = `${one}${two}${thre}${four}`
   const email =  props.location.state === undefined ? "" : props.location.state.email
 
-
   async function verificar() {
 
     let r = await api.code(code, email)
@@ -39,10 +38,10 @@ export default function App(props){
     if(r.erro){
       toast.error(r.erro)
     } else {
-      navegacao.push({
-        pathname: '/nova-senha',
-        state: {email, code}
-      })
+      navegacao.push(
+        '/nova-senha',
+        {email, code}
+      )
     }
   }
 
@@ -51,7 +50,7 @@ export default function App(props){
     if(r.erro){
         toast.error(r.erro)
     } else {
-      toast.warn('foi enviado outro E-mail')
+      toast.warn('Foi enviado outro E-mail')
     }
   }
 

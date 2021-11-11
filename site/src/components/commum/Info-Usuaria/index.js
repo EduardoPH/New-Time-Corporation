@@ -15,7 +15,7 @@ export default function InfoUsuaria(props) {
             <p1>Telefone :</p1>
             <input type="text" disabled={habilitar === true? false : true}  value={props.info.telefone}/>
             <p1>CPF :</p1>
-            <input typpe="text"disabled={habilitar === true? false : true}  value={props.info.cpf}/>
+            <input typpe="text"disabled={habilitar === true? false : true}  value={props.info.cpf === '' ? "Não cadastrado":props.info.cpf }/>
         </Container>
     )
 }

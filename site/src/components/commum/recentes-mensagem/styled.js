@@ -3,9 +3,9 @@ import styled from "styled-components";
 const Container = styled.div`
     display:flex;
     flex-direction: row;
-
+    font-family: Arial, Helvetica, sans-serif;
     .pt2-msg{
-        width: 100vw;
+        width: 20px;
     }
 
     .name-user {
@@ -13,6 +13,7 @@ const Container = styled.div`
         color: white;
         display: flex;
         align-items: center;
+        font-weight: 700;
         margin: 0.9em 0em 0em 0.6em
     }
 
@@ -26,13 +27,11 @@ const Container = styled.div`
 
     .caixa-msg {
         margin-top: 1em;
-        width: 100%;
+        width: 50%;
         height: 100;
         background-color: white;
         border-radius: 8px;
         padding: 1em;
-        max-width: 30em;
-        max-height: 7em;
     }
 
     .mensagem {
@@ -51,9 +50,24 @@ const Container = styled.div`
         padding-top: 0.5em;
         text-align: end;
         color: black;
+        cursor: pointer;
+        font-style: italic;
         &:hover {
+            font-weight: 600;
             text-decoration: underline;
         }
+    }
+
+    @media (max-width: 1000px){
+        transform: scale(0.8);
+
+        .caixa-msg {
+        width: 100%;
+    }
+
+    .ct-msg{
+        width: 14em;
+    }
     }
 
     

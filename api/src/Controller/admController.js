@@ -31,6 +31,7 @@ function fkDenuncia() {
       model: db.infoc_ntc_vestimento,
       as: "vestimento", 
       attributes: [
+        ["id_vestimento","id"],
         ["ds_inferior", "partInferior"],
         ["ds_superior", "partSuperior"],
         ["ds_calcado", "calcado"],
@@ -42,6 +43,7 @@ function fkDenuncia() {
       model: db.infoc_ntc_caracteristica_fisica,
       as: "id_fisico_infoc_ntc_caracteristica_fisica",
       attributes: [
+        ["id_fisico","id"],
         ["ds_pele", "pele"],
         ["ds_cabelo", "cabelo"],
         ["ds_cor_cabelo", "corCabelo"],
@@ -53,6 +55,7 @@ function fkDenuncia() {
       model: db.infoc_ntc_local,
       as: "id_local_infoc_ntc_local",
       attributes: [
+        ["id_local","id"],
         ["ds_latitude", "lat"],
         ["ds_longitude", "lgn"],
         ["ds_cidade", "cidade"],
@@ -87,7 +90,7 @@ app.get("/denuncia", async (req, resp) => {
     });
     resp.send(JSON.stringify(denuncias[0]));
   } catch (e) {
-    resp.send({ erro: "Não foi possível listar as Denuncias" });
+    resp.send({ erro: "Não foi possível listar as denúncias" });
   }
 });
 app.put("/denuncia/:id", async (req, resp) => {
@@ -104,7 +107,7 @@ app.put("/denuncia/:id", async (req, resp) => {
     if (denuncia === 1) return resp.send({ retorno: "Validada com sucesso" });
     else return resp.send({ retorno: "Houve um erro na Validação" });
   } catch (e) {
-    resp.send({ erro: "Não foi possivel cadastrar a denuncia" });
+    resp.send({ erro: "Não foi possível cadastrar a denúncia" });
   }
 });
 app.delete("/denuncia/:id", async (req, resp) => {
@@ -363,12 +366,12 @@ app.get('/buscarUsuario/:id', async(req, resp) =>{
     })
 
     if(!r)
-      return resp.send({erro: 'Usuario não encontrado'})
+      return resp.send({erro: 'Usuário não encontrado'})
     
     resp.send(r)
 
   } catch (e) {
-    resp.send({erro: 'Não foi possível encontrar as denuncias deste Usuario'})
+    resp.send({erro: 'Não foi possível encontrar as denúncias deste Usuario'})
   }
 })
 

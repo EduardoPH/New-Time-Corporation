@@ -13,7 +13,7 @@ export default function Index (){
     const [parteBaixo, setparteBaixo] = useState(denuncia.vestimenta === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).vestimenta.parteBaixo);
     const [calcado, setcalcado] = useState(denuncia.vestimenta === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).vestimenta.calcado);
     const [complemento, setComplemento] = useState(denuncia.vestimenta === undefined ? "" : JSON.parse(Cookies.get('dadosDenuncia')).vestimenta.complemento);
-
+    
     const navigation = useHistory()
 
     function proximatela() {
@@ -28,20 +28,33 @@ export default function Index (){
             return toast.error('o campo CALÇADO deve ser preenchido')
         
 
-        let vestimentas = {
+        let vestimenta = {
+            id: denuncia.vestimenta === undefined ? "" :  denuncia.vestimenta.id,
             parteCima: parteCima,
             parteBaixo: parteBaixo,
             calcado: calcado,
             complemento: complemento
         }   
- 
-        
-        let dados = {
-            caracteristicas: denuncia.caracteristicas,
-            vestimenta: vestimentas,
-            local: denuncia.local
+        let r = {
+            caracteristicas:{
+                id: denuncia.caracteristicas === undefined ? "" :  denuncia.caracteristicas.id ,
+                pele: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.pele ,
+                cabelo: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.cabelo ,
+                corCabelo: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.corCabelo ,
+                complemento: denuncia.caracteristicas === undefined ? "" : denuncia.caracteristicas.complemento 
+            },
+            vestimenta: vestimenta,
+            local:{
+                id: denuncia.local === undefined ? "" :  denuncia.local.id,
+                lat: denuncia.local === undefined ? "" : denuncia.local.lat,
+                lgn: denuncia.local === undefined ? "" : denuncia.local.lgn,
+                cidade: denuncia.local === undefined ? "" : denuncia.local.cidade,
+                bairro: denuncia.local === undefined ? "" : denuncia.local.bairro
+            },
+            complemento: denuncia.complemento === undefined ? "" : denuncia.complemento,
+            idDen: denuncia.idDen === undefined ? "" : denuncia.idDen
         }
-        Cookies.set('dadosDenuncia', JSON.stringify(dados))  
+        Cookies.set('dadosDenuncia', JSON.stringify(r))  
         navigation.push('/formulario/local')
     }
 
@@ -52,7 +65,6 @@ export default function Index (){
             <ToastContainer/>
                 <div class="pag">
                     <div class="conteudo">
-
                             <div class="box">
                                 <div class="titulo-box">Parte de cima</div>
                                 <div class="imputs">

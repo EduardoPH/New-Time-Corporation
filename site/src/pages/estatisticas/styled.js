@@ -9,7 +9,7 @@ height: 100vh;
     display:flex;
     align-self: center;
     color: white;
-    font: 700 2em arial;
+    font: 700 2.7em arial;
     margin: 0.9em 0em;
 }
 

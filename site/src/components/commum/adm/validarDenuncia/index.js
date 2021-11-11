@@ -49,7 +49,7 @@ export default function Index(props) {
   
   async function ListarValidacoes() {
     Loading({
-      text: "Por Favor Aguarde",
+      text: "Por Favor, Aguarde",
       title: "CARREGANDO",
       theme: "dark",
       topBar: true,
@@ -84,13 +84,13 @@ export default function Index(props) {
   const excluir = async () => {
     confirmAlert({
       title: "Remover Denúncia",
-      message: `Tem certeza que deseja remover esta denúncia `,
+      message: `Tem certeza que deseja remover esta denúncia? `,
       buttons: [
         {
           label: "Sim",
           onClick: async () => {
             await api.deletarDen(info.id);
-            toast("Denúncia Apagada");
+            toast("Denúncia Excluída");
             props.location.state = undefined
             ListarValidacoes()
           },
@@ -99,9 +99,6 @@ export default function Index(props) {
       ],
     });
   };
-
-  console.log(info)
-
   useEffect(() => {
       ListarValidacoes()
       // eslint-disable-next-line react-hooks/exhaustive-deps
