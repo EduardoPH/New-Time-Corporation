@@ -53,7 +53,6 @@ export default function Index(){
                                 <Link to={{pathname:"/administrador", state: item}}>
                                     <button>Alterar</button>
                                 </Link>
-                                    <button className="visu">Visualizar</button>
                             </td>
                         </tr>
                     )} 
