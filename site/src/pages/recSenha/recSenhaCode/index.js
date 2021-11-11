@@ -76,12 +76,12 @@ export default function App(props){
               <input id="1" className="password" onChange={e => setOne(e.target.value)} onKeyUp={move(one, "2")} type="text" maxLength="1"/>
               <input id="2" className="password" onChange={e => setTwo(e.target.value)} onKeyUp={move(two, "3")}  type="text" maxLength="1"/>
               <input id="3" className="password" onChange={e => setThre(e.target.value)} onKeyUp={move(thre, "4")} type="text" maxLength="1"/>
-              <input id="4" className="password" onChange={e => setFour(e.target.value)} type="text" maxLength="1"/> 
+              <input id="4" className="password" onChange={e => setFour(e.target.value)} onKeyUp={move(four, "enviar")} type="text" maxLength="1"/> 
             </div>
 
             <div className="box-code-pt2"> 
               <div className="aviso"> Não recebeu? <span onClick={rec}> Reenviar </span></div>
-               <Buttons clicado={verificar} width="13em" valor="Enviar" />
+               <div className="botao" ><Buttons id='enviar' clicado={verificar} width="13em" valor="Enviar" /></div>
             </div>
           </div>
         </div>

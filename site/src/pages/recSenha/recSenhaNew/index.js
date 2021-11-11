@@ -41,7 +41,6 @@ export default function App(props){
   }
 
   async function alterar() {
-    alert("passou aqui")
       let r = await api.novaSenha(code, email, nSenha)
       if(r.erro){
         toast.error(r.erro)

@@ -90,16 +90,23 @@ export const Container = styled.div`
   .aviso{
     color: #595050;
     font-size: 1.2em;
+    font-weight: 700;
     display: flex;
     align-items: center;
+    
     
     span {
       color: #9341C0;
       cursor: pointer;
+      padding: 0em 1.5em; 
+      margin-top: 1em;
 
       &:hover{
         text-decoration: underline;
       }
     }
   }
+  .botao {
+      margin-top: 1em;
+    }
 `;

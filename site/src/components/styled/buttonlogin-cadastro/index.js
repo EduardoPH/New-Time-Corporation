@@ -10,7 +10,7 @@ function Inputs(props) {
 
 function Buttons(props) {
     return(
-        <ButtonsStyle onClick={props.clicado} style={{width: props.width, position: props.position, right: props.right, top: props.top}}> {props.valor} </ButtonsStyle> 
+        <ButtonsStyle id={props.id} onClick={props.clicado} style={{width: props.width, position: props.position, right: props.right, top: props.top}}> {props.valor} </ButtonsStyle> 
     )
 }
 

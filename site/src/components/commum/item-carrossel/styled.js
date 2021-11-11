@@ -63,7 +63,9 @@ display:flex;
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    justify-content: center;
 .frases {
+    justify-content: center;
         text-align: center;
         display:flex;
         font: 1.8em arial;

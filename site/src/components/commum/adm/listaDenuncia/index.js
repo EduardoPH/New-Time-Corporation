@@ -48,7 +48,7 @@ export default function Index(){
                             <td className="previa">
                                 {item.depoimento}
                             </td>
-                            <td>{item.bt_ativo === true ? 'Ativa' : 'Inativa'}</td>
+                            <td>{item.ativo === 1 ? 'Ativa' : 'Inativa'}</td>
                             <td className="coluna-acao">
                                 <Link to={{pathname:"/administrador", state: item}}>
                                     <button>Alterar</button>

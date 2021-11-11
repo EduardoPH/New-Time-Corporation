@@ -398,7 +398,7 @@ app.get('/buscarDenuncia/:id', async(req, resp) =>{
       attributes: retornoDenuncia(),
       include: fkDenuncia()
     })
-
+    
     resp.send(r)
   } catch (e) {
     resp.send({

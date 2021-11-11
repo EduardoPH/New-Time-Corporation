@@ -50,6 +50,16 @@ const ButtonsStyle = styled.button`
     transition: 0.21s;
     color: white;
   }
+
+  &:focus {
+    outline: none;
+    background-color: #b133ff;
+    transition: 0.3s;
+    border: solid 3px #fff;
+    box-shadow: 0px 0px 20px #fff, 0px 0px 10px inset;
+    transition: 0.21s;
+    color: white;
+  }
 `;
 
 export { ButtonsStyle, InputStyle };
