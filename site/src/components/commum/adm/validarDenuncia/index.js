@@ -114,7 +114,7 @@ export default function Index(props) {
           <img src="/assets/images/denuncias-recentes/Perfil.png" alt="" />
           
             <div className="informacoes-usuaria">
-              <p1>  {info && info.id_usuario_infoc_ntc_usuario.nome} </p1>
+              <p1>  {info === undefined ? 'SEM DENÚNCIA' : info.id_usuario_infoc_ntc_usuario.nome} </p1>
               <span>{info && info.id_usuario_infoc_ntc_usuario.email}  </span>
               <span> {info && info.id_usuario_infoc_ntc_usuario.telefone} </span>
               <Link

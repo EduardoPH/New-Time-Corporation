@@ -13,11 +13,11 @@ const Container= styled.div`
     flex-wrap: wrap;
     max-height: auto;
 
-    padding: 0em 3em 0em 1em; 
+    padding: 0.3em 3em 0em 1em; 
 
     .logo img{
 
-        height: 4em;
+        height: 3.2em;
         margin-top: 5px;
         cursor: pointer;
 
