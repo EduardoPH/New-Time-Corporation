@@ -18,7 +18,6 @@ const  ContainerApoio = styled.div `
     align-self: center;
     width:82%;
     background-color: #7F00BF;
-    height: 28em;
     border-radius: 1em;
     }
 
