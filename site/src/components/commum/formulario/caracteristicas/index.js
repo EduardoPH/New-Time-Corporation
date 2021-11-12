@@ -140,9 +140,9 @@ export default function Caracteristicas (props){
                     </div>
 
                     <div class="conteudo2">
-                        <div class="informacoes">Informações complementares</div>
+                        <div class="informacoes">Informações complementares referente às características.</div>
                         <div className="info2">
-                            <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Área para escrever informações complementares"></textarea>
+                            <textarea value={complemento} onChange={ e => setComplemento(e.target.value)} name="" id="valor" cols="30" rows="10" placeholder="Informações complementares."></textarea>
                             <button  className="btm-avan" onClick={proximaTela} >Avançar</button> 
                         </div>
                     </div> 

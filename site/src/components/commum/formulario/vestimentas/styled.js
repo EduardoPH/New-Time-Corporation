@@ -67,6 +67,7 @@ textarea {
     resize: none;
     border: none;
     margin-right: 2em;
+    padding: 1em;
     &:focus {
         box-shadow: 0 0 0 0;
         border: 0 none;

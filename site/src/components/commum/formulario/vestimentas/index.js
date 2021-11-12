@@ -146,9 +146,9 @@ export default function Index (){
                     </div>
 
                     <div class="conteudo2">
-                        <div class="informacoes">Informações complementares</div>
+                        <div class="informacoes">Informações complementares referente às vestimentas</div>
                         <div className="info2">
-                            <textarea onChange={ (e) => setComplemento(e.target.value)} value={complemento} name="" id="valor" cols="30" rows="10" placeholder="Área para escrever informações complementares"/>
+                            <textarea onChange={ (e) => setComplemento(e.target.value)} value={complemento} name="" id="valor" cols="30" rows="10" placeholder="Informações complementares."/>
                             <button  className="btm-avan" onClick={proximatela}>Avançar</button>
                         </div>
                     </div>  

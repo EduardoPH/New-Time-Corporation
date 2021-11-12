@@ -36,26 +36,26 @@ export default function Administrador(){
                             <div class="menu-lateral">
                                 <Link to="/formulario">
                                     <div className="item-lateral">
+                                    <img width="35px" src="/assets/images/formulario/face.png" alt=""></img>
                                         <div className="textos-lateral"> Características <br/> Físicas </div>
-                                        <img width="35px" src="/assets/images/formulario/face.png" alt=""></img>
                                     </div>
                                 </Link>
                                 <Link to="/formulario/vestimentas">
                                     <div className="item-lateral">
+                                    <img width="40px" src="/assets/images/formulario/shirt.png" alt=""></img>
                                         <div className="textos-lateral"> Vestimentas </div>
-                                        <img width="40px" src="/assets/images/formulario/shirt.png" alt=""></img>
                                     </div>
                                 </Link>
                                 <Link to="/formulario/local">
                                     <div className="item-lateral">
+                                    <img width="60px" style={{"margin-top":"-11px", "margin-bottom":"-11px"}} src="/assets/images/formulario/location.svg" alt=""></img>
                                         <div div className="textos-lateral"> Local </div>
-                                        <img width="60px" style={{"margin-top":"-11px", "margin-bottom":"-11px"}} src="/assets/images/formulario/location.svg" alt=""></img>
                                     </div>
                                 </Link>
                                 <Link to="/formulario/depoimento">
                                     <div className="item-lateral">
+                                    <img width="40px" src="/assets/images/formulario/depoimento.svg" alt=""></img>
                                         <div div className="textos-lateral"> Depoimento </div>
-                                        <img width="40px" src="/assets/images/formulario/depoimento.svg" alt=""></img>
                                     </div>
                                 </Link>
                             </div>
