@@ -67,8 +67,10 @@ const Container = styled.div`
 
     .rc-denuncias {
         max-height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
+
+
 
     @media (max-width: 1000px){
         transform: scale(0.8);
