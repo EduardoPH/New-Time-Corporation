@@ -35,11 +35,7 @@ export default function Details() {
             <div className="rc-conteudo">
                 <div className="rc-denuncias" >
                 {denuncia.map(i => {
-                    if(i.id_usuario_infoc_ntc_usuario.id% 2 === 0 ){
-                        return <MensagemLeft visible={i.ativo === 0? 'none': ''} denuncia={i}/>;
-                    } else{
-                        return <MensagemRigth visible={i.ativo === 0? 'none': ''} denuncia={i}/>;
-                    }
+                   <MensagemLeft visible={i.ativo === 0? 'none': ''} denuncia={i}/>;
                 }
                 )}
                 </div>
