@@ -77,5 +77,5 @@ export class  Mapa extends Component{
 
 
 export default GoogleApiWrapper((props) => ({
-  apiKey: 'AIzaSyBmWg6SrxvblQHjMwlinmCLc9RU3bIu3-A',
+  apiKey: 'AIzaSyAlXfIoyas3Zq3VcUL7GdoXhupSlGNhvoQ',
 }))(Mapa)
