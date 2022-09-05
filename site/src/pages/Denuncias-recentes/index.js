@@ -1,6 +1,6 @@
 import { Container } from "./styled";
 import Menu from '../../components/commum/menu'
-import {MensagemLeft, MensagemRigth} from '../../components/commum/recentes-mensagem'
+import {MensagemLeft} from '../../components/commum/recentes-mensagem'
 import { useEffect, useState } from "react";
 import Api from '../../services/denuncias.js'
 import { Loading } from "react-loading-ui";
@@ -34,9 +34,8 @@ export default function Details() {
             <div className="rc-titulo"> Denúncias Recentes </div>
             <div className="rc-conteudo">
                 <div className="rc-denuncias" >
-                {denuncia.map(i => {
-                   <MensagemLeft visible={i.ativo === 0? 'none': ''} denuncia={i}/>;
-                }
+                {denuncia.map(i => 
+                   <MensagemLeft visible={i.ativo === 0? 'none': ''} denuncia={i}/>
                 )}
                 </div>
             </div>
