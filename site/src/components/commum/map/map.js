@@ -4,7 +4,7 @@ import {MapStyle, containerStyle} from './mapStyle.js'
 import Geocode from "react-geocode";
 
 
-Geocode.setApiKey("AIzaSyBmWg6SrxvblQHjMwlinmCLc9RU3bIu3-A")
+Geocode.setApiKey(process.env.API_KEY_MAPS)
 
 
 

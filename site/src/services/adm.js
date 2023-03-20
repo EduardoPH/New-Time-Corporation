@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = new axios.create({
-    baseURL: 'https://api-ntc.herokuapp.com/administrador'
+    baseURL: 'https://ntc-api.vercel.app/administrador'
 })
 
 export default class Api{

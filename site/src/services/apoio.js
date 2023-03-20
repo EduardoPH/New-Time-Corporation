@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = new axios.create({
-    baseURL: 'https://api-ntc.herokuapp.com/apoio'
+    baseURL: 'https://ntc-api.vercel.app/apoio'
 })
 
 
