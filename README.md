@@ -33,8 +33,8 @@ Para rodar o projeto, execute ```npm start```
 ## Autores
 
 - [Eduardo Mendes](https://www.github.com/EduardoPH)
-- [Heloysa](https://www.github.com/EduardoPH)
-- [Erik Benito](https://www.github.com/EduardoPH)
-- [Josemir Fernandes](https://www.github.com/EduardoPH)
-- [Felipe Oliveira](https://www.github.com/EduardoPH)
-- [Guilherme Oliveira](https://www.github.com/EduardoPH)
+- [Heloysa](https://github.com/heloysasa)
+- [Erik Benito](https://github.com/Erik-Benito)
+- [Josemir Fernandes](https://github.com/jhowsemi1)
+- [Felipe Oliveira](https://github.com/Felipe-Oliveira-Verissimo)
+- [Guilherme Oliveira](https://github.com/GuiOliveira0)
