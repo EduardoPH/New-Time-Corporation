@@ -14,7 +14,7 @@ mais tragédias.
 </p>
 
 <p align="center">
-  ![image](https://user-images.githubusercontent.com/88357842/236710221-c4e06257-ef25-4641-87a2-a2c03f677222.png)
+  <img src="https://user-images.githubusercontent.com/88357842/236710221-c4e06257-ef25-4641-87a2-a2c03f677222.png" />
 </p>
 
 
