@@ -1,4 +1,4 @@
-# NewTimeComporation
+# Women
 
 Este projeto objetiva o desenvolvimento de uma aplicação WEB para fins pedagógicos em meu primeiro contato com programação em um curso técnico.
 O projeto consiste em uma aplicação web afim de unir mulheres em nossa comunicade online que ja sofreram ou sofrem algum tipo de agressão. A empresa também fornece todo apoio necessário para a vítima, estatísticas de locais perigosos e zona de perigo em cada denuncia, afim de evitar
